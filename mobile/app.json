@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "BuffetFindr",
+    "slug": "buffetfindr",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "buffetfindr",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#fafaf8"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.arpanghosh.buffetfindr",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "BuffetFindr uses your location to find nearby Indian buffets.",
+        "GADApplicationIdentifier": "ca-app-pub-3940256099942544~1458002511"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#fafaf8"
+      },
+      "package": "com.arpanghosh.buffetfindr",
+      "permissions": ["ACCESS_FINE_LOCATION"]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-location"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
