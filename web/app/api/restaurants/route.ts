@@ -26,13 +26,15 @@ async function dbQuery(params: {
   }
 
   const where = conditions.join(" AND ");
-  const rows = await sql`
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const rows = await (sql as any)`
     SELECT * FROM restaurants
-    WHERE ${sql.unsafe(where)}
+    WHERE ${(sql as any).unsafe(where)}
     ORDER BY buffet_score DESC
     LIMIT ${params.limit}
   `;
-  const total = await sql`SELECT COUNT(*) FROM restaurants WHERE ${sql.unsafe(where)}`;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const total = await (sql as any)`SELECT COUNT(*) FROM restaurants WHERE ${(sql as any).unsafe(where)}`;
 
   return {
     restaurants: rows as unknown as Restaurant[],
