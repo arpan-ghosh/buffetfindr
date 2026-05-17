@@ -51,7 +51,11 @@ scraper/data/*.json  →  web/data/*.json  →  Neon DB (db:seed)  →  web + mo
 | DC | ~50 | 12 |
 | Massachusetts (`MA`) | 145 | 42 |
 | New York (`NY`) | 357 | 77 |
-| **Total** | | **252** |
+| Pennsylvania (`PA`) | 173 | 35 |
+| New Jersey (`NJ`) | 321 | 94 |
+| Illinois (`IL`) | 177 | 47 |
+| Washington (`WA`) | 136 | 30 |
+| **Total** | | **458** |
 
 ### Adding a new region
 1. Add locations to `scraper/locations.py` → `STATE_MAP`
@@ -141,10 +145,14 @@ Every `git push` to `main` also triggers auto-deploy via GitHub integration.
 ### Region filters (UI → API mapping)
 | Filter label | States queried |
 |---|---|
-| All | MD, VA, DC, MA, NY |
+| All | MD, VA, DC, MA, NY, PA, NJ, IL, WA |
 | DMV | MD, VA, DC |
 | Boston | MA |
 | NYC | NY |
+| Philly | PA |
+| NJ | NJ |
+| Chicago | IL |
+| Seattle | WA |
 
 ### Key files
 | File | Purpose |
