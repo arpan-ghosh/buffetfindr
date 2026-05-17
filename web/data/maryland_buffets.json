@@ -6628,8 +6628,8 @@
       "food",
       "establishment"
     ],
-    "buffet_score": 15,
-    "buffet_confidence": "LOW",
+    "buffet_score": 65,
+    "buffet_confidence": "HIGH",
     "buffet_evidence": [
       "manually verified buffet: Sunday lunch buffet only, manually verified",
       "buffet mentioned in 1 review"
