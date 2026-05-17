@@ -37,6 +37,7 @@ function statesForRegion(region: string): string[] | null {
 async function dbQuery(params: {
   state: string;
   minScore: number;
+  buffetsOnly: boolean;
   confidence?: string;
   search?: string;
   limit: number;
@@ -44,18 +45,16 @@ async function dbQuery(params: {
   const { neon } = await import("@neondatabase/serverless");
   const sql = neon(process.env.DATABASE_URL!);
 
-  const rows = await sql`
-    SELECT * FROM restaurants
-    WHERE is_buffet = true
-    ORDER BY buffet_score DESC
-  `;
+  const rows = params.buffetsOnly
+    ? await sql`SELECT * FROM restaurants WHERE is_buffet = true ORDER BY buffet_score DESC`
+    : await sql`SELECT * FROM restaurants ORDER BY buffet_score DESC`;
 
   let restaurants = rows as unknown as Restaurant[];
 
   const allowedStates = statesForRegion(params.state);
   if (allowedStates)
     restaurants = restaurants.filter(r => allowedStates.includes(r.state?.toUpperCase() ?? ""));
-  if (params.minScore > 0)
+  if (params.buffetsOnly && params.minScore > 0)
     restaurants = restaurants.filter(r => (r.buffet_score ?? 0) >= params.minScore);
   if (params.confidence)
     restaurants = restaurants.filter(r => r.buffet_confidence === params.confidence!.toUpperCase());
@@ -79,17 +78,26 @@ function loadFile(name: string): Restaurant[] {
 function fileQuery(params: {
   state: string;
   minScore: number;
+  buffetsOnly: boolean;
   confidence?: string;
   search?: string;
   limit: number;
 }): { restaurants: Restaurant[]; total: number } {
-  const files = REGION_FILES[params.state] ?? REGION_FILES.all;
-  let restaurants: Restaurant[] = files.flatMap(loadFile);
+  const suffix = params.buffetsOnly ? "buffets" : "all";
+  const regionFiles = REGION_FILES[params.state] ?? REGION_FILES.all;
+  const allFiles = regionFiles.flatMap(name => [
+    path.join(process.cwd(), "data", `${name}_${suffix}.json`),
+  ]);
+
+  let restaurants: Restaurant[] = allFiles
+    .filter(f => fs.existsSync(f))
+    .flatMap(f => JSON.parse(fs.readFileSync(f, "utf8")));
 
   const seen = new Set<string>();
   restaurants = restaurants.filter(r => { if (seen.has(r.place_id)) return false; seen.add(r.place_id); return true; });
+  if (params.buffetsOnly)
+    restaurants = restaurants.filter(r => r.buffet_score >= params.minScore);
   restaurants = restaurants
-    .filter(r => r.buffet_score >= params.minScore)
     .filter(r => !params.confidence || r.buffet_confidence === params.confidence.toUpperCase())
     .filter(r => !params.search || r.name.toLowerCase().includes(params.search!) || r.address?.toLowerCase().includes(params.search!));
   restaurants.sort((a, b) => b.buffet_score - a.buffet_score);
@@ -102,11 +110,12 @@ function fileQuery(params: {
 export async function GET(req: NextRequest) {
   const p = req.nextUrl.searchParams;
   const params = {
-    state:      p.get("state")      ?? "all",
-    minScore:   parseInt(p.get("min_score") ?? "30"),
-    confidence: p.get("confidence") ?? undefined,
-    search:     p.get("search")?.toLowerCase() ?? undefined,
-    limit:      parseInt(p.get("limit") ?? "300"),
+    state:       p.get("state")        ?? "all",
+    minScore:    parseInt(p.get("min_score") ?? "30"),
+    buffetsOnly: p.get("buffets_only") !== "false",
+    confidence:  p.get("confidence")   ?? undefined,
+    search:      p.get("search")?.toLowerCase() ?? undefined,
+    limit:       parseInt(p.get("limit") ?? "500"),
   };
 
   const result = USE_DB ? await dbQuery(params) : fileQuery(params);

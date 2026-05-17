@@ -26,17 +26,19 @@ export default function Home() {
   const [state, setState] = useState("all");
   const [confidence, setConfidence] = useState("");
   const [search, setSearch] = useState("");
+  const [buffetsOnly, setBuffetsOnly] = useState(true);
 
   const fetchRestaurants = useCallback(async () => {
     setLoading(true);
     const params = new URLSearchParams({ state, min_score: "30" });
+    if (!buffetsOnly) params.set("buffets_only", "false");
     if (confidence) params.set("confidence", confidence);
     if (search)     params.set("search", search);
     const res = await fetch(`/api/restaurants?${params}`);
     const data = await res.json();
     setRestaurants(data.restaurants ?? []);
     setLoading(false);
-  }, [state, confidence, search]);
+  }, [state, confidence, search, buffetsOnly]);
 
   useEffect(() => { fetchRestaurants(); }, [fetchRestaurants]);
 
@@ -69,7 +71,7 @@ export default function Home() {
           <div>
             <h1 className="text-base font-bold leading-none text-[var(--text)]">Buffet Findr</h1>
             <p className="text-[10px] text-[var(--muted)] leading-none mt-0.5">
-              {loading ? "Loading…" : `${restaurants.length} buffets near you`}
+              {loading ? "Loading…" : buffetsOnly ? `${restaurants.length} buffets near you` : `${restaurants.length} Indian restaurants`}
             </p>
           </div>
           <button
@@ -131,9 +133,11 @@ export default function Home() {
                 state={state}
                 confidence={confidence}
                 search={search}
+                buffetsOnly={buffetsOnly}
                 onStateChange={setState}
                 onConfidenceChange={setConfidence}
                 onSearchChange={setSearch}
+                onBuffetsOnlyChange={setBuffetsOnly}
               />
             </div>
 
@@ -155,7 +159,7 @@ export default function Home() {
                   ))}
                   {restaurants.length === 0 && (
                     <div className="py-16 text-center text-[var(--muted)]">
-                      No buffets found for this filter.
+                      No restaurants found for this filter.
                     </div>
                   )}
                 </div>
@@ -179,9 +183,11 @@ export default function Home() {
                 state={state}
                 confidence={confidence}
                 search={search}
+                buffetsOnly={buffetsOnly}
                 onStateChange={setState}
                 onConfidenceChange={setConfidence}
                 onSearchChange={setSearch}
+                onBuffetsOnlyChange={setBuffetsOnly}
               />
             </div>
 

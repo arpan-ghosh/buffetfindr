@@ -7,9 +7,11 @@ interface Props {
   state: string;
   confidence: string;
   search: string;
+  buffetsOnly: boolean;
   onStateChange: (s: string) => void;
   onConfidenceChange: (c: string) => void;
   onSearchChange: (s: string) => void;
+  onBuffetsOnlyChange: (v: boolean) => void;
 }
 
 const REGIONS = [
@@ -29,7 +31,7 @@ const CONFIDENCE = [
   { value: "MEDIUM", label: "Likely" },
 ];
 
-export function FilterBar({ state, confidence, search, onStateChange, onConfidenceChange, onSearchChange }: Props) {
+export function FilterBar({ state, confidence, search, buffetsOnly, onStateChange, onConfidenceChange, onSearchChange, onBuffetsOnlyChange }: Props) {
   return (
     <div className="flex flex-col gap-2">
       {/* Search */}
@@ -77,6 +79,20 @@ export function FilterBar({ state, confidence, search, onStateChange, onConfiden
             {c.label}
           </button>
         ))}
+
+        <div className="h-4 w-px bg-[var(--border)] self-center mx-1 flex-shrink-0" />
+
+        <button
+          onClick={() => onBuffetsOnlyChange(!buffetsOnly)}
+          className={cn(
+            "flex-shrink-0 rounded-full px-3.5 py-1.5 text-xs font-semibold transition-all",
+            buffetsOnly
+              ? "bg-[var(--gold,#D4891A)] text-white shadow-sm"
+              : "bg-white border border-[var(--border)] text-[var(--muted)] hover:border-yellow-400"
+          )}
+        >
+          {buffetsOnly ? "🍛 Buffets" : "🍽️ All restaurants"}
+        </button>
       </div>
     </div>
   );
