@@ -2,7 +2,7 @@
 
 ## Project overview
 
-BuffetFindr finds Indian (and South Asian) buffet restaurants near users across the DMV, Boston, and NYC.
+BuffetFindr finds Indian (and South Asian) buffet restaurants near users across the DMV, Boston, NYC, Philadelphia, New Jersey, Chicago, and Seattle.
 
 **Domains**: `buffetfindr.com` (primary), `indianbuffetfinder.com` (redirect/SEO)
 **GitHub**: `github.com/arpan-ghosh/buffetfindr` (public)
@@ -58,13 +58,19 @@ scraper/data/*.json  →  web/data/*.json  →  Neon DB (db:seed)  →  web + mo
 | **Total** | | **458** |
 
 ### Adding a new region
-1. Add locations to `scraper/locations.py` → `STATE_MAP`
+1. Add location grid to `scraper/locations.py` → `STATE_MAP`
 2. Add state key to `scraper/main.py` `--state` choices
-3. Run `python scraper/main.py --state <new_state>`
+3. Run `python3 scraper/main.py --state <new_state>`
 4. Copy output to `web/data/`
 5. Add state to `web/scripts/seed.ts` states array
 6. Add region to `web/app/api/restaurants/route.ts` `REGION_FILES` and `REGION_STATES` maps
-7. Run `npm run db:seed`
+7. Add pill to `web/components/FilterBar.tsx` `REGIONS` array
+8. Add pan/zoom target to `web/components/RestaurantMap.tsx` `REGION_VIEW`
+9. Add pan/zoom target to `mobile/lib/api.ts` `REGION_VIEW`
+10. Run `npm run db:seed`
+
+> **Note**: `db:seed` now also updates the `state` field on conflict, so re-scraping a region with a corrected state abbreviation will fix the DB.
+> **Note**: NJ restaurants that appeared in the NY scrape get corrected to `state=NJ` because seed runs NY before NJ.
 
 ---
 
@@ -73,7 +79,9 @@ scraper/data/*.json  →  web/data/*.json  →  Neon DB (db:seed)  →  web + mo
 ### Running
 ```bash
 cd scraper
-python main.py --state maryland   # maryland / virginia / dc / massachusetts / new_york / all
+python3 main.py --state maryland
+# valid states: maryland / virginia / dc / massachusetts / new_york /
+#               philadelphia / new_jersey / illinois / washington / all
 ```
 
 ### Pipeline script (multi-state)
@@ -138,9 +146,9 @@ npm run db:seed       # upsert all web/data/*.json into Neon
 ### Deployment
 ```bash
 cd web
-vercel --prod --token <token>
+vercel --prod   # deploys from current working tree, no token needed (auth stored locally)
 ```
-Every `git push` to `main` also triggers auto-deploy via GitHub integration.
+`git push` to `main` *should* trigger GitHub auto-deploy but it is unreliable — always verify with `vercel ls` or just run `vercel --prod` directly to be certain.
 
 ### Region filters (UI → API mapping)
 | Filter label | States queried |
@@ -169,7 +177,8 @@ Every `git push` to `main` also triggers auto-deploy via GitHub integration.
 | `components/SubmitRestaurantModal.tsx` | User submission form |
 | `db/schema.ts` | Drizzle schema: restaurants, restaurant_feedback, restaurant_submissions |
 | `db/SCHEMA.sql` | Human-readable schema reference with annotations |
-| `scripts/seed.ts` | Loads web/data/*.json → Neon |
+| `scripts/seed.ts` | Loads web/data/*.json → Neon (upserts; also updates `state` on conflict) |
+| `app/api/photo/route.ts` | Proxies Google Places photos — key stays server-side |
 
 ### Color theme (Indian palette)
 | Token | Value | Usage |
@@ -181,6 +190,29 @@ Every `git push` to `main` also triggers auto-deploy via GitHub integration.
 | `--text` | `#1C0A00` | Very dark warm brown |
 | `--muted` | `#8C6B55` | Warm taupe |
 | `--border` | `#EDE0D4` | Warm sand border |
+
+---
+
+## Photo proxy (`web/app/api/photo/route.ts`)
+
+Restaurant photos are served through `/api/photo?ref=<photo_resource_name>&w=<width>` so the Google API key never appears in client-side requests.
+
+**How it works**: The `ref` is the Google Places photo resource name (e.g. `places/ChIJ.../photos/Ab43m-...`). The proxy fetches:
+```
+GET https://places.googleapis.com/v1/{ref}/media?maxWidthPx={w}&key={SERVER_KEY}
+```
+Google returns a **302 redirect** to `lh3.googleusercontent.com`. Node's `fetch()` follows it automatically and the proxy streams back the `image/jpeg`.
+
+**Critical pitfall — `skipHttpRedirect=true`**: Adding this param to the Google URL does NOT return the image binary. It returns `200 application/json` with `{ name, photoUri }`. If you pass that JSON through as `image/jpeg` every photo breaks silently. **Never use `skipHttpRedirect=true`.**
+
+**Cache-Control**: Set to `no-store` intentionally. Using `public` caused Vercel's CDN to cache broken responses and serve them even after the proxy was fixed — the only escape was changing the `w` parameter to get a fresh URL. `no-store` prevents that class of bug entirely.
+
+**Width conventions**:
+| Context | Width |
+|---|---|
+| RestaurantCard compact (carousel) | 420 |
+| RestaurantCard list thumbnail | 200 |
+| RestaurantDetail hero / strip | 800 |
 
 ---
 
@@ -236,7 +268,7 @@ EAS auto-creates provisioning profiles and signing certs using the App Store Con
 - **Price**: Free (ads planned via AdMob in future)
 
 ### Mobile API base URL
-Currently hardcoded to the Vercel preview URL in `mobile/lib/api.ts`. Update to `https://www.buffetfindr.com` once the custom domain is fully propagated.
+`mobile/lib/api.ts` uses `https://www.buffetfindr.com` as `BASE`. Custom domain is live and propagated.
 
 ---
 
@@ -264,12 +296,13 @@ Tools: `scrape_buffets`, `get_buffet_results`, `check_scrape_status`
 
 ## Known issues / decisions
 
-- **Cross-state duplicates**: Border restaurants appear in multiple raw files; `place_id` deduplication in the API prevents double-display.
+- **Cross-state duplicates**: Border restaurants appear in multiple raw files; `place_id` deduplication in the API prevents double-display. Seed runs states in order — later states overwrite `state` field, so NJ restaurants found in the NY scrape get corrected when NJ is seeded afterward.
 - **Uyghur exclusion**: `scraper/main.py` has a name-based blocklist for non-South-Asian cuisines.
 - **Weekend-only buffets score low**: Sunday-only buffets get few review mentions → score 15–25 (below 30 threshold). Add to override file.
 - **Verified overrides**: The Mint Room (Ellicott City MD, `ChIJcaSB9fEhyIkR_s8lKKOY6rw`) and Biryani Joint (Burtonsville MD) are in `known_buffets_override.json`.
 - **React peer dep conflict**: `react@19.1.0` vs `react-dom@19.2.6` — resolved via `.npmrc` `legacy-peer-deps=true`.
-- **Mobile API URL**: `mobile/lib/api.ts` hardcodes a Vercel preview URL. Update to `buffetfindr.com` after domain propagation.
+- **GitHub auto-deploy unreliable**: `git push` to `main` doesn't always trigger Vercel. Run `cd web && vercel --prod` to guarantee deployment.
+- **Photo proxy `no-store`**: Cache-Control is intentionally `no-store`. Using `public` caused Vercel CDN to cache broken responses that survived proxy fixes. Don't change it back.
 - **`npm run build` in web/**: NEVER run locally. Corrupts dev server cache. Delete `.next/` + restart if accidentally run.
 
 ---
@@ -280,6 +313,6 @@ Tools: `scrape_buffets`, `get_buffet_results`, `check_scrape_status`
 - [ ] Google/Apple Sign In via Clerk (Vercel Marketplace) — sync "Been Here" across devices
 - [ ] AdMob ads (free app monetization) — requires `react-native-google-mobile-ads` + ATT consent
 - [ ] Android app (Google Play) — Expo already configured for Android, just needs Play Console setup
-- [ ] Expand to more cities (Chicago, Bay Area, Houston next)
+- [ ] Expand to more cities (Bay Area, Houston, Atlanta next — Chicago/Philly/NJ/Seattle done)
 - [ ] Admin dashboard to review/approve user submissions
 - [ ] Weekly email digest of new buffets
