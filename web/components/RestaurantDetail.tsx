@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   X, MapPin, Phone, ExternalLink, Star, Clock,
-  Navigation2, ChevronDown, CheckCircle2, Circle,
+  Navigation2, ChevronDown, CheckCircle2, Circle, Loader2,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Restaurant } from "@/lib/types";
@@ -17,11 +17,38 @@ interface Props {
 
 const DAY_ORDER = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
 
-const BUFFET_STAPLES = [
-  "Butter Chicken","Chana Masala","Dal Makhani","Saag Paneer",
-  "Biryani","Tandoori Chicken","Naan","Samosa",
-  "Raita","Gulab Jamun","Kheer","Aloo Gobi",
+const DISH_POOL = [
+  "Butter Chicken","Chana Masala","Dal Makhani","Saag Paneer","Palak Paneer",
+  "Biryani","Chicken Biryani","Lamb Biryani","Tandoori Chicken","Chicken Tikka",
+  "Naan","Garlic Naan","Puri","Roti","Paratha",
+  "Samosa","Pakora","Aloo Tikki","Papdi Chaat",
+  "Raita","Mango Lassi","Tamarind Chutney",
+  "Gulab Jamun","Kheer","Halwa","Jalebi","Rasmalai",
+  "Aloo Gobi","Matar Paneer","Baingan Bharta","Bhindi Masala","Rajma",
+  "Korma","Vindaloo","Rogan Josh","Keema",
+  "Dosa","Idli Sambhar","Uttapam",
 ];
+
+// Deterministic shuffle seeded by place_id — same restaurant always shows same dishes
+function dishesFor(placeId: string): string[] {
+  let seed = 0;
+  for (let i = 0; i < placeId.length; i++) seed = (seed * 31 + placeId.charCodeAt(i)) >>> 0;
+  const pool = [...DISH_POOL];
+  for (let i = pool.length - 1; i > 0; i--) {
+    seed = (seed * 1664525 + 1013904223) >>> 0;
+    const j = seed % (i + 1);
+    [pool[i], pool[j]] = [pool[j], pool[i]];
+  }
+  return pool.slice(0, 9);
+}
+
+interface Review {
+  author: string;
+  photoUrl: string | null;
+  rating: number;
+  text: string;
+  timeAgo: string;
+}
 
 function HoursTable({ hours }: { hours: string[] }) {
   const today = new Date().toLocaleDateString("en-US", { weekday: "long" });
@@ -52,6 +79,9 @@ function HoursTable({ hours }: { hours: string[] }) {
 export function RestaurantDetail({ restaurant: r, onClose }: Props) {
   const [visited, setVisited]           = useState(false);
   const [evidenceOpen, setEvidenceOpen] = useState(false);
+  const [reviews, setReviews]           = useState<Review[]>([]);
+  const [reviewsLoading, setReviewsLoading] = useState(false);
+  const fetchedFor = useRef<string | null>(null);
 
   const open   = r ? isOpenNow(r) : null;
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? "";
@@ -60,11 +90,20 @@ export function RestaurantDetail({ restaurant: r, onClose }: Props) {
     ? `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(r.address ?? r.name)}`
     : "#";
 
-  // Load visited state from localStorage whenever the restaurant changes
   useEffect(() => {
     if (!r) return;
     setVisited(localStorage.getItem(`visited_${r.place_id}`) === "true");
     setEvidenceOpen(false);
+
+    if (fetchedFor.current === r.place_id) return;
+    fetchedFor.current = r.place_id;
+    setReviews([]);
+    setReviewsLoading(true);
+    fetch(`/api/reviews?place_id=${r.place_id}`)
+      .then(res => res.json())
+      .then(data => setReviews(data.reviews ?? []))
+      .catch(() => {})
+      .finally(() => setReviewsLoading(false));
   }, [r?.place_id]);
 
   const toggleVisited = () => {
@@ -210,7 +249,7 @@ export function RestaurantDetail({ restaurant: r, onClose }: Props) {
                     What you&apos;ll typically find 🍽️
                   </p>
                   <div className="flex flex-wrap gap-1.5">
-                    {BUFFET_STAPLES.map(dish => (
+                    {dishesFor(r.place_id).map(dish => (
                       <span
                         key={dish}
                         className="rounded-full bg-amber-50 border border-amber-100 px-2.5 py-1 text-xs font-medium text-amber-800"
@@ -223,6 +262,46 @@ export function RestaurantDetail({ restaurant: r, onClose }: Props) {
                     Common items at Indian buffets — may vary by restaurant.
                   </p>
                 </div>
+
+                {/* Google reviews */}
+                {(reviewsLoading || reviews.length > 0) && (
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wide text-[var(--muted)] mb-2">
+                      Reviews
+                    </p>
+                    {reviewsLoading ? (
+                      <div className="flex items-center justify-center py-6">
+                        <Loader2 size={18} className="animate-spin text-brand-500" />
+                      </div>
+                    ) : (
+                      <div className="flex flex-col gap-3">
+                        {reviews.map((rev, i) => (
+                          <div key={i} className="rounded-2xl border border-[var(--border)] p-3.5">
+                            <div className="flex items-center gap-2 mb-2">
+                              {rev.photoUrl ? (
+                                <img src={rev.photoUrl} alt="" className="h-7 w-7 rounded-full object-cover flex-shrink-0" />
+                              ) : (
+                                <div className="h-7 w-7 rounded-full bg-gray-100 flex-shrink-0 flex items-center justify-center text-xs font-bold text-[var(--muted)]">
+                                  {rev.author[0]?.toUpperCase()}
+                                </div>
+                              )}
+                              <div className="flex-1 min-w-0">
+                                <p className="text-xs font-semibold text-[var(--text)] truncate">{rev.author}</p>
+                                <div className="flex items-center gap-1">
+                                  {Array.from({ length: 5 }).map((_, s) => (
+                                    <Star key={s} size={10} className={s < rev.rating ? "fill-amber-400 text-amber-400" : "fill-gray-200 text-gray-200"} />
+                                  ))}
+                                  <span className="text-[10px] text-[var(--muted)] ml-1">{rev.timeAgo}</span>
+                                </div>
+                              </div>
+                            </div>
+                            <p className="text-xs text-[var(--text)] leading-relaxed line-clamp-4">{rev.text}</p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
 
                 {/* Hours */}
                 {r.hours?.length > 0 && (
