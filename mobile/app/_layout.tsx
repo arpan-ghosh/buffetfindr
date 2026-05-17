@@ -18,6 +18,13 @@ export default function RootLayout() {
             headerTintColor: "#f97316",
           }}
         />
+        <Stack.Screen
+          name="submit"
+          options={{
+            presentation: "modal",
+            headerShown: false,
+          }}
+        />
       </Stack>
     </>
   );
