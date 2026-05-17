@@ -2,9 +2,11 @@ import { NextRequest, NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
 import { randomUUID } from "crypto";
+import { Resend } from "resend";
 
 const FILE = path.join(process.cwd(), "data", "submissions.json");
 const USE_DB = !!process.env.DATABASE_URL;
+const NOTIFY_EMAIL = "arpanghosh95@gmail.com";
 
 async function dbInsert(sub: object) {
   const { neon } = await import("@neondatabase/serverless");
@@ -49,6 +51,24 @@ export async function POST(req: NextRequest) {
     const all = fileLoad();
     all.push({ ...submission, submitted_at: new Date().toISOString() });
     fs.writeFileSync(FILE, JSON.stringify(all, null, 2));
+  }
+
+  if (process.env.RESEND_API_KEY) {
+    const resend = new Resend(process.env.RESEND_API_KEY);
+    const lines = [
+      `<b>Name:</b> ${submission.name}`,
+      `<b>City:</b> ${submission.city}`,
+      `<b>State:</b> ${submission.state}`,
+      submission.phone   ? `<b>Phone:</b> ${submission.phone}`   : null,
+      submission.website ? `<b>Website:</b> ${submission.website}` : null,
+      submission.notes   ? `<b>Notes:</b> ${submission.notes}`   : null,
+    ].filter(Boolean).join("<br/>");
+    await resend.emails.send({
+      from: "BuffetFindr <onboarding@resend.dev>",
+      to: NOTIFY_EMAIL,
+      subject: `New buffet submission: ${submission.name} (${submission.city}, ${submission.state})`,
+      html: `<p>A new restaurant was submitted to BuffetFindr and needs review.</p><p>${lines}</p><p><b>ID:</b> ${submission.id}</p>`,
+    }).catch(() => {}); // don't fail the request if email fails
   }
 
   return NextResponse.json({ success: true, id: submission.id });
