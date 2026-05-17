@@ -19,7 +19,8 @@
       "buildNumber": "1",
       "infoPlist": {
         "NSLocationWhenInUseUsageDescription": "BuffetFindr uses your location to find nearby Indian buffets.",
-        "GADApplicationIdentifier": "ca-app-pub-3940256099942544~1458002511"
+        "GADApplicationIdentifier": "ca-app-pub-3940256099942544~1458002511",
+        "ITSAppUsesNonExemptEncryption": false
       }
     },
     "android": {

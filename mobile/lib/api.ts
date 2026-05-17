@@ -1,4 +1,4 @@
-const BASE = "https://buffetfindr-asw9k6p3s-arpan-ghoshs-projects-d7c4c085.vercel.app";
+const BASE = "https://www.buffetfindr.com";
 
 export interface Restaurant {
   place_id: string;
@@ -42,8 +42,8 @@ export async function submitFeedback(placeId: string, vote: "up" | "down", previ
 }
 
 export function photoUrl(ref: string, width = 600) {
-  // Google Places (New) photo URL — key injected server-side ideally, here for now
-  return `https://places.googleapis.com/v1/${ref}/media?maxWidthPx=${width}&key=AIzaSyBDmaBgMYFmT6QTMvar44x_toK50GhcoTA`;
+  // Routed through our own API so the Google key never leaves the server
+  return `${BASE}/api/photo?ref=${encodeURIComponent(ref)}&w=${width}`;
 }
 
 export function mapsUrl(address: string) {

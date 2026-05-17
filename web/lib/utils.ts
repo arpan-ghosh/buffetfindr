@@ -13,8 +13,9 @@ export function slugify(str: string) {
     .replace(/(^-|-$)/g, "");
 }
 
-export function photoUrl(ref: string, apiKey: string, width = 600) {
-  return `https://places.googleapis.com/v1/${ref}/media?maxWidthPx=${width}&key=${apiKey}`;
+export function photoUrl(ref: string, _apiKey: string, width = 600) {
+  // Route through our own proxy — key stays server-side only
+  return `/api/photo?ref=${encodeURIComponent(ref)}&w=${width}`;
 }
 
 export function priceLabel(level?: string | number | null) {
