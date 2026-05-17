@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --orange:       #f97316;
+  --orange-light: #fff7ed;
+  --bg:           #fafaf8;
+  --card:         #ffffff;
+  --text:         #1c1c1e;
+  --muted:        #8e8e93;
+  --border:       #e5e5ea;
+  --green:        #22c55e;
+  --red:          #ef4444;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  height: 100%;
+  background-color: var(--bg);
+  color: var(--text);
+  overscroll-behavior: none;
+}
+
+/* Smooth scrolling for card lists */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Map container keeps aspect ratio on mobile */
+.map-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+
+  .badge {
+    @apply inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold;
+  }
+
+  .badge-open {
+    @apply badge bg-green-50 text-green-700;
+  }
+
+  .badge-closed {
+    @apply badge bg-red-50 text-red-600;
+  }
+
+  .badge-high {
+    @apply badge bg-brand-50 text-brand-600;
+  }
+
+  .badge-medium {
+    @apply badge bg-amber-50 text-amber-700;
+  }
+}

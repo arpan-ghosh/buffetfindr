@@ -1,0 +1,28 @@
+# Secrets
+scraper/.env
+web/.env.local
+web/.env*.local
+
+# Dependencies
+web/node_modules/
+mcp/node_modules/
+
+# Next.js build output
+web/.next/
+web/out/
+
+# Vercel
+.vercel/
+
+# Python
+scraper/__pycache__/
+scraper/*.pyc
+scraper/*.pyo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# User-generated data (persisted in DB in production, not in repo)
+web/data/feedback.json
+web/data/submissions.json

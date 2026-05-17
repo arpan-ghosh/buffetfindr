@@ -1,0 +1,13 @@
+{
+  "name": "indian-buffet-finder-mcp",
+  "version": "1.0.0",
+  "description": "MCP plugin for Indian Buffet Finder — scraper tools",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.16.0"
+  }
+}

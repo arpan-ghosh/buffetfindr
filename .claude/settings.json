@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "buffet-scraper": {
+      "command": "node",
+      "args": ["/Users/ghosh-mac-mini/Code/indianbuffetfinder/mcp/server.js"]
+    }
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"$CLAUDE_TOOL_INPUT\" | jq -r '.tool_input.command // empty' | grep -q 'npm run build' && echo '{\"decision\":\"block\",\"reason\":\"🚫 npm run build is blocked — it corrupts the Next.js dev server cache (.next/). Use npm run dev for local development. Production builds happen on Vercel CI only.\"}' || true"
+          }
+        ]
+      }
+    ]
+  }
+}
