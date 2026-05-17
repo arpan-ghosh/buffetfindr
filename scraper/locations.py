@@ -93,8 +93,84 @@ DC = [
     {"name": "U Street",         "lat": 38.9172, "lng": -77.0282},
 ]
 
+MASSACHUSETTS = [
+    # Boston proper
+    {"name": "Downtown Boston",    "lat": 42.3601, "lng": -71.0589},
+    {"name": "Allston",            "lat": 42.3538, "lng": -71.1314},
+    {"name": "Jamaica Plain",      "lat": 42.3100, "lng": -71.1133},
+    {"name": "Dorchester",         "lat": 42.3017, "lng": -71.0665},
+    # Inner suburbs
+    {"name": "Cambridge",          "lat": 42.3736, "lng": -71.1097},
+    {"name": "Somerville",         "lat": 42.3876, "lng": -71.0995},
+    {"name": "Brookline",          "lat": 42.3318, "lng": -71.1212},
+    {"name": "Newton",             "lat": 42.3370, "lng": -71.2092},
+    {"name": "Quincy",             "lat": 42.2529, "lng": -71.0023},
+    {"name": "Watertown",          "lat": 42.3668, "lng": -71.1828},
+    {"name": "Medford",            "lat": 42.4184, "lng": -71.1062},
+    {"name": "Malden",             "lat": 42.4251, "lng": -71.0662},
+    {"name": "Waltham",            "lat": 42.3765, "lng": -71.2356},
+    {"name": "Lexington",          "lat": 42.4473, "lng": -71.2245},
+    {"name": "Burlington",         "lat": 42.5048, "lng": -71.1956},
+    {"name": "Woburn",             "lat": 42.4793, "lng": -71.1523},
+    # Framingham corridor — large Indian community
+    {"name": "Framingham",         "lat": 42.2793, "lng": -71.4162},
+    {"name": "Natick",             "lat": 42.2848, "lng": -71.3495},
+    {"name": "Marlborough",        "lat": 42.3487, "lng": -71.5523},
+    {"name": "Westborough",        "lat": 42.2698, "lng": -71.6134},
+    {"name": "Northborough",       "lat": 42.3195, "lng": -71.6440},
+    # North of Boston
+    {"name": "Lowell",             "lat": 42.6334, "lng": -71.3162},
+    {"name": "Chelmsford",         "lat": 42.5995, "lng": -71.3673},
+    {"name": "Andover",            "lat": 42.6584, "lng": -71.1370},
+    # South Shore
+    {"name": "Brockton",           "lat": 42.0834, "lng": -71.0184},
+    {"name": "Canton",             "lat": 42.1584, "lng": -71.1456},
+]
+
+NEW_YORK = [
+    # Manhattan — concentrated search for Indian restaurant corridors
+    {"name": "Curry Hill (28th St)", "lat": 40.7443, "lng": -73.9888},  # main Indian strip
+    {"name": "Midtown East",         "lat": 40.7549, "lng": -73.9840},
+    {"name": "East Village",         "lat": 40.7264, "lng": -73.9818},
+    {"name": "Upper West Side",      "lat": 40.7870, "lng": -73.9754},
+    {"name": "Harlem",               "lat": 40.8116, "lng": -73.9465},
+    {"name": "Lower Manhattan",      "lat": 40.7128, "lng": -74.0060},
+    # Queens — Indian food capital of NYC
+    {"name": "Jackson Heights",      "lat": 40.7557, "lng": -73.8831},  # THE Indian hub
+    {"name": "Flushing",             "lat": 40.7675, "lng": -73.8330},
+    {"name": "Jamaica",              "lat": 40.6943, "lng": -73.8062},
+    {"name": "Woodside",             "lat": 40.7448, "lng": -73.9022},
+    {"name": "Forest Hills",         "lat": 40.7189, "lng": -73.8448},
+    {"name": "Richmond Hill",        "lat": 40.6970, "lng": -73.8310},  # Indo-Caribbean hub
+    {"name": "Briarwood",            "lat": 40.7084, "lng": -73.8202},
+    {"name": "Astoria",              "lat": 40.7721, "lng": -73.9301},
+    {"name": "Corona",               "lat": 40.7501, "lng": -73.8628},
+    # Brooklyn
+    {"name": "Downtown Brooklyn",    "lat": 40.6928, "lng": -73.9903},
+    {"name": "Flatbush",             "lat": 40.6388, "lng": -73.9558},
+    {"name": "Canarsie",             "lat": 40.6389, "lng": -73.9025},
+    {"name": "Bay Ridge",            "lat": 40.6353, "lng": -74.0200},
+    # Bronx
+    {"name": "South Bronx",          "lat": 40.8174, "lng": -73.9190},
+    {"name": "Fordham",              "lat": 40.8612, "lng": -73.8938},
+    # Staten Island
+    {"name": "Staten Island",        "lat": 40.5795, "lng": -74.1502},
+    # Long Island (close suburbs)
+    {"name": "Hicksville",           "lat": 40.7685, "lng": -73.5257},  # large Indian community
+    {"name": "Westbury",             "lat": 40.7554, "lng": -73.5876},
+    {"name": "Garden City",          "lat": 40.7268, "lng": -73.6343},
+    # NJ across the river
+    {"name": "Jersey City",          "lat": 40.7178, "lng": -74.0431},
+    {"name": "Newark",               "lat": 40.7357, "lng": -74.1724},
+    {"name": "Edison",               "lat": 40.5187, "lng": -74.4121},  # biggest Indian hub in NJ
+    {"name": "Woodbridge",           "lat": 40.5573, "lng": -74.2846},
+    {"name": "Parsippany",           "lat": 40.8579, "lng": -74.4265},
+]
+
 STATE_MAP = {
-    "maryland": {"locations": MARYLAND, "abbr": "MD"},
-    "virginia": {"locations": VIRGINIA, "abbr": "VA"},
-    "dc":       {"locations": DC,       "abbr": "DC"},
+    "maryland":      {"locations": MARYLAND,      "abbr": "MD"},
+    "virginia":      {"locations": VIRGINIA,      "abbr": "VA"},
+    "dc":            {"locations": DC,            "abbr": "DC"},
+    "massachusetts": {"locations": MASSACHUSETTS, "abbr": "MA"},
+    "new_york":      {"locations": NEW_YORK,       "abbr": "NY"},
 }

@@ -18,7 +18,7 @@ const db = drizzle(neon(process.env.DATABASE_URL!), {
 const DATA_DIR = path.join(__dirname, "..", "data");
 
 async function seed() {
-  const states = ["maryland", "virginia", "dc"];
+  const states = ["maryland", "virginia", "dc", "massachusetts", "new_york"];
   let total = 0;
 
   for (const state of states) {

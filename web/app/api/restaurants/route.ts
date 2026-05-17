@@ -56,7 +56,9 @@ function fileQuery(params: {
   search?: string;
   limit: number;
 }): { restaurants: Restaurant[]; total: number } {
-  const states = params.state === "all" ? ["maryland", "virginia", "dc"] : [params.state.toLowerCase()];
+  const states = params.state === "all"
+    ? ["maryland", "virginia", "dc", "massachusetts", "new_york"]
+    : [params.state.toLowerCase()];
   let restaurants: Restaurant[] = states.flatMap(loadState);
 
   const seen = new Set<string>();
