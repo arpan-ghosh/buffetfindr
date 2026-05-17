@@ -16,7 +16,7 @@ export function RestaurantCard({ restaurant: r, selected, onClick, compact }: Pr
   const open = isOpenNow(r);
   const city = cityFromAddress(r.address ?? "");
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? "";
-  const photo = r.photo_refs?.[0] ? photoUrl(r.photo_refs[0], apiKey, compact ? 400 : 200) : null;
+  const photo = r.photo_refs?.[0] ? photoUrl(r.photo_refs[0], apiKey, compact ? 420 : 200) : null;
 
   // ── Compact vertical card (bottom sheet scroll) ──────────────────────────
   if (compact) {

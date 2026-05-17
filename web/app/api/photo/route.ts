@@ -18,7 +18,7 @@ export async function GET(req: NextRequest) {
   return new NextResponse(buf, {
     headers: {
       "Content-Type": upstream.headers.get("Content-Type") ?? "image/jpeg",
-      "Cache-Control": "public, max-age=86400",
+      "Cache-Control": "no-store",
     },
   });
 }
