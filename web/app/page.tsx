@@ -58,15 +58,6 @@ export default function Home() {
         onClose={() => setSelected(null)}
       />
 
-      {/* ── Submit a buffet FAB ──────────────────────────────────────── */}
-      <button
-        onClick={() => setSubmitOpen(true)}
-        className="fixed bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2 rounded-full bg-[var(--text)] px-4 py-2.5 text-sm font-semibold text-white shadow-lg hover:bg-gray-800 transition-all hover:scale-105 active:scale-95"
-        style={{ bottom: view === "map" ? "calc(240px + 1.5rem)" : "1.5rem" }}
-      >
-        <span className="text-base leading-none">+</span> Know a buffet we&apos;re missing?
-      </button>
-
       {/* ── Submit modal ─────────────────────────────────────────────── */}
       <SubmitRestaurantModal open={submitOpen} onClose={() => setSubmitOpen(false)} />
 
@@ -77,7 +68,7 @@ export default function Home() {
           <div>
             <h1 className="text-base font-bold leading-none text-[var(--text)]">Buffet Findr</h1>
             <p className="text-[10px] text-[var(--muted)] leading-none mt-0.5">
-              {loading ? "Loading…" : `${restaurants.length} buffets in DMV`}
+              {loading ? "Loading…" : `${restaurants.length} buffets near you`}
             </p>
           </div>
           <button
@@ -88,6 +79,15 @@ export default function Home() {
             <Info size={15} />
           </button>
         </div>
+
+        {/* Right side: submit + view toggle */}
+        <div className="flex items-center gap-2">
+        <button
+          onClick={() => setSubmitOpen(true)}
+          className="flex items-center gap-1 rounded-full border border-[var(--border)] bg-white px-3 py-1.5 text-xs font-semibold text-[var(--text)] shadow-sm hover:bg-gray-50 transition-colors"
+        >
+          <span className="text-sm leading-none">+</span> Submit
+        </button>
 
         {/* View toggle */}
         <div className="flex rounded-xl overflow-hidden border border-[var(--border)] bg-white shadow-sm">
@@ -107,6 +107,7 @@ export default function Home() {
           >
             <List size={13} /> List
           </button>
+        </div>
         </div>
       </div>
 
