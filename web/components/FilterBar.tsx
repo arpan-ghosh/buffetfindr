@@ -12,11 +12,11 @@ interface Props {
   onSearchChange: (s: string) => void;
 }
 
-const STATES = [
-  { value: "all", label: "All" },
-  { value: "maryland", label: "Maryland" },
-  { value: "virginia", label: "Virginia" },
-  { value: "dc", label: "DC" },
+const REGIONS = [
+  { value: "all",    label: "All" },
+  { value: "dmv",    label: "DMV" },
+  { value: "boston", label: "Boston" },
+  { value: "nyc",    label: "NYC" },
 ];
 
 const CONFIDENCE = [
@@ -40,9 +40,9 @@ export function FilterBar({ state, confidence, search, onStateChange, onConfiden
         />
       </div>
 
-      {/* State pills */}
+      {/* Region pills */}
       <div className="flex gap-2 overflow-x-auto no-scrollbar">
-        {STATES.map(s => (
+        {REGIONS.map(s => (
           <button
             key={s.value}
             onClick={() => onStateChange(s.value)}

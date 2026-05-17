@@ -5,6 +5,25 @@ import type { Restaurant } from "@/lib/types";
 
 const USE_DB = !!process.env.DATABASE_URL;
 
+// Region → state abbreviations (matches what's stored in DB / JSON)
+const REGION_STATES: Record<string, string[]> = {
+  dmv:    ["MD", "VA", "DC"],
+  boston: ["MA"],
+  nyc:    ["NY"],
+};
+
+// JSON file names per region
+const REGION_FILES: Record<string, string[]> = {
+  all:    ["maryland", "virginia", "dc", "massachusetts", "new_york"],
+  dmv:    ["maryland", "virginia", "dc"],
+  boston: ["massachusetts"],
+  nyc:    ["new_york"],
+};
+
+function statesForRegion(region: string): string[] | null {
+  return region === "all" ? null : (REGION_STATES[region] ?? [region.toUpperCase()]);
+}
+
 // ── DB path (Neon) ────────────────────────────────────────────────────────────
 
 async function dbQuery(params: {
@@ -17,7 +36,6 @@ async function dbQuery(params: {
   const { neon } = await import("@neondatabase/serverless");
   const sql = neon(process.env.DATABASE_URL!);
 
-  // Fetch all buffets and filter in JS — only ~130 rows, no perf concern
   const rows = await sql`
     SELECT * FROM restaurants
     WHERE is_buffet = true
@@ -26,8 +44,9 @@ async function dbQuery(params: {
 
   let restaurants = rows as unknown as Restaurant[];
 
-  if (params.state !== "all")
-    restaurants = restaurants.filter(r => r.state?.toUpperCase() === params.state.toUpperCase());
+  const allowedStates = statesForRegion(params.state);
+  if (allowedStates)
+    restaurants = restaurants.filter(r => allowedStates.includes(r.state?.toUpperCase() ?? ""));
   if (params.minScore > 0)
     restaurants = restaurants.filter(r => (r.buffet_score ?? 0) >= params.minScore);
   if (params.confidence)
@@ -43,8 +62,8 @@ async function dbQuery(params: {
 
 // ── File path (local dev) ─────────────────────────────────────────────────────
 
-function loadState(state: string): Restaurant[] {
-  const file = path.join(process.cwd(), "data", `${state}_buffets.json`);
+function loadFile(name: string): Restaurant[] {
+  const file = path.join(process.cwd(), "data", `${name}_buffets.json`);
   if (!fs.existsSync(file)) return [];
   return JSON.parse(fs.readFileSync(file, "utf8"));
 }
@@ -56,17 +75,15 @@ function fileQuery(params: {
   search?: string;
   limit: number;
 }): { restaurants: Restaurant[]; total: number } {
-  const states = params.state === "all"
-    ? ["maryland", "virginia", "dc", "massachusetts", "new_york"]
-    : [params.state.toLowerCase()];
-  let restaurants: Restaurant[] = states.flatMap(loadState);
+  const files = REGION_FILES[params.state] ?? REGION_FILES.all;
+  let restaurants: Restaurant[] = files.flatMap(loadFile);
 
   const seen = new Set<string>();
   restaurants = restaurants.filter(r => { if (seen.has(r.place_id)) return false; seen.add(r.place_id); return true; });
   restaurants = restaurants
     .filter(r => r.buffet_score >= params.minScore)
     .filter(r => !params.confidence || r.buffet_confidence === params.confidence.toUpperCase())
-    .filter(r => !params.search || r.name.toLowerCase().includes(params.search) || r.address?.toLowerCase().includes(params.search));
+    .filter(r => !params.search || r.name.toLowerCase().includes(params.search!) || r.address?.toLowerCase().includes(params.search!));
   restaurants.sort((a, b) => b.buffet_score - a.buffet_score);
 
   return { restaurants: restaurants.slice(0, params.limit), total: restaurants.length };
@@ -81,7 +98,7 @@ export async function GET(req: NextRequest) {
     minScore:   parseInt(p.get("min_score") ?? "30"),
     confidence: p.get("confidence") ?? undefined,
     search:     p.get("search")?.toLowerCase() ?? undefined,
-    limit:      parseInt(p.get("limit") ?? "200"),
+    limit:      parseInt(p.get("limit") ?? "300"),
   };
 
   const result = USE_DB ? await dbQuery(params) : fileQuery(params);
