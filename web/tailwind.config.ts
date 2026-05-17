@@ -9,13 +9,17 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          50:  "#fff7ed",
-          100: "#ffedd5",
-          400: "#fb923c",
-          500: "#f97316",
-          600: "#ea580c",
+          50:  "#FFF3EC",   /* warm cream */
+          100: "#FFE0C8",
+          400: "#E0662E",
+          500: "#C94A1F",   /* burnt tandoor orange */
+          600: "#A83A14",   /* deeper */
         },
-        surface: "#fafaf8",
+        gold: {
+          400: "#E09A2A",
+          500: "#D4891A",   /* curry gold */
+        },
+        surface: "#FFF8F2",
       },
       borderRadius: {
         "2xl": "1rem",

@@ -65,7 +65,7 @@ export default function RestaurantDetail() {
   if (!restaurant) {
     return (
       <View style={styles.centered}>
-        <ActivityIndicator color="#f97316" size="large" />
+        <ActivityIndicator color="#C94A1F" size="large" />
       </View>
     );
   }
@@ -219,7 +219,7 @@ const styles = StyleSheet.create({
   heroBadges:     { position: "absolute", bottom: 12, left: 12, flexDirection: "row", gap: 6 },
   badgeOpen:      { backgroundColor: "#22c55e", borderRadius: 12, paddingHorizontal: 8, paddingVertical: 3 },
   badgeClosed:    { backgroundColor: "#ef4444", borderRadius: 12, paddingHorizontal: 8, paddingVertical: 3 },
-  badgeHigh:      { backgroundColor: "#f97316", borderRadius: 12, paddingHorizontal: 8, paddingVertical: 3 },
+  badgeHigh:      { backgroundColor: "#C94A1F", borderRadius: 12, paddingHorizontal: 8, paddingVertical: 3 },
   badgeText:      { color: "#fff", fontSize: 11, fontWeight: "600" },
   body:           { padding: 16, gap: 12 },
   name:           { fontSize: 22, fontWeight: "700", color: "#1c1c1e" },
@@ -232,7 +232,7 @@ const styles = StyleSheet.create({
   scoreMed:       { backgroundColor: "#fffbeb" },
   scoreText:      { fontSize: 11, fontWeight: "600", color: "#ea580c" },
   actions:        { flexDirection: "row", gap: 8 },
-  btnPrimary:     { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 6, backgroundColor: "#f97316", borderRadius: 12, paddingVertical: 11 },
+  btnPrimary:     { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 6, backgroundColor: "#C94A1F", borderRadius: 12, paddingVertical: 11 },
   btnPrimaryText: { color: "#fff", fontWeight: "700", fontSize: 14 },
   btnSecondary:   { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 5, borderRadius: 12, borderWidth: 1, borderColor: "#e5e5ea", backgroundColor: "#fff", paddingHorizontal: 14, paddingVertical: 11 },
   btnSecondaryText:{ fontWeight: "600", fontSize: 14, color: "#1c1c1e" },

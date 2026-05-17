@@ -65,7 +65,7 @@ export default function Home() {
       {/* ── Header ──────────────────────────────────────────────────── */}
       <div className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-4 pt-safe pt-4 pb-2">
         <div className="flex items-center gap-2">
-          <span className="text-2xl">🍛</span>
+          <img src="/icon.png" alt="BuffetFindr" className="w-8 h-8 rounded-xl object-cover" />
           <div>
             <h1 className="text-base font-bold leading-none text-[var(--text)]">Buffet Findr</h1>
             <p className="text-[10px] text-[var(--muted)] leading-none mt-0.5">
@@ -251,7 +251,7 @@ export default function Home() {
             >
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center gap-2">
-                  <span className="text-2xl">🍛</span>
+                  <img src="/icon.png" alt="BuffetFindr" className="w-8 h-8 rounded-xl object-cover" />
                   <div>
                     <h2 className="text-base font-bold text-[var(--text)]">Buffet Findr</h2>
                     <p className="text-[11px] text-[var(--muted)]">DC · Maryland · Virginia</p>

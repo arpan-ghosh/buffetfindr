@@ -3,13 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --orange:       #f97316;
-  --orange-light: #fff7ed;
-  --bg:           #fafaf8;
+  /* Indian-inspired palette: burnt orange, curry gold, deep red */
+  --orange:       #C94A1F;   /* burnt tandoor orange */
+  --orange-light: #FFF3EC;   /* warm cream tint */
+  --gold:         #D4891A;   /* curry / saffron gold */
+  --deep-red:     #8B2110;   /* dried chili red */
+  --bg:           #FFF8F2;   /* warm parchment */
   --card:         #ffffff;
-  --text:         #1c1c1e;
-  --muted:        #8e8e93;
-  --border:       #e5e5ea;
+  --text:         #1C0A00;   /* very dark warm brown */
+  --muted:        #8C6B55;   /* warm taupe */
+  --border:       #EDE0D4;   /* warm sand border */
   --green:        #22c55e;
   --red:          #ef4444;
 }

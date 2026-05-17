@@ -7,6 +7,7 @@ import MapView, { Marker, Region } from "react-native-maps";
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import { router } from "expo-router";
+import { Image as RNImage } from "react-native";
 import { fetchRestaurants, REGION_VIEW, type Restaurant } from "../lib/api";
 import { RestaurantCard } from "../components/RestaurantCard";
 
@@ -108,7 +109,7 @@ export default function HomeScreen() {
         <View style={[styles.listOverlay, { paddingTop: insets.top + 60 }]}>
           {loading ? (
             <View style={styles.centered}>
-              <ActivityIndicator color="#f97316" size="large" />
+              <ActivityIndicator color="#C94A1F" size="large" />
             </View>
           ) : (
             <FlatList
@@ -133,7 +134,7 @@ export default function HomeScreen() {
       <View style={[styles.header, { paddingTop: insets.top + 8 }]}>
         {/* App title */}
         <View style={styles.headerLeft}>
-          <Text style={styles.headerEmoji}>🍛</Text>
+          <RNImage source={require("../assets/icon.png")} style={styles.headerIcon} />
           <View>
             <Text style={styles.headerTitle}>BuffetFindr</Text>
             <Text style={styles.headerSub}>
@@ -215,13 +216,13 @@ export default function HomeScreen() {
       <View style={[styles.tabBar, { paddingBottom: insets.bottom + 4 }]}>
         <TouchableOpacity style={styles.tabItem} onPress={() => setTab("map")}>
           <Ionicons name={tab === "map" ? "map" : "map-outline"} size={22}
-            color={tab === "map" ? "#f97316" : "#8e8e93"} />
+            color={tab === "map" ? "#C94A1F" : "#8e8e93"} />
           <Text style={[styles.tabLabel, tab === "map" && styles.tabLabelActive]}>Map</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.tabItem} onPress={() => setTab("list")}>
           <Ionicons name={tab === "list" ? "list" : "list-outline"} size={22}
-            color={tab === "list" ? "#f97316" : "#8e8e93"} />
+            color={tab === "list" ? "#C94A1F" : "#8e8e93"} />
           <Text style={[styles.tabLabel, tab === "list" && styles.tabLabelActive]}>List</Text>
         </TouchableOpacity>
 
@@ -240,12 +241,12 @@ const styles = StyleSheet.create({
   // Header
   header:       { position: "absolute", top: 0, left: 0, right: 0, zIndex: 20, flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: 16, paddingBottom: 8, backgroundColor: "rgba(250,250,248,0.92)" },
   headerLeft:   { flexDirection: "row", alignItems: "center", gap: 8 },
-  headerEmoji:  { fontSize: 22 },
+  headerIcon:   { width: 34, height: 34, borderRadius: 8 },
   headerTitle:  { fontSize: 15, fontWeight: "700", color: "#1c1c1e" },
   headerSub:    { fontSize: 10, color: "#8e8e93", marginTop: 1 },
   segControl:   { flexDirection: "row", borderRadius: 10, overflow: "hidden", borderWidth: 1, borderColor: "#e5e5ea", backgroundColor: "#fff" },
   segBtn:       { flexDirection: "row", alignItems: "center", gap: 4, paddingHorizontal: 11, paddingVertical: 6 },
-  segBtnActive: { backgroundColor: "#f97316" },
+  segBtnActive: { backgroundColor: "#C94A1F" },
   segText:      { fontSize: 12, fontWeight: "600", color: "#8e8e93" },
   segTextActive:{ color: "#fff" },
 
@@ -255,7 +256,7 @@ const styles = StyleSheet.create({
   searchInput:  { flex: 1, fontSize: 14, color: "#1c1c1e" },
   pillScroll:   { flexDirection: "row" },
   pill:         { borderRadius: 20, borderWidth: 1, borderColor: "#e5e5ea", backgroundColor: "rgba(255,255,255,0.92)", paddingHorizontal: 12, paddingVertical: 6, marginRight: 6, shadowColor: "#000", shadowOpacity: 0.04, shadowRadius: 4, elevation: 2 },
-  pillActiveOrange: { backgroundColor: "#f97316", borderColor: "#f97316" },
+  pillActiveOrange: { backgroundColor: "#C94A1F", borderColor: "#C94A1F" },
   pillActiveDark:   { backgroundColor: "#1c1c1e", borderColor: "#1c1c1e" },
   pillText:     { fontSize: 12, fontWeight: "600", color: "#6b6b6b" },
   pillTextWhite:{ color: "#fff" },
@@ -263,8 +264,8 @@ const styles = StyleSheet.create({
 
   // Map markers
   pin:          { width: 32, height: 32, borderRadius: 16, alignItems: "center", justifyContent: "center", borderWidth: 2, borderColor: "#fff", shadowColor: "#000", shadowOpacity: 0.25, shadowRadius: 4, elevation: 5 },
-  pinHigh:      { backgroundColor: "#f97316" },
-  pinMed:       { backgroundColor: "#fb923c" },
+  pinHigh:      { backgroundColor: "#C94A1F" },
+  pinMed:       { backgroundColor: "#D4891A" },
   pinEmoji:     { fontSize: 14 },
 
   // List overlay
@@ -282,5 +283,5 @@ const styles = StyleSheet.create({
   tabBar:       { position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 30, flexDirection: "row", backgroundColor: "rgba(255,255,255,0.97)", borderTopWidth: 1, borderTopColor: "#e5e5ea", paddingTop: 8 },
   tabItem:      { flex: 1, alignItems: "center", gap: 3 },
   tabLabel:     { fontSize: 10, fontWeight: "500", color: "#8e8e93" },
-  tabLabelActive:{ color: "#f97316" },
+  tabLabelActive:{ color: "#C94A1F" },
 });
