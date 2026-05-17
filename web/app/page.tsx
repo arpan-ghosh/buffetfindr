@@ -18,7 +18,7 @@ const RestaurantMap = dynamic(
 export default function Home() {
   const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
   const [loading, setLoading] = useState(true);
-  const [view, setView] = useState<"map" | "list">("list");
+  const [view, setView] = useState<"map" | "list">("map");
   const [selected, setSelected]     = useState<string | null>(null);
   const [submitOpen, setSubmitOpen] = useState(false);
   const cardScrollRef = useRef<HTMLDivElement>(null);
