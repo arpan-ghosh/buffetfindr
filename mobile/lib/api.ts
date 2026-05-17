@@ -51,8 +51,12 @@ export function mapsUrl(address: string) {
 }
 
 export const REGION_VIEW: Record<string, { lat: number; lng: number; delta: number }> = {
-  all:    { lat: 39.5,  lng: -75.8,  delta: 8  },
-  dmv:    { lat: 38.95, lng: -77.1,  delta: 1.2 },
-  boston: { lat: 42.36, lng: -71.06, delta: 0.7 },
-  nyc:    { lat: 40.73, lng: -73.95, delta: 0.6 },
+  all:     { lat: 39.8,  lng: -90.0,   delta: 50  },
+  dmv:     { lat: 38.95, lng: -77.1,   delta: 1.2 },
+  boston:  { lat: 42.36, lng: -71.06,  delta: 0.7 },
+  nyc:     { lat: 40.73, lng: -73.95,  delta: 0.6 },
+  philly:  { lat: 39.95, lng: -75.25,  delta: 0.7 },
+  nj:      { lat: 40.45, lng: -74.35,  delta: 1.2 },
+  chicago: { lat: 41.95, lng: -87.78,  delta: 1.0 },
+  seattle: { lat: 47.62, lng: -122.20, delta: 1.0 },
 };

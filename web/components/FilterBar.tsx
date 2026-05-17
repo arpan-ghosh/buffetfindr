@@ -13,10 +13,14 @@ interface Props {
 }
 
 const REGIONS = [
-  { value: "all",    label: "All" },
-  { value: "dmv",    label: "DMV" },
-  { value: "boston", label: "Boston" },
-  { value: "nyc",    label: "NYC" },
+  { value: "all",     label: "All" },
+  { value: "dmv",     label: "DMV" },
+  { value: "boston",  label: "Boston" },
+  { value: "nyc",     label: "NYC" },
+  { value: "philly",  label: "Philly" },
+  { value: "nj",      label: "NJ" },
+  { value: "chicago", label: "Chicago" },
+  { value: "seattle", label: "Seattle" },
 ];
 
 const CONFIDENCE = [

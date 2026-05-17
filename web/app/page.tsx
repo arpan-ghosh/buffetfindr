@@ -254,7 +254,7 @@ export default function Home() {
                   <img src="/icon.png" alt="BuffetFindr" className="w-8 h-8 rounded-xl object-cover" />
                   <div>
                     <h2 className="text-base font-bold text-[var(--text)]">Buffet Findr</h2>
-                    <p className="text-[11px] text-[var(--muted)]">DC · Maryland · Virginia</p>
+                    <p className="text-[11px] text-[var(--muted)]">DMV · Boston · NYC · Philly · NJ · Chicago · Seattle</p>
                   </div>
                 </div>
                 <button
@@ -266,7 +266,7 @@ export default function Home() {
               </div>
 
               <p className="text-sm text-[var(--text)] leading-relaxed mb-5">
-                Buffet Findr maps every Indian restaurant buffet in the DMV area — DC, Maryland, and Virginia. Restaurants are sourced from Google Places and scored based on reviews, website mentions, and search signals.
+                Buffet Findr maps every Indian restaurant buffet across the DMV, Boston, NYC, Philadelphia, New Jersey, Chicago, and Seattle. Restaurants are sourced from Google Places and scored based on reviews, website mentions, and search signals.
               </p>
 
               <div className="flex flex-col gap-4">

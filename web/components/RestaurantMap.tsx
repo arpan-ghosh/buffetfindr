@@ -5,10 +5,14 @@ import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 import type { Restaurant } from "@/lib/types";
 
 const REGION_VIEW: Record<string, { center: { lat: number; lng: number }; zoom: number }> = {
-  all:    { center: { lat: 39.5,  lng: -75.8  }, zoom: 7  },
-  dmv:    { center: { lat: 38.95, lng: -77.1  }, zoom: 10 },
-  boston: { center: { lat: 42.36, lng: -71.06 }, zoom: 11 },
-  nyc:    { center: { lat: 40.73, lng: -73.95 }, zoom: 11 },
+  all:     { center: { lat: 39.8,  lng: -90.0  }, zoom: 4  },
+  dmv:     { center: { lat: 38.95, lng: -77.1  }, zoom: 10 },
+  boston:  { center: { lat: 42.36, lng: -71.06 }, zoom: 11 },
+  nyc:     { center: { lat: 40.73, lng: -73.95 }, zoom: 11 },
+  philly:  { center: { lat: 39.95, lng: -75.25 }, zoom: 11 },
+  nj:      { center: { lat: 40.45, lng: -74.35 }, zoom: 10 },
+  chicago: { center: { lat: 41.95, lng: -87.78 }, zoom: 10 },
+  seattle: { center: { lat: 47.62, lng: -122.20 }, zoom: 10 },
 };
 
 const MAP_STYLE = [

@@ -18,7 +18,7 @@ const db = drizzle(neon(process.env.DATABASE_URL!), {
 const DATA_DIR = path.join(__dirname, "..", "data");
 
 async function seed() {
-  const states = ["maryland", "virginia", "dc", "massachusetts", "new_york"];
+  const states = ["maryland", "virginia", "dc", "massachusetts", "new_york", "philadelphia", "new_jersey", "illinois", "washington"];
   let total = 0;
 
   for (const state of states) {
@@ -60,6 +60,7 @@ async function seed() {
         .onConflictDoUpdate({
           target: restaurants.place_id,
           set: {
+            state:             r.state,
             buffet_score:      r.buffet_score,
             buffet_confidence: r.buffet_confidence,
             buffet_evidence:   r.buffet_evidence,

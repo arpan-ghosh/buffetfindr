@@ -4,7 +4,10 @@
       "Bash(python3 *)",
       "Skill(review-results)",
       "Bash(npm run *)",
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "Bash(python main.py --state philadelphia)",
+      "Bash(tee /tmp/scrape_philadelphia.log)",
+      "Bash(echo \"EXIT: $?\")"
     ]
   }
 }

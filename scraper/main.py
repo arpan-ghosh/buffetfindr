@@ -303,7 +303,10 @@ def main():
     parser = argparse.ArgumentParser(description="Indian Buffet Finder scraper")
     parser.add_argument(
         "--state",
-        choices=["maryland", "virginia", "dc", "massachusetts", "new_york", "all"],
+        choices=[
+            "maryland", "virginia", "dc", "massachusetts", "new_york",
+            "philadelphia", "new_jersey", "illinois", "washington", "all",
+        ],
         default="maryland",
         help="Which state to scrape (default: maryland)",
     )

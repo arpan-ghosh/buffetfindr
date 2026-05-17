@@ -167,10 +167,159 @@ NEW_YORK = [
     {"name": "Parsippany",           "lat": 40.8579, "lng": -74.4265},
 ]
 
+PHILADELPHIA = [
+    # Philadelphia city
+    {"name": "Center City",          "lat": 39.9526, "lng": -75.1652},
+    {"name": "University City",      "lat": 39.9522, "lng": -75.1932},
+    {"name": "Northeast Philadelphia","lat": 40.0629, "lng": -75.0402},
+    {"name": "South Philadelphia",   "lat": 39.9234, "lng": -75.1636},
+    {"name": "North Philadelphia",   "lat": 39.9920, "lng": -75.1582},
+    {"name": "Germantown",           "lat": 40.0431, "lng": -75.1716},
+    # Montgomery County suburbs
+    {"name": "King of Prussia",      "lat": 40.0914, "lng": -75.3855},
+    {"name": "Lansdale",             "lat": 40.2415, "lng": -75.2838},
+    {"name": "Plymouth Meeting",     "lat": 40.1084, "lng": -75.2810},
+    {"name": "Norristown",           "lat": 40.1215, "lng": -75.3402},
+    {"name": "Horsham",              "lat": 40.1773, "lng": -75.1494},
+    {"name": "Willow Grove",         "lat": 40.1479, "lng": -75.1157},
+    {"name": "Ambler",               "lat": 40.1509, "lng": -75.2196},
+    {"name": "Blue Bell",            "lat": 40.1540, "lng": -75.2816},
+    {"name": "Montgomeryville",      "lat": 40.2476, "lng": -75.2465},
+    # Chester County suburbs
+    {"name": "Wayne",                "lat": 40.0426, "lng": -75.3851},
+    {"name": "Exton",                "lat": 40.0262, "lng": -75.6207},
+    {"name": "Malvern",              "lat": 40.0362, "lng": -75.5132},
+    # Delaware County suburbs
+    {"name": "Media",                "lat": 39.9184, "lng": -75.3802},
+    {"name": "Ardmore",              "lat": 40.0090, "lng": -75.2871},
+    {"name": "Upper Darby",          "lat": 39.9618, "lng": -75.2596},
+    # Bucks County suburbs
+    {"name": "Bensalem",             "lat": 40.1029, "lng": -74.9341},
+    {"name": "Langhorne",            "lat": 40.1734, "lng": -74.9227},
+    {"name": "Doylestown",           "lat": 40.3101, "lng": -75.1299},
+    {"name": "Chalfont",             "lat": 40.2887, "lng": -75.2101},
+]
+
+NEW_JERSEY = [
+    # Central NJ — Edison/Oak Tree Road corridor (largest Indian hub in US per capita)
+    {"name": "Edison",               "lat": 40.5187, "lng": -74.4121},
+    {"name": "Iselin",               "lat": 40.5698, "lng": -74.3234},
+    {"name": "Woodbridge",           "lat": 40.5573, "lng": -74.2846},
+    {"name": "Metuchen",             "lat": 40.5432, "lng": -74.3626},
+    {"name": "New Brunswick",        "lat": 40.4774, "lng": -74.4447},
+    {"name": "Piscataway",           "lat": 40.4990, "lng": -74.3967},
+    {"name": "South Brunswick",      "lat": 40.3768, "lng": -74.5315},
+    {"name": "East Brunswick",       "lat": 40.4271, "lng": -74.4182},
+    {"name": "North Brunswick",      "lat": 40.4746, "lng": -74.4793},
+    {"name": "Sayreville",           "lat": 40.4596, "lng": -74.3599},
+    {"name": "Old Bridge",           "lat": 40.4134, "lng": -74.3443},
+    {"name": "Monroe Township",      "lat": 40.3287, "lng": -74.4252},
+    {"name": "Manalapan",            "lat": 40.2929, "lng": -74.3352},
+    {"name": "Plainsboro",           "lat": 40.3326, "lng": -74.5918},
+    # Princeton corridor
+    {"name": "Princeton",            "lat": 40.3573, "lng": -74.6672},
+    {"name": "Lawrence Township",    "lat": 40.2815, "lng": -74.7210},
+    {"name": "Robbinsville",         "lat": 40.2165, "lng": -74.6091},
+    # Somerset County
+    {"name": "Bridgewater",          "lat": 40.5937, "lng": -74.6045},
+    {"name": "Warren",               "lat": 40.6879, "lng": -74.4960},
+    {"name": "Somerset",             "lat": 40.5004, "lng": -74.4971},
+    # Parsippany / Morris County — large Indian IT corridor
+    {"name": "Parsippany",           "lat": 40.8579, "lng": -74.4265},
+    {"name": "Whippany",             "lat": 40.8240, "lng": -74.4196},
+    {"name": "Morristown",           "lat": 40.7968, "lng": -74.4818},
+    # North Jersey — Hudson/Bergen counties
+    {"name": "Jersey City",          "lat": 40.7178, "lng": -74.0431},
+    {"name": "Newark",               "lat": 40.7357, "lng": -74.1724},
+    {"name": "Hoboken",              "lat": 40.7440, "lng": -74.0324},
+    {"name": "North Bergen",         "lat": 40.7984, "lng": -74.0246},
+    {"name": "Secaucus",             "lat": 40.7895, "lng": -74.0560},
+    {"name": "Lodi",                 "lat": 40.8823, "lng": -74.0826},
+    # South Jersey — Philly suburbs
+    {"name": "Cherry Hill",          "lat": 39.9312, "lng": -75.0246},
+    {"name": "Mount Laurel",         "lat": 39.9429, "lng": -74.9349},
+    {"name": "Voorhees",             "lat": 39.8517, "lng": -75.0077},
+    {"name": "Marlton",              "lat": 39.8929, "lng": -74.9243},
+]
+
+ILLINOIS = [
+    # Chicago Devon Avenue — the main Indian strip
+    {"name": "Devon Avenue",         "lat": 41.9983, "lng": -87.7101},
+    {"name": "Rogers Park",          "lat": 41.9981, "lng": -87.6868},
+    {"name": "Skokie",               "lat": 42.0334, "lng": -87.7334},
+    {"name": "Lincolnwood",          "lat": 41.9928, "lng": -87.7317},
+    {"name": "Morton Grove",         "lat": 42.0408, "lng": -87.7826},
+    # Chicago downtown / North Side
+    {"name": "Chicago Loop",         "lat": 41.8781, "lng": -87.6298},
+    {"name": "Chicago North Side",   "lat": 41.9484, "lng": -87.6553},
+    {"name": "Wicker Park",          "lat": 41.9085, "lng": -87.6788},
+    # NW suburbs — heavy Indian tech/IT population
+    {"name": "Schaumburg",           "lat": 42.0334, "lng": -88.0834},
+    {"name": "Hoffman Estates",      "lat": 42.0603, "lng": -88.1431},
+    {"name": "Palatine",             "lat": 42.1103, "lng": -88.0342},
+    {"name": "Rolling Meadows",      "lat": 42.0742, "lng": -88.0148},
+    {"name": "Hanover Park",         "lat": 41.9981, "lng": -88.1448},
+    {"name": "Carol Stream",         "lat": 41.9121, "lng": -88.1348},
+    {"name": "Bartlett",             "lat": 41.9956, "lng": -88.1784},
+    {"name": "Bloomingdale",         "lat": 41.9532, "lng": -88.0797},
+    {"name": "Elk Grove Village",    "lat": 42.0003, "lng": -87.9908},
+    {"name": "Des Plaines",          "lat": 42.0334, "lng": -87.8831},
+    {"name": "Niles",                "lat": 42.0167, "lng": -87.8123},
+    {"name": "Glenview",             "lat": 42.0700, "lng": -87.8265},
+    {"name": "Evanston",             "lat": 42.0451, "lng": -87.6877},
+    # Western suburbs
+    {"name": "Naperville",           "lat": 41.7508, "lng": -88.1535},
+    {"name": "Lisle",                "lat": 41.7965, "lng": -88.1314},
+    {"name": "Bolingbrook",          "lat": 41.6981, "lng": -88.0684},
+    {"name": "Westmont",             "lat": 41.7945, "lng": -87.9742},
+    {"name": "Oak Brook",            "lat": 41.8364, "lng": -87.9481},
+    {"name": "Lombard",              "lat": 41.8867, "lng": -88.0070},
+    {"name": "Addison",              "lat": 41.9315, "lng": -87.9886},
+    {"name": "Downers Grove",        "lat": 41.8081, "lng": -88.0109},
+    {"name": "Aurora",               "lat": 41.7606, "lng": -88.3201},
+    {"name": "Woodridge",            "lat": 41.7495, "lng": -88.0498},
+]
+
+WASHINGTON = [
+    # Seattle proper
+    {"name": "Downtown Seattle",     "lat": 47.6062, "lng": -122.3321},
+    {"name": "Capitol Hill",         "lat": 47.6221, "lng": -122.3186},
+    {"name": "University District",  "lat": 47.6553, "lng": -122.3035},
+    {"name": "Northgate",            "lat": 47.7062, "lng": -122.3251},
+    {"name": "Rainier Valley",       "lat": 47.5501, "lng": -122.2873},
+    {"name": "Shoreline",            "lat": 47.7543, "lng": -122.3415},
+    # Eastside — highest Indian density in WA (Microsoft/Amazon employees)
+    {"name": "Bellevue",             "lat": 47.6101, "lng": -122.2015},
+    {"name": "Redmond",              "lat": 47.6740, "lng": -122.1215},
+    {"name": "Kirkland",             "lat": 47.6815, "lng": -122.2087},
+    {"name": "Sammamish",            "lat": 47.6163, "lng": -122.0356},
+    {"name": "Issaquah",             "lat": 47.5301, "lng": -122.0326},
+    {"name": "Mercer Island",        "lat": 47.5707, "lng": -122.2221},
+    {"name": "Factoria",             "lat": 47.5618, "lng": -122.1560},
+    {"name": "Crossroads Bellevue",  "lat": 47.6207, "lng": -122.1369},
+    # North of Seattle
+    {"name": "Bothell",              "lat": 47.7601, "lng": -122.2054},
+    {"name": "Woodinville",          "lat": 47.7543, "lng": -122.1638},
+    {"name": "Kenmore",              "lat": 47.7568, "lng": -122.2448},
+    {"name": "Lynnwood",             "lat": 47.8209, "lng": -122.3151},
+    {"name": "Totem Lake",           "lat": 47.7148, "lng": -122.1796},
+    # South of Seattle
+    {"name": "Renton",               "lat": 47.4829, "lng": -122.2171},
+    {"name": "Kent",                 "lat": 47.3809, "lng": -122.2348},
+    {"name": "Federal Way",          "lat": 47.3223, "lng": -122.3126},
+    {"name": "Tukwila",              "lat": 47.4741, "lng": -122.2606},
+    {"name": "Burien",               "lat": 47.4701, "lng": -122.3465},
+    {"name": "Covington",            "lat": 47.3590, "lng": -122.1171},
+]
+
 STATE_MAP = {
     "maryland":      {"locations": MARYLAND,      "abbr": "MD"},
     "virginia":      {"locations": VIRGINIA,      "abbr": "VA"},
     "dc":            {"locations": DC,            "abbr": "DC"},
     "massachusetts": {"locations": MASSACHUSETTS, "abbr": "MA"},
-    "new_york":      {"locations": NEW_YORK,       "abbr": "NY"},
+    "new_york":      {"locations": NEW_YORK,      "abbr": "NY"},
+    "philadelphia":  {"locations": PHILADELPHIA,  "abbr": "PA"},
+    "new_jersey":    {"locations": NEW_JERSEY,    "abbr": "NJ"},
+    "illinois":      {"locations": ILLINOIS,      "abbr": "IL"},
+    "washington":    {"locations": WASHINGTON,    "abbr": "WA"},
 }

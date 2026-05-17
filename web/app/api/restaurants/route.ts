@@ -7,17 +7,25 @@ const USE_DB = !!process.env.DATABASE_URL;
 
 // Region → state abbreviations (matches what's stored in DB / JSON)
 const REGION_STATES: Record<string, string[]> = {
-  dmv:    ["MD", "VA", "DC"],
-  boston: ["MA"],
-  nyc:    ["NY"],
+  dmv:     ["MD", "VA", "DC"],
+  boston:  ["MA"],
+  nyc:     ["NY"],
+  philly:  ["PA"],
+  nj:      ["NJ"],
+  chicago: ["IL"],
+  seattle: ["WA"],
 };
 
 // JSON file names per region
 const REGION_FILES: Record<string, string[]> = {
-  all:    ["maryland", "virginia", "dc", "massachusetts", "new_york"],
-  dmv:    ["maryland", "virginia", "dc"],
-  boston: ["massachusetts"],
-  nyc:    ["new_york"],
+  all:     ["maryland", "virginia", "dc", "massachusetts", "new_york", "philadelphia", "new_jersey", "illinois", "washington"],
+  dmv:     ["maryland", "virginia", "dc"],
+  boston:  ["massachusetts"],
+  nyc:     ["new_york"],
+  philly:  ["philadelphia"],
+  nj:      ["new_jersey"],
+  chicago: ["illinois"],
+  seattle: ["washington"],
 };
 
 function statesForRegion(region: string): string[] | null {
