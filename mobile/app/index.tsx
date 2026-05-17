@@ -32,6 +32,12 @@ export default function HomeScreen() {
   const [confidence, setConfidence]   = useState("");
   const [search, setSearch]           = useState("");
   const mapRef = useRef<MapView>(null);
+  const currentRegion = useRef({
+    latitude: REGION_VIEW.dmv.lat,
+    longitude: REGION_VIEW.dmv.lng,
+    latitudeDelta: REGION_VIEW.dmv.delta,
+    longitudeDelta: REGION_VIEW.dmv.delta,
+  });
 
   useEffect(() => {
     setLoading(true);
@@ -42,11 +48,30 @@ export default function HomeScreen() {
 
   useEffect(() => {
     const v = REGION_VIEW[region] ?? REGION_VIEW.dmv;
-    mapRef.current?.animateToRegion({
-      latitude: v.lat, longitude: v.lng,
-      latitudeDelta: v.delta, longitudeDelta: v.delta,
-    }, 600);
+    const r = { latitude: v.lat, longitude: v.lng, latitudeDelta: v.delta, longitudeDelta: v.delta };
+    currentRegion.current = r;
+    mapRef.current?.animateToRegion(r, 600);
   }, [region]);
+
+  const zoomIn = () => {
+    const r = {
+      ...currentRegion.current,
+      latitudeDelta:  Math.max(currentRegion.current.latitudeDelta  / 2, 0.002),
+      longitudeDelta: Math.max(currentRegion.current.longitudeDelta / 2, 0.002),
+    };
+    currentRegion.current = r;
+    mapRef.current?.animateToRegion(r, 250);
+  };
+
+  const zoomOut = () => {
+    const r = {
+      ...currentRegion.current,
+      latitudeDelta:  Math.min(currentRegion.current.latitudeDelta  * 2, 60),
+      longitudeDelta: Math.min(currentRegion.current.longitudeDelta * 2, 60),
+    };
+    currentRegion.current = r;
+    mapRef.current?.animateToRegion(r, 250);
+  };
 
   return (
     <View style={styles.root}>
@@ -61,6 +86,7 @@ export default function HomeScreen() {
           longitudeDelta: REGION_VIEW.dmv.delta,
         }}
         showsUserLocation
+        onRegionChange={r => { currentRegion.current = r; }}
       >
         {restaurants.map(r =>
           r.lat && r.lng ? (
@@ -172,6 +198,19 @@ export default function HomeScreen() {
         </ScrollView>
       </View>
 
+      {/* ── Zoom buttons (map mode only) ── */}
+      {tab === "map" && (
+        <View style={[styles.zoomControls, { bottom: insets.bottom + 72 }]}>
+          <TouchableOpacity style={styles.zoomBtn} onPress={zoomIn} activeOpacity={0.75}>
+            <Ionicons name="add" size={22} color="#1c1c1e" />
+          </TouchableOpacity>
+          <View style={styles.zoomDivider} />
+          <TouchableOpacity style={styles.zoomBtn} onPress={zoomOut} activeOpacity={0.75}>
+            <Ionicons name="remove" size={22} color="#1c1c1e" />
+          </TouchableOpacity>
+        </View>
+      )}
+
       {/* ── Bottom tab bar ── */}
       <View style={[styles.tabBar, { paddingBottom: insets.bottom + 4 }]}>
         <TouchableOpacity style={styles.tabItem} onPress={() => setTab("map")}>
@@ -233,6 +272,11 @@ const styles = StyleSheet.create({
   listContent:  { paddingHorizontal: 12, paddingTop: 100, paddingBottom: 100, gap: 10 },
   centered:     { flex: 1, alignItems: "center", justifyContent: "center", marginTop: 120 },
   emptyText:    { textAlign: "center", color: "#8e8e93", marginTop: 60, fontSize: 15 },
+
+  // Zoom controls
+  zoomControls: { position: "absolute", right: 14, zIndex: 25, backgroundColor: "#fff", borderRadius: 12, borderWidth: 1, borderColor: "#e5e5ea", shadowColor: "#000", shadowOpacity: 0.12, shadowRadius: 8, elevation: 6, overflow: "hidden" },
+  zoomBtn:      { width: 42, height: 42, alignItems: "center", justifyContent: "center" },
+  zoomDivider:  { height: 1, backgroundColor: "#e5e5ea", marginHorizontal: 8 },
 
   // Bottom tab bar
   tabBar:       { position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 30, flexDirection: "row", backgroundColor: "rgba(255,255,255,0.97)", borderTopWidth: 1, borderTopColor: "#e5e5ea", paddingTop: 8 },
