@@ -9,7 +9,7 @@ export async function GET(req: NextRequest) {
   if (!ref) return NextResponse.json({ error: "Missing ref" }, { status: 400 });
 
   const url = `https://places.googleapis.com/v1/${ref}/media`
-    + `?maxWidthPx=${w}&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&skipHttpRedirect=true`;
+    + `?maxWidthPx=${w}&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`;
 
   const upstream = await fetch(url);
   if (!upstream.ok) return NextResponse.json({ error: "Photo not found" }, { status: 404 });
