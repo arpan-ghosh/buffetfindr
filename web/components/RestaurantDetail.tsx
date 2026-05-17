@@ -89,7 +89,9 @@ export function RestaurantDetail({ restaurant: r, onClose }: Props) {
   const directionsUrl = r
     ? `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(r.address ?? r.name)}`
     : "#";
-  const mapsPlaceUrl = r ? `https://www.google.com/maps/place/?q=place_id:${r.place_id}` : "#";
+  const mapsPlaceUrl = r
+    ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(r.name)}&query_place_id=${r.place_id}`
+    : "#";
 
   useEffect(() => {
     if (!r) return;
