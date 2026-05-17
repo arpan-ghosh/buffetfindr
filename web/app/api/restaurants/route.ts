@@ -17,29 +17,28 @@ async function dbQuery(params: {
   const { neon } = await import("@neondatabase/serverless");
   const sql = neon(process.env.DATABASE_URL!);
 
-  const conditions: string[] = ["is_buffet = true", `buffet_score >= ${params.minScore}`];
-  if (params.state !== "all") conditions.push(`state = '${params.state.toUpperCase()}'`);
-  if (params.confidence) conditions.push(`buffet_confidence = '${params.confidence.toUpperCase()}'`);
-  if (params.search) {
-    const s = params.search.replace(/'/g, "''");
-    conditions.push(`(lower(name) LIKE '%${s}%' OR lower(address) LIKE '%${s}%')`);
-  }
-
-  const where = conditions.join(" AND ");
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const rows = await (sql as any)`
+  // Fetch all buffets and filter in JS — only ~130 rows, no perf concern
+  const rows = await sql`
     SELECT * FROM restaurants
-    WHERE ${(sql as any).unsafe(where)}
+    WHERE is_buffet = true
     ORDER BY buffet_score DESC
-    LIMIT ${params.limit}
   `;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const total = await (sql as any)`SELECT COUNT(*) FROM restaurants WHERE ${(sql as any).unsafe(where)}`;
 
-  return {
-    restaurants: rows as unknown as Restaurant[],
-    total: Number((total[0] as { count: string }).count),
-  };
+  let restaurants = rows as unknown as Restaurant[];
+
+  if (params.state !== "all")
+    restaurants = restaurants.filter(r => r.state?.toUpperCase() === params.state.toUpperCase());
+  if (params.minScore > 0)
+    restaurants = restaurants.filter(r => (r.buffet_score ?? 0) >= params.minScore);
+  if (params.confidence)
+    restaurants = restaurants.filter(r => r.buffet_confidence === params.confidence!.toUpperCase());
+  if (params.search)
+    restaurants = restaurants.filter(r =>
+      r.name?.toLowerCase().includes(params.search!) ||
+      r.address?.toLowerCase().includes(params.search!)
+    );
+
+  return { restaurants: restaurants.slice(0, params.limit), total: restaurants.length };
 }
 
 // ── File path (local dev) ─────────────────────────────────────────────────────
