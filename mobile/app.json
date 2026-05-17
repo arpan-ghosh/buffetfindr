@@ -28,7 +28,11 @@
         "backgroundColor": "#fafaf8"
       },
       "package": "com.arpanghosh.buffetfindr",
-      "permissions": ["ACCESS_FINE_LOCATION"]
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -39,6 +43,13 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "bbedaf8c-3d34-4e1f-81da-0de0f098f2aa"
+      }
+    },
+    "owner": "arpanghosh95s-organization"
   }
 }
