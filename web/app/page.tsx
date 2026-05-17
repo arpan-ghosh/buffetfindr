@@ -49,6 +49,7 @@ export default function Home() {
       <RestaurantMap
         restaurants={restaurants}
         selected={selected}
+        region={state}
         onSelect={id => setSelected(id)}
       />
 

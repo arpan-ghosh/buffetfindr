@@ -1,10 +1,15 @@
 "use client";
 
-import { useCallback, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 import type { Restaurant } from "@/lib/types";
 
-const CENTER = { lat: 38.95, lng: -77.1 };
+const REGION_VIEW: Record<string, { center: { lat: number; lng: number }; zoom: number }> = {
+  all:    { center: { lat: 39.5,  lng: -75.8  }, zoom: 7  },
+  dmv:    { center: { lat: 38.95, lng: -77.1  }, zoom: 10 },
+  boston: { center: { lat: 42.36, lng: -71.06 }, zoom: 11 },
+  nyc:    { center: { lat: 40.73, lng: -73.95 }, zoom: 11 },
+};
 
 const MAP_STYLE = [
   { featureType: "poi",        stylers: [{ visibility: "off" }] },
@@ -20,6 +25,7 @@ const MAP_STYLE = [
 interface Props {
   restaurants: Restaurant[];
   selected?: string | null;
+  region: string;
   onSelect: (placeId: string) => void;
 }
 
@@ -41,13 +47,21 @@ function markerIcon(selected: boolean, score: number) {
   };
 }
 
-export function RestaurantMap({ restaurants, selected, onSelect }: Props) {
+export function RestaurantMap({ restaurants, selected, region, onSelect }: Props) {
   const { isLoaded, loadError } = useJsApiLoader({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? "",
   });
 
   const mapRef = useRef<google.maps.Map | null>(null);
   const onLoad = useCallback((map: google.maps.Map) => { mapRef.current = map; }, []);
+
+  // Pan + zoom when region filter changes
+  useEffect(() => {
+    if (!mapRef.current) return;
+    const view = REGION_VIEW[region] ?? REGION_VIEW.dmv;
+    mapRef.current.panTo(view.center);
+    mapRef.current.setZoom(view.zoom);
+  }, [region]);
 
   if (loadError) {
     return (
@@ -75,8 +89,8 @@ export function RestaurantMap({ restaurants, selected, onSelect }: Props) {
     <div className="map-container">
       <GoogleMap
         mapContainerStyle={{ width: "100%", height: "100%" }}
-        center={CENTER}
-        zoom={10}
+        center={REGION_VIEW.dmv.center}
+        zoom={REGION_VIEW.dmv.zoom}
         onLoad={onLoad}
         options={{
           styles: MAP_STYLE,
