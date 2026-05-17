@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import {
-  X, MapPin, Phone, ExternalLink, Star, Clock,
+  X, MapPin, Phone, Globe, Star, Clock,
   Navigation2, ChevronDown, CheckCircle2, Circle, Loader2,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -86,9 +86,10 @@ export function RestaurantDetail({ restaurant: r, onClose }: Props) {
   const open   = r ? isOpenNow(r) : null;
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? "";
   const photos = r?.photo_refs?.map(ref => photoUrl(ref, apiKey, 800)) ?? [];
-  const mapsUrl = r
+  const directionsUrl = r
     ? `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(r.address ?? r.name)}`
     : "#";
+  const mapsPlaceUrl = r ? `https://www.google.com/maps/place/?q=place_id:${r.place_id}` : "#";
 
   useEffect(() => {
     if (!r) return;
@@ -206,7 +207,7 @@ export function RestaurantDetail({ restaurant: r, onClose }: Props) {
                 {/* Action buttons */}
                 <div className="flex gap-2">
                   <a
-                    href={mapsUrl} target="_blank" rel="noopener noreferrer"
+                    href={directionsUrl} target="_blank" rel="noopener noreferrer"
                     className="flex flex-1 items-center justify-center gap-1.5 rounded-xl bg-brand-500 px-4 py-2.5 text-sm font-semibold text-white hover:bg-brand-600 transition-colors"
                   >
                     <Navigation2 size={14} /> Directions
@@ -219,12 +220,20 @@ export function RestaurantDetail({ restaurant: r, onClose }: Props) {
                       <Phone size={14} /> Call
                     </a>
                   )}
+                  <a
+                    href={mapsPlaceUrl} target="_blank" rel="noopener noreferrer"
+                    title="View on Google Maps"
+                    className="flex items-center justify-center rounded-xl border border-[var(--border)] bg-white px-3 py-2.5 text-[var(--text)] hover:bg-gray-50 transition-colors"
+                  >
+                    <img src="/google-maps-icon.svg" alt="Google Maps" className="h-4 w-4" />
+                  </a>
                   {r.website && (
                     <a
                       href={r.website} target="_blank" rel="noopener noreferrer"
+                      title="Restaurant website"
                       className="flex items-center justify-center rounded-xl border border-[var(--border)] bg-white px-3 py-2.5 text-[var(--text)] hover:bg-gray-50 transition-colors"
                     >
-                      <ExternalLink size={14} />
+                      <Globe size={14} />
                     </a>
                   )}
                 </div>
