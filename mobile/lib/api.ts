@@ -23,11 +23,13 @@ export async function fetchRestaurants(params: {
   state?: string;
   search?: string;
   confidence?: string;
+  buffetsOnly?: boolean;
 } = {}): Promise<Restaurant[]> {
-  const query = new URLSearchParams({ min_score: "30", limit: "300" });
-  if (params.state)      query.set("state", params.state);
-  if (params.search)     query.set("search", params.search);
-  if (params.confidence) query.set("confidence", params.confidence);
+  const query = new URLSearchParams({ min_score: "30", limit: "500" });
+  if (params.state)               query.set("state", params.state);
+  if (params.search)              query.set("search", params.search);
+  if (params.confidence)          query.set("confidence", params.confidence);
+  if (params.buffetsOnly === false) query.set("buffets_only", "false");
   const res = await fetch(`${BASE}/api/restaurants?${query}`);
   const data = await res.json();
   return data.restaurants ?? [];

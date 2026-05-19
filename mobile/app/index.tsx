@@ -12,10 +12,14 @@ import { fetchRestaurants, REGION_VIEW, type Restaurant } from "../lib/api";
 import { RestaurantCard } from "../components/RestaurantCard";
 
 const REGIONS = [
-  { value: "all",    label: "All"    },
-  { value: "dmv",    label: "DMV"    },
-  { value: "boston", label: "Boston" },
-  { value: "nyc",    label: "NYC"    },
+  { value: "all",     label: "All"     },
+  { value: "dmv",     label: "DMV"     },
+  { value: "boston",  label: "Boston"  },
+  { value: "nyc",     label: "NYC"     },
+  { value: "philly",  label: "Philly"  },
+  { value: "nj",      label: "NJ"      },
+  { value: "chicago", label: "Chicago" },
+  { value: "seattle", label: "Seattle" },
 ];
 
 const CONFIDENCE = [
@@ -29,26 +33,27 @@ export default function HomeScreen() {
   const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
   const [loading, setLoading]         = useState(true);
   const [tab, setTab]                 = useState<"map" | "list">("map");
-  const [region, setRegion]           = useState("dmv");
+  const [region, setRegion]           = useState("all");
   const [confidence, setConfidence]   = useState("");
   const [search, setSearch]           = useState("");
+  const [buffetsOnly, setBuffetsOnly] = useState(true);
   const mapRef = useRef<MapView>(null);
   const currentRegion = useRef({
-    latitude: REGION_VIEW.dmv.lat,
-    longitude: REGION_VIEW.dmv.lng,
-    latitudeDelta: REGION_VIEW.dmv.delta,
-    longitudeDelta: REGION_VIEW.dmv.delta,
+    latitude: REGION_VIEW.all.lat,
+    longitude: REGION_VIEW.all.lng,
+    latitudeDelta: REGION_VIEW.all.delta,
+    longitudeDelta: REGION_VIEW.all.delta,
   });
 
   useEffect(() => {
     setLoading(true);
-    fetchRestaurants({ state: region, confidence, search })
+    fetchRestaurants({ state: region, confidence, search, buffetsOnly })
       .then(setRestaurants)
       .finally(() => setLoading(false));
-  }, [region, confidence, search]);
+  }, [region, confidence, search, buffetsOnly]);
 
   useEffect(() => {
-    const v = REGION_VIEW[region] ?? REGION_VIEW.dmv;
+    const v = REGION_VIEW[region] ?? REGION_VIEW.all;
     const r = { latitude: v.lat, longitude: v.lng, latitudeDelta: v.delta, longitudeDelta: v.delta };
     currentRegion.current = r;
     mapRef.current?.animateToRegion(r, 600);
@@ -81,10 +86,10 @@ export default function HomeScreen() {
         ref={mapRef}
         style={StyleSheet.absoluteFillObject}
         initialRegion={{
-          latitude: REGION_VIEW.dmv.lat,
-          longitude: REGION_VIEW.dmv.lng,
-          latitudeDelta: REGION_VIEW.dmv.delta,
-          longitudeDelta: REGION_VIEW.dmv.delta,
+          latitude: REGION_VIEW.all.lat,
+          longitude: REGION_VIEW.all.lng,
+          latitudeDelta: REGION_VIEW.all.delta,
+          longitudeDelta: REGION_VIEW.all.delta,
         }}
         showsUserLocation
         onRegionChange={r => { currentRegion.current = r; }}
@@ -123,7 +128,7 @@ export default function HomeScreen() {
                 />
               )}
               ListEmptyComponent={
-                <Text style={styles.emptyText}>No buffets found.</Text>
+                <Text style={styles.emptyText}>{buffetsOnly ? "No buffets found." : "No restaurants found."}</Text>
               }
             />
           )}
@@ -138,7 +143,7 @@ export default function HomeScreen() {
           <View>
             <Text style={styles.headerTitle}>BuffetFindr</Text>
             <Text style={styles.headerSub}>
-              {loading ? "Loading…" : `${restaurants.length} buffets`}
+              {loading ? "Loading…" : buffetsOnly ? `${restaurants.length} buffets` : `${restaurants.length} restaurants`}
             </Text>
           </View>
         </View>
@@ -196,6 +201,17 @@ export default function HomeScreen() {
               <Text style={[styles.pillText, confidence === c.value && styles.pillTextWhite]}>{c.label}</Text>
             </TouchableOpacity>
           ))}
+
+          <View style={styles.pillDivider} />
+
+          <TouchableOpacity
+            style={[styles.pill, buffetsOnly ? styles.pillActiveGold : undefined]}
+            onPress={() => setBuffetsOnly(v => !v)}
+          >
+            <Text style={[styles.pillText, buffetsOnly && styles.pillTextWhite]}>
+              {buffetsOnly ? "🍛 Buffets" : "🍽️ All restaurants"}
+            </Text>
+          </TouchableOpacity>
         </ScrollView>
       </View>
 
@@ -258,6 +274,7 @@ const styles = StyleSheet.create({
   pill:         { borderRadius: 20, borderWidth: 1, borderColor: "#e5e5ea", backgroundColor: "rgba(255,255,255,0.92)", paddingHorizontal: 12, paddingVertical: 6, marginRight: 6, shadowColor: "#000", shadowOpacity: 0.04, shadowRadius: 4, elevation: 2 },
   pillActiveOrange: { backgroundColor: "#C94A1F", borderColor: "#C94A1F" },
   pillActiveDark:   { backgroundColor: "#1c1c1e", borderColor: "#1c1c1e" },
+  pillActiveGold:   { backgroundColor: "#D4891A", borderColor: "#D4891A" },
   pillText:     { fontSize: 12, fontWeight: "600", color: "#6b6b6b" },
   pillTextWhite:{ color: "#fff" },
   pillDivider:  { width: 1, backgroundColor: "#e5e5ea", marginHorizontal: 4, alignSelf: "center", height: 16 },
