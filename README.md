@@ -7,7 +7,7 @@
 BuffetFindr is a free web app and iOS app that maps Indian (and South Asian) buffet restaurants across the DMV, Boston, and NYC. No more Googling — every verified buffet in one place, with hours, ratings, photos, directions, and community confirmation.
 
 🌐 **Web**: [buffetfindr.com](https://www.buffetfindr.com)  
-📱 **iOS**: [App Store](https://apps.apple.com/nz/app/buffetfindr/id6770199090) 
+📱 **iOS**: [App Store](https://apps.apple.com/nz/app/buffetfindr/id6770199090)  
 🔒 **Privacy**: [buffetfindr.com/privacy](https://www.buffetfindr.com/privacy)
 
 ---
