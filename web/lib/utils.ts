@@ -13,9 +13,9 @@ export function slugify(str: string) {
     .replace(/(^-|-$)/g, "");
 }
 
-export function photoUrl(ref: string, _apiKey: string, width = 600) {
+export function photoUrl(ref: string, _apiKey: string, width = 600, index = 0) {
   // Route through our own proxy — key stays server-side only
-  return `/api/photo?ref=${encodeURIComponent(ref)}&w=${width}`;
+  return `/api/photo?ref=${encodeURIComponent(ref)}&w=${width}&i=${index}`;
 }
 
 export function priceLabel(level?: string | number | null) {

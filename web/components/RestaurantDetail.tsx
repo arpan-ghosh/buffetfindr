@@ -85,7 +85,7 @@ export function RestaurantDetail({ restaurant: r, onClose }: Props) {
 
   const open   = r ? isOpenNow(r) : null;
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? "";
-  const photos = r?.photo_refs?.map(ref => photoUrl(ref, apiKey, 800)) ?? [];
+  const photos = r?.photo_refs?.map((ref, i) => photoUrl(ref, apiKey, 800, i)) ?? [];
   const directionsUrl = r
     ? `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(r.address ?? r.name)}`
     : "#";

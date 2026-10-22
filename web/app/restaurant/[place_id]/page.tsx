@@ -144,7 +144,7 @@ export default async function RestaurantPage({ params }: { params: Promise<{ pla
           <div className="flex gap-2 px-4 py-2 overflow-x-auto bg-white border-b border-[var(--border)]">
             {photos.slice(1).map((ref, i) => (
               <div key={i} className="h-16 w-24 flex-shrink-0 rounded-xl overflow-hidden bg-gray-100">
-                <img src={`/api/photo?ref=${encodeURIComponent(ref)}&w=200`} alt="" className="h-full w-full object-cover" loading="lazy" />
+                <img src={`/api/photo?ref=${encodeURIComponent(ref)}&w=200&i=${i + 1}`} alt="" className="h-full w-full object-cover" loading="lazy" />
               </div>
             ))}
           </div>
