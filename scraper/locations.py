@@ -353,6 +353,23 @@ ATLANTA = [
     {"name": "Marietta",             "lat": 33.9526, "lng": -84.5499},
 ]
 
+BAY_AREA = [
+    {"name": "Fremont",              "lat": 37.5485, "lng": -121.9886},
+    {"name": "Sunnyvale",            "lat": 37.3688, "lng": -122.0363},
+    {"name": "San Jose",             "lat": 37.3382, "lng": -121.8863},
+    {"name": "Milpitas",             "lat": 37.4323, "lng": -121.8996},
+    {"name": "Dublin / Pleasanton",  "lat": 37.7022, "lng": -121.9358},
+    {"name": "San Francisco",        "lat": 37.7749, "lng": -122.4194},
+]
+
+PHOENIX = [
+    {"name": "Phoenix",              "lat": 33.4484, "lng": -112.0740},
+    {"name": "Tempe",                "lat": 33.4255, "lng": -111.9400},
+    {"name": "Chandler",             "lat": 33.3062, "lng": -111.8413},
+    {"name": "Scottsdale",           "lat": 33.4942, "lng": -111.9261},
+    {"name": "Glendale / Peoria",    "lat": 33.5387, "lng": -112.1860},
+]
+
 STATE_MAP = {
     "maryland":      {"locations": MARYLAND,      "abbr": "MD"},
     "virginia":      {"locations": VIRGINIA,      "abbr": "VA"},
@@ -368,4 +385,6 @@ STATE_MAP = {
     "houston":       {"locations": HOUSTON,       "abbr": "TX"},
     "miami":         {"locations": MIAMI,         "abbr": "FL"},
     "atlanta":       {"locations": ATLANTA,       "abbr": "GA"},
+    "bay_area":      {"locations": BAY_AREA,      "abbr": "CA"},
+    "phoenix":       {"locations": PHOENIX,       "abbr": "AZ"},
 }

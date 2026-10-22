@@ -25,6 +25,8 @@ const REGIONS = [
   { value: "houston", label: "Houston" },
   { value: "miami",   label: "Miami"   },
   { value: "atlanta", label: "Atlanta" },
+  { value: "bayarea", label: "Bay Area" },
+  { value: "phoenix", label: "Phoenix" },
 ];
 
 const CONFIDENCE = [

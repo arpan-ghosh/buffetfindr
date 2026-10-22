@@ -438,7 +438,7 @@ def main():
         choices=[
             "maryland", "virginia", "dc", "massachusetts", "new_york",
             "philadelphia", "new_jersey", "illinois", "washington",
-            "los_angeles", "dallas", "houston", "miami", "atlanta", "all",
+            "los_angeles", "dallas", "houston", "miami", "atlanta", "bay_area", "phoenix", "all",
         ],
         default="maryland",
         help="Which state to scrape (default: maryland)",

@@ -66,4 +66,6 @@ export const REGION_VIEW: Record<string, { lat: number; lng: number; delta: numb
   houston: { lat: 29.72, lng: -95.50,  delta: 0.9 },
   miami:   { lat: 25.85, lng: -80.25,  delta: 0.8 },
   atlanta: { lat: 33.90, lng: -84.30,  delta: 0.9 },
+  bayarea: { lat: 37.50, lng: -122.05, delta: 0.9 },
+  phoenix: { lat: 33.45, lng: -111.99, delta: 0.9 },
 };

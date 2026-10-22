@@ -2,7 +2,7 @@
 
 ## Project overview
 
-BuffetFindr finds Indian (and South Asian) buffet restaurants near users across the DMV, Boston, NYC, Philadelphia, New Jersey, Chicago, Seattle, Los Angeles, Dallas, Houston, Miami, and Atlanta.
+BuffetFindr finds Indian (and South Asian) buffet restaurants near users across the DMV, Boston, NYC, Philadelphia, New Jersey, Chicago, Seattle, Los Angeles, Dallas, Houston, Miami, Atlanta, the Bay Area, and Phoenix.
 
 **Domains**: `buffetfindr.com` (primary), `indianbuffetfinder.com` (redirect/SEO)
 **GitHub**: `github.com/arpan-ghosh/buffetfindr` (public)
@@ -60,9 +60,11 @@ scraper/data/*.json  →  web/data/*.json  →  Neon DB (db:seed)  →  web + mo
 | Houston (`TX`) | top 20 | 8 |
 | Miami (`FL`) | top 20 | 6 |
 | Atlanta (`GA`) | top 20 | 3 |
-| **Total** | | **492** |
+| Bay Area (`CA`) | top 20 | 5 |
+| Phoenix (`AZ`) | top 20 | 5 |
+| **Total** | | **502** |
 
-> LA/Dallas/Houston/Miami/Atlanta are **top-20 samples** (ranked by `rating × ln(reviews)`), not full grid scrapes. Dallas and Houston are both `state=TX`; the API/region pages split them by latitude (Dallas ≥ 31.5°, Houston < 31.5°).
+> LA/Dallas/Houston/Miami/Atlanta/Bay Area/Phoenix are **top-20 samples** (ranked by `rating × ln(reviews)`), not full grid scrapes. Dallas/Houston share `state=TX` (split at lat 31.5°) and LA/Bay Area share `state=CA` (split at lat 36°); the API, region pages and restaurant pages split them by latitude.
 
 ### Adding a new region
 1. Add location grid to `scraper/locations.py` → `STATE_MAP`
@@ -89,7 +91,7 @@ cd scraper
 python3 main.py --state maryland
 # valid states: maryland / virginia / dc / massachusetts / new_york /
 #               philadelphia / new_jersey / illinois / washington /
-#               los_angeles / dallas / houston / miami / atlanta / all
+#               los_angeles / dallas / houston / miami / atlanta / bay_area / phoenix / all
 ```
 
 ### Top-N metro scan (new cities, cheap)
@@ -175,11 +177,13 @@ vercel --prod   # deploys from current working tree, no token needed (auth store
 | NJ | NJ |
 | Chicago | IL |
 | Seattle | WA |
-| LA | CA |
+| LA | CA (lat < 36) |
 | Dallas | TX (lat ≥ 31.5) |
 | Houston | TX (lat < 31.5) |
 | Miami | FL |
 | Atlanta | GA |
+| Bay Area | CA (lat ≥ 36) |
+| Phoenix | AZ |
 
 ### Key files
 | File | Purpose |
@@ -332,6 +336,6 @@ Tools: `scrape_buffets`, `get_buffet_results`, `check_scrape_status`
 - [ ] Google/Apple Sign In via Clerk (Vercel Marketplace) — sync "Been Here" across devices
 - [ ] AdMob ads (free app monetization) — requires `react-native-google-mobile-ads` + ATT consent
 - [ ] Android app (Google Play) — Expo already configured for Android, just needs Play Console setup
-- [ ] Expand to more cities (Bay Area, Phoenix, Austin next — Chicago/Philly/NJ/Seattle done; LA/Dallas/Houston/Miami/Atlanta are top-20 samples, could get full grid scrapes)
+- [ ] Expand to more cities (Austin, Las Vegas, San Diego next — Chicago/Philly/NJ/Seattle done; LA/Dallas/Houston/Miami/Atlanta are top-20 samples, could get full grid scrapes)
 - [ ] Admin dashboard to review/approve user submissions
 - [ ] Weekly email digest of new buffets

@@ -16,11 +16,13 @@ const REGIONS: Record<string, { label: string; states: string[]; description: st
   nj:      { label: "New Jersey",               states: ["NJ"],           description: "New Jersey" },
   chicago: { label: "Chicago",                  states: ["IL"],           description: "Chicago and Illinois" },
   seattle: { label: "Seattle",                  states: ["WA"],           description: "Seattle and Washington State" },
-  la:      { label: "Los Angeles",              states: ["CA"],           description: "Los Angeles and Southern California" },
+  la:      { label: "Los Angeles",              states: ["CA"],           description: "Los Angeles and Southern California", latRange: [-90, 36] },
   dallas:  { label: "Dallas–Fort Worth",        states: ["TX"],           description: "Dallas–Fort Worth and North Texas", latRange: [31.5, 90] },
   houston: { label: "Houston",                  states: ["TX"],           description: "Houston and Southeast Texas",       latRange: [-90, 31.5] },
   miami:   { label: "Miami",                    states: ["FL"],           description: "Miami and South Florida" },
   atlanta: { label: "Atlanta",                  states: ["GA"],           description: "Atlanta and Georgia" },
+  bayarea: { label: "San Francisco Bay Area",   states: ["CA"],           description: "the San Francisco Bay Area, Silicon Valley, and the East Bay", latRange: [36, 90] },
+  phoenix: { label: "Phoenix",                  states: ["AZ"],           description: "Phoenix, Scottsdale, Tempe, and Arizona" },
 };
 
 async function getBuffets(states: string[], latRange: [number, number] = [-90, 90]): Promise<Restaurant[]> {

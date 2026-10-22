@@ -18,6 +18,8 @@ const REGION_VIEW: Record<string, { center: { lat: number; lng: number }; zoom: 
   houston: { center: { lat: 29.72, lng: -95.50  }, zoom: 10 },
   miami:   { center: { lat: 25.85, lng: -80.25  }, zoom: 10 },
   atlanta: { center: { lat: 33.90, lng: -84.30  }, zoom: 10 },
+  bayarea: { center: { lat: 37.50, lng: -122.05 }, zoom: 9  },
+  phoenix: { center: { lat: 33.45, lng: -111.99 }, zoom: 10 },
 };
 
 const MAP_STYLE = [
