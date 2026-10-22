@@ -60,11 +60,11 @@ scraper/data/*.json  →  web/data/*.json  →  Neon DB (db:seed)  →  web + mo
 | Houston (`TX`) | top 20 | 8 |
 | Miami (`FL`) | top 20 | 6 |
 | Atlanta (`GA`) | top 20 | 3 |
-| Bay Area (`CA`) | top 20 | 5 |
+| Bay Area (`CA`) | 347 | 91 |
 | Phoenix (`AZ`) | top 20 | 5 |
-| **Total** | | **502** |
+| **Total** | | **588** |
 
-> LA/Dallas/Houston/Miami/Atlanta/Bay Area/Phoenix are **top-20 samples** (ranked by `rating × ln(reviews)`), not full grid scrapes. Dallas/Houston share `state=TX` (split at lat 31.5°) and LA/Bay Area share `state=CA` (split at lat 36°); the API, region pages and restaurant pages split them by latitude.
+> LA/Dallas/Houston/Miami/Atlanta/Phoenix are **top-20 samples** (ranked by `rating × ln(reviews)`), not full grid scrapes (Bay Area is a full 34-point grid scrape). Dallas/Houston share `state=TX` (split at lat 31.5°) and LA/Bay Area share `state=CA` (split at lat 36°); the API, region pages and restaurant pages split them by latitude.
 
 ### Adding a new region
 1. Add location grid to `scraper/locations.py` → `STATE_MAP`
@@ -336,6 +336,6 @@ Tools: `scrape_buffets`, `get_buffet_results`, `check_scrape_status`
 - [ ] Google/Apple Sign In via Clerk (Vercel Marketplace) — sync "Been Here" across devices
 - [ ] AdMob ads (free app monetization) — requires `react-native-google-mobile-ads` + ATT consent
 - [ ] Android app (Google Play) — Expo already configured for Android, just needs Play Console setup
-- [ ] Expand to more cities (Austin, Las Vegas, San Diego next — Chicago/Philly/NJ/Seattle done; LA/Dallas/Houston/Miami/Atlanta are top-20 samples, could get full grid scrapes)
+- [ ] Expand to more cities (Austin, Las Vegas, San Diego next — Chicago/Philly/NJ/Seattle done; LA/Dallas/Houston/Miami/Atlanta/Phoenix are top-20 samples, could get full grid scrapes like the Bay Area)
 - [ ] Admin dashboard to review/approve user submissions
 - [ ] Weekly email digest of new buffets

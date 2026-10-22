@@ -354,12 +354,45 @@ ATLANTA = [
 ]
 
 BAY_AREA = [
-    {"name": "Fremont",              "lat": 37.5485, "lng": -121.9886},
-    {"name": "Sunnyvale",            "lat": 37.3688, "lng": -122.0363},
+    # South Bay / Silicon Valley — largest Indian community in the region
     {"name": "San Jose",             "lat": 37.3382, "lng": -121.8863},
+    {"name": "Santa Clara",          "lat": 37.3541, "lng": -121.9552},
+    {"name": "Sunnyvale",            "lat": 37.3688, "lng": -122.0363},
+    {"name": "Cupertino",            "lat": 37.3230, "lng": -122.0322},
+    {"name": "Mountain View",        "lat": 37.3861, "lng": -122.0839},
     {"name": "Milpitas",             "lat": 37.4323, "lng": -121.8996},
-    {"name": "Dublin / Pleasanton",  "lat": 37.7022, "lng": -121.9358},
+    {"name": "Campbell",             "lat": 37.2872, "lng": -121.9500},
+    {"name": "Los Gatos",            "lat": 37.2358, "lng": -121.9624},
+    {"name": "East San Jose",        "lat": 37.3300, "lng": -121.7900},
+    {"name": "South San Jose",       "lat": 37.2500, "lng": -121.8600},
+    {"name": "Morgan Hill",          "lat": 37.1305, "lng": -121.6544},
+    # Peninsula
+    {"name": "Palo Alto",            "lat": 37.4419, "lng": -122.1430},
+    {"name": "Redwood City",         "lat": 37.4852, "lng": -122.2364},
+    {"name": "San Mateo",            "lat": 37.5630, "lng": -122.3255},
+    {"name": "South San Francisco",  "lat": 37.6547, "lng": -122.4077},
+    {"name": "Daly City",            "lat": 37.6879, "lng": -122.4702},
+    # San Francisco
     {"name": "San Francisco",        "lat": 37.7749, "lng": -122.4194},
+    # East Bay — Fremont/Tri-Valley are big Indian hubs
+    {"name": "Fremont",              "lat": 37.5485, "lng": -121.9886},
+    {"name": "Union City",           "lat": 37.5934, "lng": -122.0439},
+    {"name": "Hayward",              "lat": 37.6688, "lng": -122.0808},
+    {"name": "San Leandro",          "lat": 37.7249, "lng": -122.1561},
+    {"name": "Oakland",              "lat": 37.8044, "lng": -122.2712},
+    {"name": "Berkeley",             "lat": 37.8715, "lng": -122.2730},
+    {"name": "Richmond",             "lat": 37.9358, "lng": -122.3478},
+    {"name": "Dublin",               "lat": 37.7022, "lng": -121.9358},
+    {"name": "Pleasanton",           "lat": 37.6624, "lng": -121.8747},
+    {"name": "Livermore",            "lat": 37.6819, "lng": -121.7680},
+    {"name": "San Ramon",            "lat": 37.7799, "lng": -121.9780},
+    {"name": "Walnut Creek",         "lat": 37.9101, "lng": -122.0652},
+    {"name": "Concord",              "lat": 37.9780, "lng": -122.0311},
+    {"name": "Antioch",              "lat": 38.0049, "lng": -121.8058},
+    # North Bay
+    {"name": "San Rafael",           "lat": 37.9735, "lng": -122.5311},
+    {"name": "Novato",               "lat": 38.1074, "lng": -122.5697},
+    {"name": "Vallejo",              "lat": 38.1041, "lng": -122.2566},
 ]
 
 PHOENIX = [
