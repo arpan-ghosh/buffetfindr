@@ -2,7 +2,7 @@
 
 ## Project overview
 
-BuffetFindr finds Indian (and South Asian) buffet restaurants near users across the DMV, Boston, NYC, Philadelphia, New Jersey, Chicago, and Seattle.
+BuffetFindr finds Indian (and South Asian) buffet restaurants near users across the DMV, Boston, NYC, Philadelphia, New Jersey, Chicago, Seattle, Los Angeles, Dallas, Houston, Miami, and Atlanta.
 
 **Domains**: `buffetfindr.com` (primary), `indianbuffetfinder.com` (redirect/SEO)
 **GitHub**: `github.com/arpan-ghosh/buffetfindr` (public)
@@ -55,7 +55,14 @@ scraper/data/*.json  →  web/data/*.json  →  Neon DB (db:seed)  →  web + mo
 | New Jersey (`NJ`) | 321 | 94 |
 | Illinois (`IL`) | 177 | 47 |
 | Washington (`WA`) | 136 | 30 |
-| **Total** | | **458** |
+| Los Angeles (`CA`) | top 20 | 8 |
+| Dallas (`TX`) | top 20 | 9 |
+| Houston (`TX`) | top 20 | 8 |
+| Miami (`FL`) | top 20 | 6 |
+| Atlanta (`GA`) | top 20 | 3 |
+| **Total** | | **492** |
+
+> LA/Dallas/Houston/Miami/Atlanta are **top-20 samples** (ranked by `rating × ln(reviews)`), not full grid scrapes. Dallas and Houston are both `state=TX`; the API/region pages split them by latitude (Dallas ≥ 31.5°, Houston < 31.5°).
 
 ### Adding a new region
 1. Add location grid to `scraper/locations.py` → `STATE_MAP`
@@ -81,8 +88,15 @@ scraper/data/*.json  →  web/data/*.json  →  Neon DB (db:seed)  →  web + mo
 cd scraper
 python3 main.py --state maryland
 # valid states: maryland / virginia / dc / massachusetts / new_york /
-#               philadelphia / new_jersey / illinois / washington / all
+#               philadelphia / new_jersey / illinois / washington /
+#               los_angeles / dallas / houston / miami / atlanta / all
 ```
+
+### Top-N metro scan (new cities, cheap)
+```bash
+python3 main.py --state houston --top 20   # search-only, rank by prominence, details+scoring for top 20
+```
+Then `cp data/{m}_raw.json ../web/data/{m}_all.json && cp data/{m}_buffets.json ../web/data/`, and `cd web && npm run db:seed -- {m}` (seed accepts state names to limit what it upserts).
 
 ### Pipeline script (multi-state)
 ```bash
@@ -161,6 +175,11 @@ vercel --prod   # deploys from current working tree, no token needed (auth store
 | NJ | NJ |
 | Chicago | IL |
 | Seattle | WA |
+| LA | CA |
+| Dallas | TX (lat ≥ 31.5) |
+| Houston | TX (lat < 31.5) |
+| Miami | FL |
+| Atlanta | GA |
 
 ### Key files
 | File | Purpose |
@@ -313,6 +332,6 @@ Tools: `scrape_buffets`, `get_buffet_results`, `check_scrape_status`
 - [ ] Google/Apple Sign In via Clerk (Vercel Marketplace) — sync "Been Here" across devices
 - [ ] AdMob ads (free app monetization) — requires `react-native-google-mobile-ads` + ATT consent
 - [ ] Android app (Google Play) — Expo already configured for Android, just needs Play Console setup
-- [ ] Expand to more cities (Bay Area, Houston, Atlanta next — Chicago/Philly/NJ/Seattle done)
+- [ ] Expand to more cities (Bay Area, Phoenix, Austin next — Chicago/Philly/NJ/Seattle done; LA/Dallas/Houston/Miami/Atlanta are top-20 samples, could get full grid scrapes)
 - [ ] Admin dashboard to review/approve user submissions
 - [ ] Weekly email digest of new buffets

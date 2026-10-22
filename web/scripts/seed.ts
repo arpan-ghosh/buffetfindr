@@ -1,7 +1,8 @@
 /**
  * Seed the Neon database from scraped JSON files.
  * Run after setting DATABASE_URL:
- *   npm run db:seed
+ *   npm run db:seed                  # all states
+ *   npm run db:seed -- houston miami # only these states
  */
 
 import * as fs from "fs";
@@ -66,7 +67,10 @@ async function seedFile(file: string, label: string, total: { n: number }) {
 }
 
 async function seed() {
-  const states = ["maryland", "virginia", "dc", "massachusetts", "new_york", "philadelphia", "new_jersey", "illinois", "washington"];
+  const all = ["maryland", "virginia", "dc", "massachusetts", "new_york", "philadelphia", "new_jersey", "illinois", "washington", "los_angeles", "dallas", "houston", "miami", "atlanta"];
+  // Optional: `npm run db:seed -- houston dallas` seeds only those states
+  const only = process.argv.slice(2);
+  const states = only.length ? all.filter(s => only.includes(s)) : all;
   const total = { n: 0 };
 
   // Seed all Indian restaurants first, then buffets (buffets win on conflict)

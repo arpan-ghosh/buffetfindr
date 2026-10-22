@@ -14,11 +14,22 @@ const REGION_STATES: Record<string, string[]> = {
   nj:      ["NJ"],
   chicago: ["IL"],
   seattle: ["WA"],
+  la:      ["CA"],
+  dallas:  ["TX"],
+  houston: ["TX"],
+  miami:   ["FL"],
+  atlanta: ["GA"],
+};
+
+// Dallas and Houston are both TX — split them by latitude (Dallas ≈ 32.8, Houston ≈ 29.8)
+const REGION_LAT_RANGE: Record<string, [number, number]> = {
+  dallas:  [31.5, 90],
+  houston: [-90, 31.5],
 };
 
 // JSON file names per region
 const REGION_FILES: Record<string, string[]> = {
-  all:     ["maryland", "virginia", "dc", "massachusetts", "new_york", "philadelphia", "new_jersey", "illinois", "washington"],
+  all:     ["maryland", "virginia", "dc", "massachusetts", "new_york", "philadelphia", "new_jersey", "illinois", "washington", "los_angeles", "dallas", "houston", "miami", "atlanta"],
   dmv:     ["maryland", "virginia", "dc"],
   boston:  ["massachusetts"],
   nyc:     ["new_york"],
@@ -26,10 +37,20 @@ const REGION_FILES: Record<string, string[]> = {
   nj:      ["new_jersey"],
   chicago: ["illinois"],
   seattle: ["washington"],
+  la:      ["los_angeles"],
+  dallas:  ["dallas"],
+  houston: ["houston"],
+  miami:   ["miami"],
+  atlanta: ["atlanta"],
 };
 
 function statesForRegion(region: string): string[] | null {
   return region === "all" ? null : (REGION_STATES[region] ?? [region.toUpperCase()]);
+}
+
+function inRegionLat(r: Restaurant, region: string): boolean {
+  const range = REGION_LAT_RANGE[region];
+  return !range || (r.lat != null && r.lat >= range[0] && r.lat < range[1]);
 }
 
 // ── DB path (Neon) ────────────────────────────────────────────────────────────
@@ -53,7 +74,7 @@ async function dbQuery(params: {
 
   const allowedStates = statesForRegion(params.state);
   if (allowedStates)
-    restaurants = restaurants.filter(r => allowedStates.includes(r.state?.toUpperCase() ?? ""));
+    restaurants = restaurants.filter(r => allowedStates.includes(r.state?.toUpperCase() ?? "") && inRegionLat(r, params.state));
   if (params.buffetsOnly && params.minScore > 0)
     restaurants = restaurants.filter(r => (r.buffet_score ?? 0) >= params.minScore);
   if (params.confidence)
@@ -95,6 +116,7 @@ function fileQuery(params: {
 
   const seen = new Set<string>();
   restaurants = restaurants.filter(r => { if (seen.has(r.place_id)) return false; seen.add(r.place_id); return true; });
+  restaurants = restaurants.filter(r => inRegionLat(r, params.state));
   if (params.buffetsOnly)
     restaurants = restaurants.filter(r => r.buffet_score >= params.minScore);
   restaurants = restaurants

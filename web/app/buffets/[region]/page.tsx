@@ -8,7 +8,7 @@ import { cityFromAddress } from "@/lib/utils";
 
 export const revalidate = 86400;
 
-const REGIONS: Record<string, { label: string; states: string[]; description: string }> = {
+const REGIONS: Record<string, { label: string; states: string[]; description: string; latRange?: [number, number] }> = {
   dmv:     { label: "DC, Maryland & Virginia", states: ["DC","MD","VA"], description: "Washington DC, Maryland, and Northern Virginia" },
   boston:  { label: "Boston",                  states: ["MA"],           description: "Greater Boston and Massachusetts" },
   nyc:     { label: "New York City",            states: ["NY"],           description: "New York City and surrounding areas" },
@@ -16,13 +16,19 @@ const REGIONS: Record<string, { label: string; states: string[]; description: st
   nj:      { label: "New Jersey",               states: ["NJ"],           description: "New Jersey" },
   chicago: { label: "Chicago",                  states: ["IL"],           description: "Chicago and Illinois" },
   seattle: { label: "Seattle",                  states: ["WA"],           description: "Seattle and Washington State" },
+  la:      { label: "Los Angeles",              states: ["CA"],           description: "Los Angeles and Southern California" },
+  dallas:  { label: "Dallas–Fort Worth",        states: ["TX"],           description: "Dallas–Fort Worth and North Texas", latRange: [31.5, 90] },
+  houston: { label: "Houston",                  states: ["TX"],           description: "Houston and Southeast Texas",       latRange: [-90, 31.5] },
+  miami:   { label: "Miami",                    states: ["FL"],           description: "Miami and South Florida" },
+  atlanta: { label: "Atlanta",                  states: ["GA"],           description: "Atlanta and Georgia" },
 };
 
-async function getBuffets(states: string[]): Promise<Restaurant[]> {
+async function getBuffets(states: string[], latRange: [number, number] = [-90, 90]): Promise<Restaurant[]> {
   const sql = neon(process.env.DATABASE_URL!);
   const rows = await sql`
     SELECT * FROM restaurants
     WHERE is_buffet = true AND state = ANY(${states}::text[])
+      AND lat >= ${latRange[0]} AND lat < ${latRange[1]}
     ORDER BY buffet_score DESC
   `;
   return rows as unknown as Restaurant[];
@@ -48,7 +54,7 @@ export default async function RegionPage({ params }: { params: Promise<{ region:
   const config = REGIONS[region];
   if (!config) notFound();
 
-  const buffets = await getBuffets(config.states);
+  const buffets = await getBuffets(config.states, config.latRange);
 
   return (
     <div className="min-h-dvh bg-[var(--bg)] font-[family-name:var(--font-geist-sans)]">

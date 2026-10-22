@@ -312,6 +312,47 @@ WASHINGTON = [
     {"name": "Covington",            "lat": 47.3590, "lng": -122.1171},
 ]
 
+# ── Top-10 metro expansion ────────────────────────────────────────────────────
+# Few anchor points per metro, chosen at South Asian dining clusters.
+# Used with `main.py --top 20` (rank by prominence, detail-fetch only the finalists).
+
+LOS_ANGELES = [
+    {"name": "Artesia / Cerritos",   "lat": 33.8658, "lng": -118.0831},  # Little India
+    {"name": "Central LA",           "lat": 34.0522, "lng": -118.2437},
+    {"name": "Irvine",               "lat": 33.6846, "lng": -117.8265},
+    {"name": "Pasadena",             "lat": 34.1478, "lng": -118.1445},
+    {"name": "San Fernando Valley",  "lat": 34.2381, "lng": -118.5301},
+]
+
+DALLAS = [
+    {"name": "Irving",               "lat": 32.8140, "lng": -96.9489},
+    {"name": "Plano",                "lat": 33.0198, "lng": -96.6989},
+    {"name": "Frisco",               "lat": 33.1507, "lng": -96.8236},
+    {"name": "Dallas",               "lat": 32.7767, "lng": -96.7970},
+]
+
+HOUSTON = [
+    {"name": "Hillcroft",            "lat": 29.7066, "lng": -95.5159},  # Little India
+    {"name": "Sugar Land",           "lat": 29.5997, "lng": -95.6349},
+    {"name": "Katy",                 "lat": 29.7858, "lng": -95.8244},
+    {"name": "Houston",              "lat": 29.7604, "lng": -95.3698},
+]
+
+MIAMI = [
+    {"name": "Miami",                "lat": 25.7617, "lng": -80.1918},
+    {"name": "Doral",                "lat": 25.8195, "lng": -80.3553},
+    {"name": "Kendall",              "lat": 25.6793, "lng": -80.3173},
+    {"name": "Davie / Fort Lauderdale", "lat": 26.0765, "lng": -80.2521},
+]
+
+ATLANTA = [
+    {"name": "Decatur",              "lat": 33.7748, "lng": -84.2963},
+    {"name": "Duluth",               "lat": 34.0029, "lng": -84.1446},
+    {"name": "Alpharetta",           "lat": 34.0754, "lng": -84.2941},
+    {"name": "Midtown Atlanta",      "lat": 33.7838, "lng": -84.3830},
+    {"name": "Marietta",             "lat": 33.9526, "lng": -84.5499},
+]
+
 STATE_MAP = {
     "maryland":      {"locations": MARYLAND,      "abbr": "MD"},
     "virginia":      {"locations": VIRGINIA,      "abbr": "VA"},
@@ -322,4 +363,9 @@ STATE_MAP = {
     "new_jersey":    {"locations": NEW_JERSEY,    "abbr": "NJ"},
     "illinois":      {"locations": ILLINOIS,      "abbr": "IL"},
     "washington":    {"locations": WASHINGTON,    "abbr": "WA"},
+    "los_angeles":   {"locations": LOS_ANGELES,   "abbr": "CA"},
+    "dallas":        {"locations": DALLAS,        "abbr": "TX"},
+    "houston":       {"locations": HOUSTON,       "abbr": "TX"},
+    "miami":         {"locations": MIAMI,         "abbr": "FL"},
+    "atlanta":       {"locations": ATLANTA,       "abbr": "GA"},
 }

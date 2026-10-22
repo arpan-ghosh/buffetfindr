@@ -20,6 +20,11 @@ const REGIONS = [
   { value: "nj",      label: "NJ"      },
   { value: "chicago", label: "Chicago" },
   { value: "seattle", label: "Seattle" },
+  { value: "la",      label: "LA"      },
+  { value: "dallas",  label: "Dallas"  },
+  { value: "houston", label: "Houston" },
+  { value: "miami",   label: "Miami"   },
+  { value: "atlanta", label: "Atlanta" },
 ];
 
 const CONFIDENCE = [

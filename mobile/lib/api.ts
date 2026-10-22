@@ -61,4 +61,9 @@ export const REGION_VIEW: Record<string, { lat: number; lng: number; delta: numb
   nj:      { lat: 40.45, lng: -74.35,  delta: 1.2 },
   chicago: { lat: 41.95, lng: -87.78,  delta: 1.0 },
   seattle: { lat: 47.62, lng: -122.20, delta: 1.0 },
+  la:      { lat: 33.95, lng: -118.10, delta: 1.2 },
+  dallas:  { lat: 32.92, lng: -96.85,  delta: 0.9 },
+  houston: { lat: 29.72, lng: -95.50,  delta: 0.9 },
+  miami:   { lat: 25.85, lng: -80.25,  delta: 0.8 },
+  atlanta: { lat: 33.90, lng: -84.30,  delta: 0.9 },
 };

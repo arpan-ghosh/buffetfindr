@@ -13,6 +13,11 @@ const REGION_VIEW: Record<string, { center: { lat: number; lng: number }; zoom: 
   nj:      { center: { lat: 40.45, lng: -74.35 }, zoom: 10 },
   chicago: { center: { lat: 41.95, lng: -87.78 }, zoom: 10 },
   seattle: { center: { lat: 47.62, lng: -122.20 }, zoom: 10 },
+  la:      { center: { lat: 33.95, lng: -118.10 }, zoom: 9  },
+  dallas:  { center: { lat: 32.92, lng: -96.85  }, zoom: 10 },
+  houston: { center: { lat: 29.72, lng: -95.50  }, zoom: 10 },
+  miami:   { center: { lat: 25.85, lng: -80.25  }, zoom: 10 },
+  atlanta: { center: { lat: 33.90, lng: -84.30  }, zoom: 10 },
 };
 
 const MAP_STYLE = [

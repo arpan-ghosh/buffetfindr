@@ -10,6 +10,7 @@ logger = logging.getLogger(__name__)
 BASE = "https://places.googleapis.com/v1/places"
 
 SEARCH_FIELDS = "places.id,places.displayName,places.formattedAddress,places.types,places.businessStatus"
+SEARCH_FIELDS_RANKED = SEARCH_FIELDS + ",places.rating,places.userRatingCount"
 
 DETAIL_FIELDS = ",".join([
     "id",
@@ -30,13 +31,13 @@ DETAIL_FIELDS = ",".join([
 ])
 
 
-def text_search(query: str, location: dict, radius: int, api_key: str, page_token: Optional[str] = None) -> dict:
+def text_search(query: str, location: dict, radius: int, api_key: str, page_token: Optional[str] = None, field_mask: str = SEARCH_FIELDS) -> dict:
     if page_token:
         time.sleep(2)
 
     headers = {
         "X-Goog-Api-Key": api_key,
-        "X-Goog-FieldMask": SEARCH_FIELDS,
+        "X-Goog-FieldMask": field_mask,
         "Content-Type": "application/json",
     }
     body = {
