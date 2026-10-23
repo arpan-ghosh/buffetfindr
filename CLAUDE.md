@@ -164,11 +164,13 @@ npm run db:seed       # upsert all web/data/*.json into Neon
 ```
 
 ### Deployment
+The Vercel project's **Root Directory is `web`**, so `git push` to `main` auto-builds and deploys the *committed* tree. Commit before you expect something to ship.
+
 ```bash
-cd web
-vercel --prod   # deploys from current working tree, no token needed (auth stored locally)
+# from the REPO ROOT (not web/ — the CLI would look for web/web)
+vercel --prod   # deploys the current working tree, no token needed (auth stored locally)
 ```
-`git push` to `main` *should* trigger GitHub auto-deploy but it is unreliable — always verify with `vercel ls` or just run `vercel --prod` directly to be certain.
+Check results with `vercel ls`; a failed Git build shows as `Error` there with the cause in `vercel inspect <url> --logs`.
 
 ### Region filters (UI → API mapping)
 | Filter label | States queried |
@@ -331,7 +333,7 @@ Tools: `scrape_buffets`, `get_buffet_results`, `check_scrape_status`
 - **Weekend-only buffets score low**: Sunday-only buffets get few review mentions → score 15–25 (below 30 threshold). Add to override file.
 - **Verified overrides**: The Mint Room (Ellicott City MD, `ChIJcaSB9fEhyIkR_s8lKKOY6rw`) and Biryani Joint (Burtonsville MD) are in `known_buffets_override.json`.
 - **React peer dep conflict**: `react@19.1.0` vs `react-dom@19.2.6` — resolved via `.npmrc` `legacy-peer-deps=true`.
-- **GitHub auto-deploy unreliable**: `git push` to `main` doesn't always trigger Vercel. Run `cd web && vercel --prod` to guarantee deployment.
+- **Git builds failed until Oct 2026**: the project Root Directory was `.` while the app lives in `web/`, so every Git-triggered build errored (`Couldn't find any pages or app directory`) while `cd web && vercel --prod` worked. Root Directory is now `web`; deploy the CLI from the repo root.
 - **Photo proxy `no-store`**: Cache-Control is intentionally `no-store`. Using `public` caused Vercel CDN to cache broken responses that survived proxy fixes. Don't change it back.
 - **`npm run build` in web/**: NEVER run locally. Corrupts dev server cache. Delete `.next/` + restart if accidentally run.
 
