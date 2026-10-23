@@ -55,8 +55,8 @@ scraper/data/*.json  →  web/data/*.json  →  Neon DB (db:seed)  →  web + mo
 | New Jersey (`NJ`) | 321 | 94 |
 | Illinois (`IL`) | 177 | 47 |
 | Washington (`WA`) | 136 | 30 |
-| Los Angeles (`CA`) | top 20 | 8 |
-| Dallas (`TX`) | top 20 | 9 |
+| Los Angeles (`CA`) | 271 | 85 |
+| Dallas (`TX`) | 210 | 53 |
 | Houston (`TX`) | top 20 | 8 |
 | Miami (`FL`) | top 20 | 6 |
 | Atlanta (`GA`) | top 20 | 3 |
@@ -65,9 +65,9 @@ scraper/data/*.json  →  web/data/*.json  →  Neon DB (db:seed)  →  web + mo
 | Columbus (`OH`) | top 20 | 11 |
 | Cincinnati (`OH`/`KY`) | top 20 | 6 |
 | Cleveland (`OH`) | top 20 | 7 |
-| **Total** | | **612** |
+| **Total** | | **704** |
 
-> LA/Dallas/Houston/Miami/Atlanta/Phoenix/Columbus/Cincinnati/Cleveland are **top-20 samples** (ranked by `rating × ln(reviews)`), not full grid scrapes (Bay Area is a full 34-point grid scrape). Dallas/Houston share `state=TX` (split at lat 31.5°) and LA/Bay Area share `state=CA` (split at lat 36°), Columbus/Cincinnati/Cleveland share `state=OH` (split at lat 39.6° and 40.8°; Cincinnati also includes N. Kentucky, `state=KY`, taken from each address); the API, region pages and restaurant pages split them by latitude.
+> Houston/Miami/Atlanta/Phoenix/Columbus/Cincinnati/Cleveland are **top-20 samples** (ranked by `rating × ln(reviews)`), not full grid scrapes. Bay Area (34 points), LA (35) and Dallas–Fort Worth (24) are full grid scrapes; LA/Dallas were merged with their earlier top-20 pass (higher buffet score wins) because a grid scan records a place under whichever query found it first and so can miss the "found via Indian buffet" +20 bonus. Dallas/Houston share `state=TX` (split at lat 31.5°) and LA/Bay Area share `state=CA` (split at lat 36°), Columbus/Cincinnati/Cleveland share `state=OH` (split at lat 39.6° and 40.8°; Cincinnati also includes N. Kentucky, `state=KY`, taken from each address); the API, region pages and restaurant pages split them by latitude.
 
 ### Adding a new region
 1. Add location grid to `scraper/locations.py` → `STATE_MAP`
@@ -345,6 +345,6 @@ Tools: `scrape_buffets`, `get_buffet_results`, `check_scrape_status`
 - [ ] Google/Apple Sign In via Clerk (Vercel Marketplace) — sync "Been Here" across devices
 - [ ] AdMob ads (free app monetization) — requires `react-native-google-mobile-ads` + ATT consent
 - [ ] Android app (Google Play) — Expo already configured for Android, just needs Play Console setup
-- [ ] Expand to more cities (Austin, Las Vegas, San Diego next — Chicago/Philly/NJ/Seattle done; LA/Dallas/Houston/Miami/Atlanta/Phoenix/Columbus/Cincinnati/Cleveland are top-20 samples, could get full grid scrapes like the Bay Area)
+- [ ] Expand to more cities (Austin, Las Vegas, San Diego next — Chicago/Philly/NJ/Seattle done; Houston/Miami/Atlanta/Phoenix/Columbus/Cincinnati/Cleveland are top-20 samples, could get full grid scrapes like the Bay Area/LA/Dallas)
 - [ ] Admin dashboard to review/approve user submissions
 - [ ] Weekly email digest of new buffets

@@ -317,18 +317,76 @@ WASHINGTON = [
 # Used with `main.py --top 20` (rank by prominence, detail-fetch only the finalists).
 
 LOS_ANGELES = [
-    {"name": "Artesia / Cerritos",   "lat": 33.8658, "lng": -118.0831},  # Little India
-    {"name": "Central LA",           "lat": 34.0522, "lng": -118.2437},
-    {"name": "Irvine",               "lat": 33.6846, "lng": -117.8265},
+    # Central / Westside
+    {"name": "Downtown LA",          "lat": 34.0522, "lng": -118.2437},
+    {"name": "Hollywood",            "lat": 34.0928, "lng": -118.3287},
+    {"name": "Koreatown",            "lat": 34.0617, "lng": -118.3000},
+    {"name": "Santa Monica",         "lat": 34.0195, "lng": -118.4912},
+    {"name": "Culver City",          "lat": 34.0211, "lng": -118.3965},
+    # San Fernando Valley
+    {"name": "Burbank",              "lat": 34.1808, "lng": -118.3090},
+    {"name": "Glendale",             "lat": 34.1425, "lng": -118.2551},
+    {"name": "Sherman Oaks",         "lat": 34.1508, "lng": -118.4489},
+    {"name": "Northridge",           "lat": 34.2283, "lng": -118.5368},
+    {"name": "Woodland Hills",       "lat": 34.1684, "lng": -118.6059},
+    {"name": "Santa Clarita",        "lat": 34.3917, "lng": -118.5426},
+    {"name": "Thousand Oaks",        "lat": 34.1706, "lng": -118.8376},
+    # San Gabriel Valley
     {"name": "Pasadena",             "lat": 34.1478, "lng": -118.1445},
-    {"name": "San Fernando Valley",  "lat": 34.2381, "lng": -118.5301},
+    {"name": "Alhambra",             "lat": 34.0953, "lng": -118.1270},
+    {"name": "El Monte",             "lat": 34.0686, "lng": -118.0276},
+    {"name": "West Covina",          "lat": 34.0686, "lng": -117.9390},
+    {"name": "Diamond Bar",          "lat": 34.0286, "lng": -117.8103},
+    {"name": "Pomona",               "lat": 34.0551, "lng": -117.7500},
+    # South Bay / Southeast LA — Artesia/Cerritos is Little India
+    {"name": "Torrance",             "lat": 33.8358, "lng": -118.3406},
+    {"name": "Hawthorne / Lawndale", "lat": 33.9164, "lng": -118.3526},
+    {"name": "Carson",               "lat": 33.8317, "lng": -118.2820},
+    {"name": "Long Beach",           "lat": 33.7701, "lng": -118.1937},
+    {"name": "Downey",               "lat": 33.9401, "lng": -118.1332},
+    {"name": "Whittier",             "lat": 33.9792, "lng": -118.0328},
+    {"name": "Artesia / Cerritos",   "lat": 33.8658, "lng": -118.0831},
+    # Orange County
+    {"name": "Fullerton",            "lat": 33.8704, "lng": -117.9243},
+    {"name": "Anaheim",              "lat": 33.8366, "lng": -117.9143},
+    {"name": "Garden Grove",         "lat": 33.7739, "lng": -117.9414},
+    {"name": "Huntington Beach",     "lat": 33.6603, "lng": -117.9992},
+    {"name": "Irvine",               "lat": 33.6846, "lng": -117.8265},
+    {"name": "Mission Viejo",        "lat": 33.6000, "lng": -117.6720},
+    # Inland Empire
+    {"name": "Chino Hills",          "lat": 33.9898, "lng": -117.7326},
+    {"name": "Ontario",              "lat": 34.0633, "lng": -117.6509},
+    {"name": "Rancho Cucamonga",     "lat": 34.1064, "lng": -117.5931},
+    {"name": "Riverside",            "lat": 33.9533, "lng": -117.3962},
 ]
 
 DALLAS = [
-    {"name": "Irving",               "lat": 32.8140, "lng": -96.9489},
-    {"name": "Plano",                "lat": 33.0198, "lng": -96.6989},
-    {"name": "Frisco",               "lat": 33.1507, "lng": -96.8236},
+    # Dallas core + north suburbs (Irving/Plano/Frisco are the Indian hubs)
     {"name": "Dallas",               "lat": 32.7767, "lng": -96.7970},
+    {"name": "North Dallas / Addison","lat": 32.9618, "lng": -96.8292},
+    {"name": "Irving",               "lat": 32.8140, "lng": -96.9489},
+    {"name": "Carrollton",           "lat": 32.9537, "lng": -96.8903},
+    {"name": "Coppell",              "lat": 32.9546, "lng": -97.0150},
+    {"name": "Richardson",           "lat": 32.9483, "lng": -96.7299},
+    {"name": "Garland",              "lat": 32.9126, "lng": -96.6389},
+    {"name": "Mesquite",             "lat": 32.7668, "lng": -96.5992},
+    {"name": "Plano",                "lat": 33.0198, "lng": -96.6989},
+    {"name": "Allen",                "lat": 33.1032, "lng": -96.6706},
+    {"name": "Frisco",               "lat": 33.1507, "lng": -96.8236},
+    {"name": "McKinney",             "lat": 33.1972, "lng": -96.6398},
+    {"name": "Wylie",                "lat": 33.0151, "lng": -96.5389},
+    {"name": "Rockwall",             "lat": 32.9312, "lng": -96.4597},
+    {"name": "Lewisville",           "lat": 33.0462, "lng": -96.9942},
+    {"name": "Flower Mound",         "lat": 33.0146, "lng": -97.0970},
+    {"name": "Denton",               "lat": 33.2148, "lng": -97.1331},
+    # Mid-cities + Fort Worth
+    {"name": "Grand Prairie",        "lat": 32.7460, "lng": -96.9978},
+    {"name": "Arlington",            "lat": 32.7357, "lng": -97.1081},
+    {"name": "Southlake",            "lat": 32.9412, "lng": -97.1342},
+    {"name": "Keller / N. Fort Worth","lat": 32.9343, "lng": -97.2517},
+    {"name": "Fort Worth",           "lat": 32.7555, "lng": -97.3308},
+    {"name": "Mansfield",            "lat": 32.5632, "lng": -97.1417},
+    {"name": "DeSoto / Lancaster",   "lat": 32.5900, "lng": -96.8570},
 ]
 
 HOUSTON = [
