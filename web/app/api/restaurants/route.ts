@@ -5,6 +5,11 @@ import type { Restaurant } from "@/lib/types";
 
 const USE_DB = !!process.env.DATABASE_URL;
 
+// Floor on results per request. The shipped iOS app (1.1.0) and the web page ask for
+// 500, which silently dropped the lowest-scoring buffets from the "All" view once the
+// dataset passed 500. Old app builds can only be fixed from here.
+const MIN_LIMIT = 1000;
+
 // Region → state abbreviations (matches what's stored in DB / JSON)
 const REGION_STATES: Record<string, string[]> = {
   dmv:     ["MD", "VA", "DC"],
@@ -154,7 +159,7 @@ export async function GET(req: NextRequest) {
     buffetsOnly: p.get("buffets_only") !== "false",
     confidence:  p.get("confidence")   ?? undefined,
     search:      p.get("search")?.toLowerCase() ?? undefined,
-    limit:       parseInt(p.get("limit") ?? "500"),
+    limit:       Math.max(parseInt(p.get("limit") ?? "") || 0, MIN_LIMIT),
   };
 
   const result = USE_DB ? await dbQuery(params) : fileQuery(params);
