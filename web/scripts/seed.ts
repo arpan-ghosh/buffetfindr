@@ -67,7 +67,7 @@ async function seedFile(file: string, label: string, total: { n: number }) {
 }
 
 async function seed() {
-  const all = ["maryland", "virginia", "dc", "massachusetts", "new_york", "philadelphia", "new_jersey", "illinois", "washington", "los_angeles", "dallas", "houston", "miami", "atlanta", "bay_area", "phoenix"];
+  const all = ["maryland", "virginia", "dc", "massachusetts", "new_york", "philadelphia", "new_jersey", "illinois", "washington", "los_angeles", "dallas", "houston", "miami", "atlanta", "bay_area", "phoenix", "columbus", "cincinnati"];
   // Optional: `npm run db:seed -- houston dallas` seeds only those states
   const only = process.argv.slice(2);
   const states = only.length ? all.filter(s => only.includes(s)) : all;

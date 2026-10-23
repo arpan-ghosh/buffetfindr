@@ -403,6 +403,25 @@ PHOENIX = [
     {"name": "Glendale / Peoria",    "lat": 33.5387, "lng": -112.1860},
 ]
 
+COLUMBUS = [
+    {"name": "Dublin",               "lat": 40.0992, "lng": -83.1141},
+    {"name": "Westerville",          "lat": 40.1262, "lng": -82.9291},
+    {"name": "Columbus",             "lat": 39.9612, "lng": -82.9988},
+    {"name": "Hilliard",             "lat": 40.0334, "lng": -83.1582},
+    {"name": "Gahanna",              "lat": 40.0192, "lng": -82.8794},
+    {"name": "Grove City",           "lat": 39.8814, "lng": -83.0930},
+    {"name": "Polaris",              "lat": 40.1856, "lng": -83.0080},
+]
+
+CINCINNATI = [
+    {"name": "Cincinnati",           "lat": 39.1031, "lng": -84.5120},
+    {"name": "West Chester",         "lat": 39.3320, "lng": -84.4108},
+    {"name": "Mason",                "lat": 39.3600, "lng": -84.3099},
+    {"name": "Blue Ash",             "lat": 39.2323, "lng": -84.3783},
+    {"name": "Fairfield",            "lat": 39.3453, "lng": -84.5603},
+    {"name": "Milford",              "lat": 39.1750, "lng": -84.2944},
+]
+
 STATE_MAP = {
     "maryland":      {"locations": MARYLAND,      "abbr": "MD"},
     "virginia":      {"locations": VIRGINIA,      "abbr": "VA"},
@@ -420,4 +439,6 @@ STATE_MAP = {
     "atlanta":       {"locations": ATLANTA,       "abbr": "GA"},
     "bay_area":      {"locations": BAY_AREA,      "abbr": "CA"},
     "phoenix":       {"locations": PHOENIX,       "abbr": "AZ"},
+    "columbus":      {"locations": COLUMBUS,      "abbr": "OH"},
+    "cincinnati":    {"locations": CINCINNATI,    "abbr": "OH"},
 }

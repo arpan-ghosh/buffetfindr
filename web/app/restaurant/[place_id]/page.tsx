@@ -28,20 +28,20 @@ function parseAddress(address: string) {
 const REGION_LABELS: Record<string, string> = {
   MD: "Maryland", VA: "Virginia", DC: "Washington DC", MA: "Massachusetts",
   NY: "New York",  PA: "Pennsylvania", NJ: "New Jersey", IL: "Illinois", WA: "Washington",
-  CA: "California", TX: "Texas", FL: "Florida", GA: "Georgia", AZ: "Arizona",
+  CA: "California", TX: "Texas", FL: "Florida", GA: "Georgia", AZ: "Arizona", OH: "Ohio", KY: "Kentucky",
 };
 
 const STATE_REGION: Record<string, string> = {
   MD: "dmv", VA: "dmv", DC: "dmv", MA: "boston", NY: "nyc",
   PA: "philly", NJ: "nj", IL: "chicago", WA: "seattle",
-  FL: "miami", GA: "atlanta", AZ: "phoenix",
+  FL: "miami", GA: "atlanta", AZ: "phoenix", KY: "cincinnati",
 };
 
 const REGION_NAMES: Record<string, string> = {
   dmv: "DMV Area", boston: "Boston", nyc: "NYC", philly: "Philly",
   nj: "New Jersey", chicago: "Chicago", seattle: "Seattle",
   la: "Los Angeles", dallas: "Dallas", houston: "Houston", miami: "Miami", atlanta: "Atlanta",
-  bayarea: "Bay Area", phoenix: "Phoenix",
+  bayarea: "Bay Area", phoenix: "Phoenix", columbus: "Columbus", cincinnati: "Cincinnati",
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ place_id: string }> }): Promise<Metadata> {
@@ -72,9 +72,10 @@ export default async function RestaurantPage({ params }: { params: Promise<{ pla
   if (!r) notFound();
 
   const city      = cityFromAddress(r.address ?? "");
-  // TX and CA each hold two metros — split on latitude (Dallas ≈ 32.8 / Houston ≈ 29.8, Bay Area ≈ 37.5 / LA ≈ 34)
+  // TX, CA and OH each hold two metros — split on latitude (Dallas ≈ 32.8 / Houston ≈ 29.8, Bay Area ≈ 37.5 / LA ≈ 34, Columbus ≈ 40.0 / Cincinnati ≈ 39.1)
   const region    = r.state === "TX" ? (r.lat >= 31.5 ? "dallas" : "houston")
                   : r.state === "CA" ? (r.lat >= 36 ? "bayarea" : "la")
+                  : r.state === "OH" ? (r.lat >= 39.6 ? "columbus" : "cincinnati")
                   : STATE_REGION[r.state];
   const open      = isOpenNow(r);
   const addr      = parseAddress(r.address ?? "");

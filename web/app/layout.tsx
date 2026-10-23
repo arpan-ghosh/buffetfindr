@@ -7,7 +7,7 @@ const geist = Geist({ subsets: ["latin"], variable: "--font-geist-sans" });
 
 export const metadata: Metadata = {
   title: "BuffetFindr — Find Indian Buffets Near You",
-  description: "Find every Indian buffet restaurant in DC, Maryland, Virginia, Boston, NYC, Philadelphia, New Jersey, Chicago, Seattle, Los Angeles, Dallas, Houston, Miami, Atlanta, the Bay Area, and Phoenix. Lunch and dinner buffets with hours, ratings, and directions.",
+  description: "Find every Indian buffet restaurant in DC, Maryland, Virginia, Boston, NYC, Philadelphia, New Jersey, Chicago, Seattle, Los Angeles, Dallas, Houston, Miami, Atlanta, the Bay Area, Phoenix, Columbus, and Cincinnati. Lunch and dinner buffets with hours, ratings, and directions.",
   keywords: ["indian buffet", "indian buffet near me", "indian restaurant buffet", "DMV", "DC", "Maryland", "Virginia", "Boston", "NYC", "lunch buffet", "dinner buffet"],
   icons: {
     icon: "/favicon.png",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "BuffetFindr — Find Indian Buffets Near You",
-    description: "Find every Indian buffet restaurant in DC, Maryland, Virginia, Boston, NYC, Philadelphia, New Jersey, Chicago, Seattle, Los Angeles, Dallas, Houston, Miami, Atlanta, the Bay Area, and Phoenix.",
+    description: "Find every Indian buffet restaurant in DC, Maryland, Virginia, Boston, NYC, Philadelphia, New Jersey, Chicago, Seattle, Los Angeles, Dallas, Houston, Miami, Atlanta, the Bay Area, Phoenix, Columbus, and Cincinnati.",
     url: "https://www.buffetfindr.com",
     siteName: "BuffetFindr",
     images: [{ url: "https://www.buffetfindr.com/icon.png", width: 1024, height: 1024 }],
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary",
     title: "BuffetFindr — Find Indian Buffets Near You",
-    description: "Find every Indian buffet restaurant across DC, MD, VA, Boston, NYC, Philly, NJ, Chicago, Seattle, Los Angeles, Dallas, Houston, Miami, Atlanta, the Bay Area, and Phoenix.",
+    description: "Find every Indian buffet restaurant across DC, MD, VA, Boston, NYC, Philly, NJ, Chicago, Seattle, Los Angeles, Dallas, Houston, Miami, Atlanta, the Bay Area, Phoenix, Columbus, and Cincinnati.",
     images: ["https://www.buffetfindr.com/icon.png"],
   },
   alternates: { canonical: "https://www.buffetfindr.com" },

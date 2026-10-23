@@ -15,6 +15,7 @@ import json
 import logging
 import math
 import os
+import re
 import time
 from datetime import datetime
 from pathlib import Path
@@ -281,6 +282,12 @@ def _is_south_asian(place: Dict) -> bool:
     return any(h in name for h in SOUTH_ASIAN_NAME_HINTS)
 
 
+def _state_from_address(address: str, default: str) -> str:
+    """Metros can straddle a state line (e.g. Cincinnati/N. Kentucky) — trust the address."""
+    m = re.search(r", ([A-Z]{2}) \d{5}", address)
+    return m.group(1) if m else default
+
+
 def scrape_top(state_key: str, top_n: int, overrides: Dict[str, Dict]) -> List[Dict]:
     """
     Cheap metro scan: search only, rank candidates by prominence
@@ -377,7 +384,7 @@ def scrape_top(state_key: str, top_n: int, overrides: Dict[str, Dict]) -> List[D
             "buffet_confidence": scorer.confidence_label(score),
             "buffet_evidence":   evidence,
             "is_buffet":         is_buffet,
-            "state":             state_abbr,
+            "state":             _state_from_address(details.get("formattedAddress", ""), state_abbr),
             "found_via":         c["query"],
             "search_location":   c["anchor"],
             "metro_rank":        rank,
@@ -438,7 +445,7 @@ def main():
         choices=[
             "maryland", "virginia", "dc", "massachusetts", "new_york",
             "philadelphia", "new_jersey", "illinois", "washington",
-            "los_angeles", "dallas", "houston", "miami", "atlanta", "bay_area", "phoenix", "all",
+            "los_angeles", "dallas", "houston", "miami", "atlanta", "bay_area", "phoenix", "columbus", "cincinnati", "all",
         ],
         default="maryland",
         help="Which state to scrape (default: maryland)",
