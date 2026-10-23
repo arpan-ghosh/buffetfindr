@@ -64,6 +64,8 @@ SOUTH_ASIAN_NAME_HINTS = [
     "mumbai", "chennai", "hyderabad", "kolkata", "bengal", "kebab", "chaat",
 ]
 
+# locationBias is only a hint — Google can return places hundreds of miles away
+MAX_KM_FROM_ANCHOR = 20
 MIN_REVIEWS_FOR_RANKING = 15
 MIN_RATING_FOR_RANKING = 3.5
 
@@ -288,6 +290,19 @@ def _state_from_address(address: str, default: str) -> str:
     return m.group(1) if m else default
 
 
+def _km_to_nearest_anchor(place: Dict, anchors: List[Dict]) -> float:
+    loc = place.get("location") or {}
+    if "latitude" not in loc:
+        return 0.0  # no coordinates to judge by; keep
+    lat, lng = loc["latitude"], loc["longitude"]
+    def hav(a):
+        p1, p2 = math.radians(lat), math.radians(a["lat"])
+        dp, dl = p2 - p1, math.radians(a["lng"] - lng)
+        h = math.sin(dp / 2) ** 2 + math.cos(p1) * math.cos(p2) * math.sin(dl / 2) ** 2
+        return 6371 * 2 * math.asin(math.sqrt(h))
+    return min(hav(a) for a in anchors)
+
+
 def scrape_top(state_key: str, top_n: int, overrides: Dict[str, Dict]) -> List[Dict]:
     """
     Cheap metro scan: search only, rank candidates by prominence
@@ -337,6 +352,7 @@ def scrape_top(state_key: str, top_n: int, overrides: Dict[str, Dict]) -> List[D
     eligible = [
         (pid, c) for pid, c in candidates.items()
         if c["place"].get("businessStatus", "OPERATIONAL") == "OPERATIONAL"
+        and _km_to_nearest_anchor(c["place"], state_cfg["locations"]) <= MAX_KM_FROM_ANCHOR
         and (c["place"].get("userRatingCount") or 0) >= MIN_REVIEWS_FOR_RANKING
         and (c["place"].get("rating") or 0) >= MIN_RATING_FOR_RANKING
     ]
@@ -445,7 +461,7 @@ def main():
         choices=[
             "maryland", "virginia", "dc", "massachusetts", "new_york",
             "philadelphia", "new_jersey", "illinois", "washington",
-            "los_angeles", "dallas", "houston", "miami", "atlanta", "bay_area", "phoenix", "columbus", "cincinnati", "all",
+            "los_angeles", "dallas", "houston", "miami", "atlanta", "bay_area", "phoenix", "columbus", "cincinnati", "cleveland", "all",
         ],
         default="maryland",
         help="Which state to scrape (default: maryland)",

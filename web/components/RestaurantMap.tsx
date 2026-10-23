@@ -22,6 +22,7 @@ const REGION_VIEW: Record<string, { center: { lat: number; lng: number }; zoom: 
   phoenix: { center: { lat: 33.45, lng: -111.99 }, zoom: 10 },
   columbus:   { center: { lat: 40.02, lng: -83.01 }, zoom: 10 },
   cincinnati: { center: { lat: 39.25, lng: -84.45 }, zoom: 10 },
+  cleveland:  { center: { lat: 41.48, lng: -81.70 }, zoom: 10 },
 };
 
 const MAP_STYLE = [

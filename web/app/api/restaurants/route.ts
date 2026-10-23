@@ -23,23 +23,25 @@ const REGION_STATES: Record<string, string[]> = {
   phoenix: ["AZ"],
   columbus:   ["OH"],
   cincinnati: ["OH", "KY"], // metro straddles the Ohio River
+  cleveland:  ["OH"],
 };
 
 // Metros sharing a state are split by latitude:
 // Dallas ≈ 32.8 / Houston ≈ 29.8 (TX), Bay Area ≈ 37.5 / LA ≈ 34 (CA),
-// Columbus ≈ 40.0 / Cincinnati ≈ 39.1 (OH)
+// Cleveland ≈ 41.5 / Columbus ≈ 40.0 / Cincinnati ≈ 39.1 (OH)
 const REGION_LAT_RANGE: Record<string, [number, number]> = {
   dallas:  [31.5, 90],
   houston: [-90, 31.5],
   bayarea: [36, 90],
   la:      [-90, 36],
-  columbus:   [39.6, 90],
+  columbus:   [39.6, 40.8],
+  cleveland:  [40.8, 90],
   cincinnati: [-90, 39.6],
 };
 
 // JSON file names per region
 const REGION_FILES: Record<string, string[]> = {
-  all:     ["maryland", "virginia", "dc", "massachusetts", "new_york", "philadelphia", "new_jersey", "illinois", "washington", "los_angeles", "dallas", "houston", "miami", "atlanta", "bay_area", "phoenix", "columbus", "cincinnati"],
+  all:     ["maryland", "virginia", "dc", "massachusetts", "new_york", "philadelphia", "new_jersey", "illinois", "washington", "los_angeles", "dallas", "houston", "miami", "atlanta", "bay_area", "phoenix", "columbus", "cincinnati", "cleveland"],
   dmv:     ["maryland", "virginia", "dc"],
   boston:  ["massachusetts"],
   nyc:     ["new_york"],
@@ -56,6 +58,7 @@ const REGION_FILES: Record<string, string[]> = {
   phoenix: ["phoenix"],
   columbus:   ["columbus"],
   cincinnati: ["cincinnati"],
+  cleveland:  ["cleveland"],
 };
 
 function statesForRegion(region: string): string[] | null {

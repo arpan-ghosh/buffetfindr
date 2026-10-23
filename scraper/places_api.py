@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 BASE = "https://places.googleapis.com/v1/places"
 
 SEARCH_FIELDS = "places.id,places.displayName,places.formattedAddress,places.types,places.businessStatus"
-SEARCH_FIELDS_RANKED = SEARCH_FIELDS + ",places.rating,places.userRatingCount"
+SEARCH_FIELDS_RANKED = SEARCH_FIELDS + ",places.rating,places.userRatingCount,places.location"
 
 DETAIL_FIELDS = ",".join([
     "id",

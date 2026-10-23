@@ -422,6 +422,16 @@ CINCINNATI = [
     {"name": "Milford",              "lat": 39.1750, "lng": -84.2944},
 ]
 
+CLEVELAND = [
+    {"name": "Cleveland",            "lat": 41.4993, "lng": -81.6944},
+    {"name": "Parma",                "lat": 41.4048, "lng": -81.7229},
+    {"name": "Solon",                "lat": 41.3898, "lng": -81.4412},
+    {"name": "Beachwood",            "lat": 41.4645, "lng": -81.5087},
+    {"name": "Strongsville",         "lat": 41.3145, "lng": -81.8357},
+    {"name": "Westlake",             "lat": 41.4553, "lng": -81.9179},
+    {"name": "Mentor",               "lat": 41.6662, "lng": -81.3396},
+]
+
 STATE_MAP = {
     "maryland":      {"locations": MARYLAND,      "abbr": "MD"},
     "virginia":      {"locations": VIRGINIA,      "abbr": "VA"},
@@ -441,4 +451,5 @@ STATE_MAP = {
     "phoenix":       {"locations": PHOENIX,       "abbr": "AZ"},
     "columbus":      {"locations": COLUMBUS,      "abbr": "OH"},
     "cincinnati":    {"locations": CINCINNATI,    "abbr": "OH"},
+    "cleveland":     {"locations": CLEVELAND,     "abbr": "OH"},
 }

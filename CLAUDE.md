@@ -2,7 +2,7 @@
 
 ## Project overview
 
-BuffetFindr finds Indian (and South Asian) buffet restaurants near users across the DMV, Boston, NYC, Philadelphia, New Jersey, Chicago, Seattle, Los Angeles, Dallas, Houston, Miami, Atlanta, the Bay Area, Phoenix, Columbus, and Cincinnati.
+BuffetFindr finds Indian (and South Asian) buffet restaurants near users across the DMV, Boston, NYC, Philadelphia, New Jersey, Chicago, Seattle, Los Angeles, Dallas, Houston, Miami, Atlanta, the Bay Area, Phoenix, Columbus, Cincinnati, and Cleveland.
 
 **Domains**: `buffetfindr.com` (primary), `indianbuffetfinder.com` (redirect/SEO)
 **GitHub**: `github.com/arpan-ghosh/buffetfindr` (public)
@@ -64,9 +64,10 @@ scraper/data/*.json  →  web/data/*.json  →  Neon DB (db:seed)  →  web + mo
 | Phoenix (`AZ`) | top 20 | 5 |
 | Columbus (`OH`) | top 20 | 11 |
 | Cincinnati (`OH`/`KY`) | top 20 | 6 |
-| **Total** | | **605** |
+| Cleveland (`OH`) | top 20 | 7 |
+| **Total** | | **612** |
 
-> LA/Dallas/Houston/Miami/Atlanta/Phoenix/Columbus/Cincinnati are **top-20 samples** (ranked by `rating × ln(reviews)`), not full grid scrapes (Bay Area is a full 34-point grid scrape). Dallas/Houston share `state=TX` (split at lat 31.5°) and LA/Bay Area share `state=CA` (split at lat 36°), Columbus/Cincinnati share `state=OH` (split at lat 39.6°; Cincinnati also includes N. Kentucky, `state=KY`, taken from each address); the API, region pages and restaurant pages split them by latitude.
+> LA/Dallas/Houston/Miami/Atlanta/Phoenix/Columbus/Cincinnati/Cleveland are **top-20 samples** (ranked by `rating × ln(reviews)`), not full grid scrapes (Bay Area is a full 34-point grid scrape). Dallas/Houston share `state=TX` (split at lat 31.5°) and LA/Bay Area share `state=CA` (split at lat 36°), Columbus/Cincinnati/Cleveland share `state=OH` (split at lat 39.6° and 40.8°; Cincinnati also includes N. Kentucky, `state=KY`, taken from each address); the API, region pages and restaurant pages split them by latitude.
 
 ### Adding a new region
 1. Add location grid to `scraper/locations.py` → `STATE_MAP`
@@ -93,10 +94,11 @@ cd scraper
 python3 main.py --state maryland
 # valid states: maryland / virginia / dc / massachusetts / new_york /
 #               philadelphia / new_jersey / illinois / washington /
-#               los_angeles / dallas / houston / miami / atlanta / bay_area / phoenix / columbus / cincinnati / all
+#               los_angeles / dallas / houston / miami / atlanta / bay_area / phoenix / columbus / cincinnati / cleveland / all
 ```
 
 ### Top-N metro scan (new cities, cheap)
+Candidates farther than 20 km from every anchor are dropped (Google's `locationBias` is only a hint), and `state` is read from each address.
 ```bash
 python3 main.py --state houston --top 20   # search-only, rank by prominence, details+scoring for top 20
 ```
@@ -186,7 +188,8 @@ vercel --prod   # deploys from current working tree, no token needed (auth store
 | Atlanta | GA |
 | Bay Area | CA (lat ≥ 36) |
 | Phoenix | AZ |
-| Columbus | OH (lat ≥ 39.6) |
+| Columbus | OH (39.6 ≤ lat < 40.8) |
+| Cleveland | OH (lat ≥ 40.8) |
 | Cincinnati | OH (lat < 39.6) + KY |
 
 ### Key files
@@ -340,6 +343,6 @@ Tools: `scrape_buffets`, `get_buffet_results`, `check_scrape_status`
 - [ ] Google/Apple Sign In via Clerk (Vercel Marketplace) — sync "Been Here" across devices
 - [ ] AdMob ads (free app monetization) — requires `react-native-google-mobile-ads` + ATT consent
 - [ ] Android app (Google Play) — Expo already configured for Android, just needs Play Console setup
-- [ ] Expand to more cities (Cleveland, Austin, Las Vegas, San Diego next — Chicago/Philly/NJ/Seattle done; LA/Dallas/Houston/Miami/Atlanta/Phoenix/Columbus/Cincinnati are top-20 samples, could get full grid scrapes like the Bay Area)
+- [ ] Expand to more cities (Austin, Las Vegas, San Diego next — Chicago/Philly/NJ/Seattle done; LA/Dallas/Houston/Miami/Atlanta/Phoenix/Columbus/Cincinnati/Cleveland are top-20 samples, could get full grid scrapes like the Bay Area)
 - [ ] Admin dashboard to review/approve user submissions
 - [ ] Weekly email digest of new buffets

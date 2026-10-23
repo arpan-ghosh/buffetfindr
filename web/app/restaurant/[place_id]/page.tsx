@@ -41,7 +41,7 @@ const REGION_NAMES: Record<string, string> = {
   dmv: "DMV Area", boston: "Boston", nyc: "NYC", philly: "Philly",
   nj: "New Jersey", chicago: "Chicago", seattle: "Seattle",
   la: "Los Angeles", dallas: "Dallas", houston: "Houston", miami: "Miami", atlanta: "Atlanta",
-  bayarea: "Bay Area", phoenix: "Phoenix", columbus: "Columbus", cincinnati: "Cincinnati",
+  bayarea: "Bay Area", phoenix: "Phoenix", columbus: "Columbus", cincinnati: "Cincinnati", cleveland: "Cleveland",
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ place_id: string }> }): Promise<Metadata> {
@@ -72,10 +72,10 @@ export default async function RestaurantPage({ params }: { params: Promise<{ pla
   if (!r) notFound();
 
   const city      = cityFromAddress(r.address ?? "");
-  // TX, CA and OH each hold two metros — split on latitude (Dallas ≈ 32.8 / Houston ≈ 29.8, Bay Area ≈ 37.5 / LA ≈ 34, Columbus ≈ 40.0 / Cincinnati ≈ 39.1)
+  // TX, CA and OH each hold two metros — split on latitude (Dallas ≈ 32.8 / Houston ≈ 29.8, Bay Area ≈ 37.5 / LA ≈ 34, Cleveland ≈ 41.5 / Columbus ≈ 40.0 / Cincinnati ≈ 39.1)
   const region    = r.state === "TX" ? (r.lat >= 31.5 ? "dallas" : "houston")
                   : r.state === "CA" ? (r.lat >= 36 ? "bayarea" : "la")
-                  : r.state === "OH" ? (r.lat >= 39.6 ? "columbus" : "cincinnati")
+                  : r.state === "OH" ? (r.lat >= 40.8 ? "cleveland" : r.lat >= 39.6 ? "columbus" : "cincinnati")
                   : STATE_REGION[r.state];
   const open      = isOpenNow(r);
   const addr      = parseAddress(r.address ?? "");

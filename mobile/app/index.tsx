@@ -29,6 +29,7 @@ const REGIONS = [
   { value: "phoenix", label: "Phoenix" },
   { value: "columbus",   label: "Columbus"   },
   { value: "cincinnati", label: "Cincinnati" },
+  { value: "cleveland",  label: "Cleveland"  },
 ];
 
 const CONFIDENCE = [
