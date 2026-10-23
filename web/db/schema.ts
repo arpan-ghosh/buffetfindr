@@ -24,6 +24,8 @@ export const restaurants = pgTable("restaurants", {
   is_buffet:        boolean("is_buffet").default(true),
   verified:         boolean("verified").default(false),
   active:           boolean("active").default(true),
+  buffet_schedule:  text("buffet_schedule"),
+  buffet_schedule_fetched_at: timestamp("buffet_schedule_fetched_at", { withTimezone: true }),
   scraped_at:       timestamp("scraped_at", { withTimezone: true }),
   created_at:       timestamp("created_at", { withTimezone: true }).defaultNow(),
   updated_at:       timestamp("updated_at", { withTimezone: true }).defaultNow(),

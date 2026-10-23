@@ -27,6 +27,7 @@ export default function Home() {
   const [confidence, setConfidence] = useState("");
   const [search, setSearch] = useState("");
   const [buffetsOnly, setBuffetsOnly] = useState(true);
+  const [schedule, setSchedule] = useState("");
 
   const fetchRestaurants = useCallback(async () => {
     setLoading(true);
@@ -42,14 +43,23 @@ export default function Home() {
 
   useEffect(() => { fetchRestaurants(); }, [fetchRestaurants]);
 
-  const selectedRestaurant = restaurants.find(r => r.place_id === selected) ?? null;
+  const handleBuffetsOnlyChange = (v: boolean) => {
+    setBuffetsOnly(v);
+    if (!v) setSchedule("");
+  };
+
+  const displayRestaurants = schedule
+    ? restaurants.filter(r => r.buffet_schedule === schedule)
+    : restaurants;
+
+  const selectedRestaurant = displayRestaurants.find(r => r.place_id === selected) ?? null;
 
   return (
     <div className="relative h-dvh w-full overflow-hidden bg-[var(--bg)]">
 
       {/* ── Map (always rendered underneath) ───────────────────────── */}
       <RestaurantMap
-        restaurants={restaurants}
+        restaurants={displayRestaurants}
         selected={selected}
         region={state}
         onSelect={id => setSelected(id)}
@@ -71,7 +81,7 @@ export default function Home() {
           <div>
             <h1 className="text-base font-bold leading-none text-[var(--text)]">Buffet Findr</h1>
             <p className="text-[10px] text-[var(--muted)] leading-none mt-0.5">
-              {loading ? "Loading…" : buffetsOnly ? `${restaurants.length} buffets near you` : `${restaurants.length} Indian restaurants`}
+              {loading ? "Loading…" : buffetsOnly ? `${displayRestaurants.length} buffets near you` : `${displayRestaurants.length} Indian restaurants`}
             </p>
           </div>
           <button
@@ -137,7 +147,9 @@ export default function Home() {
                 onStateChange={setState}
                 onConfidenceChange={setConfidence}
                 onSearchChange={setSearch}
-                onBuffetsOnlyChange={setBuffetsOnly}
+                onBuffetsOnlyChange={handleBuffetsOnlyChange}
+                schedule={schedule}
+                onScheduleChange={setSchedule}
               />
             </div>
 
@@ -149,7 +161,7 @@ export default function Home() {
             ) : (
               <div className="flex-1 overflow-y-auto px-4 pb-8 pt-1">
                 <div className="flex flex-col gap-2 max-w-2xl mx-auto">
-                  {restaurants.map(r => (
+                  {displayRestaurants.map(r => (
                     <RestaurantCard
                       key={r.place_id}
                       restaurant={r}
@@ -157,7 +169,7 @@ export default function Home() {
                       onClick={() => setSelected(r.place_id)}
                     />
                   ))}
-                  {restaurants.length === 0 && (
+                  {displayRestaurants.length === 0 && (
                     <div className="py-16 text-center text-[var(--muted)]">
                       No restaurants found for this filter.
                     </div>
@@ -187,7 +199,9 @@ export default function Home() {
                 onStateChange={setState}
                 onConfidenceChange={setConfidence}
                 onSearchChange={setSearch}
-                onBuffetsOnlyChange={setBuffetsOnly}
+                onBuffetsOnlyChange={handleBuffetsOnlyChange}
+                schedule={schedule}
+                onScheduleChange={setSchedule}
               />
             </div>
 
@@ -212,7 +226,7 @@ export default function Home() {
                     <Loader2 size={20} className="animate-spin text-brand-500" />
                   </div>
                 ) : (
-                  restaurants.slice(0, 40).map(r => (
+                  displayRestaurants.slice(0, 40).map(r => (
                     <div key={r.place_id} style={{ scrollSnapAlign: "start" }}>
                       <RestaurantCard
                         restaurant={r}

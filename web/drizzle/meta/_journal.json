@@ -8,6 +8,13 @@
       "when": 1778988527254,
       "tag": "0000_rich_retro_girl",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1779415693489,
+      "tag": "0001_omniscient_bishop",
+      "breakpoints": true
     }
   ]
 }

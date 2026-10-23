@@ -18,6 +18,8 @@ export interface Restaurant {
   buffet_confidence: "HIGH" | "MEDIUM" | "LOW";
   buffet_evidence: string[];
   is_buffet: boolean;
+  buffet_schedule?: "BOTH" | "WEEKEND_ONLY" | "WEEKDAY_ONLY" | "DISCONTINUED" | "UNKNOWN" | null;
+  buffet_schedule_fetched_at?: string | null;
   scraped_at: string;
 }
 

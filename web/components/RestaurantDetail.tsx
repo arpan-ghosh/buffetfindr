@@ -81,7 +81,10 @@ export function RestaurantDetail({ restaurant: r, onClose }: Props) {
   const [evidenceOpen, setEvidenceOpen] = useState(false);
   const [reviews, setReviews]           = useState<Review[]>([]);
   const [reviewsLoading, setReviewsLoading] = useState(false);
+  const [scheduleLoading, setScheduleLoading] = useState(false);
+  const [localSchedule, setLocalSchedule] = useState<string | null | undefined>(undefined);
   const fetchedFor = useRef<string | null>(null);
+  const scheduleFetchedFor = useRef<string | null>(null);
 
   const open   = r ? isOpenNow(r) : null;
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? "";
@@ -107,6 +110,29 @@ export function RestaurantDetail({ restaurant: r, onClose }: Props) {
       .then(data => setReviews(data.reviews ?? []))
       .catch(() => {})
       .finally(() => setReviewsLoading(false));
+  }, [r?.place_id]);
+
+  useEffect(() => {
+    if (!r) return;
+    setLocalSchedule(undefined);
+
+    // Already analyzed and cached in DB — nothing to do
+    if (r.buffet_schedule != null) return;
+
+    // Avoid duplicate fetches for same restaurant
+    if (scheduleFetchedFor.current === r.place_id) return;
+    scheduleFetchedFor.current = r.place_id;
+
+    setScheduleLoading(true);
+    fetch("/api/analyze-schedule", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ place_id: r.place_id }),
+    })
+      .then(res => res.json())
+      .then(data => setLocalSchedule(data.buffet_schedule ?? null))
+      .catch(() => setLocalSchedule(null))
+      .finally(() => setScheduleLoading(false));
   }, [r?.place_id]);
 
   const toggleVisited = () => {
@@ -158,12 +184,33 @@ export function RestaurantDetail({ restaurant: r, onClose }: Props) {
                 <X size={16} />
               </button>
 
-              <div className="absolute bottom-3 left-3 flex gap-2">
+              <div className="absolute bottom-3 left-3 flex flex-wrap gap-2">
                 {open === true  && <span className="badge-open shadow-sm">Open Now</span>}
                 {open === false && <span className="badge-closed shadow-sm">Closed</span>}
                 {r.buffet_confidence === "HIGH" && (
                   <span className="badge bg-brand-500 text-white shadow-sm">Verified Buffet</span>
                 )}
+                {(() => {
+                  const schedule = localSchedule !== undefined ? localSchedule : (r.buffet_schedule ?? null);
+                  if (scheduleLoading) return (
+                    <span className="badge bg-black/30 text-white backdrop-blur-sm shadow-sm">
+                      <Loader2 size={10} className="animate-spin" /> Analyzing schedule…
+                    </span>
+                  );
+                  if (schedule === "BOTH") return (
+                    <span className="badge bg-green-500 text-white shadow-sm">Buffet Daily</span>
+                  );
+                  if (schedule === "WEEKEND_ONLY") return (
+                    <span className="badge bg-[var(--gold)] text-white shadow-sm">Weekend Buffet Only</span>
+                  );
+                  if (schedule === "WEEKDAY_ONLY") return (
+                    <span className="badge bg-amber-500 text-white shadow-sm">Weekday Buffet Only</span>
+                  );
+                  if (schedule === "DISCONTINUED") return (
+                    <span className="badge bg-red-600 text-white shadow-sm">Buffet Reportedly Discontinued</span>
+                  );
+                  return null;
+                })()}
               </div>
             </div>
 

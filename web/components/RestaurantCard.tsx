@@ -120,6 +120,15 @@ export function RestaurantCard({ restaurant: r, selected, onClick, compact }: Pr
             ? <span className="badge-high">Verified Buffet</span>
             : <span className="badge-medium">Likely Buffet</span>
           }
+          {r.buffet_schedule === "BOTH" && (
+            <span className="badge bg-green-50 text-green-700">Daily</span>
+          )}
+          {r.buffet_schedule === "WEEKEND_ONLY" && (
+            <span className="badge bg-amber-50 text-amber-700">Wknd Only</span>
+          )}
+          {r.buffet_schedule === "WEEKDAY_ONLY" && (
+            <span className="badge bg-blue-50 text-blue-700">Wkdy Only</span>
+          )}
         </div>
       </div>
     </motion.div>

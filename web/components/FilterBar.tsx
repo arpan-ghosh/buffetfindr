@@ -1,6 +1,6 @@
 "use client";
 
-import { Search, SlidersHorizontal } from "lucide-react";
+import { Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface Props {
@@ -8,10 +8,12 @@ interface Props {
   confidence: string;
   search: string;
   buffetsOnly: boolean;
+  schedule: string;
   onStateChange: (s: string) => void;
   onConfidenceChange: (c: string) => void;
   onSearchChange: (s: string) => void;
   onBuffetsOnlyChange: (v: boolean) => void;
+  onScheduleChange: (s: string) => void;
 }
 
 const REGIONS = [
@@ -41,7 +43,14 @@ const CONFIDENCE = [
   { value: "MEDIUM", label: "Likely" },
 ];
 
-export function FilterBar({ state, confidence, search, buffetsOnly, onStateChange, onConfidenceChange, onSearchChange, onBuffetsOnlyChange }: Props) {
+const SCHEDULES = [
+  { value: "",             label: "All" },
+  { value: "WEEKEND_ONLY", label: "Weekend" },
+  { value: "WEEKDAY_ONLY", label: "Weekday" },
+  { value: "BOTH",         label: "Both" },
+];
+
+export function FilterBar({ state, confidence, search, buffetsOnly, schedule, onStateChange, onConfidenceChange, onSearchChange, onBuffetsOnlyChange, onScheduleChange }: Props) {
   return (
     <div className="flex flex-col gap-2">
       {/* Search */}
@@ -103,6 +112,24 @@ export function FilterBar({ state, confidence, search, buffetsOnly, onStateChang
         >
           {buffetsOnly ? "🍛 Buffets" : "🍽️ All restaurants"}
         </button>
+
+        {buffetsOnly && <>
+          <div className="h-4 w-px bg-[var(--border)] self-center mx-1 flex-shrink-0" />
+          {SCHEDULES.map(s => (
+            <button
+              key={s.value}
+              onClick={() => onScheduleChange(s.value)}
+              className={cn(
+                "flex-shrink-0 rounded-full px-3.5 py-1.5 text-xs font-semibold transition-all",
+                schedule === s.value
+                  ? "bg-[var(--gold,#D4891A)] text-white shadow-sm"
+                  : "bg-white border border-[var(--border)] text-[var(--muted)] hover:border-yellow-400"
+              )}
+            >
+              {s.label}
+            </button>
+          ))}
+        </>}
       </div>
     </div>
   );
