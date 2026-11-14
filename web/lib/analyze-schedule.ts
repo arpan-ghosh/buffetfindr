@@ -21,12 +21,27 @@ interface PlaceDetails {
   regularOpeningHours?: { weekdayDescriptions?: string[] };
 }
 
+// Google place ids are URL-safe base64-ish tokens. Checked here as well as in the API
+// route because the id is interpolated into a paid upstream URL.
+export const PLACE_ID_RE = /^[A-Za-z0-9_-]{10,255}$/;
+
+const GOOGLE_TIMEOUT_MS = 10_000;
+const ANTHROPIC_TIMEOUT_MS = 20_000;
+
+/**
+ * Makes up to one paid Google Places call and one paid Anthropic call.
+ * Throws on any upstream failure or unusable model output, so callers never
+ * persist a failure as if it were a real classification.
+ */
 export async function analyzeBuffetSchedule(placeId: string): Promise<ScheduleResult> {
+  if (!PLACE_ID_RE.test(placeId)) throw new Error("Invalid place_id");
+
   const googleApiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? process.env.GOOGLE_MAPS_API_KEY;
   if (!googleApiKey) throw new Error("Google API key not configured");
 
-  const url = `https://places.googleapis.com/v1/places/${placeId}?languageCode=en`;
+  const url = `https://places.googleapis.com/v1/places/${encodeURIComponent(placeId)}?languageCode=en`;
   const placesRes = await fetch(url, {
+    signal: AbortSignal.timeout(GOOGLE_TIMEOUT_MS),
     headers: {
       "X-Goog-Api-Key": googleApiKey,
       "X-Goog-FieldMask": "id,displayName,reviews,editorialSummary,regularOpeningHours",
@@ -56,7 +71,8 @@ export async function analyzeBuffetSchedule(placeId: string): Promise<ScheduleRe
     return { buffet_schedule: "UNKNOWN", confidence: "LOW", reasoning: "No reviews or summary available." };
   }
 
-  const anthropic = new Anthropic();
+  // One retry at most (SDK default is two) and a hard timeout, to bound spend and duration.
+  const anthropic = new Anthropic({ maxRetries: 1, timeout: ANTHROPIC_TIMEOUT_MS });
 
   const userContent = [
     `Restaurant: ${name}`,
@@ -87,19 +103,28 @@ export async function analyzeBuffetSchedule(placeId: string): Promise<ScheduleRe
     messages: [{ role: "user", content: userContent }],
   });
 
-  const rawText = (msg.content[0] as { type: string; text: string }).text.trim();
+  const first = msg.content[0];
+  if (!first || first.type !== "text") throw new Error("Anthropic returned no text content");
+  const rawText = first.text.trim();
   // Strip markdown code fences if present (model sometimes wraps JSON in ```json ... ```)
   const raw = rawText.replace(/^```(?:json)?\s*/i, "").replace(/\s*```\s*$/i, "").trim();
 
+  let parsed: { schedule?: BuffetSchedule; confidence?: ScheduleConfidence; reasoning?: string };
   try {
-    const parsed = JSON.parse(raw) as { schedule: BuffetSchedule; confidence: ScheduleConfidence; reasoning: string };
-    const validSchedules: BuffetSchedule[] = ["BOTH", "WEEKEND_ONLY", "WEEKDAY_ONLY", "DISCONTINUED", "UNKNOWN"];
-    return {
-      buffet_schedule: validSchedules.includes(parsed.schedule) ? parsed.schedule : "UNKNOWN",
-      confidence: parsed.confidence ?? "LOW",
-      reasoning: parsed.reasoning ?? "",
-    };
+    parsed = JSON.parse(raw);
   } catch {
-    return { buffet_schedule: "UNKNOWN", confidence: "LOW", reasoning: "Could not parse analysis response." };
+    // Thrown (not returned as UNKNOWN) so a garbled reply is not cached as a real result.
+    throw new Error("Could not parse analysis response");
   }
+
+  const validSchedules: BuffetSchedule[] = ["BOTH", "WEEKEND_ONLY", "WEEKDAY_ONLY", "DISCONTINUED", "UNKNOWN"];
+  const validConfidence: ScheduleConfidence[] = ["HIGH", "MEDIUM", "LOW"];
+  if (!parsed || !validSchedules.includes(parsed.schedule as BuffetSchedule)) {
+    throw new Error("Analysis response had no valid schedule");
+  }
+  return {
+    buffet_schedule: parsed.schedule as BuffetSchedule,
+    confidence: validConfidence.includes(parsed.confidence as ScheduleConfidence) ? (parsed.confidence as ScheduleConfidence) : "LOW",
+    reasoning: typeof parsed.reasoning === "string" ? parsed.reasoning.slice(0, 500) : "",
+  };
 }

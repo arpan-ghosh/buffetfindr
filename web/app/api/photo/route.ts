@@ -8,7 +8,21 @@ const KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 const FRESH_TTL_MS = 30 * 60 * 1000;
 const freshNames = new Map<string, { names: string[]; at: number }>();
 
-async function fetchPhoto(name: string, w: string) {
+// Every request here is a paid Google call, so only well-formed photo resource names
+// and the widths the apps actually request are passed upstream.
+const REF_RE = /^places\/[A-Za-z0-9_-]{10,255}\/photos\/[A-Za-z0-9_-]{10,1024}$/;
+// web: 200 (thumbnails), 420 (carousel), 800 (detail); mobile: 200, 600 (default).
+const ALLOWED_WIDTHS = [200, 420, 600, 800];
+const MAX_PHOTO_INDEX = 20;
+
+/** Snaps any requested width to the nearest allowed one (default 600). */
+function clampWidth(raw: string | null): number {
+  const n = Number(raw);
+  if (!Number.isFinite(n) || n <= 0) return 600;
+  return ALLOWED_WIDTHS.reduce((best, w) => (Math.abs(w - n) < Math.abs(best - n) ? w : best));
+}
+
+async function fetchPhoto(name: string, w: number) {
   return fetch(`https://places.googleapis.com/v1/${name}/media?maxWidthPx=${w}&key=${KEY}`);
 }
 
@@ -31,10 +45,12 @@ async function freshPhotoNames(placeId: string): Promise<string[]> {
 // `i` is the photo's index in the restaurant's photo list (used if the ref has expired).
 export async function GET(req: NextRequest) {
   const ref = req.nextUrl.searchParams.get("ref");
-  const w   = req.nextUrl.searchParams.get("w") ?? "600";
-  const i   = Number(req.nextUrl.searchParams.get("i") ?? "0") || 0;
+  const w   = clampWidth(req.nextUrl.searchParams.get("w"));
+  const rawI = Math.trunc(Number(req.nextUrl.searchParams.get("i") ?? "0")) || 0;
+  const i   = Math.min(Math.max(rawI, 0), MAX_PHOTO_INDEX);
 
   if (!ref) return NextResponse.json({ error: "Missing ref" }, { status: 400 });
+  if (!REF_RE.test(ref)) return NextResponse.json({ error: "Invalid ref" }, { status: 400 });
 
   let upstream = await fetchPhoto(ref, w);
 
