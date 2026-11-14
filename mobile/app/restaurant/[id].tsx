@@ -6,11 +6,23 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
-import { fetchRestaurants, photoUrl, mapsUrl, submitFeedback, type Restaurant } from "../../lib/api";
+import {
+  fetchRestaurantById, getCachedRestaurant, analyzeSchedule, photoUrl, mapsUrl, submitFeedback,
+  SCHEDULE_LABEL, type Restaurant, type BuffetSchedule,
+} from "../../lib/api";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const DAY_ORDER = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
 const BUFFET_STAPLES = ["Butter Chicken","Chana Masala","Dal Makhani","Saag Paneer","Biryani","Tandoori Chicken","Naan","Samosa","Raita","Gulab Jamun","Kheer","Aloo Gobi"];
+
+// Same colours as the web detail badges.
+const SCHEDULE_COLOR: Record<BuffetSchedule, string> = {
+  BOTH:         "#22c55e",
+  WEEKEND_ONLY: "#D4891A",
+  WEEKDAY_ONLY: "#f59e0b",
+  DISCONTINUED: "#dc2626",
+  UNKNOWN:      "#8e8e93",
+};
 
 function isOpenNow(hours: string[]): boolean | null {
   if (!hours?.length) return null;
@@ -33,16 +45,50 @@ function isOpenNow(hours: string[]): boolean | null {
 
 export default function RestaurantDetail() {
   const { id } = useLocalSearchParams<{ id: string }>();
-  const [restaurant, setRestaurant] = useState<Restaurant | null>(null);
+  // Normally already in memory from the home screen — no network round trip.
+  const [restaurant, setRestaurant] = useState<Restaurant | null>(() => (id ? getCachedRestaurant(id) : null));
+  const [notFound, setNotFound]     = useState(false);
+  const [loadTick, setLoadTick]     = useState(0);
+  // undefined = use the value that came with the restaurant; null = analysis had no answer
+  const [localSchedule, setLocalSchedule]     = useState<BuffetSchedule | null | undefined>(undefined);
+  const [scheduleLoading, setScheduleLoading] = useState(false);
   const [visited, setVisited]       = useState(false);
   const [myVote, setMyVote]         = useState<"up"|"down"|null>(null);
   const [votes, setVotes]           = useState({ up: 0, down: 0 });
 
   useEffect(() => {
-    fetchRestaurants().then(list => {
-      const r = list.find(x => x.place_id === id);
-      setRestaurant(r ?? null);
-    });
+    if (!id) return;
+    let cancelled = false;
+    setNotFound(false);
+    fetchRestaurantById(id)
+      .then(r => {
+        if (cancelled) return;
+        setRestaurant(r);
+        setNotFound(!r);
+      })
+      .catch(() => { if (!cancelled) setNotFound(true); });
+    return () => { cancelled = true; };
+  }, [id, loadTick]);
+
+  // Buffet schedule — same rule as the web detail panel: if the restaurant has never
+  // been analysed (null), ask the server once. The server stores the result, so this
+  // runs at most once per restaurant across all users; analysed places just display.
+  const placeId       = restaurant?.place_id;
+  const needsSchedule = !!restaurant && restaurant.is_buffet !== false && restaurant.buffet_schedule == null;
+  useEffect(() => {
+    setLocalSchedule(undefined);
+    if (!placeId || !needsSchedule) return;
+    let cancelled = false;
+    setScheduleLoading(true);
+    analyzeSchedule(placeId)
+      .then(s => { if (!cancelled) setLocalSchedule(s); })
+      .catch(() => { if (!cancelled) setLocalSchedule(null); })
+      .finally(() => { if (!cancelled) setScheduleLoading(false); });
+    return () => { cancelled = true; };
+    // Keyed on the place only: a result arriving must not re-trigger the request.
+  }, [placeId]);
+
+  useEffect(() => {
     AsyncStorage.getItem(`visited_${id}`).then(v => setVisited(v === "true"));
     AsyncStorage.getItem(`vote_${id}`).then(v => setMyVote(v as "up"|"down"|null));
   }, [id]);
@@ -65,7 +111,17 @@ export default function RestaurantDetail() {
   if (!restaurant) {
     return (
       <View style={styles.centered}>
-        <ActivityIndicator color="#C94A1F" size="large" />
+        {notFound ? (
+          <>
+            <Text style={{ fontSize: 40 }}>🍛</Text>
+            <Text style={styles.notFoundText}>We couldn't load this restaurant.</Text>
+            <TouchableOpacity style={styles.retryBtn} onPress={() => setLoadTick(t => t + 1)}>
+              <Text style={styles.btnPrimaryText}>Try again</Text>
+            </TouchableOpacity>
+          </>
+        ) : (
+          <ActivityIndicator color="#C94A1F" size="large" />
+        )}
       </View>
     );
   }
@@ -73,6 +129,8 @@ export default function RestaurantDetail() {
   const r = restaurant;
   const open = isOpenNow(r.hours);
   const photo = r.photo_refs?.[0] ? photoUrl(r.photo_refs[0]) : null;
+  const schedule = localSchedule !== undefined ? localSchedule : (r.buffet_schedule ?? null);
+  const scheduleLabel = schedule ? SCHEDULE_LABEL[schedule]?.long : null;
   const today = new Date().toLocaleDateString("en-US", { weekday: "long" });
 
   return (
@@ -90,6 +148,15 @@ export default function RestaurantDetail() {
           {open === true  && <View style={styles.badgeOpen}><Text style={styles.badgeText}>Open Now</Text></View>}
           {open === false && <View style={styles.badgeClosed}><Text style={styles.badgeText}>Closed</Text></View>}
           {r.buffet_confidence === "HIGH" && <View style={styles.badgeHigh}><Text style={styles.badgeText}>Verified Buffet</Text></View>}
+          {scheduleLoading ? (
+            <View style={[styles.badgeSchedule, styles.badgeAnalyzing]}>
+              <Text style={styles.badgeText}>Analyzing schedule…</Text>
+            </View>
+          ) : schedule && scheduleLabel ? (
+            <View style={[styles.badgeSchedule, { backgroundColor: SCHEDULE_COLOR[schedule] }]}>
+              <Text style={styles.badgeText}>{scheduleLabel}</Text>
+            </View>
+          ) : null}
         </View>
       </View>
 
@@ -97,11 +164,11 @@ export default function RestaurantDetail() {
         {/* Name + rating */}
         <Text style={styles.name}>{r.name}</Text>
         <View style={styles.ratingRow}>
-          {r.rating && (
+          {r.rating != null && r.rating > 0 && (
             <View style={styles.stars}>
               <Ionicons name="star" size={13} color="#fbbf24" />
               <Text style={styles.ratingText}>{r.rating}</Text>
-              {r.review_count && <Text style={styles.reviewCount}>({r.review_count.toLocaleString()})</Text>}
+              {r.review_count != null && r.review_count > 0 && <Text style={styles.reviewCount}>({r.review_count.toLocaleString()})</Text>}
             </View>
           )}
           <View style={[styles.scoreBadge, r.buffet_confidence === "HIGH" ? styles.scoreHigh : styles.scoreMed]}>
@@ -115,13 +182,13 @@ export default function RestaurantDetail() {
             <Ionicons name="navigate" size={15} color="#fff" />
             <Text style={styles.btnPrimaryText}>Directions</Text>
           </TouchableOpacity>
-          {r.phone && (
+          {!!r.phone && (
             <TouchableOpacity style={styles.btnSecondary} onPress={() => Linking.openURL(`tel:${r.phone}`)}>
               <Ionicons name="call" size={15} color="#1c1c1e" />
               <Text style={styles.btnSecondaryText}>Call</Text>
             </TouchableOpacity>
           )}
-          {r.website && (
+          {!!r.website && (
             <TouchableOpacity style={styles.btnSecondary} onPress={() => Linking.openURL(r.website!)}>
               <Ionicons name="globe-outline" size={15} color="#1c1c1e" />
             </TouchableOpacity>
@@ -212,11 +279,15 @@ export default function RestaurantDetail() {
 const styles = StyleSheet.create({
   container:      { flex: 1, backgroundColor: "#fafaf8" },
   content:        { paddingBottom: 40 },
-  centered:       { flex: 1, alignItems: "center", justifyContent: "center" },
+  centered:       { flex: 1, alignItems: "center", justifyContent: "center", gap: 12, padding: 32, backgroundColor: "#fafaf8" },
+  notFoundText:   { fontSize: 15, color: "#6b6b6b", textAlign: "center" },
+  retryBtn:       { backgroundColor: "#C94A1F", borderRadius: 12, paddingHorizontal: 20, paddingVertical: 10 },
   hero:           { height: 220, position: "relative" },
   heroImg:        { width: "100%", height: 220 },
   heroPlaceholder:{ backgroundColor: "#fff7ed", alignItems: "center", justifyContent: "center" },
-  heroBadges:     { position: "absolute", bottom: 12, left: 12, flexDirection: "row", gap: 6 },
+  heroBadges:     { position: "absolute", bottom: 12, left: 12, right: 12, flexDirection: "row", flexWrap: "wrap", gap: 6 },
+  badgeSchedule:  { borderRadius: 12, paddingHorizontal: 8, paddingVertical: 3 },
+  badgeAnalyzing: { backgroundColor: "rgba(0,0,0,0.45)" },
   badgeOpen:      { backgroundColor: "#22c55e", borderRadius: 12, paddingHorizontal: 8, paddingVertical: 3 },
   badgeClosed:    { backgroundColor: "#ef4444", borderRadius: 12, paddingHorizontal: 8, paddingVertical: 3 },
   badgeHigh:      { backgroundColor: "#C94A1F", borderRadius: 12, paddingHorizontal: 8, paddingVertical: 3 },

@@ -1,5 +1,9 @@
 const BASE = "https://www.buffetfindr.com";
 
+export { REGION_VIEW } from "./regions";
+
+export type BuffetSchedule = "BOTH" | "WEEKEND_ONLY" | "WEEKDAY_ONLY" | "DISCONTINUED" | "UNKNOWN";
+
 export interface Restaurant {
   place_id: string;
   name: string;
@@ -7,33 +11,149 @@ export interface Restaurant {
   state: string;
   lat: number;
   lng: number;
-  phone?: string;
-  website?: string;
-  rating?: number;
-  review_count?: number;
+  phone?: string | null;
+  website?: string | null;
+  rating?: number | null;
+  review_count?: number | null;
   buffet_score: number;
   buffet_confidence: "HIGH" | "MEDIUM" | "LOW";
   buffet_evidence: string[];
   hours: string[];
   photo_refs: string[];
   is_buffet: boolean;
+  /** null/undefined = not analysed yet; "UNKNOWN" = analysed, not enough evidence. */
+  buffet_schedule?: BuffetSchedule | null;
+  buffet_schedule_fetched_at?: string | null;
 }
 
-export async function fetchRestaurants(params: {
+export interface RestaurantQuery {
   state?: string;
   search?: string;
   confidence?: string;
   buffetsOnly?: boolean;
-} = {}): Promise<Restaurant[]> {
-  const query = new URLSearchParams({ min_score: "30", limit: "500" });
-  if (params.state)               query.set("state", params.state);
-  if (params.search)              query.set("search", params.search);
-  if (params.confidence)          query.set("confidence", params.confidence);
-  if (params.buffetsOnly === false) query.set("buffets_only", "false");
-  const res = await fetch(`${BASE}/api/restaurants?${query}`);
-  const data = await res.json();
-  return data.restaurants ?? [];
 }
+
+export interface RestaurantPage {
+  restaurants: Restaurant[];
+  /** Matches on the server. Greater than `restaurants.length` when the result was truncated. */
+  total: number;
+}
+
+// ── Fetch with in-memory cache ────────────────────────────────────────────────
+// The "All" payload is ~2.7 MB, so identical queries are served from memory and
+// concurrent identical requests share one network call.
+
+const CACHE_MS = 10 * 60 * 1000;
+const TIMEOUT_MS = 25_000;
+// The server clamps `limit` to at least 1000 anyway; ask for it explicitly.
+const LIMIT = "1000";
+
+const pageCache = new Map<string, { at: number; page: RestaurantPage }>();
+const inflight  = new Map<string, Promise<RestaurantPage>>();
+const byId      = new Map<string, Restaurant>();
+
+function queryString(params: RestaurantQuery): string {
+  const query = new URLSearchParams({ min_score: "30", limit: LIMIT });
+  query.set("state", params.state || "all");
+  if (params.search)                query.set("search", params.search);
+  if (params.confidence)            query.set("confidence", params.confidence);
+  if (params.buffetsOnly === false) query.set("buffets_only", "false");
+  return query.toString();
+}
+
+async function requestPage(qs: string): Promise<RestaurantPage> {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
+  try {
+    const res = await fetch(`${BASE}/api/restaurants?${qs}`, { signal: controller.signal });
+    if (!res.ok) throw new Error(`Server error (${res.status})`);
+    const data = await res.json();
+    const restaurants: Restaurant[] = data.restaurants ?? [];
+    return { restaurants, total: typeof data.total === "number" ? data.total : restaurants.length };
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+export function fetchRestaurantPage(params: RestaurantQuery = {}): Promise<RestaurantPage> {
+  const qs = queryString({ ...params, search: params.search?.trim().toLowerCase() });
+
+  const cached = pageCache.get(qs);
+  if (cached && Date.now() - cached.at < CACHE_MS) return Promise.resolve(cached.page);
+
+  const pending = inflight.get(qs);
+  if (pending) return pending;
+
+  const request = requestPage(qs)
+    .then(page => {
+      pageCache.set(qs, { at: Date.now(), page });
+      // Keep the first object seen per place so detail-screen updates stay visible in lists.
+      for (const r of page.restaurants) if (!byId.has(r.place_id)) byId.set(r.place_id, r);
+      return page;
+    })
+    .finally(() => inflight.delete(qs));
+
+  inflight.set(qs, request);
+  return request;
+}
+
+export async function fetchRestaurants(params: RestaurantQuery = {}): Promise<Restaurant[]> {
+  return (await fetchRestaurantPage(params)).restaurants;
+}
+
+/** Drop cached lists (used by "Retry"). */
+export function clearRestaurantCache() {
+  pageCache.clear();
+}
+
+/** A restaurant already loaded by any list query, without touching the network. */
+export function getCachedRestaurant(placeId: string): Restaurant | null {
+  return byId.get(placeId) ?? null;
+}
+
+/** Look a restaurant up by id, falling back to the network (e.g. cold deep link). */
+export async function fetchRestaurantById(placeId: string): Promise<Restaurant | null> {
+  const hit = byId.get(placeId);
+  if (hit) return hit;
+  const buffets = await fetchRestaurants();
+  const found = buffets.find(r => r.place_id === placeId);
+  if (found) return found;
+  // Non-buffet restaurants only exist in the unfiltered list (truncated to the top 1000).
+  const everything = await fetchRestaurants({ buffetsOnly: false });
+  return everything.find(r => r.place_id === placeId) ?? null;
+}
+
+// ── Buffet schedule ───────────────────────────────────────────────────────────
+
+/**
+ * Ask the server to classify when the buffet runs (same call the web detail panel makes).
+ * The server stores the answer, so each restaurant is analysed once for all clients; only
+ * call this when `buffet_schedule` is null.
+ */
+export async function analyzeSchedule(placeId: string): Promise<BuffetSchedule | null> {
+  const res = await fetch(`${BASE}/api/analyze-schedule`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ place_id: placeId }),
+  });
+  if (!res.ok) return null;
+  const data = await res.json();
+  const schedule: BuffetSchedule | null = data.buffet_schedule ?? null;
+  // Remember it for this session so reopening the screen doesn't ask again.
+  const cached = byId.get(placeId);
+  if (cached && schedule) cached.buffet_schedule = schedule;
+  return schedule;
+}
+
+export const SCHEDULE_LABEL: Record<BuffetSchedule, { short: string; long: string } | null> = {
+  BOTH:         { short: "Daily",     long: "Buffet Daily" },
+  WEEKEND_ONLY: { short: "Wknd Only", long: "Weekend Buffet Only" },
+  WEEKDAY_ONLY: { short: "Wkdy Only", long: "Weekday Buffet Only" },
+  DISCONTINUED: { short: "Discontinued", long: "Buffet Reportedly Discontinued" },
+  UNKNOWN:      null,
+};
+
+// ── Misc ──────────────────────────────────────────────────────────────────────
 
 export async function submitFeedback(placeId: string, vote: "up" | "down", previous?: "up" | "down" | null) {
   await fetch(`${BASE}/api/feedback`, {
@@ -51,24 +171,3 @@ export function photoUrl(ref: string, width = 600) {
 export function mapsUrl(address: string) {
   return `https://maps.apple.com/?q=${encodeURIComponent(address)}`;
 }
-
-export const REGION_VIEW: Record<string, { lat: number; lng: number; delta: number }> = {
-  all:     { lat: 39.8,  lng: -90.0,   delta: 50  },
-  dmv:     { lat: 38.95, lng: -77.1,   delta: 1.2 },
-  boston:  { lat: 42.36, lng: -71.06,  delta: 0.7 },
-  nyc:     { lat: 40.73, lng: -73.95,  delta: 0.6 },
-  philly:  { lat: 39.95, lng: -75.25,  delta: 0.7 },
-  nj:      { lat: 40.45, lng: -74.35,  delta: 1.2 },
-  chicago: { lat: 41.95, lng: -87.78,  delta: 1.0 },
-  seattle: { lat: 47.62, lng: -122.20, delta: 1.0 },
-  la:      { lat: 33.95, lng: -118.10, delta: 1.2 },
-  dallas:  { lat: 32.92, lng: -96.85,  delta: 0.9 },
-  houston: { lat: 29.72, lng: -95.50,  delta: 0.9 },
-  miami:   { lat: 25.85, lng: -80.25,  delta: 0.8 },
-  atlanta: { lat: 33.90, lng: -84.30,  delta: 0.9 },
-  bayarea: { lat: 37.50, lng: -122.05, delta: 0.9 },
-  phoenix: { lat: 33.45, lng: -111.99, delta: 0.9 },
-  columbus:   { lat: 40.02, lng: -83.01, delta: 0.8 },
-  cincinnati: { lat: 39.25, lng: -84.45, delta: 0.8 },
-  cleveland:  { lat: 41.48, lng: -81.70, delta: 0.8 },
-};
