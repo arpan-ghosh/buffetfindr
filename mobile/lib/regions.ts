@@ -42,18 +42,30 @@ export const REGIONS: RegionDef[] = [
   { key: "columbus",   label: "Columbus",   hint: "Ohio",     group: "Midwest", lat: 40.02, lng: -83.01, delta: 0.8, aliases: ["oh"] },
   { key: "cincinnati", label: "Cincinnati", hint: "Ohio & N. Kentucky", group: "Midwest", lat: 39.25, lng: -84.45, delta: 0.8, aliases: ["oh", "ky"] },
   { key: "cleveland",  label: "Cleveland",  hint: "Ohio",     group: "Midwest", lat: 41.48, lng: -81.70, delta: 0.8, aliases: ["oh", "akron"] },
+  { key: "detroit",     label: "Detroit",     hint: "Michigan",  group: "Midwest", lat: 42.47, lng: -83.25, delta: 0.8, aliases: ["mi", "troy", "novi", "canton"] },
+  { key: "minneapolis", label: "Twin Cities", hint: "Minneapolis–St. Paul", group: "Midwest", lat: 44.94, lng: -93.27, delta: 0.8, aliases: ["mn", "minnesota", "minneapolis", "st paul"] },
 
   // ── South ──
   { key: "atlanta", label: "Atlanta", hint: "Georgia",            group: "South", lat: 33.90, lng: -84.30, delta: 0.9, aliases: ["ga"] },
   { key: "miami",   label: "Miami",   hint: "South Florida",      group: "South", lat: 25.85, lng: -80.25, delta: 0.8, aliases: ["fl", "fort lauderdale"] },
   { key: "dallas",  label: "Dallas",  hint: "Dallas–Fort Worth",  group: "South", lat: 32.92, lng: -96.85, delta: 0.9, aliases: ["tx", "texas", "dfw", "plano", "irving", "frisco"] },
   { key: "houston", label: "Houston", hint: "Texas",              group: "South", lat: 29.72, lng: -95.50, delta: 0.9, aliases: ["tx", "sugar land"] },
+  { key: "austin",     label: "Austin",      hint: "Texas",          group: "South", lat: 30.38, lng: -97.74, delta: 0.8, aliases: ["tx", "texas", "round rock", "cedar park"] },
+  { key: "sanantonio", label: "San Antonio", hint: "Texas",          group: "South", lat: 29.52, lng: -98.52, delta: 0.7, aliases: ["tx", "texas"] },
+  { key: "tampa",      label: "Tampa",       hint: "Tampa Bay",      group: "South", lat: 27.98, lng: -82.50, delta: 0.8, aliases: ["fl", "florida", "st petersburg", "clearwater"] },
+  { key: "orlando",    label: "Orlando",     hint: "Central Florida", group: "South", lat: 28.52, lng: -81.40, delta: 0.8, aliases: ["fl", "florida", "kissimmee"] },
+  { key: "charlotte",  label: "Charlotte",   hint: "North Carolina", group: "South", lat: 35.22, lng: -80.80, delta: 0.9, aliases: ["nc", "sc", "fort mill"] },
+  { key: "raleigh",    label: "Raleigh",     hint: "Raleigh–Durham", group: "South", lat: 35.84, lng: -78.82, delta: 0.7, aliases: ["nc", "durham", "cary", "morrisville"] },
 
   // ── West ──
   { key: "seattle", label: "Seattle",     hint: "Washington",                group: "West", lat: 47.62, lng: -122.20, delta: 1.0, aliases: ["wa", "bellevue", "redmond"] },
   { key: "bayarea", label: "Bay Area",    hint: "San Francisco & San Jose",  group: "West", lat: 37.50, lng: -122.05, delta: 0.9, aliases: ["sf", "ca", "california", "fremont", "sunnyvale", "oakland"] },
   { key: "la",      label: "Los Angeles", hint: "Southern California",       group: "West", lat: 33.95, lng: -118.10, delta: 1.2, aliases: ["la", "ca", "california", "artesia", "orange county"] },
   { key: "phoenix", label: "Phoenix",     hint: "Arizona",                   group: "West", lat: 33.45, lng: -111.99, delta: 0.9, aliases: ["az", "tempe", "chandler"] },
+  { key: "sandiego",   label: "San Diego",  hint: "Southern California",  group: "West", lat: 32.92, lng: -117.15, delta: 0.9, aliases: ["ca", "california", "mira mesa"] },
+  { key: "sacramento", label: "Sacramento", hint: "Northern California",  group: "West", lat: 38.60, lng: -121.40, delta: 0.8, aliases: ["ca", "california", "roseville", "folsom"] },
+  { key: "lasvegas",   label: "Las Vegas",  hint: "Nevada",               group: "West", lat: 36.13, lng: -115.17, delta: 0.6, aliases: ["nv", "vegas", "henderson"] },
+  { key: "denver",     label: "Denver",     hint: "Colorado",             group: "West", lat: 39.71, lng: -104.96, delta: 0.8, aliases: ["co", "aurora", "boulder"] },
 ];
 
 const BY_KEY = new Map(REGIONS.map(r => [r.key, r]));
