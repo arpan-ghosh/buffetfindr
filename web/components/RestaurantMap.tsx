@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef } from "react";
 import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
-import type { Restaurant } from "@/lib/types";
+import type { MapBounds, RestaurantSummary } from "@/lib/types";
 
 const REGION_VIEW: Record<string, { center: { lat: number; lng: number }; zoom: number }> = {
   all:     { center: { lat: 39.8,  lng: -90.0  }, zoom: 4  },
@@ -49,10 +49,14 @@ const MAP_STYLE = [
 ];
 
 interface Props {
-  restaurants: Restaurant[];
+  restaurants: RestaurantSummary[];
   selected?: string | null;
   region: string;
   onSelect: (placeId: string) => void;
+  /** Visible area, reported each time the map comes to rest (never while it is moving). */
+  onBoundsChange?: (bounds: MapBounds) => void;
+  /** The map could not load, so no bounds will ever be reported. */
+  onUnavailable?: () => void;
 }
 
 function markerIcon(selected: boolean, score: number) {
@@ -73,13 +77,30 @@ function markerIcon(selected: boolean, score: number) {
   };
 }
 
-export function RestaurantMap({ restaurants, selected, region, onSelect }: Props) {
+export function RestaurantMap({ restaurants, selected, region, onSelect, onBoundsChange, onUnavailable }: Props) {
   const { isLoaded, loadError } = useJsApiLoader({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? "",
   });
 
   const mapRef = useRef<google.maps.Map | null>(null);
   const onLoad = useCallback((map: google.maps.Map) => { mapRef.current = map; }, []);
+
+  const onIdle = useCallback(() => {
+    const b = mapRef.current?.getBounds()?.toJSON();
+    if (!b) return;
+    // Zoomed out far enough to wrap around the globe: treat it as every longitude.
+    const wraps = b.east <= b.west;
+    onBoundsChange?.({
+      south: Math.max(b.south, -90),
+      north: Math.min(b.north, 90),
+      west:  wraps ? -180 : Math.max(b.west, -180),
+      east:  wraps ?  180 : Math.min(b.east, 180),
+    });
+  }, [onBoundsChange]);
+
+  useEffect(() => {
+    if (loadError) onUnavailable?.();
+  }, [loadError, onUnavailable]);
 
   // Pan + zoom when region filter changes
   useEffect(() => {
@@ -118,6 +139,7 @@ export function RestaurantMap({ restaurants, selected, region, onSelect }: Props
         center={REGION_VIEW.dmv.center}
         zoom={REGION_VIEW.dmv.zoom}
         onLoad={onLoad}
+        onIdle={onIdle}
         options={{
           styles: MAP_STYLE,
           disableDefaultUI: true,

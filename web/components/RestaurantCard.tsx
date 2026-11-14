@@ -2,11 +2,11 @@
 
 import { MapPin, Star } from "lucide-react";
 import { motion } from "framer-motion";
-import type { Restaurant } from "@/lib/types";
+import type { RestaurantSummary } from "@/lib/types";
 import { cn, isOpenNow, cityFromAddress, photoUrl } from "@/lib/utils";
 
 interface Props {
-  restaurant: Restaurant;
+  restaurant: RestaurantSummary;
   selected?: boolean;
   onClick?: () => void;
   compact?: boolean;

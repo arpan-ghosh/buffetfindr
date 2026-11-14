@@ -4,6 +4,11 @@ export { REGION_VIEW } from "./regions";
 
 export type BuffetSchedule = "BOTH" | "WEEKEND_ONLY" | "WEEKDAY_ONLY" | "DISCONTINUED" | "UNKNOWN";
 
+/**
+ * List queries ask the server for its "lite" rows (`fields=lite`): everything the cards,
+ * map pins and filters use, with `photo_refs` cut to the first photo. The fields marked
+ * "detail only" are missing from those rows until `fetchRestaurantById` loads the full one.
+ */
 export interface Restaurant {
   place_id: string;
   name: string;
@@ -11,13 +16,16 @@ export interface Restaurant {
   state: string;
   lat: number;
   lng: number;
+  /** Detail only. */
   phone?: string | null;
+  /** Detail only. */
   website?: string | null;
   rating?: number | null;
   review_count?: number | null;
   buffet_score: number;
   buffet_confidence: "HIGH" | "MEDIUM" | "LOW";
-  buffet_evidence: string[];
+  /** Detail only. */
+  buffet_evidence?: string[];
   hours: string[];
   photo_refs: string[];
   is_buffet: boolean;
@@ -40,8 +48,11 @@ export interface RestaurantPage {
 }
 
 // ── Fetch with in-memory cache ────────────────────────────────────────────────
-// The "All" payload is ~2.7 MB, so identical queries are served from memory and
-// concurrent identical requests share one network call.
+// Lists are downloaded whole, once per (region, buffets-only), as lite rows: about 1 MB
+// of JSON (~0.4 MB gzipped) for every buffet in the country, against ~3.7 MB for full
+// rows. Identical queries are served from memory and concurrent identical requests share
+// one network call. Loading by map area instead would not pay for itself at this size:
+// search, "Near me" sorting and clustering all work on the complete list on the device.
 
 const CACHE_MS = 10 * 60 * 1000;
 const TIMEOUT_MS = 25_000;
@@ -50,10 +61,14 @@ const LIMIT = "1000";
 
 const pageCache = new Map<string, { at: number; page: RestaurantPage }>();
 const inflight  = new Map<string, Promise<RestaurantPage>>();
+/** Lite rows from list queries. */
 const byId      = new Map<string, Restaurant>();
+/** Full rows from `fetchRestaurantById`. */
+const fullById     = new Map<string, { at: number; restaurant: Restaurant }>();
+const fullInflight = new Map<string, Promise<Restaurant | null>>();
 
 function queryString(params: RestaurantQuery): string {
-  const query = new URLSearchParams({ min_score: "30", limit: LIMIT });
+  const query = new URLSearchParams({ min_score: "30", limit: LIMIT, fields: "lite" });
   query.set("state", params.state || "all");
   if (params.search)                query.set("search", params.search);
   if (params.confidence)            query.set("confidence", params.confidence);
@@ -61,7 +76,7 @@ function queryString(params: RestaurantQuery): string {
   return query.toString();
 }
 
-async function requestPage(qs: string): Promise<RestaurantPage> {
+async function getJson(qs: string): Promise<{ restaurants: Restaurant[]; total: number }> {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
   try {
@@ -84,7 +99,7 @@ export function fetchRestaurantPage(params: RestaurantQuery = {}): Promise<Resta
   const pending = inflight.get(qs);
   if (pending) return pending;
 
-  const request = requestPage(qs)
+  const request = getJson(qs)
     .then(page => {
       pageCache.set(qs, { at: Date.now(), page });
       // Keep the first object seen per place so detail-screen updates stay visible in lists.
@@ -106,21 +121,48 @@ export function clearRestaurantCache() {
   pageCache.clear();
 }
 
-/** A restaurant already loaded by any list query, without touching the network. */
+/**
+ * The best copy already in memory, without touching the network: the full row if the
+ * detail screen has loaded it before, otherwise the lite row from a list.
+ */
 export function getCachedRestaurant(placeId: string): Restaurant | null {
-  return byId.get(placeId) ?? null;
+  return fullById.get(placeId)?.restaurant ?? byId.get(placeId) ?? null;
 }
 
-/** Look a restaurant up by id, falling back to the network (e.g. cold deep link). */
-export async function fetchRestaurantById(placeId: string): Promise<Restaurant | null> {
-  const hit = byId.get(placeId);
-  if (hit) return hit;
-  const buffets = await fetchRestaurants();
-  const found = buffets.find(r => r.place_id === placeId);
-  if (found) return found;
-  // Non-buffet restaurants only exist in the unfiltered list (truncated to the top 1000).
-  const everything = await fetchRestaurants({ buffetsOnly: false });
-  return everything.find(r => r.place_id === placeId) ?? null;
+/**
+ * The full row for the detail screen (`?place_id=`): adds phone, website, every photo and
+ * the buffet evidence to what the lists carry. If the request fails and a list already
+ * loaded this restaurant, that lite row is returned instead, so the screen still works
+ * offline. Resolves to null when the server doesn't know the id.
+ */
+export function fetchRestaurantById(placeId: string): Promise<Restaurant | null> {
+  const cached = fullById.get(placeId);
+  if (cached && Date.now() - cached.at < CACHE_MS) return Promise.resolve(cached.restaurant);
+
+  const pending = fullInflight.get(placeId);
+  if (pending) return pending;
+
+  const request = getJson(`place_id=${encodeURIComponent(placeId)}`)
+    .then(({ restaurants }) => {
+      // Matched by id rather than taking the first row, in case a server ignores the parameter.
+      const full = restaurants.find(r => r.place_id === placeId) ?? null;
+      if (full) {
+        fullById.set(placeId, { at: Date.now(), restaurant: full });
+        // Lists keep showing their own (lite) object; pass on a schedule it doesn't have yet.
+        const lite = byId.get(placeId);
+        if (lite && full.buffet_schedule) lite.buffet_schedule = full.buffet_schedule;
+      }
+      return full;
+    })
+    .catch(err => {
+      const lite = byId.get(placeId);
+      if (lite) return lite;
+      throw err;
+    })
+    .finally(() => fullInflight.delete(placeId));
+
+  fullInflight.set(placeId, request);
+  return request;
 }
 
 // ── Buffet schedule ───────────────────────────────────────────────────────────
@@ -140,8 +182,11 @@ export async function analyzeSchedule(placeId: string): Promise<BuffetSchedule |
   const data = await res.json();
   const schedule: BuffetSchedule | null = data.buffet_schedule ?? null;
   // Remember it for this session so reopening the screen doesn't ask again.
-  const cached = byId.get(placeId);
-  if (cached && schedule) cached.buffet_schedule = schedule;
+  if (schedule) {
+    for (const cached of [byId.get(placeId), fullById.get(placeId)?.restaurant]) {
+      if (cached) cached.buffet_schedule = schedule;
+    }
+  }
   return schedule;
 }
 

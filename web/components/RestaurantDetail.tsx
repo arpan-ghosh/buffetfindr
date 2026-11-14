@@ -6,12 +6,13 @@ import {
   Navigation2, ChevronDown, CheckCircle2, Circle, Loader2,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import type { Restaurant } from "@/lib/types";
+import type { RestaurantWithDetails } from "@/lib/types";
 import { isOpenNow, photoUrl, cn } from "@/lib/utils";
 import { FeedbackButtons } from "./FeedbackButtons";
 
 interface Props {
-  restaurant: Restaurant | null;
+  /** Opens straight away from the list's summary row; the page swaps in the full row when it arrives. */
+  restaurant: RestaurantWithDetails | null;
   onClose: () => void;
 }
 
@@ -406,7 +407,7 @@ export function RestaurantDetail({ restaurant: r, onClose }: Props) {
                 </div>
 
                 {/* Buffet evidence — collapsible, at the bottom */}
-                {r.buffet_evidence?.length > 0 && (
+                {r.buffet_evidence && r.buffet_evidence.length > 0 && (
                   <div className="rounded-2xl border border-[var(--border)] overflow-hidden">
                     <button
                       onClick={() => setEvidenceOpen(o => !o)}

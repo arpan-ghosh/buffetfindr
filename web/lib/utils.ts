@@ -24,7 +24,7 @@ export function priceLabel(level?: string | number | null) {
   return "$".repeat(Math.min(n, 4));
 }
 
-export function isOpenNow(restaurant: Restaurant): boolean | null {
+export function isOpenNow(restaurant: Pick<Restaurant, "hours">): boolean | null {
   if (!restaurant.hours?.length) return null;
   const now = new Date();
   const dayNames = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];

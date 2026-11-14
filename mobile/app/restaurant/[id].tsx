@@ -45,7 +45,8 @@ function isOpenNow(hours: string[]): boolean | null {
 
 export default function RestaurantDetail() {
   const { id } = useLocalSearchParams<{ id: string }>();
-  // Normally already in memory from the home screen — no network round trip.
+  // Normally already in memory from the home screen, so the screen opens instantly with the
+  // list's lite row; the full row (phone, website) replaces it a moment later.
   const [restaurant, setRestaurant] = useState<Restaurant | null>(() => (id ? getCachedRestaurant(id) : null));
   const [notFound, setNotFound]     = useState(false);
   const [loadTick, setLoadTick]     = useState(0);
@@ -63,7 +64,8 @@ export default function RestaurantDetail() {
     fetchRestaurantById(id)
       .then(r => {
         if (cancelled) return;
-        setRestaurant(r);
+        // Never blank a screen that is already showing the lite row.
+        setRestaurant(prev => r ?? prev);
         setNotFound(!r);
       })
       .catch(() => { if (!cancelled) setNotFound(true); });

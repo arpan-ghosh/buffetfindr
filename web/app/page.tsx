@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import dynamic from "next/dynamic";
 import { motion, AnimatePresence } from "framer-motion";
 import { Map, List, Loader2, Info, X, ChevronLeft, ChevronRight } from "lucide-react";
@@ -8,15 +8,59 @@ import { RestaurantCard } from "@/components/RestaurantCard";
 import { FilterBar } from "@/components/FilterBar";
 import { RestaurantDetail } from "@/components/RestaurantDetail";
 import { SubmitRestaurantModal } from "@/components/SubmitRestaurantModal";
-import type { Restaurant } from "@/lib/types";
+import type { MapBounds, RestaurantSummary, RestaurantWithDetails } from "@/lib/types";
 
 const RestaurantMap = dynamic(
   () => import("@/components/RestaurantMap").then(m => m.RestaurantMap),
   { ssr: false }
 );
 
+// ── Loading by map area ("All" view) ────────────────────────────────────────────
+// The "All" view asks the API only for what the map shows, plus a margin so that small
+// pans and every zoom-in are answered from what is already loaded.
+
+/** Wait this long after the map settles (or a filter changes) before asking the server. */
+const FETCH_DEBOUNCE_MS = 250;
+/** How long the "All" view waits for the map's first report before loading without an area. */
+const MAP_WAIT_MS = 6000;
+/** Extra area requested around the viewport, as a fraction of its size on each side. */
+const BOUNDS_MARGIN = 0.5;
+
+function padBounds(b: MapBounds): MapBounds {
+  const dLat = (b.north - b.south) * BOUNDS_MARGIN;
+  const dLng = (b.east - b.west) * BOUNDS_MARGIN;
+  // Rounded outwards to 3 decimals (~100 m) to keep the URL short.
+  const down = (v: number) => Math.floor(v * 1000) / 1000;
+  const up   = (v: number) => Math.ceil(v * 1000) / 1000;
+  return {
+    south: Math.max(down(b.south - dLat), -90),
+    north: Math.min(up(b.north + dLat), 90),
+    west:  Math.max(down(b.west - dLng), -180),
+    east:  Math.min(up(b.east + dLng), 180),
+  };
+}
+
+function containsBounds(outer: MapBounds, inner: MapBounds): boolean {
+  return outer.south <= inner.south && outer.north >= inner.north
+      && outer.west  <= inner.west  && outer.east  >= inner.east;
+}
+
+function inBounds(r: RestaurantSummary, b: MapBounds): boolean {
+  return r.lat >= b.south && r.lat <= b.north && r.lng >= b.west && r.lng <= b.east;
+}
+
+/** What the list currently on screen was loaded with. */
+interface Loaded {
+  filters: string;
+  state: string;
+  /** Area that was requested; null = no area restriction. */
+  box: MapBounds | null;
+  /** False when the server cut the result at its row limit. */
+  complete: boolean;
+}
+
 export default function Home() {
-  const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
+  const [restaurants, setRestaurants] = useState<RestaurantSummary[]>([]);
   const [loading, setLoading] = useState(true);
   const [view, setView] = useState<"map" | "list">("map");
   const [selected, setSelected]     = useState<string | null>(null);
@@ -28,47 +72,139 @@ export default function Home() {
   const [search, setSearch] = useState("");
   const [buffetsOnly, setBuffetsOnly] = useState(true);
   const [schedule, setSchedule] = useState("");
+  const [bounds, setBounds] = useState<MapBounds | null>(null);
+  const [mapUnavailable, setMapUnavailable] = useState(false);
+  const [detail, setDetail] = useState<RestaurantWithDetails | null>(null);
+  const loaded = useRef<Loaded | null>(null);
+  const requestSeq = useRef(0);
 
-  const fetchRestaurants = useCallback(async () => {
-    setLoading(true);
-    const params = new URLSearchParams({ state, min_score: "30" });
-    if (!buffetsOnly) params.set("buffets_only", "false");
-    if (confidence) params.set("confidence", confidence);
-    if (search)     params.set("search", search);
-    const res = await fetch(`/api/restaurants?${params}`);
-    const data = await res.json();
-    setRestaurants(data.restaurants ?? []);
-    setLoading(false);
-  }, [state, confidence, search, buffetsOnly]);
+  // "All" loads by map area. A text search is the exception: it should find a restaurant
+  // anywhere, not just on screen. Specific regions are small and load whole, as before.
+  const byArea = state === "all" && !search && !mapUnavailable;
+  // Outside the "All" view the viewport is irrelevant, so map movement must not re-run the loader.
+  const area = byArea ? bounds : null;
 
-  useEffect(() => { fetchRestaurants(); }, [fetchRestaurants]);
+  useEffect(() => {
+    if (byArea && !area) return; // the map reports its bounds once it has settled
+
+    const filters = [state, confidence, search, buffetsOnly].join("|");
+    const prev = loaded.current;
+    const covered = prev?.filters === filters && (
+      prev.box === null ||
+      (area !== null && prev.complete && containsBounds(prev.box, area))
+    );
+    if (covered) return;
+
+    const box = area ? padBounds(area) : null;
+    const seq = ++requestSeq.current;
+    const controller = new AbortController();
+    // First load and region switches go out at once; pans, zooms and typing are debounced.
+    const delay = !prev || (!byArea && prev.state !== state) ? 0 : FETCH_DEBOUNCE_MS;
+
+    const timer = setTimeout(async () => {
+      setLoading(true);
+      try {
+        const params = new URLSearchParams({ state, min_score: "30", fields: "lite" });
+        if (!buffetsOnly) params.set("buffets_only", "false");
+        if (confidence) params.set("confidence", confidence);
+        if (search)     params.set("search", search);
+        if (box)        params.set("bbox", [box.west, box.south, box.east, box.north].join(","));
+        const res = await fetch(`/api/restaurants?${params}`, { signal: controller.signal });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        if (seq !== requestSeq.current) return; // a newer request has been issued since
+        const rows: RestaurantSummary[] = data.restaurants ?? [];
+        setRestaurants(rows);
+        loaded.current = { filters, state, box, complete: (data.total ?? rows.length) <= rows.length };
+      } catch {
+        // Superseded or failed: keep showing what we have.
+      } finally {
+        if (seq === requestSeq.current) setLoading(false);
+      }
+    }, delay);
+
+    return () => { clearTimeout(timer); controller.abort(); };
+  }, [state, confidence, search, buffetsOnly, area, byArea]);
+
+  const handleMapUnavailable = useCallback(() => setMapUnavailable(true), []);
+
+  // The map reports on every idle, moved or not; ignore reports that change nothing.
+  const handleBoundsChange = useCallback((b: MapBounds) => {
+    setBounds(prev =>
+      prev && prev.south === b.south && prev.north === b.north && prev.west === b.west && prev.east === b.east
+        ? prev
+        : b);
+  }, []);
+
+  // If the map never reports (blocked script, bad key), stop waiting and load without an area.
+  useEffect(() => {
+    if (bounds) return;
+    const t = setTimeout(() => setMapUnavailable(true), MAP_WAIT_MS);
+    return () => clearTimeout(t);
+  }, [bounds]);
+
+  // The detail panel opens at once from the list's summary row, then upgrades to the
+  // full row (phone, website, every photo, buffet evidence).
+  const handleSelect = useCallback((placeId: string) => {
+    setSelected(placeId);
+    setDetail(prev => prev?.place_id === placeId
+      ? prev
+      : restaurants.find(r => r.place_id === placeId) ?? null);
+  }, [restaurants]);
+
+  const closeDetail = useCallback(() => { setSelected(null); setDetail(null); }, []);
+
+  useEffect(() => {
+    if (!selected) return;
+    let cancelled = false;
+    fetch(`/api/restaurants?place_id=${encodeURIComponent(selected)}`)
+      .then(res => (res.ok ? res.json() : null))
+      .then(data => {
+        const full: RestaurantWithDetails | undefined = data?.restaurants?.[0];
+        if (!cancelled && full?.place_id === selected) setDetail(full);
+      })
+      .catch(() => {}); // the summary row stays on screen
+    return () => { cancelled = true; };
+  }, [selected]);
 
   const handleBuffetsOnlyChange = (v: boolean) => {
     setBuffetsOnly(v);
     if (!v) setSchedule("");
   };
 
-  const displayRestaurants = schedule
-    ? restaurants.filter(r => r.buffet_schedule === schedule)
-    : restaurants;
+  // Pins: everything loaded (including the margin around the viewport).
+  const mapRestaurants = useMemo(
+    () => (schedule ? restaurants.filter(r => r.buffet_schedule === schedule) : restaurants),
+    [restaurants, schedule],
+  );
 
-  const selectedRestaurant = displayRestaurants.find(r => r.place_id === selected) ?? null;
+  // Cards, list and the count: in the "All" view, only what the map is showing.
+  const displayRestaurants = useMemo(
+    () => (area ? mapRestaurants.filter(r => inBounds(r, area)) : mapRestaurants),
+    [mapRestaurants, area],
+  );
+
+  // Only the very first load shows a spinner; after that the previous results stay up
+  // until the new ones replace them.
+  const initialLoading = loading && restaurants.length === 0;
 
   return (
     <div className="relative h-dvh w-full overflow-hidden bg-[var(--bg)]">
 
       {/* ── Map (always rendered underneath) ───────────────────────── */}
       <RestaurantMap
-        restaurants={displayRestaurants}
+        restaurants={mapRestaurants}
         selected={selected}
         region={state}
-        onSelect={id => setSelected(id)}
+        onSelect={handleSelect}
+        onBoundsChange={handleBoundsChange}
+        onUnavailable={handleMapUnavailable}
       />
 
       {/* ── Restaurant detail sidebar ────────────────────────────────── */}
       <RestaurantDetail
-        restaurant={selectedRestaurant}
-        onClose={() => setSelected(null)}
+        restaurant={detail}
+        onClose={closeDetail}
       />
 
       {/* ── Submit modal ─────────────────────────────────────────────── */}
@@ -81,7 +217,7 @@ export default function Home() {
           <div>
             <h1 className="text-base font-bold leading-none text-[var(--text)]">Buffet Findr</h1>
             <p className="text-[10px] text-[var(--muted)] leading-none mt-0.5">
-              {loading ? "Loading…" : buffetsOnly ? `${displayRestaurants.length} buffets near you` : `${displayRestaurants.length} Indian restaurants`}
+              {initialLoading ? "Loading…" : buffetsOnly ? `${displayRestaurants.length} buffets near you` : `${displayRestaurants.length} Indian restaurants`}
             </p>
           </div>
           <button
@@ -154,7 +290,7 @@ export default function Home() {
             </div>
 
             {/* List */}
-            {loading ? (
+            {initialLoading ? (
               <div className="flex-1 flex items-center justify-center">
                 <Loader2 size={24} className="animate-spin text-brand-500" />
               </div>
@@ -166,7 +302,7 @@ export default function Home() {
                       key={r.place_id}
                       restaurant={r}
                       selected={selected === r.place_id}
-                      onClick={() => setSelected(r.place_id)}
+                      onClick={() => handleSelect(r.place_id)}
                     />
                   ))}
                   {displayRestaurants.length === 0 && (
@@ -221,7 +357,7 @@ export default function Home() {
                 className="flex gap-3 px-10 pb-6 overflow-x-auto no-scrollbar"
                 style={{ scrollSnapType: "x mandatory" }}
               >
-                {loading ? (
+                {initialLoading ? (
                   <div className="min-w-[260px] h-[200px] rounded-2xl bg-white shadow-card flex items-center justify-center">
                     <Loader2 size={20} className="animate-spin text-brand-500" />
                   </div>
@@ -232,7 +368,7 @@ export default function Home() {
                         restaurant={r}
                         selected={selected === r.place_id}
                         compact
-                        onClick={() => setSelected(r.place_id)}
+                        onClick={() => handleSelect(r.place_id)}
                       />
                     </div>
                   ))
