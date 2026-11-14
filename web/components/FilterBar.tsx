@@ -35,6 +35,18 @@ const REGIONS = [
   { value: "columbus",   label: "Columbus" },
   { value: "cincinnati", label: "Cincinnati" },
   { value: "cleveland",  label: "Cleveland" },
+  { value: "austin",      label: "Austin" },
+  { value: "sanantonio",  label: "San Antonio" },
+  { value: "sandiego",    label: "San Diego" },
+  { value: "sacramento",  label: "Sacramento" },
+  { value: "lasvegas",    label: "Las Vegas" },
+  { value: "detroit",     label: "Detroit" },
+  { value: "minneapolis", label: "Twin Cities" },
+  { value: "denver",      label: "Denver" },
+  { value: "tampa",       label: "Tampa" },
+  { value: "orlando",     label: "Orlando" },
+  { value: "charlotte",   label: "Charlotte" },
+  { value: "raleigh",     label: "Raleigh" },
 ];
 
 const CONFIDENCE = [

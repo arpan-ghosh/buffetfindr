@@ -2,7 +2,7 @@
 
 ## Project overview
 
-BuffetFindr finds Indian (and South Asian) buffet restaurants near users across the DMV, Boston, NYC, Philadelphia, New Jersey, Chicago, Seattle, Los Angeles, Dallas, Houston, Miami, Atlanta, the Bay Area, Phoenix, Columbus, Cincinnati, and Cleveland.
+BuffetFindr finds Indian (and South Asian) buffet restaurants near users across the DMV, Boston, NYC, Philadelphia, New Jersey, Chicago, Seattle, Los Angeles, Dallas, Houston, Miami, Atlanta, the Bay Area, Phoenix, Columbus, Cincinnati, Cleveland, Austin, San Antonio, San Diego, Sacramento, Las Vegas, Detroit, Minneapolis–St. Paul, Denver, Tampa, Orlando, Charlotte, and Raleigh–Durham.
 
 **Domains**: `buffetfindr.com` (primary), `indianbuffetfinder.com` (redirect/SEO)
 **GitHub**: `github.com/arpan-ghosh/buffetfindr` (public)
@@ -65,9 +65,23 @@ scraper/data/*.json  →  web/data/*.json  →  Neon DB (db:seed)  →  web + mo
 | Columbus (`OH`) | top 20 | 11 |
 | Cincinnati (`OH`/`KY`) | top 20 | 6 |
 | Cleveland (`OH`) | top 20 | 7 |
+| Austin (`TX`) | top 20 | 6 |
+| San Antonio (`TX`) | top 20 | 6 |
+| San Diego (`CA`) | top 20 | 7 |
+| Sacramento (`CA`) | top 20 | 9 |
+| Las Vegas (`NV`) | top 20 | 14 |
+| Detroit (`MI`) | top 20 | 9 |
+| Minneapolis–St. Paul (`MN`) | top 20 | 4 |
+| Denver (`CO`) | top 20 | 9 |
+| Tampa (`FL`) | top 20 | 8 |
+| Orlando (`FL`) | top 20 | 7 |
+| Charlotte (`NC`/`SC`) | top 20 | 6 |
+| Raleigh–Durham (`NC`) | top 20 | 8 |
 | **Total** | | **704** |
 
 > Houston/Miami/Atlanta/Phoenix/Columbus/Cincinnati/Cleveland are **top-20 samples** (ranked by `rating × ln(reviews)`), not full grid scrapes. Bay Area (34 points), LA (35) and Dallas–Fort Worth (24) are full grid scrapes; LA/Dallas were merged with their earlier top-20 pass (higher buffet score wins) because a grid scan records a place under whichever query found it first and so can miss the "found via Indian buffet" +20 bonus. Dallas/Houston share `state=TX` (split at lat 31.5°) and LA/Bay Area share `state=CA` (split at lat 36°), Columbus/Cincinnati/Cleveland share `state=OH` (split at lat 39.6° and 40.8°; Cincinnati also includes N. Kentucky, `state=KY`, taken from each address); the API, region pages and restaurant pages split them by latitude.
+>
+> The 12 metros added in Nov 2026 (Austin … Raleigh–Durham) are top-20 samples too. Metros sharing a state are now split by **bounding boxes** (lat and/or lng) defined once in `web/lib/regions.ts` (`REGION_DEFS`): TX = Dallas / Houston / Austin / San Antonio, CA = LA / Bay Area / San Diego / Sacramento, FL = Miami / Tampa / Orlando, NC = Charlotte (+SC) / Raleigh. Boxes within a state must not overlap.
 
 ### Adding a new region
 1. Add location grid to `scraper/locations.py` → `STATE_MAP`
@@ -75,7 +89,7 @@ scraper/data/*.json  →  web/data/*.json  →  Neon DB (db:seed)  →  web + mo
 3. Run `python3 scraper/main.py --state <new_state>`
 4. Copy output to `web/data/`
 5. Add state to `web/scripts/seed.ts` states array
-6. Add region to `web/app/api/restaurants/route.ts` `REGION_FILES` and `REGION_STATES` maps
+6. Add region to `web/lib/regions.ts` `REGION_DEFS` (states, data files, and bounding `boxes` if it shares a state with another metro) — the API route, region page, restaurant page and sitemap all read it; also add label/description to `web/app/buffets/[region]/page.tsx` and `REGION_NAMES`/`REGION_LABELS` in `web/app/restaurant/[place_id]/page.tsx`
 7. Add pill to `web/components/FilterBar.tsx` `REGIONS` array
 8. Add pan/zoom target to `web/components/RestaurantMap.tsx` `REGION_VIEW`
 9. Add pan/zoom target to `mobile/lib/api.ts` `REGION_VIEW`
@@ -94,7 +108,9 @@ cd scraper
 python3 main.py --state maryland
 # valid states: maryland / virginia / dc / massachusetts / new_york /
 #               philadelphia / new_jersey / illinois / washington /
-#               los_angeles / dallas / houston / miami / atlanta / bay_area / phoenix / columbus / cincinnati / cleveland / all
+#               los_angeles / dallas / houston / miami / atlanta / bay_area / phoenix / columbus / cincinnati / cleveland /
+#               austin / san_antonio / san_diego / sacramento / las_vegas / detroit /
+#               minneapolis / denver / tampa / orlando / charlotte / raleigh / all
 ```
 
 ### Top-N metro scan (new cities, cheap)
@@ -183,22 +199,35 @@ Check results with `vercel ls`; a failed Git build shows as `Error` there with t
 | NJ | NJ |
 | Chicago | IL |
 | Seattle | WA |
-| LA | CA (lat < 36) |
+| LA | CA (33.4 ≤ lat < 36) |
 | Dallas | TX (lat ≥ 31.5) |
-| Houston | TX (lat < 31.5) |
-| Miami | FL |
+| Houston | TX (lat < 31.5, lng ≥ −96.5) |
+| Miami | FL (lat < 27.2) |
 | Atlanta | GA |
-| Bay Area | CA (lat ≥ 36) |
+| Bay Area | CA (lat ≥ 36, excluding the Sacramento box) |
 | Phoenix | AZ |
 | Columbus | OH (39.6 ≤ lat < 40.8) |
 | Cleveland | OH (lat ≥ 40.8) |
 | Cincinnati | OH (lat < 39.6) + KY |
+| Austin (`austin`) | TX (29.85 ≤ lat < 31.5, lng < −96.5) |
+| San Antonio (`sanantonio`) | TX (lat < 29.85, lng < −96.5) |
+| San Diego (`sandiego`) | CA (lat < 33.4) |
+| Sacramento (`sacramento`) | CA (lat ≥ 38.2, lng ≥ −121.9) |
+| Las Vegas (`lasvegas`) | NV |
+| Detroit (`detroit`) | MI |
+| Twin Cities (`minneapolis`) | MN |
+| Denver (`denver`) | CO |
+| Tampa (`tampa`) | FL (lat ≥ 27.2, lng < −81.85) |
+| Orlando (`orlando`) | FL (lat ≥ 27.2, lng ≥ −81.85) |
+| Charlotte (`charlotte`) | NC + SC (lng < −80.0) |
+| Raleigh (`raleigh`) | NC (lng ≥ −80.0) |
 
 ### Key files
 | File | Purpose |
 |---|---|
 | `app/page.tsx` | Main page: map + list view, filters, header |
 | `app/api/restaurants/route.ts` | GET restaurants — Neon in prod, JSON files in dev |
+| `lib/regions.ts` | Region → states / data files / bounding boxes; `inRegion`, `regionFor` |
 | `app/api/feedback/route.ts` | Thumbs up/down votes |
 | `app/api/submissions/route.ts` | User-submitted restaurants |
 | `app/privacy/page.tsx` | Privacy policy at `/privacy` |

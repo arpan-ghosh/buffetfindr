@@ -5,38 +5,51 @@ import { Star, MapPin, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import type { Restaurant } from "@/lib/types";
 import { cityFromAddress } from "@/lib/utils";
+import { REGION_DEFS, inRegion } from "@/lib/regions";
 
 export const revalidate = 86400;
 
-const REGIONS: Record<string, { label: string; states: string[]; description: string; latRange?: [number, number] }> = {
-  dmv:     { label: "DC, Maryland & Virginia", states: ["DC","MD","VA"], description: "Washington DC, Maryland, and Northern Virginia" },
-  boston:  { label: "Boston",                  states: ["MA"],           description: "Greater Boston and Massachusetts" },
-  nyc:     { label: "New York City",            states: ["NY"],           description: "New York City and surrounding areas" },
-  philly:  { label: "Philadelphia",             states: ["PA"],           description: "Philadelphia and Pennsylvania" },
-  nj:      { label: "New Jersey",               states: ["NJ"],           description: "New Jersey" },
-  chicago: { label: "Chicago",                  states: ["IL"],           description: "Chicago and Illinois" },
-  seattle: { label: "Seattle",                  states: ["WA"],           description: "Seattle and Washington State" },
-  la:      { label: "Los Angeles",              states: ["CA"],           description: "Los Angeles and Southern California", latRange: [-90, 36] },
-  dallas:  { label: "Dallas–Fort Worth",        states: ["TX"],           description: "Dallas–Fort Worth and North Texas", latRange: [31.5, 90] },
-  houston: { label: "Houston",                  states: ["TX"],           description: "Houston and Southeast Texas",       latRange: [-90, 31.5] },
-  miami:   { label: "Miami",                    states: ["FL"],           description: "Miami and South Florida" },
-  atlanta: { label: "Atlanta",                  states: ["GA"],           description: "Atlanta and Georgia" },
-  bayarea: { label: "San Francisco Bay Area",   states: ["CA"],           description: "the San Francisco Bay Area, Silicon Valley, and the East Bay", latRange: [36, 90] },
-  phoenix: { label: "Phoenix",                  states: ["AZ"],           description: "Phoenix, Scottsdale, Tempe, and Arizona" },
-  columbus:   { label: "Columbus",              states: ["OH"],           description: "Columbus, Dublin, and Central Ohio", latRange: [39.6, 40.8] },
-  cleveland:  { label: "Cleveland",             states: ["OH"],           description: "Cleveland, Parma, Solon, and Northeast Ohio", latRange: [40.8, 90] },
-  cincinnati: { label: "Cincinnati",            states: ["OH","KY"],      description: "Cincinnati, West Chester, and Northern Kentucky", latRange: [-90, 39.6] },
+// Membership (states + bounding boxes) lives in lib/regions.ts; this is display copy only.
+const REGIONS: Record<string, { label: string; description: string }> = {
+  dmv:     { label: "DC, Maryland & Virginia", description: "Washington DC, Maryland, and Northern Virginia" },
+  boston:  { label: "Boston", description: "Greater Boston and Massachusetts" },
+  nyc:     { label: "New York City", description: "New York City and surrounding areas" },
+  philly:  { label: "Philadelphia", description: "Philadelphia and Pennsylvania" },
+  nj:      { label: "New Jersey", description: "New Jersey" },
+  chicago: { label: "Chicago", description: "Chicago and Illinois" },
+  seattle: { label: "Seattle", description: "Seattle and Washington State" },
+  la:      { label: "Los Angeles", description: "Los Angeles and Southern California" },
+  dallas:  { label: "Dallas–Fort Worth", description: "Dallas–Fort Worth and North Texas" },
+  houston: { label: "Houston", description: "Houston and Southeast Texas" },
+  miami:   { label: "Miami", description: "Miami and South Florida" },
+  atlanta: { label: "Atlanta", description: "Atlanta and Georgia" },
+  bayarea: { label: "San Francisco Bay Area", description: "the San Francisco Bay Area, Silicon Valley, and the East Bay" },
+  phoenix: { label: "Phoenix", description: "Phoenix, Scottsdale, Tempe, and Arizona" },
+  columbus:   { label: "Columbus", description: "Columbus, Dublin, and Central Ohio" },
+  cleveland:  { label: "Cleveland", description: "Cleveland, Parma, Solon, and Northeast Ohio" },
+  cincinnati: { label: "Cincinnati", description: "Cincinnati, West Chester, and Northern Kentucky" },
+  austin:      { label: "Austin", description: "Austin, Round Rock, Cedar Park, and Central Texas" },
+  sanantonio:  { label: "San Antonio", description: "San Antonio and South Central Texas" },
+  sandiego:    { label: "San Diego", description: "San Diego, Mira Mesa, and North County" },
+  sacramento:  { label: "Sacramento", description: "Sacramento, Roseville, Folsom, and Elk Grove" },
+  lasvegas:    { label: "Las Vegas", description: "Las Vegas, Henderson, and Southern Nevada" },
+  detroit:     { label: "Detroit", description: "Metro Detroit — Farmington Hills, Troy, Canton, and Novi" },
+  minneapolis: { label: "Minneapolis–St. Paul", description: "Minneapolis, St. Paul, and the Twin Cities suburbs" },
+  denver:      { label: "Denver", description: "Denver, Aurora, Lakewood, and the Front Range suburbs" },
+  tampa:       { label: "Tampa Bay", description: "Tampa, St. Petersburg, Clearwater, and Brandon" },
+  orlando:     { label: "Orlando", description: "Orlando, Kissimmee, Lake Mary, and Central Florida" },
+  charlotte:   { label: "Charlotte", description: "Charlotte, Pineville, Matthews, and Fort Mill" },
+  raleigh:     { label: "Raleigh–Durham", description: "Raleigh, Durham, Cary, Morrisville, and Chapel Hill" },
 };
 
-async function getBuffets(states: string[], latRange: [number, number] = [-90, 90]): Promise<Restaurant[]> {
+async function getBuffets(region: string): Promise<Restaurant[]> {
   const sql = neon(process.env.DATABASE_URL!);
   const rows = await sql`
     SELECT * FROM restaurants
-    WHERE is_buffet = true AND state = ANY(${states}::text[])
-      AND lat >= ${latRange[0]} AND lat < ${latRange[1]}
+    WHERE is_buffet = true AND state = ANY(${REGION_DEFS[region].states}::text[])
     ORDER BY buffet_score DESC
   `;
-  return rows as unknown as Restaurant[];
+  return (rows as unknown as Restaurant[]).filter(r => inRegion(r, region));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ region: string }> }): Promise<Metadata> {
@@ -57,9 +70,9 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
 export default async function RegionPage({ params }: { params: Promise<{ region: string }> }) {
   const { region } = await params;
   const config = REGIONS[region];
-  if (!config) notFound();
+  if (!config || !REGION_DEFS[region]) notFound();
 
-  const buffets = await getBuffets(config.states, config.latRange);
+  const buffets = await getBuffets(region);
 
   return (
     <div className="min-h-dvh bg-[var(--bg)] font-[family-name:var(--font-geist-sans)]">

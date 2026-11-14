@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
 import { neon } from "@neondatabase/serverless";
+import { REGION_KEYS } from "@/lib/regions";
 
 const BASE = "https://www.buffetfindr.com";
-const REGIONS = ["dmv","boston","nyc","philly","nj","chicago","seattle","la","dallas","houston","miami","atlanta","bayarea","phoenix","columbus","cincinnati","cleveland"];
+const REGIONS = REGION_KEYS;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const sql = neon(process.env.DATABASE_URL!);

@@ -1,0 +1,3435 @@
+[
+  {
+    "place_id": "ChIJtb_ADkKZVogR3JnDFU7ix-A",
+    "name": "Kolapasi Indian Canteen - Charlotte (Steele Creek)",
+    "address": "2040 Freeman Park Dr #100, Charlotte, NC 28273, USA",
+    "lat": 35.1614444,
+    "lng": -80.9698243,
+    "phone": "(980) 771-1002",
+    "website": "https://kolapasicharlotte.com/?utm_source=google",
+    "rating": 4.8,
+    "review_count": 2098,
+    "price_level": null,
+    "business_status": "OPERATIONAL",
+    "hours": [
+      "Monday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Saturday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Sunday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM"
+    ],
+    "hours_periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 21,
+          "minute": 0
+        }
+      }
+    ],
+    "photo_refs": [
+      "places/ChIJtb_ADkKZVogR3JnDFU7ix-A/photos/AV-0GLeDEASW0IVXO3UyXt9Kl1vxrYgjgsHt0nDB8Eeq_WA73FJlW44JYCRadfK94_oacxuTfC7d3rL1mNEzeHhwt1RlI1cKdnhdsLp8kBiEI5Dmq_yxFT2NbwM6H8yQ6qZdtC3Fxv-dUOAwI_VhsXgAu-tEmP2cOIF8gnqhZENpnijcdEiHeF2RWLaCKNY-chjbAQsxFWgTaen0qanL8OWjc6sLNmgurWHJcm177txRrCW30qGR7mGrdJaBAqwJXITgy6mo9GsBnl0Vr--yky-t0PKPzcGmiyDppBqa0LLKB_bMgNSEsD_b9Q7GcmlyunFmyQLEw8J5ugSbhZKywT1iccso07YU-G50b8PiPj7L4-yxdIKLVDLrdj-_WYuVuVa_T2nhIhpBG555rZ9vUTzjV9SjcYZOJR9Sz6zaJrPd_DgyuA",
+      "places/ChIJtb_ADkKZVogR3JnDFU7ix-A/photos/AV-0GLdnhXEhG-_mHZe0Cbvpr5lmX2wJDTEShdDW7QSKFsURgURGVkGNHHc4N4CWZkzUYXpaiaYFv45QLhrnxiu2SU0hwhRzLosuhFSud-t-P5jWJwMClaQ9awVPjlaKGADoSsU_sxuOmbcoWl6Wbg48GlFhwEBBwsxAu4yj0Ax37-yN048zW8lCV6Y3705PhJC0aAhoPVOErhFzDSKbfiXrU8HFuJv1YWZ40Zx4hwkx9Bpu6ZTzZA7Kq6RCjJrMzgELGkYDTkhcHgqRgzD-wVm5i-bcZS68elbQvqSc7ELd4B3SlSNLWwNo95E-PLFATPJOWrMlu1Hx5LYgb2zy9iP3ePcg0Sv5r5Um8p6U8JUTVE9aYo-uYOm0Om8vbyp80cJuhWhneMcdnt6LgCGqtxRs9PdphTxXKKb4Fem8Wuh93F_G_w",
+      "places/ChIJtb_ADkKZVogR3JnDFU7ix-A/photos/AV-0GLfB-BDkEI1wVSgy6uDvGlEu6w2JnTYVwsHLJIWAN8GlxGowd9tZY4EIA4OAMU8rKJlUxLD5mx9MGPxaest8AKB4rIWugWgQZ37UxOCF_cnPy2LhOp4tV41LA8ynbEWtZ0mzuUa8Sy3MKwa9f9d-kUfFHoW9mBmPbr0WTWLlE8U1gmRX6D18zunmX_b86Rw9QJDUIO4TxHWHBH431YNfeuHkRfwBP0x7FT-ngk8TOiLugjJLd7qYVIZqT1y_PrLOAt3VwFdzuAejlvmBeGpRbc2C_6NwQXeX92izbuP17_OBhqsxPKrJQ_IX-EtoGzBItb4hfuo-wjs5B9PnmTQhjXeJC6zt7n5CbFn8zEY-vUqRZfKh2OIFHNYpunuwsNFFFfUeecc7q10ZwyDZecu-SFpPZtA_7tWZKs8Thep4bBreiA",
+      "places/ChIJtb_ADkKZVogR3JnDFU7ix-A/photos/AV-0GLe3FkROJDerr9Ty7765oHMJAv4FNDpIrHBX6mIBIBInyb0d-K-_TczL2UbdewSUgv-0RnNl9C7n0N8pIk1lD9wYiTEPTd_OXHvQi-2jnLP7tWYIh_W7e5oBGTF9zI2JIpcJ75J8TVwefDhZ2QcjvO8zOW4uggsd4x_VIUYSghjxiP-IehLg4c65cfLB_z7hglJcxl2k3MMHkqmPkDC3ZRurqz0fAdXS-8KhQe_whDONtHAGVS8Q8ckrTEvItwJ28alaeK7Ha1HgSEOb4-Vxh2Km-QWpfMPwc67ABM6iKgwaxayAj8atIiWp6JbH9PWXcZliWHcZH2na-K90ap381G1lzvFW-r2eX5fTr69xuJkWUnifO_UeMr-ioxjzXEDS8-q8BiaTyHrXItOM7u7nmTrWv5cyyf6RhC7RdDCdtaDLsw",
+      "places/ChIJtb_ADkKZVogR3JnDFU7ix-A/photos/AV-0GLd4ZQf6NnRJQMip4jMneDqHthRBohCMzTUhNIzHjHvD5KTyaZgcukckLm9RF7pGolu7rgCKkUntrOL52-xw8jbnl698hvNIKOH98cE__EzGG5i1wjpyf62Kfw8bbn47gv_dYisuKRllcR6q6ku6ndvEYeXSc2UWinIW4AaBKeogbacGO3NGaz58uI9VyfM3D9oNpBCMGJZ16Dt24lCBvzOX3VZGEDneI6KKyQJrE88lQXGsp36u7PKKAVrjahACJ2HXRSfIYezWquxA6gFMqRbS5tx_LkQxIGdgFSrM3dfvWh1dZ7kwIJykY85BOfLvyV5NiS02AtwIZAHwamF9GZj_SEH6eLN4ImPHmBlajK285_36qHdyrgVTGp0Q7i9c2T5je0Nfi_rjby36IiT-gfCWLSPu8Pr00m1wfCBL6uteKA"
+    ],
+    "types": [
+      "indian_restaurant",
+      "halal_restaurant",
+      "vegan_restaurant",
+      "vegetarian_restaurant",
+      "meal_takeaway",
+      "south_indian_restaurant",
+      "korean_restaurant",
+      "family_restaurant",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "buffet_score": 20,
+    "buffet_confidence": "LOW",
+    "buffet_evidence": [
+      "matched 'Indian buffet' search query"
+    ],
+    "is_buffet": false,
+    "state": "NC",
+    "found_via": "Indian buffet",
+    "search_location": "Uptown Charlotte",
+    "metro_rank": 1,
+    "scraped_at": "2026-11-14T20:28:47.335574Z"
+  },
+  {
+    "place_id": "ChIJ7ZxDxEefVogRqE8_6VOC82U",
+    "name": "Curry Gate",
+    "address": "5516 South Blvd, Charlotte, NC 28217, USA",
+    "lat": 35.160663,
+    "lng": -80.8765422,
+    "phone": "(704) 910-4038",
+    "website": "https://currygates.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp",
+    "rating": 4.9,
+    "review_count": 1682,
+    "price_level": "PRICE_LEVEL_MODERATE",
+    "business_status": "OPERATIONAL",
+    "hours": [
+      "Monday: 12:00\u2009\u2013\u20099:00\u202fPM",
+      "Tuesday: 12:00\u2009\u2013\u20099:00\u202fPM",
+      "Wednesday: 12:00\u2009\u2013\u20099:00\u202fPM",
+      "Thursday: 12:00\u2009\u2013\u20099:00\u202fPM",
+      "Friday: 12:00\u2009\u2013\u20099:00\u202fPM",
+      "Saturday: 12:00\u2009\u2013\u20099:00\u202fPM",
+      "Sunday: 12:00\u2009\u2013\u20098:45\u202fPM"
+    ],
+    "hours_periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 20,
+          "minute": 45
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 21,
+          "minute": 0
+        }
+      }
+    ],
+    "photo_refs": [
+      "places/ChIJ7ZxDxEefVogRqE8_6VOC82U/photos/AV-0GLeF_ardNachR-kEWNd7uYPzvi3E3fqtA23RYaNC2hHltG5jx9okzEDxg6rBRYB2o31QpsDCqwmG-PArQ0OYgtYTtWYWDP8RvUmv5uo5WIT5_ift21UjH_7tfI89gVujc-ajQISUNoGrBJbFJ38vIedpr97nWazk2dT1WBS9fSLRNquS6U9nIP07_7Cg-40G8-JniRMFnXmmYWOvxPX-z5niYi3anWe9eOKpmfYYDUAynspGrTqsuQfH_dwqZv3aHNSnPVpAlSxHSw9omqtIRPhllPVDWSQSR-MoyfH1j2NzSdkeoAJNeJqzgzau2IcG4Oqn2KncFZ1f16rOLWhDzQhhJx62D9EnbdLOthLh5XG2Zgstk8s7y8-Gpzf5uoBHoVy6rXXfhVmCbDMQqXue0ULinZYW",
+      "places/ChIJ7ZxDxEefVogRqE8_6VOC82U/photos/AV-0GLdtkt2FKru_VrlA2ELuaYnK3avpfeq8zKF_JPt1Nk7Yz8SADzO0MeSrHBH8_rHkRHLhAAm_Piey_JumVfkefNi_qApJnEQIbeGYMBKX7huYAFXMyFae446JeMQuCfm1rg4KvbSX5QyrDwyIUAybyzaNuECpbM1SV8TtQr4a6jaDhd0BEGs_-VdEPD1evKoEhOE88eM8KJew4JAwZmueRyVKAaJ7hY8NZBJxUdBH56cZ5K0Xlmgkujf7uEMpQeDIav9x61aJdkYgTOrFuopZPvKyADi76jEolSwNNPn2LaGd6ZdW_xm3chuDBDpltxkEHbHMUOIIzpnTKtpb73bq1Nr17Dj1bbceahkDLshcrM2WE-Xpl7LUkE-O4W1prK0uXrWPiT1jHLtY6hB9-zBwrkwZhGI",
+      "places/ChIJ7ZxDxEefVogRqE8_6VOC82U/photos/AV-0GLfIt0ywoJzyQlFHtgUkLCIl4BHMy2ShC4Xq8HXyeYxYxspxbUtJzPS1ImQjHoYKA5IMwHiXw17dmzjhI3cDkCokYwIwpczvp_Oo3n3L3sBkpkJS3hyuPJrl0orJT1KlYYsOfg0YczOZg7MWYn6119WLhEJl2xb4Ok6AXGEfbrmm-9d61EumgYuGgmJkUWylNBlybG0VpjQc2vzJzvFkVHP5j35gPpT057OeMOnlIi3WyG767LBFhtE3UMcojtmBsKi8ByuzaP9RKiXYs0y9Mm5F7i0g6OnyQ2MGoHr0p3RqcFWkiS10I_Fe9q5JNfD3VJQUtvaj0WtOaOk-jEigkwHabhwhTUlwLgv3JowREcAW51JfcCXnA6C4E1B0ptmUwdIJt4UK7tvUeL9akdZk3GzGXmLhNe9rHtSO8ImsytcBLA",
+      "places/ChIJ7ZxDxEefVogRqE8_6VOC82U/photos/AV-0GLdgF0MJ7kuJ1kgo5usoYXH9lTOHjmLxsjCGSGZ0D_itHzOEGnE3f9GIVxUUy9B0o68UlIKGGBGuOUBdCGPfqpcc8ok636Dq_EV-LKk9oiB_tLTUjsGMJe2mM2Bjdp0QnxyBrrkCa-uGCdDTu21s2rsrq0OK7EqAORb3Bldst6ubmYZgbWowER4cc4gCoBMWB0K82UxP2KB7QevXw6kCoHh_cNMItAfS_zbMnMH3WhpQvdaSCwDwnwGAs0ULQA6FZhCABfI38axnUagS6nS7PTaupeyxQ4CzAockC0tXXZ1R-P78DIzu5r4a-thSXopvoq_kXjpUopC3bvyEp3khlIYDlhbxjsAY0xFFrmlepmvLkvwgRbTmtyImnpTknnLs2r69QQjwkI2sqmY12DdlFsl6r3XQ2h0_RtKQFgMyMwr5Ig",
+      "places/ChIJ7ZxDxEefVogRqE8_6VOC82U/photos/AV-0GLeo-kerttCMBsLPRGWmUl1rLQCtS0qHHEyEHfCSM8SvqN0aNlUusf5NAOnITriVd6DpMa-ZucOOX9Yr7SFJZCH89bjzwblRUlDPyowCvBy4pG-3VaJlmhBTCqt_q8iYTRw5LmhXt6zdYVz351CdvmNJG4m796-bOBHBZaUzwoxFO6FXwYlky2WeQtBUuJVaaIqfj6iPzHmRcdwQWpuBvM1PFVQuxzP2OyUVYMqwLHpw4zu9-DfyU-T-5I_lX7_Z3N6GKXUsM_jUwdlXIh893Gmx1HRcMgjj7mz4x-_gMlVEzbDXDX4mlTQWtKpKc4Mk4SXNomZHw7cENyA8mNfihZNbRAu-ydVIU9bHlJVPe779R4PCP5nKhGUto8MrGa9D2MgAHGEtsrpFsAcJSrxftrF5f7G-AG2W0NRd1Aqb2NliPA"
+    ],
+    "types": [
+      "indian_restaurant",
+      "diner",
+      "north_indian_restaurant",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "buffet_score": 20,
+    "buffet_confidence": "LOW",
+    "buffet_evidence": [
+      "matched 'Indian buffet' search query"
+    ],
+    "is_buffet": false,
+    "state": "NC",
+    "found_via": "Indian buffet",
+    "search_location": "Uptown Charlotte",
+    "metro_rank": 2,
+    "scraped_at": "2026-11-14T20:28:48.490806Z"
+  },
+  {
+    "place_id": "ChIJSxekugccVIgRYQwo39Jk9rY",
+    "name": "Passage To India (UNC)",
+    "address": "9510 University City Blvd #101, Charlotte, NC 28213, USA",
+    "lat": 35.305713,
+    "lng": -80.723496,
+    "phone": "(704) 549-1886",
+    "website": "https://passagetoindianc.com/?utm_source=google",
+    "rating": 4.5,
+    "review_count": 2986,
+    "price_level": "PRICE_LEVEL_INEXPENSIVE",
+    "business_status": "OPERATIONAL",
+    "hours": [
+      "Monday: 11:00\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u20099:00\u202fPM",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u20099:00\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u20099:00\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u20099:00\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u20092:30\u202fPM, 4:30\u2009\u2013\u20099:00\u202fPM",
+      "Saturday: 11:00\u202fAM\u2009\u2013\u20092:30\u202fPM, 4:30\u2009\u2013\u20099:00\u202fPM",
+      "Sunday: 11:00\u202fAM\u2009\u2013\u20092:30\u202fPM, 4:30\u2009\u2013\u20098:00\u202fPM"
+    ],
+    "hours_periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 0,
+          "hour": 16,
+          "minute": 30
+        },
+        "close": {
+          "day": 0,
+          "hour": 20,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 16,
+          "minute": 30
+        },
+        "close": {
+          "day": 5,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 16,
+          "minute": 30
+        },
+        "close": {
+          "day": 6,
+          "hour": 21,
+          "minute": 0
+        }
+      }
+    ],
+    "photo_refs": [
+      "places/ChIJSxekugccVIgRYQwo39Jk9rY/photos/AV-0GLeuz785kzc-myubR0bWpi9lT5UHorC7ggTEiGT1WCmHIAgoQCK61Fcb0NpHuQ45uVXkhQgrl9-Wa8xBegUvqNzJ3TCLc1KDUWQ-sXAbX2o8dp-6O673QQ6nagWgDVhJN3f6FXJ0wYhykK7mJ8U43mJ3-TKNpUX_KdfhQV343gsnXXiVtc_3gIA3x0qtqSzJUyAeJDjuG-VmhqiGx8LMaorKF6F3iykzx9Nc1rqJ_DaqYolcNcLcf4Ep33ICjfDVwD91Vd9qQ-AlbIyqytTCy31EH8ndSyqFHwQWYzCjbnFFuyhpHZQN3iqCT6l6--TPKzf73kMHVPtC0CA02HukC2iBqclhiKrS3HjuhFAGtlBn_B-g2oc_GnjnT8AL1LHfNPafSbNZp3GoP6L1h0hDe1w4lWJxJSc",
+      "places/ChIJSxekugccVIgRYQwo39Jk9rY/photos/AV-0GLeyYeteEyFkgvH3n10Cesg7oxmVBcbZhzSKH2H-vV5Dq1y0WvgtLWU2C6k0T4uZQ1ev7dXZ5Vlpve3bkBH0chLW0Qmchg4kjzYQrMG62Su0lv1nMZUhPZ45ngBu3Hn9ZZlE9eLRoTdfB_84jplU0Q3JydEJVJuvnA-pI39iKCwv8RLm4ic460pUeIlFhkhojUG3l9x6u1KLEsVrX3VvrglyZlcng4yWDtTRjmVXA-PsNl-HbcmltpZ8YHVUx4xlJCsUHEz4rsItzXYgcE8aJOUyhyZREFHz214XInGJHZBMERqG-Sl9hK5YZ3o3CuK8grZmD0O5MfNtzZzQsglvJ-rWLeS-PFA5DhiXr3UUY1Rqd7VmwUaXLz6EYJd3kAxIdrtiCHsHqT6t1zLS3C_6m4k7MzNJ",
+      "places/ChIJSxekugccVIgRYQwo39Jk9rY/photos/AV-0GLf4GSG1T-MK_V6VxSHddA7iKlPXtIQ1zB5WJYHmEILRkmpt4ZLSU5wS-uwtFdHsEYA0DuQZAsZoIxyJeA31F7XgOPElAU1APAqp9hW_vWSth6oWlc-OhegWfn_yTnRZTBEM5cffViRorv6iZYf58JhxpOFsu15wLwy83EpLp73Y4SZQOb0MEwGlUC2cbe5h0OsHbEpFcVhI8ceH5K3Ciu4BtNYvgApBABT_jpqcU6jSv-PjDXDBosQYebnbZW-2S-r4kheGGHMrv6sDDSJXzrHVVk9QxdiTrjob-7LJ_RjvHr99OpPLlF1ofqB6U3FYLTZeidEQisHACxHAd4gZibPY-JsmkSQDWCo8mA7qFZeymq7IP2-fuFrXcBGyjkiZUS-ibxnTm0XJEHih9GmdPgeTiiU",
+      "places/ChIJSxekugccVIgRYQwo39Jk9rY/photos/AV-0GLcq5HBneN_JNrT0onXx5f2mdlu85kdEbECGCQghEUhUS9hCAGUGdkBzsWqOlE0wtZvh9Gi85-XROzGOPeH2er6mJBqtXYy6ITJWa7hMhanQidkI8JGLRSkZMIOwQJ9jf7LFLTqSc0alrajGckZxdcB-9DUFRErTczhSTSpfKRZzp-zQjegT9XMg2aS4wHDJ5mn_mMjxLRhxmRwYE_vGzNC6NxOAa7caSbSCEb9d5W9JD4f7NYsQq46ldTAfsuo_xhvk938KPXaxwsNrfHm4SNGKYbT-MfUU0JZIR9zw5XVGfMzvqHdcY_5cEf-DOPuwxQteqf6kfcxWaFDH2ahpBzUdU4V3ixs6C3reG5sIhSDmZBtcLuTxL2qIHZIfs20ynZsHKxWJ6plJ6AGC2odFWH9mfpGy508",
+      "places/ChIJSxekugccVIgRYQwo39Jk9rY/photos/AV-0GLcEZBFq7qu_TvbceE8F4EVk56m26kH32qdRs2BJU4KBVk5qn7uhG3TQVhRifJWEeuGfQp6hNAbbAFT52elqWig77xQSkA6VPsA1z-8PVAS1kL8j5UyxsxVfNjdMCBOFod7nSBSdPjwxbkj6L_cfG_ZxcSNxCBG8SHvPHyu5089bovvZL7XcTFzir3PlDLY-3Tb3Heucj5x15Y7msOuTp8JAH2zVtKnedx7EesmXqVZiU5teKFZ6PC98rWkP9s-e4LlvEJ6wuDk4vkZ1F0XLHN6kKrlrj2ktZlmYbTXFSNN5zJt_2UW330pGmkcveOg-khR4-ZxYRvfAAaXrD1v3clVgotKzDtjLmpPYzGkOx0v2gBdyu_YYrskv39IJePH6zRjz51QFTpxeWNjbaIg3ocu_FmkN712D0TGwpVaYO9wfTA"
+    ],
+    "types": [
+      "indian_restaurant",
+      "halal_restaurant",
+      "vegan_restaurant",
+      "vegetarian_restaurant",
+      "meal_takeaway",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "buffet_score": 35,
+    "buffet_confidence": "MEDIUM",
+    "buffet_evidence": [
+      "matched 'Indian buffet' search query",
+      "buffet in Google summary"
+    ],
+    "is_buffet": true,
+    "state": "NC",
+    "found_via": "Indian buffet",
+    "search_location": "Uptown Charlotte",
+    "metro_rank": 3,
+    "scraped_at": "2026-11-14T20:28:48.786748Z"
+  },
+  {
+    "place_id": "ChIJA1m5KEEhVIgRTUZKxGoPFIk",
+    "name": "Royal Biryani",
+    "address": "9624 Monroe Rd, Charlotte, NC 28270, USA",
+    "lat": 35.1407977,
+    "lng": -80.74057959999999,
+    "phone": "(980) 339-5842",
+    "website": "https://www.royalbiryanius.com/",
+    "rating": 4.6,
+    "review_count": 1732,
+    "price_level": "PRICE_LEVEL_MODERATE",
+    "business_status": "OPERATIONAL",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 12:00\u2009\u2013\u20099:30\u202fPM",
+      "Wednesday: 12:00\u2009\u2013\u20099:30\u202fPM",
+      "Thursday: 12:00\u2009\u2013\u20099:30\u202fPM",
+      "Friday: 12:00\u2009\u2013\u20099:30\u202fPM",
+      "Saturday: 12:00\u2009\u2013\u20099:30\u202fPM",
+      "Sunday: 12:00\u2009\u2013\u20099:00\u202fPM"
+    ],
+    "hours_periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 21,
+          "minute": 30
+        }
+      }
+    ],
+    "photo_refs": [
+      "places/ChIJA1m5KEEhVIgRTUZKxGoPFIk/photos/AV-0GLcw4r6mz0uIKn39pH8Y0tGtqXM3hYjf4PAVTvAqOCYXjAF8dafE-qpIdCFpr7j577BiMkfww1zrenR3Ki4JM85l1WxNWuW_bb6NCRImuSd4gfhDBlpzx1YSIUcwVryM9zDfUYfnPnCElCSi6zELZ4am2Vg5DarrohwB7vNPvQmHxpAEPOEEILhNEZR5lCMMBqrnYAzx3eihyPleeJHEablWhNyw43rHG48LUoqqezq2-abUBVMBmFZKOZ9_A-GwLqL0xOTVk-9QSS_GW2dEkOTRGWadDMMjtkT-k1LmvCugtfbGmyCN7o7z6alhWPkJD3mFxxi57MV1Px68LhLCMy9yMaZ2znqnCemgN1xmFTYP8oPMp_WP3cGKN69xM1_pK_nhgrXF5dIZSUHLuxtnWfhtboAfmAE",
+      "places/ChIJA1m5KEEhVIgRTUZKxGoPFIk/photos/AV-0GLdaGg-PiM__XzqKH5KVAoEHhUl8o6G90FSNl3bE6PrFD3jTdSUtf190qDSRKbSGiAibSfqfDcHiCx4yIf5_urZU5gPbPnXcOGGjMJndMtx5j1h6l2Ju51gQ_cEuFB-Y-kfR0tzd0F_s_01ZpBDC_AA-q_nFwCOomP0UaJcO5wqpincY-e8UaMksi6UN69kN3SkF91xioO6ZvGn05BFhmwvtoQViC9G-7axUsXH9bPkyNtSjbVqENvX-iaA4_k-Dbnc0jSY6AtcZXD-2P9SY9PAR1Gom7eRh8PKLZVgOHdjFIEl3lvrWVLB1JSkuk7Yo-1v52EvNEa26-3DdfR0wTaJkca1UT42L9EKcwgVH103d47TzOIz5lNtqvJRQH2gdF44LZCOOTE4CWJ44h1DidiiKRd8T",
+      "places/ChIJA1m5KEEhVIgRTUZKxGoPFIk/photos/AV-0GLd0lZv7SqDEICLvcTVNJdmhqi4fjpfSYQZpEoOPpMBoRPqE3SwYtvvU5WbbkfQ0nQdN4pU_COKzSDtDU9iuN6G2G3Z9J92NUhTRUC_aLhuM8qpHVfc5M0VyS7QoXTZGhzCkW5Fy0zheOn_yTfNiYF3-UGAjFMASaGay84mkSU1wDHJbfpjm8LC9bGM94TXTTfxHG70BpMi6rhdIgpDMZujYvB-rjs_WMlB8aVTEB0grvwjhk148L_ZfzyKvQIKJCovIIZoOvP2j6cEK8bCIX6TzYVqxNBeaCV19WHPJnBb35AGi653jsoMej6eW6sVkynkjfkdtXagIu4WqdrLf4SMKOuGqUXSSPu6iDna55mJTNpzU4HDWZz6o8hUYgiI11AGgIpoEOlMK1TqiNZ9w-3A6leu7Lao",
+      "places/ChIJA1m5KEEhVIgRTUZKxGoPFIk/photos/AV-0GLepUMGRcIoMzuq25-zmV2mLKCiWDZVDJLer9XFVavoQzdmGFayY_kVPdP1AKas4TQt-WXvmkix8IAq3NaW7V_PvO_R5t7gt62YCnyTakkWJD1TFbkbNESK8rh-somCEC0dV7TXopyfDvlgMGMpI0TfPZJv2ncX1zviTbex2VehJPyYRvOqcR3M16ol8BNICvoLi0U0UC26xN_-SKsnZy9b2qfpxUW_Ix0mvkSfoANwnIXHatQYunLnb8KkHP2zms_ITp02dMo87sn6khYqPuiuHBnSL3UacRKCFUlarRKo6z55tbDnEkqUR-P365FfTaxXs2aOwoxZepXR2X_KKcDQ5K8f4dJ9TvbLvVJJfrv71VFxRfp6tRPHd4sLFVeEUbKhqQBC0Z2X3AyGZxoQ69vtDA4s1cyiagS3eyKqD9OeQFQ",
+      "places/ChIJA1m5KEEhVIgRTUZKxGoPFIk/photos/AV-0GLdvG2Nkjfi7qZYcvLsLEZ7zBEoZ0A9IK7Ae1guIBiPKRP7aHW6vvfSm5rBPv_Jou-eY_X0FYj6SMRQAOpFj-C3ko9FbCjvluyemeZObZBH_qaw_6vyieMQHlGKyGLpZ4neg6XOBUTpaXlNN_692eOPyRV9fE9F6D2nWRp2T1C3ZoBWt1-dWFLPUR_n13egq6Ig8txcMFR1Um8rDW_DoCdVHFhDsJ39ZK41gAlODQGQHpQZJBbX2vZWCJBmvlVK9irkcCCiUBk7Pc3Uxhf7UPopgUliyt4Kh-INdGEzv5tJE34fEXIo3mM14FwcvxdnJY1FkLYvoGUq7Diz0x76EUhraz7UimsbryLJbxwPYxJL0HA61yfclNAVxs-Ddahxwk67yVatPZ-eVe8FLa7Mlck3S-g"
+    ],
+    "types": [
+      "indian_restaurant",
+      "meal_takeaway",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "buffet_score": 20,
+    "buffet_confidence": "LOW",
+    "buffet_evidence": [
+      "matched 'Indian buffet' search query"
+    ],
+    "is_buffet": false,
+    "state": "NC",
+    "found_via": "Indian buffet",
+    "search_location": "Uptown Charlotte",
+    "metro_rank": 4,
+    "scraped_at": "2026-11-14T20:28:50.405183Z"
+  },
+  {
+    "place_id": "ChIJnYyDX32hVogRxb6ykCRHbZg",
+    "name": "Botiwalla by Chai Pani",
+    "address": "1115 N Brevard St, Charlotte, NC 28206, USA",
+    "lat": 35.234111899999995,
+    "lng": -80.82724929999999,
+    "phone": "(980) 296-3993",
+    "website": "http://botiwalla.com/",
+    "rating": 4.7,
+    "review_count": 1399,
+    "price_level": "PRICE_LEVEL_INEXPENSIVE",
+    "business_status": "OPERATIONAL",
+    "hours": [
+      "Monday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM"
+    ],
+    "hours_periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 22,
+          "minute": 0
+        }
+      }
+    ],
+    "photo_refs": [
+      "places/ChIJnYyDX32hVogRxb6ykCRHbZg/photos/AV-0GLf6NOCzvSDDlEwXb4jSm7libf0SdwFbh2tyuMsdX3KAWDc1sy4OP0y-AOrcy_jYVBF0qBdlpwN9gYPE9KS0OGrIRUe2o6YBEH7WWLa4X_CE54lKlDgvJmYl2Q_U1Sk2CYcLTbJMn3G-a7LyjojL8X2IenKHam9ravXIsBnYwI7iYewNfh1JKp6_mDWY4wBdjMPCsmSphIsD-Wu-ztaUvmO9Yf5080C0k9gmP5Ez_5zxQw0icDJ1M5RbPvzvv959XRBGGdY63iLH8oM7T6KOMgXqoNYUXgGBwuEZf_P3pl7VdKN49yYGcRUIQr5sjoNJ4ios4TMzzWNZaAvPFpwDzuMgVe5O6H2rpI_XzbXuo0mtVAQkrXPZR7xhuomVUgN7uPIcQZZJ4XtX0iMWTCWHQJ63aTwG-zg",
+      "places/ChIJnYyDX32hVogRxb6ykCRHbZg/photos/AV-0GLef-FyUpwRA6nVE74iTUXdiVx-hLS2BUrBw8pDU74ow-cl3jZIGc3dbtIJRgf8rfXUecTiKCY4nim8nC2ZDWBiXhvFmuXylaVDSpWzWdLf788tLhOKoXXS6hRWW3Ud6NvFAJIYX1cvQD5ydMVbfpu0N-mUAUbrNVc_1lE_oPWRjo1Dy63UyK82MvVWqtQYQF82a4BmRRNJowpu0M_IDpfTDRB69JhdVFhNEp2HjCOKqpzjZzVy49IwW0pKe2CRdfZMo6eyLOctAwlRSpUgMixPAwPolLM25wPagFfyDiPaRooSGBecJ5YlF6PiNG6iKItFbcVzTPHc4yjzL1UVNmPxmFiVdHPLgOrMFFbZxEodYLeORngxigJz-hieuMyhwF0BlnbmdUJ5fPre_YpWzSPVtu1S8Fa0",
+      "places/ChIJnYyDX32hVogRxb6ykCRHbZg/photos/AV-0GLe8neBq-WeiFhUUsUZWT6OPtJsHAXxT2REAHmj04I-ihOHWVLtAFnQDbKvL079Lde0tYyQngRO5spBlqveb9eod9iPOjL8mmEowWuX8sUimaFusBab7Kg1dyxFEzzEuwX7GE9xgSYkX4-WYjLzvyCN1BDxWsVYpEaGw6b0YaJM04Pf4go5X4LYslABroCx_fMr18FacL-tTruPYP0u5_4oIQCHB8-dinaNA1QvHIj_ISP5Gsq2stbD9Wzxd9kNGWza0srFFyYvrjoKf3t7fuMcu2XjvxMltt3KcLTEzSyz4Ox4KmHG5Wkvo7KE2AdBDUL2l0vS83K6EvxlgP-hkovw8E2HNCBlVfXu14nkxwiV8OLxBnHjVmCe1Vp1D32CT8vdsGRJLQQXrPaX8S-gEFwWnxfTEc6fqyHOeobJwViQfLQ",
+      "places/ChIJnYyDX32hVogRxb6ykCRHbZg/photos/AV-0GLcDXJzFW2ygdyYO2QGN0IDVP-4HPFxqIwaFz5v2RJzTIiOzhF-lonVkArsMiO9dIYEBDJv4TPw5VaUN8Aq1QbXbbhGU0dsFUj46nnLlbnJmv5abT6qfAybpv-hdJxtTHNRAyUrUzL4cuao9uWtyq-PR_mDkNG-atJ8RyXFnKYbQjbfJCZrc9nVTCOV55EKlLi7j32ICrjm8ISiFY5x6FN9xjS61gQnnSbgfcgq9iEP6xHDe6Tg23HrVCl8NF_IAZ7iIppmLqI0FsrhoBnJiY4ua9e6TnhV1kXxyuo-hOKaqX5RyuSyxhqUHSnpPjFxop5M0TInZUu2PQTheEmqxn5dd1i2u4i-CltjoVNXe0sdZMVviv2jF3gDGIT-iFQuvpNmntH-a1hXiUuhNh9AuK8l0OetzkqgrtJuYFk1fu1Pk",
+      "places/ChIJnYyDX32hVogRxb6ykCRHbZg/photos/AV-0GLfp5Dk4nBKW_eEfJnTlZIBpmfw_0iVU5urotdFNnPjtr90-UlNnv4H1dnJzEpfzdGoW5lddNhoSLVV1Yd908fI5M3QW33W0gyvHiwCnBPvS8iMMZJWY7OR80NDhsCuFRN7BtKJKYwOKxcCU47Dt__WaJc4pnubAzcmYz65oqvQyZ8BvwG-bLfQpwLoudDT2iaXpo861rdiX-uSf_DOlDpQd24j3NSqMjVaOaeg6UrCBnwGO6JFpLpRcnmre0Q8urLYJPr-yGyz7XersRZYRzUpPcvCYjUDRt9mwjsgwHUErPb8_G-VBozPt1vtF24VRTfzjuKjhIPp83cpsgIx_QdX4ja8GQkZhsqx3RpetapDCbjrdNIkCyQiJt5eJ6NK4UUN5YtnoKdPMnrRlR68kM9euxmvlTjVwzd7ejYg7U9UgTQ"
+    ],
+    "types": [
+      "indian_restaurant",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "buffet_score": 20,
+    "buffet_confidence": "LOW",
+    "buffet_evidence": [
+      "matched 'Indian buffet' search query"
+    ],
+    "is_buffet": false,
+    "state": "NC",
+    "found_via": "Indian buffet",
+    "search_location": "Uptown Charlotte",
+    "metro_rank": 5,
+    "scraped_at": "2026-11-14T20:28:52.037223Z"
+  },
+  {
+    "place_id": "ChIJ71s2xrqhVogRYkAp6d_JrZo",
+    "name": "CURRY GATE",
+    "address": "630 W 24th St, Charlotte, NC 28206, USA",
+    "lat": 35.2481273,
+    "lng": -80.82893469999999,
+    "phone": "(704) 712-2968",
+    "website": "https://currygates.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp",
+    "rating": 4.7,
+    "review_count": 1169,
+    "price_level": "PRICE_LEVEL_MODERATE",
+    "business_status": "OPERATIONAL",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 12:00\u2009\u2013\u20099:00\u202fPM",
+      "Wednesday: 12:00\u2009\u2013\u20099:00\u202fPM",
+      "Thursday: 12:00\u2009\u2013\u20099:00\u202fPM",
+      "Friday: 12:00\u2009\u2013\u20099:00\u202fPM",
+      "Saturday: 12:00\u2009\u2013\u20099:00\u202fPM",
+      "Sunday: 12:00\u2009\u2013\u20099:00\u202fPM"
+    ],
+    "hours_periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 21,
+          "minute": 0
+        }
+      }
+    ],
+    "photo_refs": [
+      "places/ChIJ71s2xrqhVogRYkAp6d_JrZo/photos/AV-0GLeovR1tD5sJNVIY0dGBK4bqPzH16gBGWJkU35RHXlvC0aPkQpXQze91Qnn2xEE9KXpzRtVMg-QfVVfqgjNFLjFF3mZvTBVEnsKsDhc78LZWUiSISM4H_52eLVVcjeU9zvQZ-WwHQSta7okUiqbgH8he7KxOPRFTTf05pYvuns32jMsiFZvgw_tqEXeE3lrcvxKYsbixWId1kDGLOQO4n2cOGvmoQRjRDnkF-6Ib-FiOQmpAq3T50yY6ySwwC_drkZJPB53qxroBpl_cY3Cnn1FDMGVT_OYwceigCvlqsKAnVrTloXEJwXtqBHAV3K4TJn0YTzbb0pQ2ezNiqSvuUCRYPosgXvLk37OCn5nfUXJ2rcicOctafw9FhJ0-uQMyso5V8Nqgvsw06iUMgerbNXBp7U8IREbaZp0IBQdFLMYv",
+      "places/ChIJ71s2xrqhVogRYkAp6d_JrZo/photos/AV-0GLfkIR9xC2VmiaivSntLKp06VeU2D3r1rphY0NmW1ctpd4ZO6HRY0uXsTsLfTCkw_J1kt9jQJB3mN2xhdozcbE72FFynEpvVY-GGfyOC3bnumMMCgpvwxJAFZVfgc5FFV_JrKR8f27sNpgqLQi_cPLhjTAWBaLfOYijn-9Iwr9UeDwVrqx29SgKbEOiiWsOXiEyED-mYB9ZijYb_mg6rVfqyBmyppr3qs3Ing95wSq71oZgzg3kLZ-owhVnrcla2hLFIYLvrlYkEmQ0mRI_3UJZueSOqZGBzJbW4A3E5TP6IOTNj60FdWb7Lua9ftOfR8jUjX2m2w6E3CuUd4xYUbmxIHUcZm3leGSyIscSHLICN2_DS4ylRXWrijJ7BjBwDhVi4YWS7Jky246CT658WdSdB2mrHXiixKpdFRj217onlaQ",
+      "places/ChIJ71s2xrqhVogRYkAp6d_JrZo/photos/AV-0GLf_jgDsp2n8sMjhy9VvsrkPWD2K6upBvVaWiBDs8n3G7_oL87FWDhySz8gaQwbtKC_rjnAesN_kMIj-y3gEIDEAI6QPXQxUDO3LyIZv_6ILYgowQ32RdNtYl51tb-OsV2FjprvUMriR8XNfefkCYoNL6brUhhRLjXqrCk_GwdxFwa-bJtkfg2NYS1_pkHtTiKYLEDTL_BLGTdkyeaXbd8M0b4f2BgdeZKTplWdcZ6g8jnyX0pO0CaATx2DoFtCROwMEo2jxWTgeQomg64K_FOEigJtQE7O6EYBOtc76bNlMC2h6xDdNkTrPBSlcahLOisWHL6mN2WFXHraVCOpQ8oWpwkpYx-1_0NCoXTbRckeiYprdU8oJGxG5gsxHgpBeVjgrbeC0SQKBfezMIhrBaQr9OA",
+      "places/ChIJ71s2xrqhVogRYkAp6d_JrZo/photos/AV-0GLfjTRczaiSK3D2MmPujsOLSoir3SVBpD6e8n6CJMBn0IBVBKrrbfPE4LcdNnujZXXMocgiQ2xXaIPQ-U8awp3D7O9u5g9NOLQqLkYT0Q7kWeC-ZHA-jTAtX16H4d4LNJaBIDmupYNMCQQYMQQLC8VGQKmCLNZybIMXVlNuXMCQRHzsLUaPkRiXBV9SCZ5oH9Gsc9uLrQXT72rNg45ejTB6knRTUDQBike8pHwFRFykwpNNFW09gp9_249JYuwPVdXmwv8x7tu_QGpCuo7QHHUOW10C8obdWb9XkaFs-jtcqkIBivk4uDAlp2O5_sp_Kg-2iL8UHDfz4IFuqjiVWPoRUCnlDhyL79gWwTNPlxrCr3O-LJ1O_LGHr9d_HwvBHvJ9zvZ-7sEX3YrwN_Z1u2qTvYmkuQbua9Y_5WHSLK4o2fw",
+      "places/ChIJ71s2xrqhVogRYkAp6d_JrZo/photos/AV-0GLd3BPFziZvM7verYnXf3fkVbK9zaIEID0nm8HhZsQhq3wGZF2hsf09I7q5aLKO5DUEy5X9dBVC9y8K4qP7qBK931Uh_nKA8aKlbTFqqsG-AyTvSkh1QK3QbNhHk2xhqj64996rkORSKjprv5Awc26zr6OHDGZW5mdVVVuUL8xTaFzVeurMP7ElfL2ko8LekrJOdByfTVvRsFxN3iWy2WycTINWvkZ4y64p5NnCq8aJJEUiGZNZ6M9jAaAwgK1naVgiCLb5uZX6TBtqIDwgNOX2AKIhmt9KiFAV6XMs5XFPmJ5SM8ntr0RVuhx89lQYMaRXtoQ9d2-AIjG8710OSIrSZoVvwUiegc2VyzDdwk6AQxNfmNzOmEaJnEG-w3VLNAWk7sAkGFq4NHc8wYahkjxGssJM"
+    ],
+    "types": [
+      "indian_restaurant",
+      "north_indian_restaurant",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "buffet_score": 20,
+    "buffet_confidence": "LOW",
+    "buffet_evidence": [
+      "matched 'Indian buffet' search query"
+    ],
+    "is_buffet": false,
+    "state": "NC",
+    "found_via": "Indian buffet",
+    "search_location": "Uptown Charlotte",
+    "metro_rank": 6,
+    "scraped_at": "2026-11-14T20:28:53.042037Z"
+  },
+  {
+    "place_id": "ChIJq6q6SyyDVogRO7aaQQ8G92g",
+    "name": "Tabla Indian Restaurant - Charlotte, NC",
+    "address": "15025 Lancaster Hwy D8, Charlotte, NC 28277, USA",
+    "lat": 35.041677199999995,
+    "lng": -80.86216879999999,
+    "phone": "(704) 210-8484",
+    "website": "https://www.tablacharlotte.com/",
+    "rating": 4.3,
+    "review_count": 2129,
+    "price_level": "PRICE_LEVEL_INEXPENSIVE",
+    "business_status": "OPERATIONAL",
+    "hours": [
+      "Monday: 11:30\u202fAM\u2009\u2013\u20092:00\u202fPM, 4:00\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 11:30\u202fAM\u2009\u2013\u20092:00\u202fPM, 4:00\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 11:30\u202fAM\u2009\u2013\u20092:00\u202fPM, 4:00\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 11:30\u202fAM\u2009\u2013\u20092:00\u202fPM, 4:00\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 11:30\u202fAM\u2009\u2013\u20099:00\u202fPM"
+    ],
+    "hours_periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 0,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 1,
+          "hour": 14,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 16,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 2,
+          "hour": 14,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 16,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 3,
+          "hour": 14,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 16,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 4,
+          "hour": 14,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 16,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 5,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 6,
+          "hour": 22,
+          "minute": 0
+        }
+      }
+    ],
+    "photo_refs": [
+      "places/ChIJq6q6SyyDVogRO7aaQQ8G92g/photos/AV-0GLd7zN_pMjlMEJEo0LPZTk7NUsDX9pYM3bN3FfJdy6tBSI6QkfNY7yIwQc_6rV-W7mSYPlw5KOue4fud9WuLHVYNI1ktKFJDoEriCYxZ-8WtAQkyDwM-zSu5NI0Of1FEuai04AlvgZt-kyCS-eFshkZ_vMxzmTxEHbv136NhgpvtHhyR0bAhtC92pXwcNZC5oOS8P0HfeIWYri_eTrbY0_dnri2iaTQ3SPDyMyuwFkpLNNvLgvjX-rp7OlB6Scf_MG06x09HVEVVAWaYVQNgynDHz75gfFIRwkU5qlWKgp6W2gdAOlnrIs38knospA2xCpJtcMZPzf5SkQeea3Chvqz90RSYvAEcNTlDo52jOYV71TQcWP5QV0bx60vzcIz64ihYgQzgy14CTl33_jkuCr5BUDliy10",
+      "places/ChIJq6q6SyyDVogRO7aaQQ8G92g/photos/AV-0GLfVJWKNecVDEua9tLzXYCH28YuDcfUdz_vGwlW0_q6YNdSo1lU1GVpM1LC__LAVm6o1PK3RjOkpjnz0cmDN0WSFmnL7Vt_uLw1kl7iPD-UhP5TmYXNS5xGrEIpf84cT1XT8YjSFkBjXCI1vVVo8Vsje8Tp9aT_uq0gazhKcEqAfIfAtN6s1aKxZqB131Rlc9k3xT8-K6dNJeYHEZVQELuNb0COZF-DfaY2cEnCkas-FcK1Qoccc5k4TWUL4nGtRl6oaYn0qL0LonLbzrdkbeYLLzxW5B7-_3jl-MZlLlgcIECvtAsy6DubNmiB5oS9P2Vga_EVIQlisuT1BFBl-H92bNJ09MTX4Cvrw6g9rUgC5gTRMwaukpCuWbyp3MdpBIxRB2vKz1eCe9plD5hD7cPGk5q3p4lRvFBB0H9w0WUOd",
+      "places/ChIJq6q6SyyDVogRO7aaQQ8G92g/photos/AV-0GLeeo2dYeeTnWFS3-lFjS489kFJ162KMkZxhNq0nh_3jyOrXuuCDdpQdkDIr_6F3DcKuLBMHJyjMOvFXAjfekGElf0RdAoXVlISsT_bNN5-D3Lvo7Cz6ltktHXuDzHQtU1hfoDdW4fq9hKhyjf64HPED8Oevi2vSvgjhV_g12LJn3EiSU4_y34kfM5qdzA4_0Pfwl7KPOfa6EG4LKiefN4YlkJ-4nulo0lX-ZFq8VJXzpeyPFUY-ja1F9gKR77mB_-nPlMtHnD99EC5GN8Ge3URzIzwsNFJr5mmlrCIr3zPCROyujVIUKysG-sgO88HDemCJOj8SMG71epbFKZPxbU7n2DHhBvN7ihTvqZHnoCeNM56pcGLTxvX182vcDiVyaJ-EGsbuwmNYPb86eNx8_LEukiU",
+      "places/ChIJq6q6SyyDVogRO7aaQQ8G92g/photos/AV-0GLcD32Whz4i_WBR2K6jNp46DQNvzUo-llHYWh5muJ7DaAVyT5XNN_ewTV08dXG3grPfg3lremaEcptTj3g9_RfVSxIeyALyBSLZeTKKngPrv2jkoV14Ws3jZFeISkGECPEu9ds5pygHD7zMhSkhz3qEG2gUWUfE4StESyxHgAPrT4iJ936qLv8djcIqL2Ft0Ml_5SEwjeztgfjaZLp_vlYkA5p0kDQMgOu4oxGUTcpQKYIaedzHdCNbe5yVeKGCXNpTp-moV_8R-BNZr8Eg6tSpbcLNXuv6b5_zhOFhM9AVKwmCSUFW-C3_GtybdsUwUgcEr6GqSVxVO3M2G5fTyPr5tCPIdG4JIjLl5YXGTuKS_1qInqEeNBMTjAbIfxOrrWkaABI0GKwWiUvPyoNsZ1XG-LNUf489ga5n6cPqA_LL0Sw",
+      "places/ChIJq6q6SyyDVogRO7aaQQ8G92g/photos/AV-0GLcK8TQlv-E_59f36VJSvntCgpUmWXe6_GAEry34hicOmcEsghxRyVxZ4IBDUiDXpXg5diMbA2XVUlF7pebV7gTWDKjYg4VnH3uhsqHYLQtuDOaZrlIqmwPFqVFpFLnEBMlkopcdAyllbcc1Qn6V22fH2KhMnzz43PfJ0caP5DIhnrqNcJ2dG7fTvT74Fu5MjWWL3kFdLgLalsIdGtSlv6ZxoAxMPNmReYGNI_6pmx2iTS5q8IUEWQm7wTr-ElcRbvQ0KAViPAoGdRHqeQoRmLPlaCOhi-hi2T9F78vYk1VEGRQu7PC1ffuBzZODOy6xjT2If4NOPPRC8uCXG5auMGno7l0yoMgTM-aCG0jnMdNyKjgFUtv5s-azPq5yyxVojhsqPJkpsCuxJFclqlYy0WXdymE_lPSeThj4aHbIYvgEEw"
+    ],
+    "types": [
+      "indian_restaurant",
+      "halal_restaurant",
+      "banquet_hall",
+      "buffet_restaurant",
+      "vegan_restaurant",
+      "vegetarian_restaurant",
+      "catering_service",
+      "meal_takeaway",
+      "food_delivery",
+      "event_venue",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "buffet_score": 20,
+    "buffet_confidence": "LOW",
+    "buffet_evidence": [
+      "matched 'Indian buffet' search query"
+    ],
+    "is_buffet": false,
+    "state": "NC",
+    "found_via": "Indian buffet",
+    "search_location": "Uptown Charlotte",
+    "metro_rank": 7,
+    "scraped_at": "2026-11-14T20:28:53.475714Z"
+  },
+  {
+    "place_id": "ChIJMYTtAOWdVogRIA5PZwxpiTw",
+    "name": "Chaat 'N' Dosa",
+    "address": "8624 Camfield St C, Charlotte, NC 28277, USA",
+    "lat": 35.0538228,
+    "lng": -80.8152808,
+    "phone": "(704) 271-9361",
+    "website": "http://chaatndosanc.com/",
+    "rating": 4.4,
+    "review_count": 1619,
+    "price_level": "PRICE_LEVEL_INEXPENSIVE",
+    "business_status": "OPERATIONAL",
+    "hours": [
+      "Monday: 11:00\u202fAM\u2009\u2013\u20092:00\u202fPM, 4:00\u2009\u2013\u20099:30\u202fPM",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u20092:00\u202fPM, 4:00\u2009\u2013\u20099:30\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u20092:00\u202fPM, 4:00\u2009\u2013\u20099:30\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u20092:00\u202fPM, 4:00\u2009\u2013\u20099:30\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 8:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 8:30\u202fAM\u2009\u2013\u20098:45\u202fPM"
+    ],
+    "hours_periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 8,
+          "minute": 30
+        },
+        "close": {
+          "day": 0,
+          "hour": 20,
+          "minute": 45
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 14,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 16,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 14,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 16,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 14,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 16,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 14,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 16,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 8,
+          "minute": 30
+        },
+        "close": {
+          "day": 6,
+          "hour": 22,
+          "minute": 0
+        }
+      }
+    ],
+    "photo_refs": [
+      "places/ChIJMYTtAOWdVogRIA5PZwxpiTw/photos/AV-0GLdNCvs23nOfH5S9VjAaQWJnel4ggReohgXUjyyu0qB0Wutx_ypbkylxjQkLwrwKNHEXjRAjYHRRNFFLjvjsRv6ecpmqNlqArafeVJYPX49LL5XHgB0Olcr1l33PjzfL3OCzZDGny1Y3q9FldlFu_6WWcaQ_b752TvWHt6UQMj3Mla3Fzb6vBFwJgIJ-olOrw7NESC47TIsuOORe5vi__k-dluBsfxUfzOreigWnLh-KxOtSYsuhupI-3lb9rNhQk2hDXsqSMu6gmA3gxVZVg7EtmedZciQJ4gFAiiheov1wP2cLcPyhp4t8Vpj85IROWlTKWiUzge62WpFnMHPf89RFW6_XycT5bw7HBB6EgChAxazFuImjqCn7oTU31pLuXiefzWnkQ2vVX6xu5VBtQa1DdrfdM48",
+      "places/ChIJMYTtAOWdVogRIA5PZwxpiTw/photos/AV-0GLfxtp8E1sFSreMkyPFM5Vco46PwZNHHpKfjzURJ0FTah9IpmoVSR2QlCP2E7HC_4xz4tJ2iGVJwl7l-qZ-a80g1mK9k8LRWdT2Ik1QqNfaUBIbeWCQLLj9gPdzy7pMaUcbDQyOjRePLeh4IIf-7SZFyBABubQYmPWOBkIgHSSSHZFPtIs5evp7tEjnT4BscxaM1v1W96_4hb9CASm-XJLnvWH3ptXUY7QhL7XOAmxUxj9aoFbD4k5hdZrJ69aF0KYvX53IlAFbNDY52A2Bt1O1ZHdL5z5-V-Pd3WGkEDps88hW3tb0Wfzc8bncxdxGgSZtvkhia4g89jtDxai0dLfmobB4--BIK4G-PTx3mhzxI1oZCdavdZ1MSW_fUtagqaS2nW1ktU2n3OSNjazPCRsx22A5x-FQ",
+      "places/ChIJMYTtAOWdVogRIA5PZwxpiTw/photos/AV-0GLdhZPxOIoO8i7VL3RgEdVh84BHUVpC2hdOWI8havXWLetDLRk8pQuDyu7fwEHvE5hnw05uoLZqsfdVdGNrTnKYbbPFpD9Ywi1nZoR7Y0edZLqEAb4W4YwTlCxKmEjnbNjVK_aV4ctDXLySXZIPNR-z5HacqUYA6duV7gdzPOVbkXbLVKTsRZP_ehL6fdHCt5Ij8qEKPEILDN8np9lD2y4CXnbJMkbQiAPtB2EOzNItDe7xLO37D2bCMUT9YRiH1pd3az9gsBt3IijjoKYm5Dzz5Exv3NuBZX3TczC61VH_io-PzER6Pm8OswFSaYaNd3dEKY6Gnvbf4ToNikLGGw48S0W72v_5DoA7LqCmQxOILRfHqrPSc2-P6uIlbsDam5WfaIzKVDGJBqtYomwu4dBGsMzZm",
+      "places/ChIJMYTtAOWdVogRIA5PZwxpiTw/photos/AV-0GLcUljXyGU0mzydCN7Dmr-m0Ay7shUwUxknqekXnJnF2V7Tn0HiafhA2udAbW4_e6bnXxZJNiRdgwsvpLDtR1BgVlHDBrAkBw6ASDsAVVHfsfN4CCry7hjOn_d470Te9tYU627anwFTxlorx_-0jcThS8nRrPSCJiIvtl6YNPHVuSHko4g2dnO35sbGE1vvEWyI1QKyB3hZcZT8zH0TBg4v1cOqqhHRTmFVKdBPciW8vp3VtlsFGynGNi7tQPWcWN1PWzzopR-ePgNwwkehSr_kvAkJZCD23GZ6Y6C8L9epFzP20ROWUj0eVNK1gc3QprGuTmbLAX-uEv0nrblEcEz-iSjSRHBkqiqKKrmtbSyIW0ffJ5AYc7x4-O9iih9PiyHXmtnWDIAJBXjSWGnd2uVBiVbIINwsD3QuOzHa_xqP9Eg",
+      "places/ChIJMYTtAOWdVogRIA5PZwxpiTw/photos/AV-0GLe1Mw_m-jREOHixc1Kx8xojXs7sNn__jq3nfFBM5isMC2V18uC-aLS8KpUCzS_3tZ-oTokLLXLIKPalpZ6f7wXBLTUbWo5oHQvfcZCdNJzXuqVufy4NEpaj62ZeiGXCn493A7GhTh84KbgUgDjtmV3hvqDSs5QVNRFpWVZbUEOEUkaY8N0GktCH2M6Bjdm4_N3RHuYIRU-Tj8jJThb32PWDFLIZZhCYSQIlxojvk8sLyk6M20P6MyFkMX0fiBcGtj6Z4Als0w0xQDrcRWM9dYCqpcbQiQk6ZoLvSHWH_7BrQjZP-ibW1Xo52fX36nUpPR_Vvu05k2Je_REuAAL2I5x9f3Wlj7y79HXna7pUDt8G-z120bc-FGmC-6pl4vHGglReXU6k52IFUf8ImE1tyTwOrVZ1i_Al9jH2D2n4EITwhg"
+    ],
+    "types": [
+      "indian_restaurant",
+      "vegan_restaurant",
+      "vegetarian_restaurant",
+      "meal_takeaway",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "buffet_score": 45,
+    "buffet_confidence": "MEDIUM",
+    "buffet_evidence": [
+      "buffet mentioned in 2/5 reviews",
+      "matched 'Indian buffet' search query"
+    ],
+    "is_buffet": true,
+    "state": "NC",
+    "found_via": "Indian buffet",
+    "search_location": "Ballantyne / Pineville",
+    "metro_rank": 8,
+    "scraped_at": "2026-11-14T20:28:53.884790Z"
+  },
+  {
+    "place_id": "ChIJMVlG_2QaVIgRCevUWOvscdQ",
+    "name": "Zafran Kabab Palace",
+    "address": "230 E W.T. Harris Blvd, Charlotte, NC 28262, USA",
+    "lat": 35.3038084,
+    "lng": -80.74947519999999,
+    "phone": "(980) 833-1904",
+    "website": "https://zafrankababpalaceinc.com/",
+    "rating": 4.4,
+    "review_count": 1532,
+    "price_level": "PRICE_LEVEL_MODERATE",
+    "business_status": "OPERATIONAL",
+    "hours": [
+      "Monday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM"
+    ],
+    "hours_periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 22,
+          "minute": 0
+        }
+      }
+    ],
+    "photo_refs": [
+      "places/ChIJMVlG_2QaVIgRCevUWOvscdQ/photos/AV-0GLc5ozbTprZP_kS-D_n_myfp7vUP1RloRQUpbC91SV3eu6dOiU5hdhNbfThEp1pBXAXv4WV5HCAhNfaLLQQik-eUjX25MGVO2sLP5rq2fLk2GIUzdrjynZ7qNaa7GWXXcfPI8_DERMJH0xjs7ITyjY9ctwz_U6DhpSxHkynqI7LMbfvTrjuwscwYEIY0F0FgQmEJ-4feLLwRGMj5N9FzCltNI17rPNAHOzyIa2Q55ksowvprqBfpArDd_NzOaYsxII48n0geybg60OTu2UyTPKjRm1ZRl-azj-nD5V8UbfDGFyjh1bxUkWqjdDPkU_IOJj0EhA2gaccrLUBhzH3O4otCscsCLLQv6d2bG37Snjy8EX9EAdOebp7_WUxeO2-dzqfsyp1a651Ph-zg-1pBgOZlO90bmwGTKnuRbiFwZHbY",
+      "places/ChIJMVlG_2QaVIgRCevUWOvscdQ/photos/AV-0GLeCybTX-lBBq5K8NVb-z8DoHFd9Vjde1LWHf7mh6LAHNs3jT5cXXhvkz3B1-YHDAILky3CwjphP1JuTYFcKx45QZQgkT5OOA9WUkStwgGjN0je3EMRgNxba99q2aLjOuFKsLdRZ0INnFIHC31MFfBY_EIpyjTcarB3zG5_ALpOqgVD1ge4MVIpaClwcUsJiVO0WrtmniBubjlaQPj7rHM3B-DPx0hqSEuUZqpgnezKG9_ZGbGPDkwh28yrxByrVsEGjlNzi2P5tGMJj5_F0qET4TvpWWwV4NRMfeo75-pcKSiy9f7TjEgiHjew6B_dtFSsoAHd-Pvjbc2uJkKUG4GcOA6WjvmuO8sJFPG6du3gaUIK7vPSeT5OTr6DB_olypWZqp4aAThW-1omulfIvGw_IAd5DZE_WASuKuzbqDJIseg",
+      "places/ChIJMVlG_2QaVIgRCevUWOvscdQ/photos/AV-0GLcz4DpuCZuF_cd5K3isodTi8hNmnhit1YAZ9Hri7dSr1VHECfNwLN6yoNDAsflHXPAWGHg2K8PhYUwm_gx49LcZqKaSeYeIRXpEj69uVwiX4T9MCARlgcsvWiv3N0cynrvCCww5h0Mgkum6FjcXzOlqHKX2aoPAQvfqVXVH7XXtXmCX_OsBAnp4oY-xh19PWoNIQytWUTZIYTPpjwGbPBhzLtU6MkGWcGGweQsyysycGuhx1SCW6mAxwTQbiDCO0JfJSAauiZia4_iwBlG97bAlKkNsIfFFZ18YyHT55UpEvTPrl8toUGMqEDqFjPMPhmhqik4h7gGuy0MuO_d7fSQaV6eR5hDn-lsD-2iHUERiYonxw1-1lYwESf2HEcPEDq3IcshuQnh7aJHcWveomkR1iPz5L_iJS7tF5ytY7GkW5g",
+      "places/ChIJMVlG_2QaVIgRCevUWOvscdQ/photos/AV-0GLcAhncIXPeaWzfHFQeWUCgtIkX0CnmOnV5O53mpuCmtM6Qwev-ioWfg4QmkDQnQyveP7bnzsW6okAPbuIXYsdvRYHj9JwMc2Qu2W2Vd-zU8MjjvriooE3M17GEz7dPgH182w3EYxAauU7MI-A3V_4iUaABJ3CCqzUVZnOtPssaXG4EUBQgckHVj8kMnXpSV6iT9s3Kexe1o1Cy1HGSSg7NzGujLv6WtACJwuNsRzyt3PdR_HmcQvcuqyyr3EtF5h-FSGDGn8m5f1D502q78AO7BbY4EcgVCWti-q7WYGYFc9kLpJB5D7zg0rfHs_p7i5glbsmwutUOKYHSNfpMsvKtrD15mrI_MAUKm802_ZO1WeGshhbMdewmJifY5_bBtl72h8LB6HB_Pddk1EYcUcWP3m_pN_B_1kYizvjFkeuuXkA",
+      "places/ChIJMVlG_2QaVIgRCevUWOvscdQ/photos/AV-0GLcsQYI4aYXPPXirmOkpxIaal1aj0sFbww3M63pVS1dX-fKPa-TvMgfG6wJdx4xwU1RzJ2iqYvjucsiPg8ARCzzQvbDektC46kSq-a89QbhJQjLX80OcHJ3d5ToUtAb3ws9y0AI2GlEpIbAuZgqVazrcPenZJDk3nHhhl10-OCqzamO6IdYyUS2yTly-3TX9ZmGzX7x6ecTDCCVFRjkKDanBHsDO7zmyP2d5AvmnR0PVam5-rZ2jVgNc65pqFUdRfuAsnYcpN1V9SYOMo0-cSzlka55r6esWUVBWMpua71Zn8EmVssOcHABUsETXQHbCXhKcN0E4z5HfIrIFg5CT0BtFvcyJt859zQJRma5ruH_p8KZYa-6dOeEOcN52wKpmAIy8zH_oi85iKzl-9D4oR5YbR90nQX1FP7byzS1EY-bS"
+    ],
+    "types": [
+      "pakistani_restaurant",
+      "indian_restaurant",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "buffet_score": 35,
+    "buffet_confidence": "MEDIUM",
+    "buffet_evidence": [
+      "matched 'Indian buffet' search query",
+      "buffet in Google summary"
+    ],
+    "is_buffet": true,
+    "state": "NC",
+    "found_via": "Indian buffet",
+    "search_location": "Uptown Charlotte",
+    "metro_rank": 9,
+    "scraped_at": "2026-11-14T20:28:55.089823Z"
+  },
+  {
+    "place_id": "ChIJ22waPnwbVIgRKVqHFAx2rR4",
+    "name": "Red Chillez Indian Cuisine",
+    "address": "3775 Concord Pkwy S #132, Concord, NC 28027, USA",
+    "lat": 35.3682289,
+    "lng": -80.6649874,
+    "phone": "(980) 248-1563",
+    "website": "https://redchillezconcord.com/?utm_source=google",
+    "rating": 4.6,
+    "review_count": 951,
+    "price_level": null,
+    "business_status": "OPERATIONAL",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u20099:30\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u20099:30\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u20099:30\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 11:00\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 11:00\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u20099:30\u202fPM"
+    ],
+    "hours_periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 0,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 22,
+          "minute": 0
+        }
+      }
+    ],
+    "photo_refs": [
+      "places/ChIJ22waPnwbVIgRKVqHFAx2rR4/photos/AV-0GLfPmc-_zgzXHBwBUNRKDSoad1200hi78Z7RLqeWHQpb3Xd2zxAZjzqc92_zb0oMY8BiRRp1rAgJ9KDClqNAfwNpWB8dtP3R-zcTzfu5yg5MFKtcnx-1x0Cnm_nvO6UsaYKY9NEEWmR29-6CoKAy0mxQCyj0rQwLGnKNpAa5oowsulGCePmHq_3wjXFn4VXNnMmjYVASeZchrbHFnbXjTSa-vfUKQBWWueJhyfZHYXdEF3hO5NBgMWVdQW2BKYNli2fQi3NWZkKHWjhIpaqkC-2sbAqb38odNxEmDeOMBzLvTC8TqdwaalrxhUByhiuPzcXs_0jle2pHDaz6jtqIwFIPJ1jymujy1_F6EkibG7O7mmbUVBaIfCrXDlsBhrVW4NocWi8yjkYG8gl1Vn730H2YyLjXFyT0H9K6BuH_1ZXj",
+      "places/ChIJ22waPnwbVIgRKVqHFAx2rR4/photos/AV-0GLc_fSiz55W2MQfl2KlX6XUoJDo6hM0P9cCN12migWcly8ZWOvTTcylKjE8XET-BNfd8iUUuMmsNzSmEztHxp4Whi8nCAAsy4XfhXIupgaUeX2jNb3NgVBCToOAft-22MYwqyEGpakV22FAX1X5Jx6C4GQ86OxSsEOqCf9ycQUZNPeoX7HbqrZ8lkrCoawFDOV5EUiXt8hsr4YnoVwXCHmo2AVMkCOKqSI6mLhLCk080tRz-C7o9wy1AMHAEPmD1GZTIC3lmCr2AF5mjJip44t_IRnoiLr4ijMd2lbbQqH1OF-4laloLBgn8MhhAmdGZIiqL6freTzC8NbVxtG6zGi569ZzHhO41PLh5TgMyN1RB3AB9gKJaCBI8x5auXo60KY1L3SqtaBAmi_h-GJ3zVGhC6foCvF65pdSgxLVxDnN_Eg",
+      "places/ChIJ22waPnwbVIgRKVqHFAx2rR4/photos/AV-0GLfiDecZjyqCshq-PD_2WVXR19SkDxxPyIE6fZjveLd61WOWQhHLFsfxn8atPq1CuIosfN9gbIUfaNz8xmpy-exlYWRujy0_CTuV9o5WSS_RmyZPmUe5fnVYB4Ez_Z8XIfiTX47pg4kIypxsUedFZPcoPLXLAKiqpAOE5UsWt-5wfc9bHL8tfK1XOxVYAqs-3rol-E1VWKmKu02ubthQLSsbv2fMCNJILDAuDqsa_YVdSUG38Hi4d-d4lsDQDKePsGkl2zsNJPCkq-GNzvjjFByZ5czTCZO4hPVETYhB2njTkO-twz9nRRXZAXPEUgnhsxmrATVQMNGgvpdyX5bn2vIoaAltBcgDWawWSEP0tHr6A2HmmtAqIPKXXsWGsru1ALSwuP9Xs2gTQlep_prY16rf6caW8S7VqiTMzC92qygG9A",
+      "places/ChIJ22waPnwbVIgRKVqHFAx2rR4/photos/AV-0GLeUjep5dyyxaIV6rOFPfP8HHHtNEvx1sBal9fJJ-p4RHhNw9YQvxwJBndnZitDmdMaIuYnI8Gj-wlC8pyVRVUsrEqBXQk1l9eYqa5xOOxi5tD9tEm2D8Rb-h5NqJ19jkRxO_kcu-mWlahpTxnz9Kdij_9NXMVO0mCJ1D-3UXkEgX4FyagFer1SFBKec2HftgisD-ih3AFJCSm2R56BfN05WmoObZRikv-fup9O8kSlqznOuTZAXuX8UTGc75F0kZKL12PSpBB5GPZOXOztMwLzqLbv6MG2NsmujLqm6WhnozhjQhn_QIvC_GBHCnG9kU4ssYXT20cDPsyy3MEkM3fGPJy4YWi-OKm-QpD7A6z5ESNTZs9QS5-EsrqGxy-B7vPYciSpOa3TEv5hC0BT53-I7vV8DMwLKCNc4kiGns4Gv",
+      "places/ChIJ22waPnwbVIgRKVqHFAx2rR4/photos/AV-0GLeeuj5oXT9w9jXRvCyVGN3e7qSl9cPvkhUKJ_60_2zQcPk-WhNHcatEuhXw_Q3CNDj7ajRxub0mFuOfkjyf8Nebh4TuElO-IEFzf03bBepi9ipxPeyWKc5o51xIURjWTP3POWRMTi8iO4Y2JbHQ4gcehH3KUYLdFQG7OnUVCh66U08HNihDoa_lrTUWhm2tZeL5TzJ-SUrwDbYY6FtZhHayC1j-zJZ4fH7YmIZzW0y7buMavSpwAI3lTIuun1sTzat-mgcJ7EDRTPEwQZto0Fz9zWBOY7UEhF46NxrQwPaNTgiXi5TsU12guNYybUKu8LTjUf3abuGFfvJLHdmNsW-f9ZjqBnS4ab4wao_Ct6Tc2zabm_EjLIvKjiz_usxZVFiDYrJgAkbOYzALCrmxypjY72717Ug7U9zG-aht6_zC_A"
+    ],
+    "types": [
+      "indian_restaurant",
+      "halal_restaurant",
+      "vegetarian_restaurant",
+      "catering_service",
+      "food_delivery",
+      "south_indian_restaurant",
+      "family_restaurant",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "buffet_score": 20,
+    "buffet_confidence": "LOW",
+    "buffet_evidence": [
+      "matched 'Indian buffet' search query"
+    ],
+    "is_buffet": false,
+    "state": "NC",
+    "found_via": "Indian weekend buffet",
+    "search_location": "Concord",
+    "metro_rank": 10,
+    "scraped_at": "2026-11-14T20:28:55.375171Z"
+  },
+  {
+    "place_id": "ChIJ-eyrVxWFVogRqzV-6Bv_wN8",
+    "name": "Persis Indian Grill",
+    "address": "1504 Carolina Pl #101, Fort Mill, SC 29708, USA",
+    "lat": 35.031416199999995,
+    "lng": -80.9644339,
+    "phone": "(803) 396-0444",
+    "website": "http://persisfortmill.com/",
+    "rating": 4.3,
+    "review_count": 1437,
+    "price_level": "PRICE_LEVEL_MODERATE",
+    "business_status": "OPERATIONAL",
+    "hours": [
+      "Monday: 11:00\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u20099:30\u202fPM",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u20099:30\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u20099:30\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u20099:30\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 11:00\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 11:00\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u20099:00\u202fPM"
+    ],
+    "hours_periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 0,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 22,
+          "minute": 0
+        }
+      }
+    ],
+    "photo_refs": [
+      "places/ChIJ-eyrVxWFVogRqzV-6Bv_wN8/photos/AV-0GLdtFOyC0Ub8hFOcvSc-qwb6QVq0nZ2n4MPlUkFYohOq6OPmxO_7hOt7B0LudmfwVqgU46GZUI6dwEyKre8zhaNR2uz6TtzEb-nGQpSCDPfw_9wkCv2CjK7GU2PCfSI2D57nQ4jDds-pTlCAjSUbhNSH3fyw6g29Bmt_oGmxwu-qjIVZO03q9tsarCV58yUrXBiHOKMmXAyEVef8GrnsU6S3Drj9e0e6BXRa-WpdGXd1_V0cb49di7yeYjQEMI0x_fziS91sb9Jy7YqOKpZHoJsJOdZ8750QnPciV2La2M_CKX2JbMa9MnJuFy4xsxS9z6mFMxyAW9pdbG6865KGAwyPIqMl3NGp6Jysp8IPhHOy_zU6rJbf4eV4tlS-Vi2H1VyZsLmvGzOFj674z9y7CTAkUZijtjo",
+      "places/ChIJ-eyrVxWFVogRqzV-6Bv_wN8/photos/AV-0GLfGPjkxrCInB7yuH0MF_x5PS29jNpy5vX3e7t2lk7TrTLMzgyejRkjAfbIG4UgEZxfNsTXx-4nNHso_IMdetA5FqBxWGArA1qxauadH0dC5Hp5naR4JsWH2DTC2BpYr6h8HtOGPXJ1QX0EhiVz5PchCisYKoRzjVk3Cz2i5L4ArTgt4RIaoRE2zjTna5f6Ak_YDBeMA-FNJhbNxzBivEMhTRgz0Y-nXAHZ7CkPmN0I8V7b5hcEJAwOuk73Vg85z5OTdrDpY4BbXzoF-rqnj2rC1-JcqzVn6r45dhwZ0pej0eie9NtchghIyAiWoSqyLMid27a_8bL6L6mpZKt5lab-TXr_vU2Z7c7vV6sItbP662bWxnb5nqM2gc-IJsABKMFIkvLv8Ibx5OC1o1MXAnZVebEc",
+      "places/ChIJ-eyrVxWFVogRqzV-6Bv_wN8/photos/AV-0GLe4AHV7BcjwCOmoZzax3jEtpQQsO249amlr3WyTBHnUrTeCdlMQfdkAWXsQJ0MpGy9XYlFFclvAxb0bDlQnmlCE9-5-uzruMgmj-1O-b8V0WpJHrs7WwTa_ghVbOygivoY-eydg9WTytFiVZoJ-UqeQkyI6SQajp59qfDHkvIk_fr6wo5geWY5f1PK_9KsmxxhKRXUsT7E3nouAf2S0VvYBZP410RPmn39fvcBiEgU-3GaKd6sxrq98B3twWIAeF0Z1vxid9MSYngNiky7A5ryqrSqJFNNfoiQxIvPbSFziuJUxU6YR-QmHqYDGpLTftFRI1MTUFNzVKS_fLbhb6cToMspgnCibkMKgN-eJbjqU8O3zhGs1XLpLRlD2OoMBWBu0Kro7LfK5UwA8bdvOs_ULuPiqiLHulwgBAiAZjMLspA",
+      "places/ChIJ-eyrVxWFVogRqzV-6Bv_wN8/photos/AV-0GLco9REWuxpk9MvjzxLjq2FtnJ4ixG_g_hGSOfTh3n_oX7Ny_R5flH_GVAGZkWVX1wInCNKx5kJHPtlC-p72kMnEbOgTOd4PkBXupRrIQUjBIn_l0uRrJwcYFjzOVZaMhunf4UI7JxeJoLvmrV7Zebfb9mX9RP2-pnapombT_EQcDeq-dnS0DOqLjfyJOAf6H30beCGA7GRKffV1d8dgQl7zPAV4d0T137Xzv3qeB4LbMQsLM8XAaeRQzxT75PC97MlNI4WQDgMZz43CTBf7X76zDW_p1vV0A3a6KMFN8_lzosFOnipnZwi-X4FabuohCmcPH7jT9NpmuejZnuDLp6n8_KGM-WJ9cuLBDSOsMrKZHbLS9fVniJSGjJcgQBtEAS8D7ajLhSj-PpvYyxx4CmWN9VuG8vM",
+      "places/ChIJ-eyrVxWFVogRqzV-6Bv_wN8/photos/AV-0GLcwQybLzQ11otEe4Q1pYBM4L-bJtOF9MbiFOENbT9JrsDw7DjqLiGfiHDQHjKAXeR-74qm_lHFS0UswKIy9t79CYE3ReRLVLXLp4MwTPXIZI-pysKruizJmvh4LraE_duNg0IGRG1ymjAmG-NYiA18UeOYzHzwr5Z986qAAv4NfWlhLkiGp7YMebCK5BdCoPT28im10Xfyb9gQZGIvExZFBsDk94m0yWYs_fJNXfhc1oj_G5tPfLRuNvHC-5eTnEDyTLYHRL1Ldku6oG-aAGhJVxA5562txBszP20JRZLXgKnH53YYncoC0cH3NSZttV7elkxSH0HO1abTgKXNlAdtsnCKec3IzUgK3jADm_AWERkp74mufpOE_b1OaBHlhe0NLGWQ-Ml8hiEimoXagJK_bia7sAHLFBmpI3rt5riaJ9Q"
+    ],
+    "types": [
+      "indian_restaurant",
+      "bar_and_grill",
+      "bar",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "buffet_score": 20,
+    "buffet_confidence": "LOW",
+    "buffet_evidence": [
+      "matched 'Indian buffet' search query"
+    ],
+    "is_buffet": false,
+    "state": "SC",
+    "found_via": "Indian buffet",
+    "search_location": "Ballantyne / Pineville",
+    "metro_rank": 11,
+    "scraped_at": "2026-11-14T20:28:55.617055Z"
+  },
+  {
+    "place_id": "ChIJM4-yVfobVIgR1j3Spf3jBiE",
+    "name": "Nawabi Hyderabad House Concord",
+    "address": "7779 Lyles Ln NW, Concord, NC 28027, USA",
+    "lat": 35.365498599999995,
+    "lng": -80.71204259999999,
+    "phone": "(980) 258-0007",
+    "website": "https://hhcltnc.com/",
+    "rating": 4.1,
+    "review_count": 1988,
+    "price_level": "PRICE_LEVEL_MODERATE",
+    "business_status": "OPERATIONAL",
+    "hours": [
+      "Monday: 11:30\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Tuesday: 11:30\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Wednesday: 11:30\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Thursday: 11:30\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u20091:00\u202fAM",
+      "Saturday: 11:00\u202fAM\u2009\u2013\u20091:00\u202fAM",
+      "Sunday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM"
+    ],
+    "hours_periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 1,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 2,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 3,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 4,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 1,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 1,
+          "minute": 0
+        }
+      }
+    ],
+    "photo_refs": [
+      "places/ChIJM4-yVfobVIgR1j3Spf3jBiE/photos/AV-0GLeGEDqtEOvQrD9VBIEk8cJQxRZaiUnHZFgsD5OJUdSWjtxLroNMaU1PdeXBdspRoAYsW8_3iKqugCnrW5CoWqpD_8DhislSB33nnQc0MoyWsDx2bubsaWOBbr_T0atVJiCLqPG8iTi7DbX3_nIKBRaLervf4Gopakq4P7P_PcWeqU43AFctB5Wtptp-didE7T0HZhFUgkSM25rWkexOthWpjlbqg6hk81lUNiv5LXmgMy5gtj3IV5R1_vlFXH7uc8tCphAV2CGUUmhNXDl5ui-ZvSVLG0xu1mG-LorX7k_6_uE6tTzs-BjXUZ-epEUJ89-PiAph1WipF_kwuPflONg0RopykBIHmnly3eywj3fSath3qG2AhUQrKd4LnntPLhA35xfcRFQP-LL7ux_nxkadP0CE",
+      "places/ChIJM4-yVfobVIgR1j3Spf3jBiE/photos/AV-0GLfm3Cfr44c9OW3aQpGCk0AKAJhMlTV7RVf746uJ_y-rFPxuVlg_wjGQcil80MSWOBGtr3pE8p0yjXa58VHy4-rmCqTXDkEkCvD2b2LoPseBKIMLJeHuvjKfUng17NafG7Y0Bona1UAppd4y1Scs1e5LfQ6a3fsiUZMyETVsqHNQQZAUV60uxzro67mZSvOV4DnDuN_gZW7DAjvrgp2bTq61vNxeQtCaOrnOIxkEBr9reGCN1WezflYxrJmIQyU28JwFh0jCZnfJZBCA8DqFl47KNh_IUDjRI8PJC7nbBsgOYAdVPUx9uXkXufXkHd4OrTsLpDyRFUeaqkpPY_vKDiufmkb4XO76sjwOZqs_tnCnYpPLaQoiba_dMmpyDiNbEDaXh-f9LSQXGwcmBRzb1aOt9eRwxTI",
+      "places/ChIJM4-yVfobVIgR1j3Spf3jBiE/photos/AV-0GLf4wJkNK0_cKENSiepU4_3bLq7jgGUZuJImd_KuKVSalLpxVW8wHnP14MGHnBaRDHs4qLrWN3mgVQ5vUCvTiwxfN3y5eFD70X1x6FhzNIHlyxMB2Qc59DyeyILG33iZugK_Tjwbp3UfRPZ94E3WWdVCR9E3Cf3s4zogOh_3mb3PAFAvM20zuScgOAmvnNsx-THG5MPilqxJxyR7QauSna-BaOlMe_L1AWMqqoYaf5T7If60zfRwbrdlCjE-DrUp2E96VO-n20k1nPSPHIRVllMGfeIX3midQQsX-CeZTg-ardPaYF3yIuSWlbcCH9c92iu_axhQlleNhv8-JsgCGJf8k0j46GEVojWNjZ9NlNwD0pnlb5Ofqj7dg_wXXi3hY9sqTCn0AyxXZwDgnF1lINld63E",
+      "places/ChIJM4-yVfobVIgR1j3Spf3jBiE/photos/AV-0GLfu_T2F2AL6UuhEgCQT1YA0h2EfHYmrFkp5k8BtP8YP75U1-3D6nco_K1ZUfdz8Erfw09tWcNOMiwb61PadaeixWElTD0ATo3GrbS_Mm2t6BIC-x0X63X43RdgJs9tKueGqMIWqjsRaD3Wjp3-6qVCYZrMPkL_HFp_nVTwl7DPSviw5RXHnUu4T8s4ZuJDA2-fFQgaaUnwg53VrX90SiD6WXqd_O8IOp57upwC4mV3JWgrZv4-qDYybeYi0tlTWpL-_LTEiHU2s_ktaYY5J3Qdqv8F1B64TAYCA4br_MsMaNkY-QH46BwwjPfN-alTnntj4PHP60WaQ9xYURGuXZLxCPJZei0RtGNlrHYM-hnHJb8l9-G8FEIXfuJqABA7AtWRSHGOcIdKFJPoMF5YSQtPQdHbSpXMRp6X7e37eRXTU",
+      "places/ChIJM4-yVfobVIgR1j3Spf3jBiE/photos/AV-0GLfjEmNuUUNyo1rLsXEScv_Zo2LVySp9hQBRwMloptZW8QbZlnddwwbxWpZPj-4zmuIGd2NGEZl_SEHy_iC6eeq4rwZA4KpPAtr1xuRjTFmLfxoidu2rSG7GxmcpdKwQrRwfCYAlg1BiB5dija8ytcoADOxzjQBfqsFsb_FuF4ahjc-rUkyGcwt9Qht6JC3X7wfcJU5SkqjTPMONwi3sfhMVqnKopsy46qm3crmeFZSnSJh4BGRtH-zy2jdGB9CfTZ9ICezaBfOxPrnahjY3IT7APioSSNVh0vxvW69zZH05Ss6ce0twkQdmjC8MZrf5ivE7zax0cJQ_27KmRZO3bHNk-_TVGoIAv5WEVHezLlM6SSP0rc32OUkQASauvMivsgu41dRSowlW2wQjnoToB3VO5SOWETDoJfhDFfXmyd0w8A"
+    ],
+    "types": [
+      "indian_restaurant",
+      "fine_dining_restaurant",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "buffet_score": 35,
+    "buffet_confidence": "MEDIUM",
+    "buffet_evidence": [
+      "buffet mentioned in 1 review",
+      "matched 'Indian buffet' search query"
+    ],
+    "is_buffet": true,
+    "state": "NC",
+    "found_via": "Indian buffet",
+    "search_location": "Uptown Charlotte",
+    "metro_rank": 12,
+    "scraped_at": "2026-11-14T20:28:56.465963Z"
+  },
+  {
+    "place_id": "ChIJBehb392rVogRYTAQ4uyTkME",
+    "name": "Sangam Indian Cuisine",
+    "address": "20910 Torrence Chapel Rd, Cornelius, NC 28031, USA",
+    "lat": 35.4879062,
+    "lng": -80.8745556,
+    "phone": "(704) 655-9600",
+    "website": "http://www.sangamindia.com/",
+    "rating": 4.4,
+    "review_count": 1173,
+    "price_level": "PRICE_LEVEL_INEXPENSIVE",
+    "business_status": "OPERATIONAL",
+    "hours": [
+      "Monday: 11:30\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u20099:30\u202fPM",
+      "Tuesday: Closed",
+      "Wednesday: 11:30\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u20099:30\u202fPM",
+      "Thursday: 11:30\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u20099:30\u202fPM",
+      "Friday: 11:30\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 12:00\u2009\u2013\u20093:00\u202fPM, 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 12:00\u2009\u2013\u20093:00\u202fPM, 5:00\u2009\u2013\u20099:00\u202fPM"
+    ],
+    "hours_periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 15,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 0,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 1,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 3,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 4,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 5,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 15,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 22,
+          "minute": 0
+        }
+      }
+    ],
+    "photo_refs": [
+      "places/ChIJBehb392rVogRYTAQ4uyTkME/photos/AV-0GLdI3RyJqupJbSZkidePmcEwG3lJu90RbBNI-Tyqr5w3E15rqCBowEGzS3DMNhfGQ0dV8lTEcjyUQgfNOhvbwFVE8MfaqVLasXnUE_gXZOJgveEYsjL1xnb0AD6GCZgIJ1C9OKJtyP7wO4Jbts9FW2xWCQLfTEU7mDrqYG_vrwbtnOE-Dh2Eb1eK9ytTQNWi4UaDF9_NPO5wCANtA3fGkjWMnlSG1X49_CmZ3RsQxcT2sMhPU7P3VPN9XioAH7XdfNfKvlYa4HII-1-GniZRexFJWg0xxl8cD9wu4YWG-5l0_g-kJKIaMIPH9UBmXFu6VA2WvnbVJ-ndzH7eZ_ganfjObnwYEvNp7Rspm-nrulHPbWIRkxDCpwOWj05o0KLH_uBEBLzIMIhh30nAMlTDAY944HK3scY",
+      "places/ChIJBehb392rVogRYTAQ4uyTkME/photos/AV-0GLfnbsCtLLU8Xfh0PmVYFn4xONGRuARKBF1jf70uZ1xHLecBiz4B-1Ghhnthim0U1v0MawjJXXvBu9vB2VRegDGlWh1NuJT2TY6YiNzYnAL9TFWV2TwwrtpXu8yM7hyA38yWRcgBbAhP8DZSlTgTpj1HjKRlJK1Hfx7VDce4WzUMz-mPxaZ0ksMN7z66f6dLZJLotdgups1zmr_K6__CNddTVFAf5eHVTTNHyTbTZUgdKOvKk-LfxJhpuA5y5LuMpQ17sXkx_zhxCNuPfX-BBLPVsKclAi4pUkeZvT9v2ttvA6izdHpd6_x8flk6XmdBulF_77eaptCDO3rUE824I9LV5Day3REvXCpHi1OAQzV9ohD1YD8S7XtrxgO_cQdGlnGgFsxcthd4Pi5CEhoQGdJ77YkPkaE",
+      "places/ChIJBehb392rVogRYTAQ4uyTkME/photos/AV-0GLegcU3qLaaFYTEJXJ5tvfk8dwUpi5IefMa42vzEHmj78THaU8121OXIUHL-vOGrYRbGV5yi2-cFUFyD3oxelHxDeycqxVQKkPFMOV0mZj2TcGN_-uDa2Vudf0mkobDkNrd9L0dLQolUN_4mQcOla9Utctd9iTKhFESq6bn8dIz8GWsRY6TtIF02wWUntWeNjcsh5qFwQMhI42int-kJD4rsMIVZxTZ1mElkBe9z1wAY73bEtDeoeDYy0f3utT2zETBi_oQj8UaaiMCbHHw675EV-k-C0AwYvYwasGSNRorbsbhHsmJm2NywqglH4tcE0hdpsqXB6ud5wKTkau-F8MdiLYsIWOS9gqYihw3nKwb-lrlJm9n2esXac6bT3W80Xp0J1_QJ9LTnczWKhQc3U3mUASCDxUIB8lsSn6ELAb1t2w",
+      "places/ChIJBehb392rVogRYTAQ4uyTkME/photos/AV-0GLfDzBQx2-Ap3ux2_QN0OH8kSLsKBt9T85ooxDT65lgm1oeIilsNfr9wbcyfzIoYQc7SCYhaEYFy8YgmvZa044uozP8pxJPLQUzB07xfmV5zXkM0fBssgP9Cy7BUCgufxlG06Td01LFbqgylZPtq8YauKRN8hp-sHNQgvn794KM-fvzpyGtg34TfZFcV5adFvHjCLbRskFGdFYqXaNCpwgdrhAIvqZtI7P7XjW7a0gkWJukxrrOT8y8JQ9fS4wQce__0dwTON8Qma9HUr7vwRysOVc-x0xee3onxcTj90r4eHK84i_HA0mYGfM0N9KRe41mxX9Kwdm6HMgF2Ys448VrlSf7umm3-pytjfS9Xl0sJQ8n5fcVKiD1twZ4O2yHoe8RI14ELxrdtBXOt1fNHhEQl7qz8",
+      "places/ChIJBehb392rVogRYTAQ4uyTkME/photos/AV-0GLejaYJ_2yTAKhrIePIgC9hYz51PkDWJdx4eCrztu5k3OomWFUq71IVeuBrPaOvkY1FlRQWNkBQo6V-NU2QIHmHfDUnKOr1MWaRYaCOubF7Aj5pKuv4mHYT3UatDFMNcDO__hAcfctPfYHusNymi2CrCfGpYPN6HJIFpF0QXNhE8Djo43YS4LPVK3raWbLCp2iSpMJiwgqFuh1GhW0p5cOftmraflU3zAjbhfGFijS60cYVAN4WLSFyqUFYTNKKMwUph-Xntg-mNNCTcyjGjLEPeQN8395zf3Jfok3z2BPXFE7NSWZf1XdKUAMRd-7HT6v9hjukSapUMhfo9X7t09iCJBMiDplRu1YhkJ0qrJMTexvuiW2exXMSuaigVmIayvxdTjvVtBFGM_Xiy44d2DoK663XHQrckvpvk34e63NN0"
+    ],
+    "types": [
+      "indian_restaurant",
+      "buffet_restaurant",
+      "family_restaurant",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "buffet_score": 90,
+    "buffet_confidence": "HIGH",
+    "buffet_evidence": [
+      "buffet mentioned in 2/5 reviews",
+      "buffet on website: buffet, all you can eat, lunch buffet",
+      "matched 'Indian buffet' search query",
+      "buffet in Google summary"
+    ],
+    "is_buffet": true,
+    "state": "NC",
+    "found_via": "Indian weekend buffet",
+    "search_location": "University City",
+    "metro_rank": 13,
+    "scraped_at": "2026-11-14T20:28:57.962129Z"
+  },
+  {
+    "place_id": "ChIJl3L7D7QhVIgRWAFw4Hx0NXA",
+    "name": "Kolapasi Indian Canteen - Matthews NC",
+    "address": "9456 Monroe Rd, Charlotte, NC 28270, USA",
+    "lat": 35.1427838,
+    "lng": -80.7412521,
+    "phone": "(704) 443-7171",
+    "website": "https://kolapasimatthews.com/?utm_source=google",
+    "rating": 4.9,
+    "review_count": 566,
+    "price_level": null,
+    "business_status": "OPERATIONAL",
+    "hours": [
+      "Monday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Saturday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Sunday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM"
+    ],
+    "hours_periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 21,
+          "minute": 0
+        }
+      }
+    ],
+    "photo_refs": [
+      "places/ChIJl3L7D7QhVIgRWAFw4Hx0NXA/photos/AV-0GLdHL_7IUI_lDwGlsmKPo9Vc95r3Ju0apzFxvY8V1uDRSN7LSxY0schs_lkdP1gWU1ufNy1ElVIok3EjJBYwrlKQvr-2N1ls3eP5TqxyMPB21PwsDDX1cBmwXlUTpHUZA5q0EpPwpySZHaUUa6yXC2cYO9PmWLFtpVe0atxo5Fx39LUMzqFNnRW5_oqw8hhXVHJi1ajwBIfALLqszT2-BT0AbNVIV66iEHv_gQOhUNOKRVBxWcZCo2FLi3SOoDRJNywNTePVb67BAtf8c7E34OTNTlXzR0pgJhm9mldjECM4xJs3_w2kVRSLtj1teG6lLj4c9vXPr3EU6Aq_ktXkoAvJcbo_ZhlVBaLJWI0ILAOhu7JhGXIkzNp2-BkR4qi4FlMxD8jlSyRSGD5Qs_7s1hHnodJd243nDSR1tbisGpCb",
+      "places/ChIJl3L7D7QhVIgRWAFw4Hx0NXA/photos/AV-0GLfL80t_pOBsI0ZKre4Isib9OJG8d8y8DEzrEG-OahMQroEA6N0ZOi5shhwqGPGvGG-S7gvkdM9zqXnH-f_7Z5AeJTNZpEoITm-Imui_qvBLbY7bGTGVwMuQM17et-OwkJKvXWU7J_nF6k8h2MXhTH229f8XTbOQVkIPRoT5_moIclrkEAEKl6Lk3bfxH93Dpye7ZbxmIL78aB16ktmIztyogjUwsoqUKbtBpH8Hrw-fYRj9Eyjqb8_UZS41XiMb9730Hjxi5rAteqqPWO7HH75PSc-K_dIgqxgTgDw5BXKfW43WRbezuXO_MiuLuddlUsfQ7rMDNJjY6nzojPCMaKI24TrHK5LFVdNE99gyKyrQusb4xptlcq6f7X3J0VyHDr3NtsTouBWFeGnMDkfVp1Z4oVSN86h2TW5wfMcSMr6_Cw",
+      "places/ChIJl3L7D7QhVIgRWAFw4Hx0NXA/photos/AV-0GLfTYLcrRZ9C_a7q-XWvqNapqo-n10VtnE9IGB1S362iNJ7rf3G6uUR2kQKa6vCcV2LTVcqE1TNJrh3x7PTVPN47z6H5xRKO_BkLbURKmJCibsQnqxg2AOKMAMRmgJTmalk47AQJUMVcvIL96Qokhj-LW0J_4YKemdF7nzp6rVE24Ff5rrKLaPcgljG5aiF8G13uzaDUW0p65WyjKXGxsErXGxCEo272NI0eo9LoSkceh8FPlKsfvBj9mq9Y1hAF9oZ1Kzc8rLtHtJ9tRB2TxQBHtDo4BIhzO2sWwKgOcuTiPQiVrUO_5B_Cn0laUuTC8kioV-UMFX1WMqvOk9CdHLvD-5pxr060uMVBHoK9L10V6ej2XVQlzgKPx-muyJ-NmVK_ioimPDjodt32CoAzB41QFMs2SWd8Ii_4eR31fpOsdQ",
+      "places/ChIJl3L7D7QhVIgRWAFw4Hx0NXA/photos/AV-0GLfJjQ4FjwfKWcN54oKJ_iPKAzFDk94gUq76ue9PvM_V0YtbYK2T0z62ZR1YwVgAkGokDoQBi0SO6UZ_Rc4A6BWOrDcNtD5B7rCmd0ehospP2vT-N3Ucc2oiDdEXCXqk1aYyHxIfPijmvyZUav_1-3HhC5rnhEQ2jRAlxopMdKh1V2hpUD_liWQlOaC0_YYgxBbtf__5X9DAfEB-zVUpJ6BhfA8Xn6aE8IoyHAeM3c7IEOqszXTo65UIwiKPNBab8QQVpI1zDqE4lI8iTBLzTh6zkc7HO4K7vX8Iq6mm1ZlL55ZR3kdBEg0glKQOv6f1xWZd6bNr4nXgJRwCmJq8NWf_AHojjWc6-SimId_SJhQU4YitUNqZPCnC6Ie2tXJ5Pkt-1bLSASqSn-75GE_Hjg7dngd4_soG9fQO59_-GTJZ",
+      "places/ChIJl3L7D7QhVIgRWAFw4Hx0NXA/photos/AV-0GLeis2xu6vAADf9xnY3fQvHtwqdzU-w8RJVRmZfZEQmN_JpMy-nuI2p6OmZvm2_6OIqDQYZmUbpOJaIwP3Z7yyAyy58xjHGaBdgQkhZn3VFSGryLpuF9TwMu65d8Nyt9LlLMxlESzbjD2hgt5ugRMw-3gwYNKy0gPZ2U5qdEp1enXK-AjEIdAzZf_MHFxv-KG6osPZEP0wLlovariGdndQPiyPCQrezyTD3M3qEMnXEsm_RbrPRHN1Vw1fQ26h640GPKrTcMq-axwzrktWnBdU-AWCBinUwC7NNjhrPiH_eh4Pl7c9evsffQteEjHU5xlNbt0KFHE2VfxOYjuIBPZ-VmP8YaMBvjDredtwsmBcNxyJghlWyl8ynvKzecIGgM_924qyK2fHVBcpH0RA26vJ8QoWuzI3M-IVIvETpF7JngnQ"
+    ],
+    "types": [
+      "indian_restaurant",
+      "halal_restaurant",
+      "meal_takeaway",
+      "south_indian_restaurant",
+      "korean_restaurant",
+      "family_restaurant",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "buffet_score": 20,
+    "buffet_confidence": "LOW",
+    "buffet_evidence": [
+      "matched 'Indian buffet' search query"
+    ],
+    "is_buffet": false,
+    "state": "NC",
+    "found_via": "Indian buffet",
+    "search_location": "Uptown Charlotte",
+    "metro_rank": 14,
+    "scraped_at": "2026-11-14T20:28:58.209139Z"
+  },
+  {
+    "place_id": "ChIJk7ehVCidVogRh9a4DxNLB1Y",
+    "name": "The Blue Taj",
+    "address": "14815 Ballantyne Village Way Ste 170, Charlotte, NC 28277, USA",
+    "lat": 35.0535664,
+    "lng": -80.851867,
+    "phone": "(704) 369-5777",
+    "website": "https://thebluetaj.com/?utm_source=google",
+    "rating": 4.3,
+    "review_count": 1270,
+    "price_level": null,
+    "business_status": "OPERATIONAL",
+    "hours": [
+      "Monday: 11:30\u202fAM\u2009\u2013\u20092:00\u202fPM, 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 11:30\u202fAM\u2009\u2013\u20092:00\u202fPM, 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 11:30\u202fAM\u2009\u2013\u20092:00\u202fPM, 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 11:30\u202fAM\u2009\u2013\u20092:00\u202fPM, 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 11:30\u202fAM\u2009\u2013\u20092:00\u202fPM, 5:00\u2009\u2013\u200910:30\u202fPM",
+      "Saturday: 11:30\u202fAM\u2009\u2013\u20092:00\u202fPM, 5:00\u2009\u2013\u200910:30\u202fPM",
+      "Sunday: 11:30\u202fAM\u2009\u2013\u20092:00\u202fPM, 5:00\u2009\u2013\u20099:30\u202fPM"
+    ],
+    "hours_periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 0,
+          "hour": 14,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 0,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 1,
+          "hour": 14,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 2,
+          "hour": 14,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 3,
+          "hour": 14,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 4,
+          "hour": 14,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 5,
+          "hour": 14,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 22,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 6,
+          "hour": 14,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 22,
+          "minute": 30
+        }
+      }
+    ],
+    "photo_refs": [
+      "places/ChIJk7ehVCidVogRh9a4DxNLB1Y/photos/AV-0GLfBcxFvgKpCF6sCspBi_3fMzSZQioGR7YX72hcPE-W78WI0HspgETWpxU1T78OXGuAQ4Ppsa9_hlYBCrH7XSQuC2rnsiewlKR82rIg0kFHRa4QRoJuNYUpqh4XBfi-LHobBhY0QHCbuhltkf_5QG_yNjsPS4gt1j8uUT-l_kuT36kV-zC1JxWK0UScG44NBDPbBG8dUdhxV_xfAQLJki542uYtieqNlY3X1PddKCVJ_qa98sBNqsHfw-qjUSSxrJdqCiW3Kl643Q3Ycj_z0xtOAZ_xgJ8QDBbio6ErL-xrpUuZri92Dis1y8iVDR-D3JX8gL7F3C7lNcY-0SOks32fDb-dKPTmxXpocvFibx0IR19lzmV486uQzqyuTbI2SVkbie_WEW3IEy8t_hDXxoOOOLWgCWgs",
+      "places/ChIJk7ehVCidVogRh9a4DxNLB1Y/photos/AV-0GLeDU5V5ZQmsIvmHy9MCgT3t4Jm-szBVoehPcUYLwsmh-bB7Lu8ZdO2MVxFHNLHe_ne9IaOhNuKM5r-YnesGWRoEOVwmLw3YphNBVxNtGvLDXmUka-JlE3Tczol6_lrypIdW96rNF8UCyfuAjwI3zzqq1QNdi6X73YHkUtQ3Ud4njeXbUviM_6fFJ1M-nz2-A9aXNn67_CeS2W7gegC2h8MFHD5aF4271rKR-seKwicsTi2Qsay3Iq_jvJKpo13aMQmaDWkw5V5PrjDAJ_4E3ZB28PwDWVFMjhTdX6dkqvILIK6Cnq_K9ljPOiOAKAgxWaNR--tcPMUBMjOFLNYctjv03oOGWJyaP1jqXj9QQ4HiYDmRtNAjVhNX1NECV13fGo3MsYQLQwaOI4IoEyVFGy_kFUr2vBDHkBVzNb7n5u4ewA",
+      "places/ChIJk7ehVCidVogRh9a4DxNLB1Y/photos/AV-0GLcv08t-MWyjuuf7DUdGtW2xc3zj81pMg2_4m_LsiRvwkSY7wILgFjAmf8uXXR513SfUoJj3SEjZaYEqFP8z0qK7o9M4KYqJoKpdB-XVub3gqG6Ff1o8Po5VvVbluzg3rq29mN3hgEl3pdqCbhqtts0KT06lkekw8I3Y9mLVoVaqj4dTDcLRDL_rR9L5eX1wK3ICUNHZvJZLQsYRpKn8d0J4aoN5-CVM2okCSVeSqEvMCDTPBzl6gxP82YYYFyxruSAeUfITX2ALJylgW_g1d3MMUMhXEtJm3vfGMg5Td_hYWdobId8HmB58h3NCXuJgRxfrdSRCnXV9UwdRrjhCHdEGoR8fX37VK5AGU6VYQPhd4SMXVCyUnit0lWC-4gRTHYqr1vbkNRO2SrVQd80hdH1Q9TjuGF-S1nCs4h6lLGMq",
+      "places/ChIJk7ehVCidVogRh9a4DxNLB1Y/photos/AV-0GLcUp-R1M01ljwTtVpRMJOdT4jzlM9i65eCp8ka714qER5oa3XFhgjtHiQq4E_I1gUuHR0h5U0EKrJVx8QsENrzKMFXOoQbgT32z2j46xanOcSD802csWhITUsbPwVujA9tUGqlJ041rOS8eGgOCK7I0sBgpy__IHhOOV-bhyggMJt65DZ-AoffaoMN4w7lEG6lCCOPlHkGWU5SLJrBd5nr5wK34h7w4chWIeECqHg5JpW9fJKyuP2WQTJ0gKKA5dHSCexbvZAJf-368FNrHrW8JwOXvfWHwhomh3Qz6VyjVu4ZuHkLrD0WSOUQqARyqxe2yJoNG-f9bJv4FQLVACbsbUZq0tGor09frcSMO3GDhIwSBnjf7sEkwONIG0Yp6ztF4QN_l7XPJsaezJuHpd3VKFPgrJIiVESCB76J7QHXaTA",
+      "places/ChIJk7ehVCidVogRh9a4DxNLB1Y/photos/AV-0GLcNfKYm-XyzixDcQHFRsCK6qyBxOKelTsCMKiMIHexDu1FhomkhvpoRhstSN7ds6m7NQ69NW_0dOjb06_fI1I4fjB5E_frTztANvVGgi4f3OqDdmR4aWdf6yBkKwX0IO8nXx2ahc_JnjXAsi_XhwxPU6CCu1EXtv6SIUt809v6z00-Z0Dcm7NXqGRo5-fXfcPO8UXiScAxXBKUx6cMVWDWQpcHZ5Yu-TZdLuKJCvow18troWBGIBqsjX3zMKXFHhFMUe11X9fJRuRHpUK3HOHWZ9FmChB6GTl61pZhByHm4kTQrdFubj1LvoiDwJtGo7-IYPyazaQnV_Sley4GA91QmQlumJZjsYUSDuW3aD2OQ7J51ZjYIIIFLSfVzgNBHf3_SaiSdhjp7zbSS3c3vXzNa6zIQPdSkmK1Ne4N-oDp8bw"
+    ],
+    "types": [
+      "indian_restaurant",
+      "asian_restaurant",
+      "vegetarian_restaurant",
+      "catering_service",
+      "food_delivery",
+      "wine_bar",
+      "bar",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "buffet_score": 20,
+    "buffet_confidence": "LOW",
+    "buffet_evidence": [
+      "matched 'Indian buffet' search query"
+    ],
+    "is_buffet": false,
+    "state": "NC",
+    "found_via": "Indian buffet",
+    "search_location": "Ballantyne / Pineville",
+    "metro_rank": 15,
+    "scraped_at": "2026-11-14T20:28:58.480056Z"
+  },
+  {
+    "place_id": "ChIJq4jDJOsdVIgRcPl_mRckBzY",
+    "name": "Biryani Pot Indian Grill & Bar",
+    "address": "8455 Pit Stop Ct NW #150, Concord, NC 28027, USA",
+    "lat": 35.374508299999995,
+    "lng": -80.7255199,
+    "phone": "(704) 979-8533",
+    "website": "http://www.biryanipotcharlotte.com/",
+    "rating": 4.1,
+    "review_count": 1729,
+    "price_level": "PRICE_LEVEL_MODERATE",
+    "business_status": "OPERATIONAL",
+    "hours": [
+      "Monday: 11:30\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:30\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Tuesday: 11:30\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:30\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Wednesday: 11:30\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:30\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Thursday: 11:30\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:30\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Friday: 11:30\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:30\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Saturday: 11:30\u202fAM\u2009\u2013\u20093:00\u202fPM, 5:30\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Sunday: 11:30\u202fAM\u2009\u2013\u20093:00\u202fPM, 5:30\u2009\u2013\u20099:30\u202fPM"
+    ],
+    "hours_periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 0,
+          "hour": 15,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 0,
+          "hour": 17,
+          "minute": 30
+        },
+        "close": {
+          "day": 0,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 1,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 17,
+          "minute": 30
+        },
+        "close": {
+          "day": 2,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 2,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 17,
+          "minute": 30
+        },
+        "close": {
+          "day": 3,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 3,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 17,
+          "minute": 30
+        },
+        "close": {
+          "day": 4,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 4,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 17,
+          "minute": 30
+        },
+        "close": {
+          "day": 5,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 5,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 17,
+          "minute": 30
+        },
+        "close": {
+          "day": 6,
+          "hour": 2,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 6,
+          "hour": 15,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 17,
+          "minute": 30
+        },
+        "close": {
+          "day": 0,
+          "hour": 2,
+          "minute": 0
+        }
+      }
+    ],
+    "photo_refs": [
+      "places/ChIJq4jDJOsdVIgRcPl_mRckBzY/photos/AV-0GLe7AAEZeeO9U2mjwUtpWZY3QVaE0KPbymH8inIUV0s8g7qmFbbGeEXMC7LVkncxfKN-kP0YgnZ8BTLzux-052OQnor9kme09yERmWO31X-X79k5-spvOCIh5DtaGUjWNV-rxk1kV9WFX6amB-OUo3WbbQ7U6lwxDlhI1ZJh1xkG6pNo30VdfTXsAuccUA0NOQ-4may3bxpYA1zG4IdJiWanIFYifQrZsrt15in87TAEH5aQSwTPtdrAW8HKc-P39QHV-1FWSyU-3EkHJ-Q-F7mdjTuifmxEdN-GGVsRiOb_KL5CfRy1GMpH7wSMuV3qawVcltVgRLOZtq47s-e8gGt5TZwEUZ2K12pEeuKFnr807SBjBvIhhVi8k4Nnoqsfqe-OkQkN3XJn_UG2Eup57D89xQ",
+      "places/ChIJq4jDJOsdVIgRcPl_mRckBzY/photos/AV-0GLdZ6bREcdOInD-VMLOszhfOjFlMUSOjfrz2c5fKXCmCfnAHW0JjIr719LTmOSUGxz1AJfbgBpMgMHktY3AFj9xjbF7pIW7C6aB6Q-USzkgK-Sk4RqYu6120ceWnLwah3KOU2X91Z_XMDvs3EOVe6EkmVqPc9bgvDMy-yRGXLYR3uymWe6e0j12gyJk8B1ci3QH8HfnZXYOba5CpY9C-moz5mchgwhOh7gIrAImvQHzCIWt-j9997RphAH2c4jouf1sw8Q_zeYf_ywzNvto2oU7tyuoCNzVGNMdee2-AqCfVN05-EeJ8pw9oZlFMAQqn1tjMKD1azcL-hwBR5pfQDnBAHUuD9vmGEPzzzTrArQ0XQVxbiJ1WDNuDLguGr-HOkRsqgElGvpXz6xC13rqGR-3tlUE",
+      "places/ChIJq4jDJOsdVIgRcPl_mRckBzY/photos/AV-0GLc7UHWla9sdK5FiW0JKUASirkWTXS2eBJhBTml-UGQiQJRTzNEW7xM0ccZAr6W6b-KbRVQYBOM9V9LxGXE63QeQGWy_bc-RMd3YcyjEjLHTX7RPxqhrpA0v_yL3DdG1e9pUYiUxO7fQcM0L7HRLnqOiVEtSrAU5h4e8NBPVXrevN2_6Mgn8upUUoZHQfEybvbfNgXYTPwpO8rE4GZXu5ONHwoXXaQprs4wc7GpRlO93M6-DUQAfx6VLCy7Uu64G_0zvSu5NjWGX8YvuCGmx51TJV6WA6oWQh0l9_A61JH69_Xl4K8yUxH-j0zSQL2aNYglUyuy3TRxcYC0SrpgO3MuA7Hhll5HzFEbKqrHX4xHfpvPIho6_INDHcErVPxdRMVoLqQX5pNWsY5DUHwc9jsXdA2K-s_Fiy3lxKT1EF6PREw",
+      "places/ChIJq4jDJOsdVIgRcPl_mRckBzY/photos/AV-0GLc2ZEizytqhLlV4_0sYvk2y6cwGf8U_Qw6IqnYPa4uVsNxTvQgLMj2AUezY1IB99rtjIYS2RjFOA5l84WNIOHTa_Wn5lNOI6j6HOoioRA9UEHdBOm36XP-TAOkpGxUBn2Tplw1Ye88mCkVCGWuh31phhp0NyNfQmeBUy8UnjKhCAD9X_agL_auhKMYo0AABIsIe3uafaQLPWYt6JfISJPTw22UVUBzbENtOW9HntwHKc0hSvraRUOPxnFxQLgY_eyNOT1o47je8i8WpyqbUNzBFckTRhcth-KDw_fVZ1B-TcsO_rgFSNa1JNxQ2-we5d4xQiqlQFX0BpB4a939-YMxeYz2IuuUCJh70w43VsKaR7aJ_9tm12idlULHI_e0Vvdh8vUohyvbCk7I0xhYfxpaw3hQk",
+      "places/ChIJq4jDJOsdVIgRcPl_mRckBzY/photos/AV-0GLcVz56naWIZ3INV5ZWFswVOyiU3sTD34P9u_Kk0EzYb1v-Kshr7SVnZdrGus9B06ExHhIvnQfWHX7LEAGW23e3mw3_QGIARCCUPkc4tR-g27WuqysB9S8IokZTLkjUuYt4tfI9TqP8ljEIcBqTCvQaVXKkq9n8e2tXPBAKHqZG_1SWDjaPbU3APZ6IZnkxyTMw49PQcFl1z6wTEgclxoc1ZSEywdQeLXKCt-MHNwMj2Cu2FRn9FII5-jT3JxxQgNGcHbIt_Ghp32hOwYKFEBJCm19wIQipX3JhzcjlhBTZQrT2sPLrX8SXswEpaw4L-YOyxv1PaA-3klFOd3JegTDrRPwTrIC60hGMm0yXKXOwuEgx_G-OY2upgxOxiKFuvYcweLRcguEJEnxPxtvHIkcj7rMVetEYJVhnMQ7OpStauUg"
+    ],
+    "types": [
+      "indian_restaurant",
+      "bar",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "buffet_score": 20,
+    "buffet_confidence": "LOW",
+    "buffet_evidence": [
+      "matched 'Indian buffet' search query"
+    ],
+    "is_buffet": false,
+    "state": "NC",
+    "found_via": "Indian buffet",
+    "search_location": "Concord",
+    "metro_rank": 16,
+    "scraped_at": "2026-11-14T20:28:59.561334Z"
+  },
+  {
+    "place_id": "ChIJw2boc1WdVogRl9WMV3dbBuQ",
+    "name": "Eggholic - Indian Street Food",
+    "address": "605 N Polk St G, Pineville, NC 28134, USA",
+    "lat": 35.092819999999996,
+    "lng": -80.88523,
+    "phone": "(704) 835-1043",
+    "website": "https://locations.eggholic.com/us/nc/pineville/605-n-polk-st-suite-g",
+    "rating": 4.8,
+    "review_count": 578,
+    "price_level": "PRICE_LEVEL_INEXPENSIVE",
+    "business_status": "OPERATIONAL",
+    "hours": [
+      "Monday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Saturday: 11:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Sunday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM"
+    ],
+    "hours_periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 23,
+          "minute": 0
+        }
+      }
+    ],
+    "photo_refs": [
+      "places/ChIJw2boc1WdVogRl9WMV3dbBuQ/photos/AV-0GLcCkDGdMkAJG7bt36UlokudCZZcljdTfFW9TXC04cMhgMeY3YDKEJn6dm58JqKxO5J-DYQ3FYUJvcDX86nkLcKATseHMqJTOOKw5iOF4wnp0P7Prq-xTLt5CMB5078GWIQiTN67Hf2Q37Mj3aZjMzlr9rmPTGJ_TQA05v2HATiyA-2OQvJOz1l4NZyfKQHvr75ZInGPhWNNvspldxLOWb0iDTvC8lPLeEPKzn3adyH8O5jnkdqP3Odo3-TiYucP4nD6ZjFwIBx85LgOPMHBLFcC46B_xif-RSVXugsicSW6xkRcraa4j9Ngn66CpepXz_Hk5moWo4VbeWqUig1Wcnp41cHyN_FTKifuIDSUJ24OGA6J_SD-txjR339OxaHzTXq7YW3494mqmxLsRfZ56XSTxqW8zsuNs4xyzHxMg9E24Q",
+      "places/ChIJw2boc1WdVogRl9WMV3dbBuQ/photos/AV-0GLd2HvCgBe_A6E6z_Ye4qWZ0_B8qhp2Tju7W5l8ECuJURzrF1h2Kd6AqPx_w3UbLCaiG6k1NKNTC9KuUOMbeYOWhkKgLgc3vIRPJNV8aHA1T1T6A82_IW_eJdlk2nGGkjR0rpQrTxVw-43W3F4ovfKBUeqSNLeorGoQle6Ni48NzT5jd5m2yVXDjmxOa1Lw987SYckvQXj6vwNI3ElMowXbYu4PfioWMTRQFNOG75G0scYpvb3Sr1UR_UGT7JKufAgj0-687sZ7youIoNUjVpM8XULfTBfs1Y1uww7jxaS_TmSjdIK_6T7tDlbW2lKlkAzka41z4C_0m_Nk1HFA0jr95j7g1MWPNTdjl4dwQh4FFwIBHlz7GBbfQN1jB_t20_4WUnklRXnQVzXan6QHEFztQYFp7or0MP0IzBW4AZbtWJg",
+      "places/ChIJw2boc1WdVogRl9WMV3dbBuQ/photos/AV-0GLf8sZe_O4os2inZ1FAmp104rtVVsYGfUGnrAABy8Zl3IA1lWltsPcLkICX6Nj0APcBHSm6SjO66m8HYH3c-ppcxcHcSNam-Px_N71m_5m7YO4EDnDcG-7aqNaXOeaCPiRFrtIOKyPaZaFelK1NQ8pgeD0Osi7eupBoc06y28bMO2_lPHCguDHAm3g9tTvqp09eTMgVgUq-KPd90L1-RQEIG3IWV2fp_OKKnveVXhwOL3-HfouZZ9espnMxRpiFlw9U6RN3DA701AGD6ADy6cfg3eQs5j8hyLjSX8uMDsw2LEHIhDDJ8xEejPaU42Bd6p2-qpggeL1rIa9y8pMgn4hbIMlxlQJvb9XPT4Fjd8jIa_MFL8jhNy4ZJzltBHdds1OB9ymqAsZ-uh8h-p-1jpWBGWjnFIbBzAxysh1CqseGswA",
+      "places/ChIJw2boc1WdVogRl9WMV3dbBuQ/photos/AV-0GLcugdctYo1Yp7npLL55wy2Jql1Mw3eFIupm75AqFwM0xcIvyQ0e5RNGMmMRMa-0hIODs5ZKvM3D2AF-ptMlhgw5Q3GHHhjTTBPFgCNL9K7boWOoAW-UbxZR7A43M34ERFiGkLQ1nurx5MvnzaljDLp56GJ5pehjdaG7ZPfQMPix3OP2VOU9peVynftTC4Bs_KsPsJYY6u68zPVkuqbDr5yVzdy6UTXp1Vcj-nxmciD_h4F4t7gjiRPOhBgQiMKy1iD8YoRlPqiAt2fQlZKmlz-ZPOk6cDMKyjjsDmCozvEyuA_7z19f_3Nsyw8p4w_BjAp3F8nfQBoaBvtNX-RxdVbkiq-Q0s6wgNOHQcPUc_RHcPz6C3IlMYsvvkNt_F-oDRclntbQ2brTSuRTL6XsVxlcsQxQ6ENC_9D7Tv6rvxla",
+      "places/ChIJw2boc1WdVogRl9WMV3dbBuQ/photos/AV-0GLfWxO_1f9rKPExT2aUkoEX7EJyIqB2YVj8uiQG60SWi8BMaM1rYdF6IqQT8Ol1foasUdo6tfsVERW3NbscA8c1iVd4qYvKa6jolJYdZPnmsPknLnTk3ECrYWBDVGx319z2BhUa2VcGILUwTLudUKN0dPfUnXZhlpmyr3YlV1mdBuns21oDg0Y7kKNcyC96-KtiSJ21NC0rFKftN4k6uO7Mj_vAqN7C9Xy-QTIbqAc6pgqaDsvjyuDXPWzbaCURj3nZiphxkZknMmF6WwI99q9hKD56cSIy6IJnnyC5GFJX7Zjs2R5oy5KbNzSGSna5Td80JuP41nqQMyNj1Kk_8eF7mDAF6pnfr0h26wPwWcMQg8g79oTer_RmweAMny0CmbsLt2FQ41Hum8aLYvz-xDYJcR98JsM4-w7ZMUT6ExOr6jQ"
+    ],
+    "types": [
+      "indian_restaurant",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "buffet_score": 0,
+    "buffet_confidence": "LOW",
+    "buffet_evidence": [],
+    "is_buffet": false,
+    "state": "NC",
+    "found_via": "Indian restaurant",
+    "search_location": "Ballantyne / Pineville",
+    "metro_rank": 17,
+    "scraped_at": "2026-11-14T20:29:01.600193Z"
+  },
+  {
+    "place_id": "ChIJ2x6POmOfVogR_dF33OBagRo",
+    "name": "Nalan Indian Cuisine - Montford",
+    "address": "1600 E Woodlawn Rd #150, Charlotte, NC 28209, USA",
+    "lat": 35.17179,
+    "lng": -80.84926999999999,
+    "phone": "(980) 270-5888",
+    "website": "http://www.nalancuisine.com/",
+    "rating": 4.8,
+    "review_count": 576,
+    "price_level": "PRICE_LEVEL_MODERATE",
+    "business_status": "OPERATIONAL",
+    "hours": [
+      "Monday: 11:30\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:30\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 11:30\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:30\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 11:30\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:30\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 11:30\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:30\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 11:30\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:30\u2009\u2013\u200911:00\u202fPM",
+      "Saturday: 11:30\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Sunday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM"
+    ],
+    "hours_periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 0,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 1,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 17,
+          "minute": 30
+        },
+        "close": {
+          "day": 1,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 2,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 17,
+          "minute": 30
+        },
+        "close": {
+          "day": 2,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 3,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 17,
+          "minute": 30
+        },
+        "close": {
+          "day": 3,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 4,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 17,
+          "minute": 30
+        },
+        "close": {
+          "day": 4,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 5,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 17,
+          "minute": 30
+        },
+        "close": {
+          "day": 5,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 6,
+          "hour": 23,
+          "minute": 0
+        }
+      }
+    ],
+    "photo_refs": [
+      "places/ChIJ2x6POmOfVogR_dF33OBagRo/photos/AV-0GLfRk43r7r6o4pd5_rdTmma8EsCZZSlZRAVjsyaSIoYj394pKkrJEO95ASVwzOFQ5jciDMIQo6DX25i18XB0n24C_9QW7T3CjLh7d54D_MguE7jeKbAEMY-_u1KZLpboNpocvp0qJFvEhkSgEmtskEZUgP4mEjeg6x9pIg1BG_a8mqQlNJ-BCUJJ4-QzHQdr6lxc33gWHP5vZMJR4x6lzzLxrz_oVkXMYfMDwdt_DyxB4AD7eBHPnIylseZgGIN_QCKacE3wPqCvdC2xA0hKzYtc9WmOxsPl9FJEaWg30QPeGFyALnDxArxhtZhVDOTa0RzJpktKvMDLhb4PXSVuOJZwo0_csAkeUSUz4uAUuq3O05V72LfonAx-xPdoY6-c0nguZ5UYacoPxxMgs9x5dWZkYDjKLUMoQNl2oDlXACrx",
+      "places/ChIJ2x6POmOfVogR_dF33OBagRo/photos/AV-0GLcbl_HxMynITDRcXW5DmEMK4Axj88yXbWOTr8mjfWiFt1Ak0WjaUd3T799mRuxwQ8FjQKiwHmRmc2EYy7l1g3-CVaZ-_oQlg9fub38PJm1zGR9gqOHamf9QNaRoHnbmNAGraaeUr3yLzJKSzl48fboew2yuBU398imDeILzIqH4ubz4mXXKS7zOCqvPCpYdkeQHX6LS6U_UtRnE40Xdf8V2lhtW2S0VDHgwGgKP_yJ8qA1UE6yk-NY5dLM44LcbKF9N-s7LEgOZdzBsuteMOJ4I2pEyj8XMvscGTYJntd591ZFQuGOaHd7wYBeGj58YGOZUJdxI0GYZ66aRAIdPaI3WbWEYj19C8CiWKJ7gzRWNSniq-vIIXflnFRh8uuVYjqvOGkdDuxgYlHZsPTbVMOVE2rhoq_TP_kkZTUx-mag8XQ",
+      "places/ChIJ2x6POmOfVogR_dF33OBagRo/photos/AV-0GLdT-9AoIELXgSEtVPPxTEsok96CFsmQ80jONauZRxMWdvJ1lGCrrVHTMJolH5bsj620mQSXTjJWl3CEBBPNIMolo23-QUBTUWWrsKo0Uy4kscDzPMmJOFHquBioBwExjgF7JXlsajYvBJ373YTyb16RmAC9A_jrAlmzWxVs0f5Giz0mVH2-LBFxIxtdDRUiU6JWy9TMVho5QWMMjvedhcHEeoG2_oWJqbU19VIg9liZj58EtiR7Z5c34-IrifiaAoMAb7ZgikvG7rrOE5Mk-LASGH6z-42Ek3vAuzLmvg8NORO1TTvuosLhs6vzIDaqNvzAI-D-93bwCvFkXekt8hLFRJtlAgqb7zECbjKI8598a0aWxSJoLB6rD8ckIEgnRRd2Fi3hKiBoRIgU4RDVDgA_0EyIXjU7ilm5C3Q0-TXWmA",
+      "places/ChIJ2x6POmOfVogR_dF33OBagRo/photos/AV-0GLdFbacwUrfC1AJ-UDYiIN33zDdJcCWu-UWVC2ZK1__qfmGtoUuMiWgsG7wufqejBTKb17vKt2gNiEeKq29yBB1DxuzDVPX7nxi3yUQ-KZEhI8g5P8_xl3uh6HtEcYFNKoae6Q30x4_3xU6BonutkoXS_E0lG4HjTgQoCVB2TReIKZo9eS7r7ZvsaQPQncWqA9F7M723ocAnJmgctZUGFa9ClzLsmJbgK6lWJCtZ414oN97eFwnSJdiIaa-SlyUCoTK-qEWNBWcpSA5RanNrGQVFpS5jOPQ13L2BT-TWdweR-oEghX7yv32ZtSZR6Hy1K-jPVxfuRZvb-nTQ6YWBEGZY_uLZnYy7lu1L_db9bdMwcU0IlGAI2ysynN5fWq6MQDks48qtl_GcxvZZwjpuOjjEIErHqVCKBTNjqT-rgNoBiA",
+      "places/ChIJ2x6POmOfVogR_dF33OBagRo/photos/AV-0GLePUA4rpt3HgewJO4ds0Dzd3qCJjb58mmlX9OLVx3Fs0kcmI4f8zo1WK14EWpJPfnZWf25PUuqBxJecSsoVfou2KJZRZQRCGkXilBy3UJPULCsCXwhXyx8fb-xisuiczPGA6_ESJQaTJX4ERTkG7mpdGuIF9NHHEBFHtYuUfslIrk3wcj9Ml7W6Sa08aPFIxMnBSHTVpaK-oAuUnKu_66LgtKuimpPBdkmHFEBbKU0o4UpjDoNwsghDAYzU9pssiVMVbaUTax9is2dGMhRwcG_HoQhCYmx-IoQIrc4Lu9MG_CDyrVLwtRG1hfTVYhb9mliaqiSy1YxwQNzObwdyTfBQYuaan79rn2fbSDpxQGRApmX7Elfe6Mcm05A6UM4V2tMnWDUxKrpx-TDlOgFf7kALiXOHToiHoQQBkMIyMt9Y"
+    ],
+    "types": [
+      "restaurant",
+      "indian_restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "buffet_score": 20,
+    "buffet_confidence": "LOW",
+    "buffet_evidence": [
+      "matched 'Indian buffet' search query"
+    ],
+    "is_buffet": false,
+    "state": "NC",
+    "found_via": "Indian Sunday buffet",
+    "search_location": "Uptown Charlotte",
+    "metro_rank": 18,
+    "scraped_at": "2026-11-14T20:29:02.069632Z"
+  },
+  {
+    "place_id": "ChIJBxRlxNebVogRL7wHDf7Q-fk",
+    "name": "Saffron Indian Cuisine",
+    "address": "2135 Ayrsley Town Blvd B, Charlotte, NC 28273, USA",
+    "lat": 35.1377944,
+    "lng": -80.9335917,
+    "phone": "(980) 297-7722",
+    "website": "http://saffron-cuisine.com/",
+    "rating": 4.2,
+    "review_count": 1404,
+    "price_level": "PRICE_LEVEL_MODERATE",
+    "business_status": "OPERATIONAL",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u20092:00\u202fPM, 5:00\u2009\u2013\u20099:00\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u20092:00\u202fPM, 5:00\u2009\u2013\u20099:00\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u20092:00\u202fPM, 5:00\u2009\u2013\u20099:00\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u20092:00\u202fPM, 5:00\u2009\u2013\u20099:00\u202fPM",
+      "Saturday: 12:00\u2009\u2013\u20093:00\u202fPM, 5:00\u2009\u2013\u20099:00\u202fPM",
+      "Sunday: 12:00\u2009\u2013\u20093:00\u202fPM, 5:00\u2009\u2013\u20099:00\u202fPM"
+    ],
+    "hours_periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 15,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 0,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 14,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 14,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 14,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 14,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 15,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 21,
+          "minute": 0
+        }
+      }
+    ],
+    "photo_refs": [
+      "places/ChIJBxRlxNebVogRL7wHDf7Q-fk/photos/AV-0GLfBBylftJf3MzB41DPUhk5EirDGOCGgKDin5OnitSg9GGW4_d1nIsimK20iINgTEfuhOIHkFx80aUJkD4pVSFbFgGs3gZxE_yJwjrpJ1cVKghltgVyYV3VlsGODQsaG8A6NQJa7q1qxyqyVgqHU_PA6MmLtYCBmbr5XggYqQ9XhGZAhNzgQ1T8fwmNRrKuPizNBopMOePEHHabPgam4-qfveJkTk5BX7dv1errj5BOMT11QOeP9K7UP0jPm15KXgisH-dBmNmPx7_b777dg4oLpXeZHcayW_E3SxCDJA3Ndf7zSMwrAvOcIJnMz9cHBhl9NfOgYhs7K1JxeBqEUW96XhqBOOCBXMxaZV5Jn9ie7WCff1jCEeTFoWrSihajcBDOTwR49sr3pAgNySOES-UpeZ5FRLmHd-8tnD2vncN2m",
+      "places/ChIJBxRlxNebVogRL7wHDf7Q-fk/photos/AV-0GLcLHolqikOHWTX6FcfvZcLgEAI1j25GtJeNnsF2WNW_upPwF-SzGk356gEW7sjStwHzbD38L5bQbRtsl0rhzUykDn9YskpeagalTVQInJgfzsvnYQE_OU4cf0yq23OQaQviHTEsfMpI2xpP85nyPsAcOmui72Qc8jWtVExupbndkotkuj8MQrGh-kt1fAO8vy4orIdld404pIiaus1DdTznyC9TDSbqt-5mfb4kEUtTXG6pnnPl1LNfCe4VdfnRHwKCt9auc762dCT9mdZ74vVBZbofJOFh8yd9mxvsty6sThgoM2FtFMv8CmKWNUD7peayp71YH95APLmYkwOo754CRU_owO3KGuklNPRHSYXNjrBGzp1t8TETV-qKc8yCpAvClbSEcfo75oaodrFIO0VjI0AMBvhXMcLsAsOl1-ea",
+      "places/ChIJBxRlxNebVogRL7wHDf7Q-fk/photos/AV-0GLeNkHJyTd8_NRN877y2trfQnxGGwJ57uMr30lBIIvsN0HlLHJFP5fatwR_f4erD7ArkZylfNhUFO-5JinLkr9l8_qV120E-MUgeoMJgruv7I6VRTC2KRmKpgNAgXhIAfgIWOgefDbZBooBZsB2EMgzJx2g5YZWS5L3tmJ7-1Ujo9bzpD8jpqL67OZgMLZsQ2O-2h4j2Toi2GwscdpjdMHW_qyiW-FhPAUvxSPNUBZaeHPBzn5XUG8FfeWFrug-P1TYi3lFyAj9Al16XrOXZwYGf2Tvq4WbXbc6m1QfVIoh4Tz9dSpkUu3gHV0tDoBwhlNQEWw3x4NT1JDJxcK-XJNmEhRe4vwv313bIwY7YUAi3lk-6w5HIaCv2ANScr71zcTPQLDqUcf_AWMIWwD_lX-jcs7aue9trUszo5PA6QXQoTw",
+      "places/ChIJBxRlxNebVogRL7wHDf7Q-fk/photos/AV-0GLdxEt8WhAuCpBeonhL8RSPDMIKeJjDEW7Q3PKjjq-KzTWx7b9mgXBwXLAMVksRkvemEjI_gAZqaLQOz2LCGHREjExrjMaEc-vB9o0m2bguzYwhC9UX3re6Aroi2iOVLMvK-V5OqhbOv_Ee4j4WECO8DvZwj-aDLSKEVCflSoiuQ5wiRCT533vIo-f3KAu9Jud7abNDJbyjRR9tSsSvK0O5isH-Dv6nRm0o3vvgnUreobAlysXlc6RbP0znM52LNM7m3Sy95g6YdipimYA1AI6QlXgBlRe_xiNVV9Xt2av6RDqC-4vBH9Pt_sqRRybVIFjVKofR_zFj-j0Dn99s6ma0HftMrprLgrAO0C0eSPqrqY-FWXv0HyYAhwxD3gSZHcc5I_U3s4OEBtiXxrBqAmHtiXsgugzN5UavNlhY7IcH4",
+      "places/ChIJBxRlxNebVogRL7wHDf7Q-fk/photos/AV-0GLde_Un_C8UCzr15E3YK21J5HBStpSt4Cf6PeVyiJqrvseKCN_44WlUBwNLD2auawZyCYzLFuBGFl4vz3WVedhgv2BZfKTESOGx9s_Bhqi_zmPPcEAUCvMGPScb_OEuA-MzL0zsk9_aV_47ZrWsTDRavemPxeub45lVIN0Fesx43eI729ujiVQAwHbPmI6PCwUrWj2QDe_EUztmPqFPIL8Y0OPOb4AqfMPz0cSoY0BCtUIJ65T5TlXRcTYGZNRf5KLyyhqoOzRvl_yFwhNb6mVPGdZ4Jys9rESAlpdGBSHNkCVG2EItG-2DHz0YJcsfIAt9el1EJJrXM00eb2DbkQdoZZbDUJzytfE8ScAOKl-17vGsUJfriopWkgBW9SHRPmn612YX1JpOS1KhT3u5tNzlibuVoquYN3RrFu3t8x5olNg"
+    ],
+    "types": [
+      "indian_restaurant",
+      "fine_dining_restaurant",
+      "asian_restaurant",
+      "vegan_restaurant",
+      "vegetarian_restaurant",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "buffet_score": 20,
+    "buffet_confidence": "LOW",
+    "buffet_evidence": [
+      "matched 'Indian buffet' search query"
+    ],
+    "is_buffet": false,
+    "state": "NC",
+    "found_via": "Indian buffet",
+    "search_location": "Ballantyne / Pineville",
+    "metro_rank": 19,
+    "scraped_at": "2026-11-14T20:29:02.820828Z"
+  },
+  {
+    "place_id": "ChIJ9fTefgBVUYgR62IbvDCoU9s",
+    "name": "Masala Bitez Indian Kitchen",
+    "address": "134 Mooresville Commons Way A, Mooresville, NC 28117, USA",
+    "lat": 35.58551,
+    "lng": -80.87169,
+    "phone": "(704) 230-1300",
+    "website": "https://masalabitez.hrpos.heartland.us/",
+    "rating": 4.9,
+    "review_count": 424,
+    "price_level": "PRICE_LEVEL_INEXPENSIVE",
+    "business_status": "OPERATIONAL",
+    "hours": [
+      "Monday: 11:30\u202fAM\u2009\u2013\u20093:00\u202fPM, 5:00\u2009\u2013\u20099:30\u202fPM",
+      "Tuesday: 11:30\u202fAM\u2009\u2013\u20093:00\u202fPM, 5:00\u2009\u2013\u20099:30\u202fPM",
+      "Wednesday: Closed",
+      "Thursday: 11:30\u202fAM\u2009\u2013\u20093:00\u202fPM, 5:00\u2009\u2013\u20099:30\u202fPM",
+      "Friday: 11:30\u202fAM\u2009\u2013\u20093:00\u202fPM, 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 12:00\u2009\u2013\u20093:00\u202fPM, 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 12:00\u2009\u2013\u20093:00\u202fPM, 5:00\u2009\u2013\u20099:00\u202fPM"
+    ],
+    "hours_periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 15,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 0,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 1,
+          "hour": 15,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 2,
+          "hour": 15,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 4,
+          "hour": 15,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 5,
+          "hour": 15,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 15,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 22,
+          "minute": 0
+        }
+      }
+    ],
+    "photo_refs": [
+      "places/ChIJ9fTefgBVUYgR62IbvDCoU9s/photos/AV-0GLeoMyq92YdfZWsONbqnq96SRQ2W_2BWLVNb7NQORAMZth9YsUh83o9eGBMDb__Awg65L364r1kCr_8OAUed4XC_WtwmfkYMwGLqAIGIeoIW6pKv72ZKIRG_DGlWf5w3b5GtZMQJHAUb_nJ1bbTSWnPsdYuPCuo7FYZWpaOiFQwL2eWbYp1ZlAnAglSvzBYnVVnFX0BaZJY85Y6tZ0v4dEP-hHCsYxu3EKi8SMSCznxRAH0yWGbYm4-diI1oNSG-284-yu1W1Tav24Dim2jnIHht5pwcF5G64vOk4hNeOlMwWVv6lSTUiiYoXK8XXYt-0Sp50idfQ9cDBMX0g1J9ACfK4HI1n_saPynJA1wlTZJ8L8RzgS9koAoDoe93v70ozptqV8utGn6BFKox7uYQS5ORdix4hl9oaMKuxBRumSF-bw",
+      "places/ChIJ9fTefgBVUYgR62IbvDCoU9s/photos/AV-0GLc46HzGbHKLzLDeekUEA2rjSm9TvUfeWe4lXDEqyRK9XE1N9YNe2L9uBXzFtuxXor-AmsRlSZyEFxeu785yw0Vn1IogwSDGmovqOLKpbRLg0WzoqKWh6oOYhCAI3H9Y76p9Qiit6-djC5E7wdu1GsDemlhmUyMopRfOwRrgqyUF1OmGCoY9sg08gDApo2E-BoL6hIuPUu9cyZXMGTjxVNAV5PRMiNtxrEirI7U1LMkZ-ChV8eWNeHinnm9WI43VbKmqDpkr2YhYt5SwTaLdBStA6kO8tutmKAv2wQrab6tWL6CIL0tHOIWphRCvinQFuVwqGR_bftDGJlzmaC3xBQpErlPeGB7hX6AmSRYbdNxCCKdggIAVleRbVV9UnvV4rTcBuxgEqoIQ6lwah73BxqHe7bOgjdAtX7LgJ-HYFBdTpQ",
+      "places/ChIJ9fTefgBVUYgR62IbvDCoU9s/photos/AV-0GLf1PyYqGo1p7Qw5dsBGHk32pofTzXvTTQwfJ97Yz_ndj150uuyxM2c-0bh6pQAiqqlXM9qIi5NHN-UZk0WPcgRKb_HLNYFXo-FgMeS-N6YLO7O6V75dj79kTVlyeWqxHCo0EPfP5uaea5ycUT0mYYZOLwHOQSVHyCOFJL89GaJuUf8Ha0Agh70ackzGVkpML0gSJj7soGa0mcxFdmgapCpb_y_TwXqCeykvT_CANHUH9SI0BS2twKWGOm4FPBZD6uwviwcBKP2K93zkIP3UGBWxDqPA83qhtNmp1hbHp4SXDgX-Fbl4AeArWKAbLMd42U-X28ztzq56F2Hj8oGYguc9_ZI9Z_Ye5p64mrYGKE7o1iEfybN70I-gFFxxa1QblEp5gzh-1TApEhfg9pDSkscDg3oWA-4IXChtZ6VOtsGF",
+      "places/ChIJ9fTefgBVUYgR62IbvDCoU9s/photos/AV-0GLfG2DQaZWEGwoCrVDo0zVzJx05H-e3s_byLnUv4GTwTI8nY09ImSBAr5GQSbLlmfV7lMkn0S7KCsshdZ0a_oj5577g5-YKN9fIKxalZhLrBh2xcbfmSUciUcbto06p7fqd6zJDfszAgqKL1-J7LYbDRe0JAIHrMaqTr4Nf9sqAo8YX1DjuiJHsEKExP2cWyegHbB0xjQiFFu9MVLxl0cv9ugrpF861bKJMcK6wj7i2z75_44_XB6mP7e2pEq6Xp-cclGueHJzjJQZge0Wv68UcGl8C7-qXArlIa0CfJ8QyhGeZ7uR-AA_8x89cAZITZwf8WtwYM-ZBvwebEbF5TXW4ckUlj1jcMSQqGHdn0QB8PwlzLvLZx8qn6uiTXN52fD-PYetNqkjoibp0uYfmQqCYh7zip8A1_kygqQxSVxVe3VQ",
+      "places/ChIJ9fTefgBVUYgR62IbvDCoU9s/photos/AV-0GLdTIF6c1ViHWh1HDdSFJtTZnSwEbpeu4xNxfV7Aw4MF-aDd_eJwqyCW6MSlZ-kWXkDq3zBU2n0pkrNcCRb7z1hkHvRWuH_2ddJS4-Q6qEMTg_32CKIjFMxpiXC0c_uZI1YdU_iuI8Hc7WMYzaqt4fBvNfTZUDda-TtHEDFVQ3jRjRjRzRAW9uKtWbXlYPPxuBbnoUNM_vNQKdyaEnUMYZUMo7WhqdpWn8UncSO4WIAs1ub0fzvWDQKUY1Bv6NpOgeOGuAN4gOBgbH3Cq8Q0XsDCCInAK8Vis5Sa8WW14U0QSLxi1HAYhw05DFiWfV1fsb8b_XpisHQvxAk45y8qKFdebCIgQuKvkKFCkLjL5j7wn6mMnMuENSIFHOFH34y0TlJ-1vEn8UZ0F3Vv7go6of4mU6v7RWZGWE-u1951j0MA3Q"
+    ],
+    "types": [
+      "indian_restaurant",
+      "north_indian_restaurant",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "buffet_score": 45,
+    "buffet_confidence": "MEDIUM",
+    "buffet_evidence": [
+      "buffet mentioned in 2/5 reviews",
+      "matched 'Indian buffet' search query"
+    ],
+    "is_buffet": true,
+    "state": "NC",
+    "found_via": "Indian Sunday buffet",
+    "search_location": "University City",
+    "metro_rank": 20,
+    "scraped_at": "2026-11-14T20:29:03.119324Z"
+  }
+]

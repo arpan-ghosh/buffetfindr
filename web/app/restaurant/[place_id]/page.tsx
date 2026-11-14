@@ -5,6 +5,7 @@ import { Star, MapPin, Phone, Clock, Navigation2, Globe, ChevronLeft } from "luc
 import Link from "next/link";
 import type { Restaurant } from "@/lib/types";
 import { cityFromAddress, isOpenNow } from "@/lib/utils";
+import { regionFor } from "@/lib/regions";
 
 export const revalidate = 86400; // ISR — rebuild at most once per day
 
@@ -29,12 +30,7 @@ const REGION_LABELS: Record<string, string> = {
   MD: "Maryland", VA: "Virginia", DC: "Washington DC", MA: "Massachusetts",
   NY: "New York",  PA: "Pennsylvania", NJ: "New Jersey", IL: "Illinois", WA: "Washington",
   CA: "California", TX: "Texas", FL: "Florida", GA: "Georgia", AZ: "Arizona", OH: "Ohio", KY: "Kentucky",
-};
-
-const STATE_REGION: Record<string, string> = {
-  MD: "dmv", VA: "dmv", DC: "dmv", MA: "boston", NY: "nyc",
-  PA: "philly", NJ: "nj", IL: "chicago", WA: "seattle",
-  FL: "miami", GA: "atlanta", AZ: "phoenix", KY: "cincinnati",
+  NV: "Nevada", MI: "Michigan", MN: "Minnesota", CO: "Colorado", NC: "North Carolina", SC: "South Carolina",
 };
 
 const REGION_NAMES: Record<string, string> = {
@@ -42,6 +38,9 @@ const REGION_NAMES: Record<string, string> = {
   nj: "New Jersey", chicago: "Chicago", seattle: "Seattle",
   la: "Los Angeles", dallas: "Dallas", houston: "Houston", miami: "Miami", atlanta: "Atlanta",
   bayarea: "Bay Area", phoenix: "Phoenix", columbus: "Columbus", cincinnati: "Cincinnati", cleveland: "Cleveland",
+  austin: "Austin", sanantonio: "San Antonio", sandiego: "San Diego", sacramento: "Sacramento",
+  lasvegas: "Las Vegas", detroit: "Detroit", minneapolis: "Twin Cities", denver: "Denver",
+  tampa: "Tampa Bay", orlando: "Orlando", charlotte: "Charlotte", raleigh: "Raleigh–Durham",
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ place_id: string }> }): Promise<Metadata> {
@@ -72,11 +71,7 @@ export default async function RestaurantPage({ params }: { params: Promise<{ pla
   if (!r) notFound();
 
   const city      = cityFromAddress(r.address ?? "");
-  // TX, CA and OH each hold two metros — split on latitude (Dallas ≈ 32.8 / Houston ≈ 29.8, Bay Area ≈ 37.5 / LA ≈ 34, Cleveland ≈ 41.5 / Columbus ≈ 40.0 / Cincinnati ≈ 39.1)
-  const region    = r.state === "TX" ? (r.lat >= 31.5 ? "dallas" : "houston")
-                  : r.state === "CA" ? (r.lat >= 36 ? "bayarea" : "la")
-                  : r.state === "OH" ? (r.lat >= 40.8 ? "cleveland" : r.lat >= 39.6 ? "columbus" : "cincinnati")
-                  : STATE_REGION[r.state];
+  const region    = regionFor(r); // metros sharing a state are split by bounding box (lib/regions.ts)
   const open      = isOpenNow(r);
   const addr      = parseAddress(r.address ?? "");
   const photos    = r.photo_refs?.slice(0, 5) ?? [];

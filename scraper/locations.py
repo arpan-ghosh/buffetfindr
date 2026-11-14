@@ -390,25 +390,93 @@ DALLAS = [
 ]
 
 HOUSTON = [
-    {"name": "Hillcroft",            "lat": 29.7066, "lng": -95.5159},  # Little India
-    {"name": "Sugar Land",           "lat": 29.5997, "lng": -95.6349},
-    {"name": "Katy",                 "lat": 29.7858, "lng": -95.8244},
-    {"name": "Houston",              "lat": 29.7604, "lng": -95.3698},
+    # Southwest — Hillcroft (Little India), Sugar Land, Katy are the Indian hubs
+    {"name": "Hillcroft",                         "lat": 29.7066, "lng": -95.5159},
+    {"name": "Bellaire / Medical Center",         "lat": 29.7058, "lng": -95.4588},
+    {"name": "Houston",                           "lat": 29.7604, "lng": -95.3698},
+    {"name": "Westchase / Energy Corridor",       "lat": 29.7700, "lng": -95.6200},
+    {"name": "Spring Branch / Memorial",          "lat": 29.8030, "lng": -95.5160},
+    {"name": "Sugar Land",                        "lat": 29.5997, "lng": -95.6349},
+    {"name": "Missouri City / Stafford",          "lat": 29.6186, "lng": -95.5377},
+    {"name": "Richmond / Rosenberg",              "lat": 29.5822, "lng": -95.7608},
+    {"name": "Cinco Ranch",                       "lat": 29.7390, "lng": -95.7580},
+    {"name": "Katy",                              "lat": 29.7858, "lng": -95.8244},
+    # Northwest + north
+    {"name": "Copperfield / Hwy 6 North",         "lat": 29.8850, "lng": -95.6450},
+    {"name": "Jersey Village",                    "lat": 29.8877, "lng": -95.5633},
+    {"name": "Cypress",                           "lat": 29.9691, "lng": -95.6972},
+    {"name": "Tomball",                           "lat": 30.0972, "lng": -95.6161},
+    {"name": "Greenspoint / North Houston",       "lat": 29.9400, "lng": -95.4100},
+    {"name": "Spring / Klein",                    "lat": 30.0799, "lng": -95.4172},
+    {"name": "The Woodlands",                     "lat": 30.1658, "lng": -95.4613},
+    {"name": "Conroe",                            "lat": 30.3119, "lng": -95.4561},
+    {"name": "Humble / Atascocita",               "lat": 29.9988, "lng": -95.2622},
+    # South + east
+    {"name": "Pearland",                          "lat": 29.5636, "lng": -95.2860},
+    {"name": "Clear Lake / Webster",              "lat": 29.5377, "lng": -95.1183},
+    {"name": "Pasadena",                          "lat": 29.6911, "lng": -95.2091},
+    {"name": "Baytown",                           "lat": 29.7355, "lng": -94.9774},
 ]
 
 MIAMI = [
-    {"name": "Miami",                "lat": 25.7617, "lng": -80.1918},
-    {"name": "Doral",                "lat": 25.8195, "lng": -80.3553},
-    {"name": "Kendall",              "lat": 25.6793, "lng": -80.3173},
-    {"name": "Davie / Fort Lauderdale", "lat": 26.0765, "lng": -80.2521},
+    # Miami-Dade
+    {"name": "Miami",                             "lat": 25.7617, "lng": -80.1918},
+    {"name": "Miami Beach",                       "lat": 25.7907, "lng": -80.1300},
+    {"name": "Coral Gables / South Miami",        "lat": 25.7215, "lng": -80.2684},
+    {"name": "Doral",                             "lat": 25.8195, "lng": -80.3553},
+    {"name": "Kendall",                           "lat": 25.6793, "lng": -80.3173},
+    {"name": "Homestead / Cutler Bay",            "lat": 25.5200, "lng": -80.4000},
+    {"name": "Hialeah / Miami Lakes",             "lat": 25.9087, "lng": -80.3087},
+    {"name": "North Miami / Aventura",            "lat": 25.9565, "lng": -80.1392},
+    # Broward
+    {"name": "Hollywood",                         "lat": 26.0112, "lng": -80.1495},
+    {"name": "Pembroke Pines / Miramar",          "lat": 26.0078, "lng": -80.2963},
+    {"name": "Weston",                            "lat": 26.1004, "lng": -80.3998},
+    {"name": "Davie / Plantation",                "lat": 26.0765, "lng": -80.2521},
+    {"name": "Fort Lauderdale",                   "lat": 26.1224, "lng": -80.1373},
+    {"name": "Sunrise / Lauderhill",              "lat": 26.1669, "lng": -80.2564},
+    {"name": "Coral Springs",                     "lat": 26.2712, "lng": -80.2706},
+    {"name": "Pompano Beach",                     "lat": 26.2379, "lng": -80.1248},
+    # Palm Beach County
+    {"name": "Boca Raton",                        "lat": 26.3587, "lng": -80.0831},
+    {"name": "West Boca",                         "lat": 26.3600, "lng": -80.2000},
+    {"name": "Delray Beach",                      "lat": 26.4615, "lng": -80.0728},
+    {"name": "Boynton Beach",                     "lat": 26.5318, "lng": -80.0905},
+    {"name": "Wellington / Royal Palm Beach",     "lat": 26.6618, "lng": -80.2684},
+    {"name": "West Palm Beach",                   "lat": 26.7153, "lng": -80.0534},
+    {"name": "Palm Beach Gardens",                "lat": 26.8234, "lng": -80.1387},
+    {"name": "Jupiter",                           "lat": 26.9342, "lng": -80.0942},
 ]
 
 ATLANTA = [
-    {"name": "Decatur",              "lat": 33.7748, "lng": -84.2963},
-    {"name": "Duluth",               "lat": 34.0029, "lng": -84.1446},
-    {"name": "Alpharetta",           "lat": 34.0754, "lng": -84.2941},
-    {"name": "Midtown Atlanta",      "lat": 33.7838, "lng": -84.3830},
-    {"name": "Marietta",             "lat": 33.9526, "lng": -84.5499},
+    # Intown + Decatur / Buford Hwy
+    {"name": "Midtown Atlanta",                   "lat": 33.7838, "lng": -84.3830},
+    {"name": "Decatur",                           "lat": 33.7748, "lng": -84.2963},
+    {"name": "Chamblee / Doraville",              "lat": 33.8921, "lng": -84.2988},
+    {"name": "Sandy Springs / Dunwoody",          "lat": 33.9304, "lng": -84.3733},
+    {"name": "Tucker / Stone Mountain",           "lat": 33.8545, "lng": -84.2171},
+    # Gwinnett + north Fulton + Forsyth — the Indian hubs
+    {"name": "Norcross / Peachtree Corners",      "lat": 33.9412, "lng": -84.2135},
+    {"name": "Lilburn",                           "lat": 33.8901, "lng": -84.1430},
+    {"name": "Lawrenceville",                     "lat": 33.9562, "lng": -83.9880},
+    {"name": "Snellville",                        "lat": 33.8573, "lng": -84.0199},
+    {"name": "Duluth",                            "lat": 34.0029, "lng": -84.1446},
+    {"name": "Suwanee",                           "lat": 34.0515, "lng": -84.0713},
+    {"name": "Buford / Sugar Hill",               "lat": 34.1207, "lng": -84.0044},
+    {"name": "Alpharetta",                        "lat": 34.0754, "lng": -84.2941},
+    {"name": "Roswell",                           "lat": 34.0232, "lng": -84.3616},
+    {"name": "South Forsyth",                     "lat": 34.1100, "lng": -84.2200},
+    {"name": "Cumming",                           "lat": 34.2073, "lng": -84.1402},
+    # Cobb + west
+    {"name": "Marietta",                          "lat": 33.9526, "lng": -84.5499},
+    {"name": "Smyrna / Vinings",                  "lat": 33.8840, "lng": -84.5144},
+    {"name": "Kennesaw",                          "lat": 34.0234, "lng": -84.6155},
+    {"name": "Woodstock",                         "lat": 34.1015, "lng": -84.5194},
+    {"name": "Douglasville",                      "lat": 33.7515, "lng": -84.7477},
+    # South
+    {"name": "College Park / Airport",            "lat": 33.6534, "lng": -84.4494},
+    {"name": "Morrow / Stockbridge",              "lat": 33.5832, "lng": -84.3394},
+    {"name": "Peachtree City / Fayetteville",     "lat": 33.3968, "lng": -84.5958},
 ]
 
 BAY_AREA = [
@@ -454,40 +522,177 @@ BAY_AREA = [
 ]
 
 PHOENIX = [
-    {"name": "Phoenix",              "lat": 33.4484, "lng": -112.0740},
-    {"name": "Tempe",                "lat": 33.4255, "lng": -111.9400},
-    {"name": "Chandler",             "lat": 33.3062, "lng": -111.8413},
-    {"name": "Scottsdale",           "lat": 33.4942, "lng": -111.9261},
-    {"name": "Glendale / Peoria",    "lat": 33.5387, "lng": -112.1860},
+    {"name": "Phoenix",                           "lat": 33.4484, "lng": -112.0740},
+    {"name": "North Phoenix",                     "lat": 33.6400, "lng": -112.0700},
+    {"name": "Desert Ridge / North Scottsdale",   "lat": 33.6700, "lng": -111.9200},
+    {"name": "Scottsdale",                        "lat": 33.4942, "lng": -111.9261},
+    # East Valley — Tempe/Chandler/Gilbert are the Indian hubs
+    {"name": "Tempe",                             "lat": 33.4255, "lng": -111.9400},
+    {"name": "Ahwatukee",                         "lat": 33.3200, "lng": -111.9900},
+    {"name": "Mesa",                              "lat": 33.4152, "lng": -111.8315},
+    {"name": "East Mesa",                         "lat": 33.4000, "lng": -111.6800},
+    {"name": "Chandler",                          "lat": 33.3062, "lng": -111.8413},
+    {"name": "Gilbert",                           "lat": 33.3528, "lng": -111.7890},
+    {"name": "Queen Creek",                       "lat": 33.2487, "lng": -111.6343},
+    # West Valley
+    {"name": "Glendale / Peoria",                 "lat": 33.5387, "lng": -112.1860},
+    {"name": "Arrowhead / North Peoria",          "lat": 33.6400, "lng": -112.2300},
+    {"name": "Surprise",                          "lat": 33.6292, "lng": -112.3679},
+    {"name": "Goodyear / Avondale",               "lat": 33.4353, "lng": -112.3577},
 ]
 
 COLUMBUS = [
-    {"name": "Dublin",               "lat": 40.0992, "lng": -83.1141},
-    {"name": "Westerville",          "lat": 40.1262, "lng": -82.9291},
-    {"name": "Columbus",             "lat": 39.9612, "lng": -82.9988},
-    {"name": "Hilliard",             "lat": 40.0334, "lng": -83.1582},
-    {"name": "Gahanna",              "lat": 40.0192, "lng": -82.8794},
-    {"name": "Grove City",           "lat": 39.8814, "lng": -83.0930},
-    {"name": "Polaris",              "lat": 40.1856, "lng": -83.0080},
+    {"name": "Dublin",                            "lat": 40.0992, "lng": -83.1141},
+    {"name": "Westerville",                       "lat": 40.1262, "lng": -82.9291},
+    {"name": "Columbus",                          "lat": 39.9612, "lng": -82.9988},
+    {"name": "Hilliard",                          "lat": 40.0334, "lng": -83.1582},
+    {"name": "Gahanna",                           "lat": 40.0192, "lng": -82.8794},
+    {"name": "Grove City",                        "lat": 39.8814, "lng": -83.0930},
+    {"name": "Polaris",                           "lat": 40.1856, "lng": -83.0080},
+    {"name": "Worthington",                       "lat": 40.0931, "lng": -83.0180},
+    {"name": "OSU / Upper Arlington",             "lat": 40.0000, "lng": -83.0300},
+    {"name": "New Albany",                        "lat": 40.0812, "lng": -82.8088},
+    {"name": "Reynoldsburg / Pickerington",       "lat": 39.9548, "lng": -82.8121},
+    {"name": "Canal Winchester / Groveport",      "lat": 39.8500, "lng": -82.8500},
+    {"name": "Delaware",                          "lat": 40.2987, "lng": -83.0680},
 ]
 
 CINCINNATI = [
-    {"name": "Cincinnati",           "lat": 39.1031, "lng": -84.5120},
-    {"name": "West Chester",         "lat": 39.3320, "lng": -84.4108},
-    {"name": "Mason",                "lat": 39.3600, "lng": -84.3099},
-    {"name": "Blue Ash",             "lat": 39.2323, "lng": -84.3783},
-    {"name": "Fairfield",            "lat": 39.3453, "lng": -84.5603},
-    {"name": "Milford",              "lat": 39.1750, "lng": -84.2944},
+    {"name": "Cincinnati",                        "lat": 39.1031, "lng": -84.5120},
+    {"name": "West Chester",                      "lat": 39.3320, "lng": -84.4108},
+    {"name": "Mason",                             "lat": 39.3600, "lng": -84.3099},
+    {"name": "Blue Ash",                          "lat": 39.2323, "lng": -84.3783},
+    {"name": "Fairfield",                         "lat": 39.3453, "lng": -84.5603},
+    {"name": "Milford",                           "lat": 39.1750, "lng": -84.2944},
+    {"name": "Springdale / Tri-County",           "lat": 39.2870, "lng": -84.4850},
+    {"name": "Western Hills",                     "lat": 39.1500, "lng": -84.6200},
+    {"name": "Anderson / Eastgate",               "lat": 39.0900, "lng": -84.2800},
+    # Northern Kentucky (state=KY, read from each address)
+    {"name": "Florence KY",                       "lat": 38.9989, "lng": -84.6266},
+    {"name": "Fort Thomas / Cold Spring KY",      "lat": 39.0200, "lng": -84.4400},
 ]
 
 CLEVELAND = [
-    {"name": "Cleveland",            "lat": 41.4993, "lng": -81.6944},
-    {"name": "Parma",                "lat": 41.4048, "lng": -81.7229},
-    {"name": "Solon",                "lat": 41.3898, "lng": -81.4412},
-    {"name": "Beachwood",            "lat": 41.4645, "lng": -81.5087},
-    {"name": "Strongsville",         "lat": 41.3145, "lng": -81.8357},
-    {"name": "Westlake",             "lat": 41.4553, "lng": -81.9179},
-    {"name": "Mentor",               "lat": 41.6662, "lng": -81.3396},
+    {"name": "Cleveland",                         "lat": 41.4993, "lng": -81.6944},
+    {"name": "Parma",                             "lat": 41.4048, "lng": -81.7229},
+    {"name": "Solon",                             "lat": 41.3898, "lng": -81.4412},
+    {"name": "Beachwood",                         "lat": 41.4645, "lng": -81.5087},
+    {"name": "Strongsville",                      "lat": 41.3145, "lng": -81.8357},
+    {"name": "Westlake",                          "lat": 41.4553, "lng": -81.9179},
+    {"name": "Mentor",                            "lat": 41.6662, "lng": -81.3396},
+    {"name": "Lakewood / Rocky River",            "lat": 41.4820, "lng": -81.7982},
+    {"name": "University Circle / Cleveland Heights", "lat": 41.5100, "lng": -81.5800},
+    {"name": "Mayfield Heights",                  "lat": 41.5192, "lng": -81.4579},
+    {"name": "Independence / Brecksville",        "lat": 41.3400, "lng": -81.6400},
+    {"name": "Avon",                              "lat": 41.4517, "lng": -82.0354},
+]
+
+# ── Second metro expansion (top-20 samples) ───────────────────────────────────
+
+AUSTIN = [
+    {"name": "Austin",                         "lat": 30.2672, "lng": -97.7431},
+    {"name": "North Austin / Domain",          "lat": 30.4021, "lng": -97.7253},
+    {"name": "Cedar Park",                     "lat": 30.5052, "lng": -97.8203},
+    {"name": "Round Rock",                     "lat": 30.5083, "lng": -97.6789},
+    {"name": "Pflugerville",                   "lat": 30.4394, "lng": -97.6200},
+    {"name": "South Austin",                   "lat": 30.2010, "lng": -97.8000},
+]
+
+SAN_ANTONIO = [
+    {"name": "San Antonio",                    "lat": 29.4241, "lng": -98.4936},
+    {"name": "Medical Center",                 "lat": 29.5080, "lng": -98.5750},
+    {"name": "Stone Oak",                      "lat": 29.6300, "lng": -98.4900},
+    {"name": "UTSA / Helotes",                 "lat": 29.5830, "lng": -98.6200},
+    {"name": "Live Oak / Universal City",      "lat": 29.5650, "lng": -98.3360},
+]
+
+SAN_DIEGO = [
+    {"name": "Mira Mesa / Miramar",            "lat": 32.9156, "lng": -117.1439},
+    {"name": "Kearny Mesa",                    "lat": 32.8300, "lng": -117.1500},
+    {"name": "Downtown / Hillcrest",           "lat": 32.7400, "lng": -117.1611},
+    {"name": "La Jolla / UTC",                 "lat": 32.8700, "lng": -117.2150},
+    {"name": "Rancho Bernardo / Poway",        "lat": 33.0180, "lng": -117.0750},
+    {"name": "San Marcos / Vista",             "lat": 33.1400, "lng": -117.2000},
+]
+
+SACRAMENTO = [
+    {"name": "Sacramento",                     "lat": 38.5816, "lng": -121.4944},
+    {"name": "Roseville",                      "lat": 38.7521, "lng": -121.2880},
+    {"name": "Folsom",                         "lat": 38.6780, "lng": -121.1761},
+    {"name": "Elk Grove",                      "lat": 38.4088, "lng": -121.3716},
+    {"name": "Rancho Cordova",                 "lat": 38.5891, "lng": -121.3027},
+    {"name": "Davis",                          "lat": 38.5449, "lng": -121.7405},
+]
+
+LAS_VEGAS = [
+    {"name": "The Strip / Paradise",           "lat": 36.1147, "lng": -115.1728},
+    {"name": "Spring Valley",                  "lat": 36.1080, "lng": -115.2450},
+    {"name": "Summerlin",                      "lat": 36.1700, "lng": -115.3100},
+    {"name": "Henderson",                      "lat": 36.0395, "lng": -114.9817},
+    {"name": "North Las Vegas / Centennial",   "lat": 36.2700, "lng": -115.2000},
+]
+
+DETROIT = [
+    {"name": "Farmington Hills",               "lat": 42.4990, "lng": -83.3677},
+    {"name": "Troy",                           "lat": 42.6064, "lng": -83.1498},
+    {"name": "Canton",                         "lat": 42.3087, "lng": -83.4822},
+    {"name": "Novi",                           "lat": 42.4806, "lng": -83.4755},
+    {"name": "Hamtramck / Detroit",            "lat": 42.3928, "lng": -83.0496},
+    {"name": "Sterling Heights",               "lat": 42.5803, "lng": -83.0302},
+]
+
+MINNEAPOLIS = [
+    {"name": "Minneapolis",                    "lat": 44.9778, "lng": -93.2650},
+    {"name": "St. Paul",                       "lat": 44.9537, "lng": -93.0900},
+    {"name": "Bloomington / Edina",            "lat": 44.8408, "lng": -93.2983},
+    {"name": "Eden Prairie",                   "lat": 44.8547, "lng": -93.4708},
+    {"name": "Plymouth / Maple Grove",         "lat": 45.0500, "lng": -93.4500},
+    {"name": "Eagan",                          "lat": 44.8041, "lng": -93.1669},
+]
+
+DENVER = [
+    {"name": "Denver",                         "lat": 39.7392, "lng": -104.9903},
+    {"name": "Aurora",                         "lat": 39.7000, "lng": -104.8200},
+    {"name": "Lakewood",                       "lat": 39.7047, "lng": -105.0814},
+    {"name": "Centennial / DTC",               "lat": 39.6000, "lng": -104.8900},
+    {"name": "Westminster / Broomfield",       "lat": 39.8800, "lng": -105.0500},
+    {"name": "Highlands Ranch / Lone Tree",    "lat": 39.5450, "lng": -104.9300},
+]
+
+TAMPA = [
+    {"name": "Tampa",                          "lat": 27.9506, "lng": -82.4572},
+    {"name": "New Tampa / Wesley Chapel",      "lat": 28.1700, "lng": -82.3600},
+    {"name": "Brandon",                        "lat": 27.9378, "lng": -82.2859},
+    {"name": "Carrollwood / Citrus Park",      "lat": 28.0600, "lng": -82.5400},
+    {"name": "Clearwater / Largo",             "lat": 27.9400, "lng": -82.7600},
+    {"name": "St. Petersburg",                 "lat": 27.7676, "lng": -82.6403},
+]
+
+ORLANDO = [
+    {"name": "Orlando",                        "lat": 28.5383, "lng": -81.3792},
+    {"name": "International Drive / Dr. Phillips","lat": 28.4500, "lng": -81.4700},
+    {"name": "Kissimmee",                      "lat": 28.3000, "lng": -81.4200},
+    {"name": "Lake Mary / Sanford",            "lat": 28.7589, "lng": -81.3178},
+    {"name": "Winter Park / UCF",              "lat": 28.6000, "lng": -81.2500},
+    {"name": "Winter Garden / Ocoee",          "lat": 28.5600, "lng": -81.5700},
+]
+
+CHARLOTTE = [
+    {"name": "Uptown Charlotte",               "lat": 35.2271, "lng": -80.8431},
+    {"name": "Ballantyne / Pineville",         "lat": 35.0600, "lng": -80.8500},
+    {"name": "University City",                "lat": 35.3100, "lng": -80.7500},
+    {"name": "Matthews",                       "lat": 35.1168, "lng": -80.7237},
+    {"name": "Concord",                        "lat": 35.4000, "lng": -80.6000},
+    {"name": "Huntersville",                   "lat": 35.4107, "lng": -80.8428},
+]
+
+RALEIGH = [
+    {"name": "Raleigh",                        "lat": 35.7796, "lng": -78.6382},
+    {"name": "Cary",                           "lat": 35.7915, "lng": -78.7811},
+    {"name": "Morrisville / RTP",              "lat": 35.8235, "lng": -78.8256},
+    {"name": "Durham",                         "lat": 35.9940, "lng": -78.8986},
+    {"name": "Chapel Hill",                    "lat": 35.9132, "lng": -79.0558},
+    {"name": "Apex / Holly Springs",           "lat": 35.7000, "lng": -78.8500},
 ]
 
 STATE_MAP = {
@@ -508,6 +713,18 @@ STATE_MAP = {
     "bay_area":      {"locations": BAY_AREA,      "abbr": "CA"},
     "phoenix":       {"locations": PHOENIX,       "abbr": "AZ"},
     "columbus":      {"locations": COLUMBUS,      "abbr": "OH"},
-    "cincinnati":    {"locations": CINCINNATI,    "abbr": "OH"},
+    "cincinnati":    {"locations": CINCINNATI,    "abbr": "OH", "state_from_address": True},
     "cleveland":     {"locations": CLEVELAND,     "abbr": "OH"},
+    "austin":        {"locations": AUSTIN,        "abbr": "TX"},
+    "san_antonio":   {"locations": SAN_ANTONIO,   "abbr": "TX"},
+    "san_diego":     {"locations": SAN_DIEGO,     "abbr": "CA"},
+    "sacramento":    {"locations": SACRAMENTO,    "abbr": "CA"},
+    "las_vegas":     {"locations": LAS_VEGAS,     "abbr": "NV"},
+    "detroit":       {"locations": DETROIT,       "abbr": "MI"},
+    "minneapolis":   {"locations": MINNEAPOLIS,   "abbr": "MN"},
+    "denver":        {"locations": DENVER,        "abbr": "CO"},
+    "tampa":         {"locations": TAMPA,         "abbr": "FL"},
+    "orlando":       {"locations": ORLANDO,       "abbr": "FL"},
+    "charlotte":     {"locations": CHARLOTTE,     "abbr": "NC"},
+    "raleigh":       {"locations": RALEIGH,       "abbr": "NC"},
 }

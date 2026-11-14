@@ -1,0 +1,1375 @@
+[
+  {
+    "place_id": "ChIJQVZljnTnJIgRlNHUcRZxCmk",
+    "name": "New Little India",
+    "address": "8194 23 Mile Rd, Shelby Township, MI 48316, USA",
+    "lat": 42.6681361,
+    "lng": -83.031733,
+    "phone": "(586) 932-6111",
+    "website": "https://littleindiami.com/?utm_source=google",
+    "rating": 4.6,
+    "review_count": 2240,
+    "price_level": null,
+    "business_status": "OPERATIONAL",
+    "hours": [
+      "Monday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Tuesday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Wednesday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Thursday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Friday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Saturday: 12:00\u2009\u2013\u20099:30\u202fPM",
+      "Sunday: 12:00\u2009\u2013\u20099:30\u202fPM"
+    ],
+    "hours_periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 1,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 2,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 3,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 4,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 5,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 21,
+          "minute": 30
+        }
+      }
+    ],
+    "photo_refs": [
+      "places/ChIJQVZljnTnJIgRlNHUcRZxCmk/photos/AV-0GLdQgdrUsQd4o6JmarzF4cjmiqg1ExB5SWYMyX40gWta2--5bm6XKz6OehYJoxNYdYn5P4ZSaO6RnDLVWZUy4LWSByWeL9ahcZktyZ7d7-g39w6JWi9mUAG9leGJfFrvmrI9-AgC7COmtp5QqOFoJ-5BsESoPK1DininG_fbRQFLWTnxgkz08TOKh8_o0eiolypgXjNEOOsrFZH0sCTxXtsUD1CBfLsUMvHo6UKrvhIuTj5w1042mFB1k42hqWjArykie-Tin8oCZp9LtW9MMaJj89Acs4wJrQlFG86e3BnI5MdTyAlLklKaAuXqAubGtXKBh8vZZtI0y_EE5RvFRBHZyjxFu3asserbFjylKR2yMCwLYHMKmqtpE_gOrrGsbBViOrRKGyJwH3Y3hIlouLzfuNsb",
+      "places/ChIJQVZljnTnJIgRlNHUcRZxCmk/photos/AV-0GLcZy837K8sZLBRB8hyWeN-yjsXvi2k25r8iVWj4nw-dvB4yPuQpSB9s_rvc6_ydDKrBITLOaxIiLHfWE2H39Vwu1QqeSQ8bwC1A9GyXGCKz5l7HM0-WS2NeN75dth41olLRde3IJu7gKdhXkMXm9U_9P_hEpu6TcflfM6kOqi-iHqL3DCezhU9BfOx8P5kSV-aKxpCSJDFZfhrB2qMH7NX-gwkXYTJKz5tZNJDEWRVmgPZGeM85hj2LiOZyqD_QWq7eWn5Vg0FMMl9p0asx2XtRBHct-_fBH5_5r9F15bLlDRHdZyJNxOwZ3b_hgVJ2O4RgWcDIsTwWDlkC3FgBBUdSs6aWJKfQ3lQdUys-XnirpKVlo8miyw5LDxPIbMmHmH6fa5iz0extTmG0-c87GW0_0Zx4",
+      "places/ChIJQVZljnTnJIgRlNHUcRZxCmk/photos/AV-0GLeKd6ktO2vrGzhD14b2kLn2XLk4NCzGeu9Z9vh6lqiOWNgkYFuxHtOQ1iv2dmxj1yTcIJX6IH8dkhlFcXcQDPwVfy-3doJ3m1HsFjbEqyAGJe2ZMOY2aitcTECJydJdeU5T-7RnCAkXohliv5RIg0yCAAvvRes9SOg2YNT7UMmV-woCynTFgk8-SekUmNqk-TmXaMbnB8sQyFgHQGpBJuS8dtMNhucK8kep0LxbXLbuDJwh6s1en1AIzNPF0ZgaMmOoaMsQyyrNHcHSbWLg9OMoRZSUv2_RgjLUgMVyp0wyM-YMlUD78bdckr6YsThSm3S9VP5hrEHpvWJikdeZwYZOWiN75C63mv0--ezSaOyzxN9xnAtLPfF_3sup0BS8mowYYdRwywowt9rD2KA1J9ir2le8ctYga4_BkLv7-GOITQ",
+      "places/ChIJQVZljnTnJIgRlNHUcRZxCmk/photos/AV-0GLdTtNDN2Zd1WzlITVYdCeh0E8YB5i6RYGrD1iFpYVR7i3r1RbHqYUhcbf6EFhOtnnVeICT1QTCLLzMYezCK5M422TpwHeEJUncJJwDrylsvOp3gIa6UlAyvucwUTCBr_qUVz5ZuGDvHKjMmVEQ-sE8IitP719dDTKqml_9zORJpXDMChNRVGLVyB8NXf_b0tWJlrRIdL8yefBiK2Rnv-tRHqdbGQRHNa3LHoyHs7D3IJlG_yNKzZgweFG_gMY3GeHtItRQOS876FZzAoEKXGoFhXxMvxMiWk2TTyjxb3zFFEHN4i03621mQqXi_4p_gHZ0rj5J0q-hicimOA7HRd36AVCW6FiuHav3rZuEf83-k3iI-ecUU8068ZONtEWtJMtb5xfSTVWKykk2PPB1lJUXPbLImpJ6nibfMi_sao-IwDw",
+      "places/ChIJQVZljnTnJIgRlNHUcRZxCmk/photos/AV-0GLdSsyAQ3VAc2clAurE-zSj3FIQFrhOTXKhYZW3mehqaMhMTu0wGmoGefyFQaeIqG32Fy2Tg107Rbz4VJ0H_f0EEzqROb0kROSnVXvg0QqwkJCY5gT8oYrAduZ8ZE7MCnNsZlWYlVTzABjRcg4_KoSXS4hcAGk3AZcJGyJLxS55BhgQUPM43vWjFXmNaJDPgpo5IuuNtBln8F1zEPEYNgxJNf2b1AlbmG45wLw2J0RhgkPtCLGc7VxnfMM8AZsXJokInS6blsj2cKVpypZ2IUFgIXMA3-MoT1yi7iSZegU--dK0bai4clojWFuASRVtQQj9D2omxXsmH4yU3r7B8POHYbXa-6PbJAYWUo1fhi2k5QXEwJ3bBOMQaCwRhX3nG4AmC0Fs1km15pb8QBTFd6to5z2E"
+    ],
+    "types": [
+      "indian_restaurant",
+      "buffet_restaurant",
+      "vegan_restaurant",
+      "vegetarian_restaurant",
+      "catering_service",
+      "meal_takeaway",
+      "food_delivery",
+      "kebab_shop",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "buffet_score": 50,
+    "buffet_confidence": "MEDIUM",
+    "buffet_evidence": [
+      "buffet mentioned in 1 review",
+      "matched 'Indian buffet' search query",
+      "buffet in Google summary"
+    ],
+    "is_buffet": true,
+    "state": "MI",
+    "found_via": "Indian buffet",
+    "search_location": "Farmington Hills",
+    "metro_rank": 2,
+    "scraped_at": "2026-11-14T20:25:53.244816Z"
+  },
+  {
+    "place_id": "ChIJ8_JnlK2xJIgRyg-nJ-x7-d0",
+    "name": "Akshaya Patra Indian Cusine",
+    "address": "30701 W 12 Mile Rd, Farmington Hills, MI 48334, USA",
+    "lat": 42.4988709,
+    "lng": -83.3557927,
+    "phone": "(248) 987-6382",
+    "website": "https://akshayapatrafarmington.com/",
+    "rating": 4.7,
+    "review_count": 1868,
+    "price_level": "PRICE_LEVEL_INEXPENSIVE",
+    "business_status": "OPERATIONAL",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 11:30\u202fAM\u2009\u2013\u20093:00\u202fPM, 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 11:30\u202fAM\u2009\u2013\u20093:00\u202fPM, 5:00\u2009\u2013\u20099:30\u202fPM"
+    ],
+    "hours_periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 0,
+          "hour": 15,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 0,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 2,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 3,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 4,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 5,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 6,
+          "hour": 15,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 22,
+          "minute": 0
+        }
+      }
+    ],
+    "photo_refs": [
+      "places/ChIJ8_JnlK2xJIgRyg-nJ-x7-d0/photos/AV-0GLdwPgvr3Pt7zKpGs51YTSmvfPjdQ2LMw1tVoCJwVmreeIXIvkRChjAkVU2Sq6cyR9SbXplKDq1LGbBWHfiHAmcSUqDkpBYXzYrnaIWsJZTwS-8sd_PnCOdBomQjv6aRXgj-wgDl4DWLQqoZPanRsHPGghVzuoVjGtGV0CmbJXkWN4mIYlPbNy47c3Hn97yvHov12gStG1wa00EPmdnK4cVfoZQzCR_CO9edgKjn003SLUpoN7KKzAgEA5Qi6qXHq_mopP9w-m37sEnmp0FK1jla5HDa96vLvS9YqwPncXixUpRu58O5c98kY6xYVPNRT7qCo6zLHGU2UgVeXjN71oTeIwqiGMHbC9tOexBzr9StCBK8KL_wCk6kp-apqzLofjPGxwo-mbfN54Mo4YXVfMoc5g",
+      "places/ChIJ8_JnlK2xJIgRyg-nJ-x7-d0/photos/AV-0GLfoQNH8Xpk3mbmG47zuzXVve_tGTO0ikukXGs5VII6UVBOohLHDohloj_pIMqdG_XHezypfMJsbW17-AESisZWSGdW5g7cPF1wrc-BdR9ZjfR8kQeRwjdRStKw0qq9gsMWg38nrABZMWSwCAyLBMzKnQ1WNgWAMgvuqqLhf9wVzHvEgKDtlBo4xI1UPyQyy_nLgE6zyVWn3fmFqydupsY1NbnmJyxJhHT3vzUWxYswld5MtqDt9VCyyGvQ9AeI5qqJ9Pv2bx1O6rC2-h19dJYoheLsbDjbQmxY5Bxdt2IW6UXEtGmJoP70VCpde8ccyqRi3hB8NBj662e1qovUaXznPBptHQcywJeZywEaELj8Ym0D65OQZoAnSmCcD8iI-MQ8NrtqewFp_KsiGdoYdvnk2fmk3P4bm6r1OApLjDEG0",
+      "places/ChIJ8_JnlK2xJIgRyg-nJ-x7-d0/photos/AV-0GLfw_AILggzEqa3M15ZjaSavgEAlDAcjrwAUTfJyW4wPuq2nkDBziJwnMrq5iQPfUArrDgLE2H4OoGJb4QYf0C7ENE1vVItdJUve0_iqLcwCwGgdNVd3smATjlSNwQ_EkB5cT7ye1SXuJq19au1Jju96DGF2M1LJpUd5gMCwg5lW7HFy5xJvSfOk39f0R5itrL1zPNW4fsVST_QlIxQIw7h1Ndik2rIlpDwzS4vSCZ-hxBmkKrl6ouDcz6Y0o43f7OyibuND_2L2P2FhvNybMn1GQtOrraulpylKPPtRHZGrfPeXKG6INO5MG_Ig4_PW9Wvu3g9caCle02e6EwyKHqgyhQJIYRmzNC7avLlX-5HqKdzOoBKcBZrQDrkDyuz9z3N8FCCA09d8ZqxCdNyheD00KvNB3l23ii3YOvau6Nw7DQ",
+      "places/ChIJ8_JnlK2xJIgRyg-nJ-x7-d0/photos/AV-0GLd8A1JkITPS8wj1GIN4lDuU7doXOku4dlePioCQVv5IYbSkP9OhWekPMwEdETapGs8MSnV5at3S6PU99vwQEk2HCqepymvnfjo-dWtBbXV2IZ7HRlVAFFfqv6H463PFY6Nrecc9rRM43rEK-N5XtcV9t6UZSBimmisn9nOk-7QmcA8bWzYQ1y0BeZtqSuacw4qkmSNgBR1ORs2eHxQx9094HXXF-BuTAX3yfjYC_kQr5s0muNJiEelnHnRs1qMFX_Yfz-Oe0udzNxnTqLO9kFyi2ygCLE-ijyc3StOpprYy7AhdfR0cOTLlBic-T_xQ9RQfOfReY1Hejk9HHOqVBgRmR_8F_v-S0XtCsiQpuZgQUW8le0TPXQ6_icBpXAin02LbQTMqjM4uInr2fQO1z8NTPV2frWoxH62FvhGmHDr4",
+      "places/ChIJ8_JnlK2xJIgRyg-nJ-x7-d0/photos/AV-0GLfG53X0ZDRvM4Cu2r2HBxZB8QM1TKvExDuooAi7yTYJTd9UxP1UkoIyIWa8y7DixkNu9OaYkJMnzdfe4F4L2N1m0xDP_gWHArgwkB0lnuKmnis9xvYcSMzduWLgkXuzVxg6eZc7mHtSGi_KM-mcohHmOU-RoJ2DLiNpyz24Rj8a1wXetNCaDIbfe9rVHEfxExNsaF4Vc2bXdthfcOKdPzrFRABWlGa2c19YSp0aoARAxeFc0CIDZyrBEGE43jKOHQ-NmWdZQt6sX6VUQ51Nphd80iRNE07cWHYL0pfLcCZkh5DxihQvadieG8tGH9g5NzvjUa_DyV_5BBXbl_d-XIr4SWgDB0q_H0C5DGtomJYTCDNVZQ2hPLMz2SECr-_Ng8RyMoDU6Wt759xhhFurUvHVdDwieWU8AKFKpbGTrAzTbg"
+    ],
+    "types": [
+      "indian_restaurant",
+      "north_indian_restaurant",
+      "meal_takeaway",
+      "south_indian_restaurant",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "buffet_score": 35,
+    "buffet_confidence": "MEDIUM",
+    "buffet_evidence": [
+      "buffet mentioned in 1 review",
+      "matched 'Indian buffet' search query"
+    ],
+    "is_buffet": true,
+    "state": "MI",
+    "found_via": "Indian buffet",
+    "search_location": "Farmington Hills",
+    "metro_rank": 3,
+    "scraped_at": "2026-11-14T20:25:53.622744Z"
+  },
+  {
+    "place_id": "ChIJXU8G7JnnJIgRqdZzqw66zbY",
+    "name": "Spice Valley",
+    "address": "49087 Schoenherr Rd, Shelby Township, MI 48315, USA",
+    "lat": 42.656065999999996,
+    "lng": -82.9957203,
+    "phone": "(586) 326-6644",
+    "website": "https://spicevalleymi.com/",
+    "rating": 4.8,
+    "review_count": 1408,
+    "price_level": "PRICE_LEVEL_INEXPENSIVE",
+    "business_status": "OPERATIONAL",
+    "hours": [
+      "Monday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 12:00\u2009\u2013\u200910:00\u202fPM"
+    ],
+    "hours_periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 22,
+          "minute": 0
+        }
+      }
+    ],
+    "photo_refs": [
+      "places/ChIJXU8G7JnnJIgRqdZzqw66zbY/photos/AV-0GLfwdApenp_c_y49pT3pNcfoOPXou7mt25b8vMr6gmXkseJ5J-qpu0P9klxkxIlgldJIl2plyQecX6Bo5oQXrJ3vO7-W0qu_ScqvqInVhk-b3XHm16fFU_AZ5y_2xSq-JuJSMc5dB9imF1NMK0heaDyw_O2TbxE9M9fMwFQg2TGkfiqKKmcwVmD17njFzGaWyMFREMjW1zjL_pzgrxSPl038Xe2BLqyt-k5yaPaRUMK3nVbqjyyhqLDTBcVmCxOj2wgvNjkoMBVaFwdzGPqVkjEn9-eGKSdeYTpq3hsKiMTwvU1SNDuwDTWrZUaR21-f2YPD83EB1saINPazz8v6mm7ryjAyF77X__piu6u4L6GrHd7mCEQ0mXo8bDS4CIWZsH4DUOiKgQFXLTpyFYqLYcxxncA",
+      "places/ChIJXU8G7JnnJIgRqdZzqw66zbY/photos/AV-0GLcHCVEeAEGNVRAY8c3f645Jg0XTtn6KqnkoyGtsr_f2-Gmto85EiLiS57ecwONnhhrunI2vPcPypI4zu7b9Jk16j2brP7T_4mxNpK67vIfX-NcXH_RAUZwLkLm6msiVH6zUvyCIHsgkCAW4uR9m5aJu6E3DGnUR9NucrKTNqIjFID5wVm7Knvpf1J90vmICj0eFJD96rpjXcJw5BcLMxm0FfDqjTepdmJczY_nfTAncDEQ3N0v6zL-FvUdTDon71EF8Bve7hQIcjlHbyeKvPyQDHOD0prJpCIK6BTf7v9a2kZMeaIUO8wmpwUdViMan2NUMFSoH3rKkK7-T-DYge3_NCe4bd86ZtFZ7cPGnfgkUmFTgdxdKLSFgP7sDGNvrUf2t91BG4_J3mEVTEd30ZMlJukWY5MNvM5rjfgU5yaTlNQ",
+      "places/ChIJXU8G7JnnJIgRqdZzqw66zbY/photos/AV-0GLeQC50v8lsTiifC9J_nv0sUYYi1sbGgW0q0m4UEaUv0oK2rsfi9mW9KjHzf8oxhQFrtdf0dPRPjgLqOkmGRN75xELrVMoFcRuuCJjlAYeRNyUb7mydNEm9UGkTNkUMvyzJeqR1i1tX9kyg88syRkzWQfPoY0npRxvRwkQymDVF3ysIuasuyCImr7VI83UUPaXCLqLzHwVmoIn4jJBipzAlmFH5AN0ifFj3NDJT7NSnCajTv5TsWtqiEA-IfVagpAHB5ZZk8ID1u4x8khaYql7j1JERIesMChgtVw6D1Azodiy3yd4rFS0i-HveQ97eWmK4QzpB83vhhyTv6ksezWQxcMFuUhZ2RPQInfRnCNZr3mbUN-dRmn9psqnQIexx3gvVtH4_gGs7cOb6XKuviI34T1FY26Dk",
+      "places/ChIJXU8G7JnnJIgRqdZzqw66zbY/photos/AV-0GLez9jjk4lNT4YM0Cyi7lzRIjFLSfoqWCnZ7gl4qYr4oYRW0Lze2yoR1MlM8n839wKvZpWcv0m8aRtrUQG5pxI0uieMODrjttFKetIp5Hprj8pxnx2r-718hYI7SxHWYaogU3_oZMjJe7nMpUMlBbG6S9hQHsrd6-H_mH4mzA4g49ppsaZuO4TPTmLIbDRk3oa5zESo-w4bnTvU_3_Ft7j5fLRXowHJw96f6DUhFOBakqvd7yIaOlPwT-BUUrsafMHMZIOVgMiwnifaNQH_j8KdOqT6a57xvcdA3WZRi330_BfR2VOyZwkzgLVySpPU2i8seCUz9ze3d5bnXuiGu2uDw4ySjQbfH_Q5C-BxzpibcV7zOrXkNK8_Ni68hMjhPE5uUuWg_CQ6P1_Os0IdjNPoGr3_PeetW9T8Dzb6f0zqZ5g",
+      "places/ChIJXU8G7JnnJIgRqdZzqw66zbY/photos/AV-0GLeFtTa_XBK8C6HA-3SoastTWp-xAogJ4E16ZjWdDyDSGpIDfa2NIUfUtsnifX_kqKiUkTy_pwLanQqbXJopjik7QIYZgMBhsAIxUoEEC1XDYRRqDk3r-kfohvslzvdi4ZbgrC_RwwHB5tZxFwRT5IdTCSS726mRDKbZuiP8FQaDVoLzGLTlKDFWuSRRVZbTx4vpZU5cZvgqQMzJ5eKNPHfMHjy4q24Ag_VDGxMfP3z9zxdAD7j4g-u6JvkNFXP70eRgIyYcjnmYInDfNtK3BGrrN_MgEl0PX6VinerZQhqf8Y5S-iK1ry1tHuNSO4ZPWuLRZI498Kt5NoIwUPhATBSWhfwtfWma3Q4hOswRIFoCJo7KdxxGViXYTK1Amo-dz2mNim4FanoXSYc4ZMJpMtYnNrkuQU0JAbanTUpluxJvnQ"
+    ],
+    "types": [
+      "indian_restaurant",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "buffet_score": 35,
+    "buffet_confidence": "MEDIUM",
+    "buffet_evidence": [
+      "buffet mentioned in 1 review",
+      "matched 'Indian buffet' search query"
+    ],
+    "is_buffet": true,
+    "state": "MI",
+    "found_via": "Indian weekend buffet",
+    "search_location": "Farmington Hills",
+    "metro_rank": 5,
+    "scraped_at": "2026-11-14T20:25:55.651685Z"
+  },
+  {
+    "place_id": "ChIJ7yykmWmxJIgRl7NbGVAzALY",
+    "name": "Deccan Bawarchi Indian Cuisine - Farmington Hills",
+    "address": "24234 Orchard Lake Rd, Farmington Hills, MI 48336, USA",
+    "lat": 42.471029,
+    "lng": -83.35675979999999,
+    "phone": "(947) 286-8794",
+    "website": "https://www.bawarchi.io/",
+    "rating": 4.7,
+    "review_count": 1611,
+    "price_level": "PRICE_LEVEL_MODERATE",
+    "business_status": "OPERATIONAL",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Saturday: 11:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Sunday: 11:00\u202fAM\u2009\u2013\u200911:00\u202fPM"
+    ],
+    "hours_periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 23,
+          "minute": 0
+        }
+      }
+    ],
+    "photo_refs": [
+      "places/ChIJ7yykmWmxJIgRl7NbGVAzALY/photos/AV-0GLcxY_Egr-Fy7ZahYHBUht2LnYD-m_NQNqOKE3_eF9t0i4NW-zBv5c0F5D8fbzcbDEVG8O8Kn3zhBFHinik20bLDapcwQ8MTUoGly-JHZ3PKFQiEDMULRoqvSB4IL4SFTjzMeLMN7UsryyQv8B1X2K_qmvubZN7irXW_PZG_vdKM9NK4FEunjgVsvIIRuBm-JwEYPSMs_cP8CA4ZsmsDZzx6V4TcIeW7jbH900BIuSsrcNScHFMMRCyeuYF-6xrJhpxg6lMUshCCM3Mm3wVVZRwvJkQdRoYTSn5uNsUHkNIUelCu7B1_uIocjnWUaLokwZWLQW_NkLF6AoweYDWME5mtb4-Ii6hPV-CuidMsA_WDA7HtsKlaCZ2vNbNZEP54lvvl1OAZr1_Aduthfw_9-H0ZyyhWZvthLWdTbvV3RWXadA",
+      "places/ChIJ7yykmWmxJIgRl7NbGVAzALY/photos/AV-0GLeK6LJbsZ1QXAtGMq_aSUv9G_n_hJ1FMP_a9XdgXqZ3hmxjVseKV-oWDl8hL488zWPEeDm6DZQ_iNUYum0-KvzvJMVHdcJpq0f4BOfhJchhGW_4oXeDr6EWf5RfSOx85jUxwT0WHc5SC04DE-RZ01lWIFzeQjyCVD4CugCXQaZbOjG5SfJkqeMPl61vu1vnKu6-P7nH7cUE2YcL2RwHEMPRxcxXdy7YjzsJnZQUebMnPK9X2H8VGPVTbF_J8TuoEh8reNX5592rt2pcNos1oLGeqXpbW7sGGzuArVsOMSCcZCfMGkEx6Ej7_Pp1ZPtdkfJoCuV7raLAOYsi6dYhKfBGrCaikBSqgYqKJt-27jjc5h-TjTzGkDj56UpzAikfLGKWEj72vXI28_F98j7fFpd5f6r__8d7AMqllUbomKb_wQ",
+      "places/ChIJ7yykmWmxJIgRl7NbGVAzALY/photos/AV-0GLfsH78G-Y9Yq9ZJxqeF46SLXTcPXyh0btn3KALTWVv_ixbylDIbyZdyf7IQVh6bLvScXsrUZxGPRp4CiEoB4hKuNU5VoMmbG-vJ9KJBV_MwGy4hx8BPrNSfz7MoMvjH6iDrtfDS_nYloPBoziYNE7WpZc9nMZ7Np6M5HRgJ_gWQIlX2-juQPAJb2Y1nF6yXlwptHJBra-3RvSZH0FGyHZxbnllQK2QTtRxI4afWcwxiij-s57w5DkYb6KyAzDZyp8vZgw6IQMfR2KZi4Qe6CSYN5ZOTpv3LEL3qfEVJ79pKkbzHKycRXRTb7k-3MqWDiInai_85d_wsv6Vonv1YkfNizWtbj3oDWCe62lWxtvo6QCqNgqU0X0DEAL0pmBPir42EtMtbufcD-kNlFboyXcdhTs-44uAx_PRgRNPzgkXz9w",
+      "places/ChIJ7yykmWmxJIgRl7NbGVAzALY/photos/AV-0GLdioqnQAaDAA9Jeu1fGuvd8gxsbhzypBWDVVcXk1gEpOj_vZQ66fwxHHffZYiK9RS-G-PM8x_eBzQbbbpMpNNjzlH2kEX9jHbnsxS-kEqfpgd7pRpPtaHBo9-FkTtXSyUdS6-xM3Rd0Z016I-qcziXRGyviTftp6ty_wOkL8Gx76rq0AVJMXntj-3isLZ9aOeiUfBmEp01kTDzSdfsAtqd6K3FMqG17A-ucV77KJ94KoYBsMcZ5LqYxOwaUtiYYWrmDiO-hbNtV0Heh_nqOhMk2PGE23ujrjAzf_FqR0Dn_NBDLxfiGR1GXfBOM84JJMF0GOmzLpygWm-Iap99qzDGwE78gR6SipHDd93cwDSXzTtRda_cnVRr1TnAJTOD6maTnX-fQDkfNyc-ICM7YeC8Ot-DHHE8pmrZU_2478lAiOw",
+      "places/ChIJ7yykmWmxJIgRl7NbGVAzALY/photos/AV-0GLd_J0fTZUtsFBnwsEmYGQWxew77BwOh-yCzhBt5_q8O1L7z_taq4YsEG85hRDEDE7BFQ-YG5MmHfru3zexRw546RN4dEZjnX19c8WEnXHh4qilVVLMivwToh-B85SCR1sBnNCOumGbfXR8LfJdQHoeYWMVxtfT3t1voqxQfVj4dGB-9l62B6aDz2vX651pCuNtBjy6aRR22S9BL58ARYQn3s9JJgJqfLvCd-0mrHJjj9NEJTykfgXeMUloM05l5njpx8zofX3-yfRfciWQaxq5yG4mPnKU-rGUIVDDujyf57yW0QQaLCtbiZ3wehNgEECSFnhraSI1pDbnQxnEY_7Mgl2Hj5LVVTLvdrc5F6M-cVt3WNaGEC4ItX7oNZ2_t9liqZ4SaU6MywGXmB3gyid5yH4T0VeCfg3SRFLrygTYt"
+    ],
+    "types": [
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "buffet_score": 60,
+    "buffet_confidence": "HIGH",
+    "buffet_evidence": [
+      "buffet mentioned in 3/5 reviews",
+      "matched 'Indian buffet' search query"
+    ],
+    "is_buffet": true,
+    "state": "MI",
+    "found_via": "Indian buffet",
+    "search_location": "Farmington Hills",
+    "metro_rank": 6,
+    "scraped_at": "2026-11-14T20:25:56.271163Z"
+  },
+  {
+    "place_id": "ChIJU-IGkgOzJIgRAo8kyZngfek",
+    "name": "Punjab Indian Cuisine Livonia",
+    "address": "36071 Plymouth Rd, Livonia, MI 48150, USA",
+    "lat": 42.3672386,
+    "lng": -83.39870739999999,
+    "phone": "(248) 622-5489",
+    "website": "https://punjabcuisinemi.com/",
+    "rating": 4.6,
+    "review_count": 1853,
+    "price_level": "PRICE_LEVEL_MODERATE",
+    "business_status": "OPERATIONAL",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM"
+    ],
+    "hours_periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 22,
+          "minute": 0
+        }
+      }
+    ],
+    "photo_refs": [
+      "places/ChIJU-IGkgOzJIgRAo8kyZngfek/photos/AV-0GLeQPujH-0WeCQbzXVd4ZSJZEAX4xpCl-LVYdQBHETW9UDYHQyU7nPIp-o0iBFziRK9046oHBtL39r-e-a-XMcbMkF_9cQ8KsXhdUtDki088wmYClvpAIKbP_7TymSE21sHhnR7BL24-JG217gPR7FI2aUPyt8iZRZVK6Gl2RT4GhHLqVfbIDE1s_rdfn05iqtPgsJGrMAYUusLoschOlV8UGGrZzcUulOpmYZXtnFOhlK0qEPZyvw2D8yaA4tX5F_KVsIZKhM1pyD3B4xDPmFg5VGp_tiaSlkeAlsmvY0oKT8te-EA-ZfwTvr5orfYUsDOr5X_su1x_N-20d2UqAvSajy2uAgk1BXjX0MG2UDQdKuew0Z5BEgdXZNKSgV5qJYUAxhTbVX2hFO2lmx0cuNqXiu-3Wh0",
+      "places/ChIJU-IGkgOzJIgRAo8kyZngfek/photos/AV-0GLcpg_tZMkrk-ewyCjqOnrlGSdmFx0H1TlCkwugzI32R-ETUAvyJu-x_RNn2rNukqCC1KyQ_knQAlKX6xlPu2nPNeZrkrQiZXrRIkYjHelhEjKVRnjTCp75L7NDgE5sTMCjv1xDKjkLW83EDNQvSwGlV1GzBgCVU5D5NZFKpp3XQ7Q0hdhFVnutkOKJaS-x4xKTp9aZM-o1l73wM7Yo0Dy41SvQSYxzvf_KY5Y8jcDFsa3TqMDKK907YmUY7zP5BmTKXtE5UkaHrmFkBHlRITSDDStkqnQuVlDg5re_KgQ6AoSm_jXkGsofI_U5-JxcpLwu6voi9wx_U9BiT2MnsK7eQ5Oo6H9CWfVVLJIARi9uC5Tux-eSWnYqP5QQv-bDcysz5mOGgJ0KuV7r-oXSZ_pAQlTHB",
+      "places/ChIJU-IGkgOzJIgRAo8kyZngfek/photos/AV-0GLdLqeTifYeH1hhh8TxBp5-nPWxdl3FgHC0flKZ8xTyMHLOnQ8rSlHZujTOrjFjOW5rmzDOtH1xVA3VMf9frR_x5-Eznkn5dA7NzHZs8H1P9Q6uolYngpB6WZDRP8jSAtNDDjLBoJa-K3VNSlm2YvmmmqtBNjPW98BaNxHdEuPdKfjA-FXAWFVLumRGGFB0u7aFUMCEkWpu0DXuCEXNFBynMbr_qDLbPKcnoQKQoLO-uIbGQAe7M4izTFW1e29EyCD68kg0byaf-IIvg_SxLBBdiTfHcqSaO1xylz0w3DOLz5qWGoPFUAt5ujAOaNszg3YytdxL4mDGNLztb7FXm4_5LBPNtEvEo7SohnYI2SCp24xwpMrgDr0Svj5FkxIZccL6qV8d_F5JF_DtfmPa5DPnKIpjeBlGJFC3D9VqANJzKVg",
+      "places/ChIJU-IGkgOzJIgRAo8kyZngfek/photos/AV-0GLdHcx4tu9vLouXhzLdKWQ8DAXKxiXAwPLI3iAx3WYLq8XhRmS1UsXkWCer81MIayXtud7RkltIK1WqvYSa9ecLHep9Cbm1kbmWV39-i1Ns8TUiJpdmcD7mDxRA-HyjJFyYgrcCVpd-aEslN0jlovOCpbQSqDtrzvCw_WXdHv8QDxPXDPL6j_FwEeTiH2kMz0mqdTCkXF-CHRkKYd41_QVGztJcyLM_WHX-2eS6GQa7Z3qxGHDuZjC9GqQB8fakajiOkrZWk6NOp-Yxk_c3fMspFoAZcsmMNmhPodZ4bvX8s4lzVxDpMQEnBMbCrMW-v1mzwzAhMdms5z3WJ5Y5IIcSSGMryJszD598zPCf6UBttaXhASuFDzzddgxEsrwvZ8KdgEgDHBNES_dGFeGznkz4I3QYOnBS61qErM4CfczS3",
+      "places/ChIJU-IGkgOzJIgRAo8kyZngfek/photos/AV-0GLe5sKBrUxYd8vwAoa54X1RsQblEmOjaPdWFq5l7VOkJyx1T0EdohMqoMs18eqqM6zd2fLsImiXpjMbk9i34fsriKgj3ML4JwYmfUWS6ql9dNpg1nApJmtWbeWCAzB27pQXq4QUd9oFIsVqhVRwaaYweGaNijouznxdQt63FkycoifoRa0roQ1EfM3_72mqbLwPnTkvKSc4qFYXzfoMchWofvxtkftzBu-BoxYTpqDv3XpuetNtEV14j7XrrOW_CwXwM42x5ilo25ihPnFHE6a-SalCuV9ZuRxRD0EATtDAHRXJBwbE9MYNnYlRqUt8s2sVKK0XvwOQxGVk7TVZx5uo7mB6VCKAFUlBJvadVrHMTglhiYUqgYplsDCQy02sD_-Y6iBfsmIDH3HDNb8De4x4N8mDrF9E-peXtKM4vpntHMw"
+    ],
+    "types": [
+      "indian_restaurant",
+      "banquet_hall",
+      "buffet_restaurant",
+      "event_venue",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "buffet_score": 65,
+    "buffet_confidence": "HIGH",
+    "buffet_evidence": [
+      "buffet mentioned in 1 review",
+      "buffet on website: buffet, all-you-can-eat",
+      "matched 'Indian buffet' search query"
+    ],
+    "is_buffet": true,
+    "state": "MI",
+    "found_via": "Indian buffet",
+    "search_location": "Farmington Hills",
+    "metro_rank": 8,
+    "scraped_at": "2026-11-14T20:25:57.080982Z"
+  },
+  {
+    "place_id": "ChIJzQf2suPOJIgRMHDAtde7mgs",
+    "name": "Star of India",
+    "address": "180 W Nine Mile Rd, Ferndale, MI 48220, USA",
+    "lat": 42.4608418,
+    "lng": -83.1360323,
+    "phone": "(248) 546-5996",
+    "website": "http://starofindiami.com/",
+    "rating": 4.6,
+    "review_count": 1445,
+    "price_level": "PRICE_LEVEL_INEXPENSIVE",
+    "business_status": "OPERATIONAL",
+    "hours": [
+      "Monday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 12:00\u2009\u2013\u200910:00\u202fPM"
+    ],
+    "hours_periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 1,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 2,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 3,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 4,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 5,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 6,
+          "hour": 22,
+          "minute": 0
+        }
+      }
+    ],
+    "photo_refs": [
+      "places/ChIJzQf2suPOJIgRMHDAtde7mgs/photos/AV-0GLeEEmL5obTeZXN9Cr6moNKFas7VNk2tKFPMmMM2B-T4mrXOOA4YHwrOJ7QyWFKVWzH12hDPkuF-41XkIgePWn5We4PqXcJO1pEHqs4xMfGhZZyLy4GqJiYmFB099qM9A_Ii5h9CsmgxSehHALljqn8cp736S2Pmfjl1yGpAEpJ57wpzNPvE_9Wju5jtkzTwJ7ygys6kFmfvvR8wQJr4pR2R4VG3-SiQH2M7KhsQfrb3qoEOxIVE9Aq3hMuAzCdK7XRuxrt8qVEY07YipGjdhYIepklyIEHiC1awpVxWh7lvW6Zy0ymvwD6vzxy53g3SuWBBi0TYoUwwm2y1URrE4mCJ_Vp1IYlhq6H2wP-k-Mz4hgHxfzm4qS8GKsrVud008-jrENVB0Xk2lM9C2YrN4sSQGAK5",
+      "places/ChIJzQf2suPOJIgRMHDAtde7mgs/photos/AV-0GLeoUlySUFkfBMwHyz_CMt5hIYY3uZ6OBsG99-Bd-g_zAn0a6iJF_HpiN9Q87BgPtGyY1egnmqODc6424A3NllVZjfklfCuOoEI5gde8AiaiDaqpR-HK23GkTzUePM7FddjuPrQXvtRPd_YOCJrPRqiSJr88hlx6OP3X7fQEQIfgP7ZC11EMgGYMbh2kNaO7QoA7wd6M82ZGom0_TnWX7mZoqdstrWaj03dhS2tlA0qFBUS70O9OlPPBRRx_nIT3CMvmUxMhEEYdweXu21YHpIGcFvSB3KVzzlum6_EypoUudQ5QpfMcNJSDKG4rsmvzjwPnUhIkYURp-XFS1zJn2za0_LBH0eMMdcRQ5zU0nMbxz74AhpnJrtkSU0v8TUUAGP901UfG1xb1kBCbxF7mqoVFu8Bq1Dg",
+      "places/ChIJzQf2suPOJIgRMHDAtde7mgs/photos/AV-0GLfc6Cv4AbrCdI-84tS0apwhPMrTeX_rCBd5wPUYKlv_8xZV3piw3WT7NvBELs1CrdC6wwcoRWkoy0qg-Okghuy4gGaQN6-jLcbHZ0tKyKKFuRAEUp8B6Bu1ljcJNaQZWmiFt9usHQ58oWZwI0OhKFpJIQ_a1BS4FDowcotqzPhrWufMMPE58bp46wWBjLjo3WjFC97oLRiFhQ8PkcVGriLkj4owcqDkJoMB_45WsMxmxYEFPt14jlgXXrd6piH62NKiNPCxCJTN1vBI7rm-J4k66Pvkt8YgbDH6-1MHNI3mnUF3oLS6QGZqLBjK8hMx3NLK7N2NdI1H7OKMT9nBjCRLMb0_ZLK9aGqjVIqe9Ap4ZPktSrAY2WLWB9KY8LskObgkHfxA0_zgUJoX4ls_iDiKcFDwq96hx1NmqFqxGt_wHw",
+      "places/ChIJzQf2suPOJIgRMHDAtde7mgs/photos/AV-0GLcmcrkp_G_QCMHHm7wGjtyod6J9Uww5ONwBx1x2NDwovW9nDL8gb0o5VbwvX53Nsi8aGLnveGETir87II2ADGL8xzAoN8yGLLAocTOu5pkHT2eR5ElGsqfTgbBbGmtSCcRw63pGkisI3jP7hAvI-uL7NloLC1KcR8SejtiBc3r_aoXYD6FnE6_RtaBI9FQm23TLgkF2TN5mHAHF27IzCuWxmIyLkoJsOYzxBneW7IBDXtddVG7t1sgGwJHpiCyg_sQpJs4lKraZE7k3YvToSPIfjX05WERtHPFmoPbmj2tV9ny7igSjO81ANxFOnanOrAYx4UqAYFDEkqdpwc8YiJbx27x9XEqMd2VZBtOnkTtp5iaG4N-lFbtLfE3ejIe18UuWo56DVKSKOVyGU95_qKGjKA",
+      "places/ChIJzQf2suPOJIgRMHDAtde7mgs/photos/AV-0GLet7i3uCKPVJLCMdoaQzQMA92g7XVCqX-tLrxJ-HMzzxIS7E7rikJFO_9AoZF1gHDISb8h-o4umZOZwbR35vR-2KXwwToE7CoETalPFybtQHrBrmemKDuWS7HUf7-LWcwfS_IvRNgnZFVpSLAe7-0MnzvPA_elWtWxMDkkSFBUp_uq2kiFUBV5wr955XMNJXZsem15W2IBvzX7XmFt2deEUsit2P9-S74zmncFTup5iOtsGLqv9dmasIdfR5yG1rEnCD6y2CTROI2f0dADmZgCHlxCD_YNETfLn0aY0ZCCZK6bBTr1WZDCHsANRM3IrZwDZKDXDAGFilY2rJ8qI36jS3wBYp8WnSNeh_f_5EUFaiQsy1oBZx3JoMgbqIrHZCeai3slYegzIQx6qbbmOu2jzfb8k2wxSgZPh97UN9sHGGA"
+    ],
+    "types": [
+      "indian_restaurant",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "buffet_score": 65,
+    "buffet_confidence": "HIGH",
+    "buffet_evidence": [
+      "buffet mentioned in 1 review",
+      "buffet on website: buffet",
+      "matched 'Indian buffet' search query"
+    ],
+    "is_buffet": true,
+    "state": "MI",
+    "found_via": "Indian weekend buffet",
+    "search_location": "Farmington Hills",
+    "metro_rank": 11,
+    "scraped_at": "2026-11-14T20:26:00.949361Z"
+  },
+  {
+    "place_id": "ChIJd-ky-5XqJIgRdH5YP7bOtzQ",
+    "name": "Rangoli Indian Cuisine",
+    "address": "3055 Walton Blvd., Auburn Hills, MI 48326, USA",
+    "lat": 42.6794806,
+    "lng": -83.22819439999999,
+    "phone": "(248) 377-3800",
+    "website": "https://detroitrangoli.com/",
+    "rating": 4.3,
+    "review_count": 2210,
+    "price_level": "PRICE_LEVEL_MODERATE",
+    "business_status": "OPERATIONAL",
+    "hours": [
+      "Monday: 11:00\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u20098:30\u202fPM",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u20098:30\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u20098:30\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u20098:30\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u20099:30\u202fPM",
+      "Saturday: 11:30\u202fAM\u2009\u2013\u20093:00\u202fPM, 5:00\u2009\u2013\u20099:30\u202fPM",
+      "Sunday: 11:30\u202fAM\u2009\u2013\u20093:00\u202fPM, 5:00\u2009\u2013\u20098:30\u202fPM"
+    ],
+    "hours_periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 0,
+          "hour": 15,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 0,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 20,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 20,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 20,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 20,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 20,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 6,
+          "hour": 15,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 21,
+          "minute": 30
+        }
+      }
+    ],
+    "photo_refs": [
+      "places/ChIJd-ky-5XqJIgRdH5YP7bOtzQ/photos/AV-0GLf0jgWWQzzwb1RJXinDZ0SrJ3txBCSBzGVAsztIDJHTbHJv038O3Nl0DOObuAkugWdLBDj2QERCMS6vrbgNuL4qf_5L1JtPdbXolZDayvlwpQyUHO9Bw-wPgbW24n-qJQt0bQR8dOwDf8DTj5uFB7BV8fRSrhNeQ5bo1dWK4xPdWTSTVcjsQqCNBZ93T1IhWt6dZ5WdiVZd-NhxlCpdAP4gCyhlg_iukBOcMTZ7rmgQqDZBT0B5udbTeIEZU1DcEw46k_aiGcuTSfDdIf6YfVgWmazXNw_pNqIbyInuD1DGvyYmqdDoxXqDjA4MgSWUIdx748dnbtQE1h_NTVbsgVlSjUt1toy5aSfKWVgCsr1jznZen-l-ziZ9LtOf5zfEcc-UCxis93MQ9wuFa1lpl3BuottRZLU",
+      "places/ChIJd-ky-5XqJIgRdH5YP7bOtzQ/photos/AV-0GLdYqzCY0AhukT0XFOC0Mzz-leFFhmTbnwTlvlt4L4h0pvZha0qZu0hVtjwz8KZi1ILetR5nk9lRPBZ955FEy712-uJkbL3UzsKCM4Cahz75Jccu0oVnsnhEz5XcfLZseXCjsSayRCR4Dj0pAq6uWxClvNFpFbCvnYR3Om09iw5Ap2lmFA3674-K8aaJCpZzOkmlHDEgul7nEa4xn9CzQtsITyKOmA4uNf31fiYcgijRf5VnGVzaOKNqXXdlsL3cH_JS7_h8rwdFQTwlQjUv-JLLaLhDx4PJsPXjXJ-ISQC9u0O7DddgDvLsrMFQ53RD7ZogG9GEAwVZgD352nGMucY0BVbjF3tmwybgW7DV91mRgewjr3F_YcQwivjw3FEptOrhHRqut2yiTQ8YP-fgB7253R6g",
+      "places/ChIJd-ky-5XqJIgRdH5YP7bOtzQ/photos/AV-0GLe_herl3_OI30PPXBuQRZqm3YXH5_WI2IUzWfMlJ4YcJPjm8gZPsCEtIabo60lJDVrFrtry0dBFSRmnEAlptUiC0XbamlpFUEirTBSUAGBcjSyDZXCauZT75WeSEXuIZqAOuwu0DQdKUiH8pocsjgYJ5jXuhTfx_N_TTojyfNsd9Fgh4EQH8o0CFXa90TE-xAUznGUfRWMel3SvFUhEotiZE6yt-HEvrakfCBGiL80_Id5OqfQEy7EWKTVnU-WAiKbKLWDGU-_K8RogYYX3phLG4XmfGmQz18_jSANB5uLIV1UBJJoDO9IBBVFbnMdiBXb1CHoQa4gb53ncfdnleQRr7oMpi1J43telo3TG5650vXXT26na9kH1_ia3X94eN9Tp-QiYA05OJhEInWekRbfiqSVao7s",
+      "places/ChIJd-ky-5XqJIgRdH5YP7bOtzQ/photos/AV-0GLdRit63qBU8nXcemU6alMfrSgDu2AhLb0uDndmRtr-lNbM3JxeoBlv6o2306r-E7MN7T7VdLLtPTsRCK51D7U-BHy_H2lUuOO4Vv92LM3Gzz0EC-rbLKimqs0be6MP1yVfQHcR6CcvVJxXreVHwTBF7as7Lpkc6HlWHZSjSTNpEisNmlcacrbfDHNr8AyKJbstlGptoRStSlIiuDOlK0_ja27LLgpabslAa-P5wzN-ks9QoMd8oTZgC6biU1pq44qIgz5k7jIz8WI7pNKedfIopHW2X_Ul-lgOiYua-s_cUdjpzxklYBsKjUM9cZr0dx4zNFM4q8IxjmKInwxJ-3rKY5wXIDUku1k2DkW13q7T1YuMsPH6Zi73YPk1s7EecF_VGtBgS0uu1LTyR8FC8YB327gxvfAiuqR24CfySbciurA",
+      "places/ChIJd-ky-5XqJIgRdH5YP7bOtzQ/photos/AV-0GLeZZsJnEqoQK-b6hMO8osfhZ7m0dMu_U8SkXfvO8k_1js2i6CMBuh20-glbOx__-zjw1QDvhOQtpS6F3zWOq60oCnUby5PNX0SuhVPj1uffCYQux5NZVzYnaT2AFOTULUVcWdIwA3yW4JL24-yAD-t0pMGjw-0YR6LE6buYzQA00rHlBGm32n-FYPYWWQJMn_mdJRwY-lj8cBSnKCCLNJIMYSioqWexCBM_j7vyA3eEibn6DwAVStbwTdCEcufG-9APowZPZXSOLEgugjGZp9Nu1MkncNKsFfRHIFydmsxj17fKMy_bafvkrNVhzWzxTK2_yJOACHZsdvTs5MvUXQm3kWIRyWITg8cw16yHKuCpvg4ge3PC53fxWZTcABOmmRESGOjJE_ljjSu_GAxtkLDZQeb_38uZzEYrdozf-fe2oA"
+    ],
+    "types": [
+      "indian_restaurant",
+      "fine_dining_restaurant",
+      "asian_restaurant",
+      "banquet_hall",
+      "buffet_restaurant",
+      "vegan_restaurant",
+      "vegetarian_restaurant",
+      "event_venue",
+      "bar",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "buffet_score": 80,
+    "buffet_confidence": "HIGH",
+    "buffet_evidence": [
+      "buffet mentioned in 1 review",
+      "buffet on website: buffet, all you can eat, lunch buffet",
+      "matched 'Indian buffet' search query",
+      "buffet in Google summary"
+    ],
+    "is_buffet": true,
+    "state": "MI",
+    "found_via": "Indian weekend buffet",
+    "search_location": "Troy",
+    "metro_rank": 13,
+    "scraped_at": "2026-11-14T20:27:08.563535Z"
+  },
+  {
+    "place_id": "ChIJ7fmtM2LbJIgR6s8inf7pLoU",
+    "name": "Shaad Deshi Cuisine",
+    "address": "6060 12 Mile Rd, Warren, MI 48092, USA",
+    "lat": 42.5057356,
+    "lng": -83.04404590000001,
+    "phone": "(586) 576-7913",
+    "website": "https://shaadcuisine.com/?utm_source=google",
+    "rating": 4.8,
+    "review_count": 943,
+    "price_level": null,
+    "business_status": "OPERATIONAL",
+    "hours": [
+      "Monday: 11:00\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Saturday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 12:00\u2009\u2013\u200910:00\u202fPM"
+    ],
+    "hours_periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 22,
+          "minute": 0
+        }
+      }
+    ],
+    "photo_refs": [
+      "places/ChIJ7fmtM2LbJIgR6s8inf7pLoU/photos/AV-0GLflcLgVKpCM_06uaiizWQB4H0K0zndl--DnpDIOtalDNiLiT0UYX59gzak6QpOvZ3vMNLt94_e1ZLSzJfME_pTZaNwzOR2EimWYtYnfsmI_l-gqLOaAjn4Uc2ftrF_QckJEbcxV2t8F6khJgIGfE5kIauVa3iZ_2vmHr2h05Ov3YmnIcZilJA_uFKgnnSjfDfw5h9TaCtTU9x_43a0w4USOMJEA-sYDv7ouQ34xwtJ_3WbLUfhOchAM0bTu7la1ZemenaLjBBcUkXzrgeWjhsf1kW5jMSQghZ8CuYqqdXLAOJ0jFNG5OBDQ9TLXQUJCWpUWU2DuHfsUecSbJU9pFqGnsHhfdO6EhOTNMCwzNw-3cMrglomcuAIlhpfzGWlbq0MotssZi8ERBNTiVLDz1FoVU_HHQvY",
+      "places/ChIJ7fmtM2LbJIgR6s8inf7pLoU/photos/AV-0GLebdw0VkzZX4eFNyCQB0D6MWIcUkDsjClGtuzwKypE6ekcMqW9EYuFzxrFrNR3jsBVHZsVbEgBhtnO8uLIZzIJ0G0yDsOoqNrFrCKHVMqZxHXwnLFtNLJrL3MwY_KST2e20-7MmhhJ2AQK0YxBUS2XP9D6gd0RlO1Yxx9LjwAEH6J2SYSpgmm9PG7T750Mp-mhGpVUb8rEJG65PQGf3kRqHbmK2FWYAkFk0JgukjbsrDDhYovUFHgdzuHJRXZbM02DIZgoQYDITGhcJYSXgBqTeZZv07nqtBrlvN45m1rly2ttt0GUqGiMieJLjNxTvGV5mknRlTDqIgjM3b-OLPaE6ehUMaGg89wfB2fmlmoJDy5qapDVGZAVz_tX0cuGeDaCpT572LW45RxSPe188TGhxSEyp2Q38lBP5v_ASJpkH",
+      "places/ChIJ7fmtM2LbJIgR6s8inf7pLoU/photos/AV-0GLcRhb4Jjx1OjnfvS74Gcm9Lvn0N5xRezFbJ6uVDOwzEb1_quF-71uPvnGuAlwkTLzksCzUrBPhywQSde1VDSeAAV84w0Ksz0Y1LslBnHcG-JdfF70SWL5XAuyb8biaGZN3sVAJ9_HdX4LSNs1zHGk89_Bq14zr-gIUY-wi66aCl0IoyGSdDSnrx62-xzeIHpc54mrk4PQisXlVZbU0Y6ezafr66aX_CwRouKBkhB3Vxv7gHmzc3aQuOScJDDqlJqBMj70cCItyhPLO8KRFHgQRY3Pya4cB0-Fc7dD2W2p4y9OTHaDMsUqvA3xksyae5VkIt2LxyJfiXPi6H4A2S8SDw52hAuDRBKnjjYzHIviW6DWRq5cef1BrOKed-N1w72voDeluAYWAW71euVGyxObaTLgv_S858MIMK1stYTcneCQ",
+      "places/ChIJ7fmtM2LbJIgR6s8inf7pLoU/photos/AV-0GLcbg9jpGm0Ku7snG0EIyyTQ_-tBVBoTdToyLC1CYp5zXVK4mkcUEzs4mmbu8jGN0BWuiOuGUFIQVgdMsT2zUh7mvEZEHgO-mhOkGNP23WxOW5rtKGn1jRnuj0G9xHv7VGLeXf51kXeyqcS_6hNH_Y_OX1YnWDu9wnnubUHnTAFC8ZiGGZP3PxisRkLCFX88aaNp_T9afJ96kF3eUOuHWd_3IId7VCdRxyg-73KLyWDLMUrXm9wngCl2Kg-USrEEbXj7V5AY-iZw3tNxpar1zszakwz1TUKou4wC0-Q0irgwdc9txtf_mOScko-mLfeHe4jeuhEsdIjW1h_4kNotrKVmJrPG4NM8PErrHszrHBRR4ZwRxIS0dH8b0A6_dzBhsC-CG-0mR_DbT68MooH4UNXXitDlYIFpBPgoQsQ0NV1L",
+      "places/ChIJ7fmtM2LbJIgR6s8inf7pLoU/photos/AV-0GLcCZSpxdZIPUSL37tpVJisn6X89tobDiJA_TS40xFD6zQgvqAuul_IB1ad46wlRCRNaf1TkuryqGrOa2rAanVolnrnurmeBz8pNzZODsXgoDb6RyQEa-jegLdYiKeSliOi9SP4o_AzB0_5IGjvGkvORQ6JVJ4qUXb0_cgsbxgV8ec2ATQdQpG0HT9CjgzxcF4K1Khfm8wTQ3nmQTTZk78rsGsAXDS9UDBPL1sKpvHoVx_WlBXHT1zQyKzKfLPJoUoLPCSlXt8lJzGT0eLeiNx3bAWi0j2uscfS6ZRqNiJaK8r43wSWV3_1_Jw_PsboOH52N8gXCgX4C5bf1FQwVbh2hdq5CN7d9TeLWX_EjTxkvQoAiu2MG9itfhVMdkWvknuZvvaGDxVydBdRBbWBOGYW4iMEp8trKzx5OCUI9IZ0D2g"
+    ],
+    "types": [
+      "indian_restaurant",
+      "halal_restaurant",
+      "buffet_restaurant",
+      "vegan_restaurant",
+      "vegetarian_restaurant",
+      "bangladeshi_restaurant",
+      "family_restaurant",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "buffet_score": 35,
+    "buffet_confidence": "MEDIUM",
+    "buffet_evidence": [
+      "buffet mentioned in 1 review",
+      "matched 'Indian buffet' search query"
+    ],
+    "is_buffet": true,
+    "state": "MI",
+    "found_via": "Indian buffet",
+    "search_location": "Farmington Hills",
+    "metro_rank": 14,
+    "scraped_at": "2026-11-14T20:27:08.843156Z"
+  },
+  {
+    "place_id": "ChIJEx3iIUFTO4gRz9hJQU_a-cA",
+    "name": "Authentikka Indian Cuisine, Bar & Banquet",
+    "address": "42070 Ford Rd, Canton Township, MI 48187, USA",
+    "lat": 42.3246275,
+    "lng": -83.45720639999999,
+    "phone": "(734) 892-2997",
+    "website": "https://www.miauthentikka.com/",
+    "rating": 4.3,
+    "review_count": 1756,
+    "price_level": "PRICE_LEVEL_MODERATE",
+    "business_status": "OPERATIONAL",
+    "hours": [
+      "Monday: 11:30\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u20099:30\u202fPM",
+      "Tuesday: Closed",
+      "Wednesday: 11:30\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u20099:30\u202fPM",
+      "Thursday: 11:30\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u20099:30\u202fPM",
+      "Friday: 11:30\u202fAM\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 11:30\u202fAM\u2009\u2013\u20093:00\u202fPM, 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 11:30\u202fAM\u2009\u2013\u20093:00\u202fPM, 5:00\u2009\u2013\u20099:30\u202fPM"
+    ],
+    "hours_periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 0,
+          "hour": 15,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 0,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 1,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 3,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 4,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 21,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 5,
+          "hour": 14,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 11,
+          "minute": 30
+        },
+        "close": {
+          "day": 6,
+          "hour": 15,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 22,
+          "minute": 0
+        }
+      }
+    ],
+    "photo_refs": [
+      "places/ChIJEx3iIUFTO4gRz9hJQU_a-cA/photos/AV-0GLdExzO5J6ALlX0isb41oKiRRsi5CRd6zaOsA7W3prGn2o7Y7UguIfTVvAv0tL_ZC1jTTiX0qWiIfME1rtpDSUakS5TucAj43Xq62SAXacjwwOG3LX5f3haS8dfd2IOmKBvIMcWRyvFrueuahacWJ7pc2UVrKqNQR30bBbLtqZalR4XBE14QYMBD1X3EduV4nGwXWIJP46RjhVO01lymKlyjabzASd6kdLbZzhlROJcrbPjetz-BAmCr5vFtGpgiSoXPl5XfO04BKgYBjJtX0oq_8Ud2mx2vFrnJcJX-gyneCU8ZxD_gsPFtRC-uXNluWlQLI2P4M3hHqk7idAL3ZxVjYYF7lXY9_DtnAZmZ4DR3HjArNb54ne5kaJPwwK5aH5BJImOSUoBStVxqDSH6QOGf6DNUTRqwKJw_xI4IFZxamA",
+      "places/ChIJEx3iIUFTO4gRz9hJQU_a-cA/photos/AV-0GLdzncjplcVzV08Y-pdMH1VNRDvJ9DNzYtIMQd-FoGMtpGxp51yUZFhRkjNBkMgAeve2jgAuCDpRFhNRfEDBR9nZ96oGFhBWSgEbMUjR5fA3YT6cqOGAX8eT8WjjV9L61DuQsYqCtrmkkD5VErP9-IkK-giv22XlH_3M3n4tPqNWsoJlIb1huJmyFdtqQOulCtDK7ukKW_yKPgzBYmgNqQ5ScCdTg_ZQXIzcQ4UiyAzPi3pyXfvugKvf-hDqE9WYoAHQuiWpdgT5M87J2DXvr_d5P1xre2670eTy1842ok1pHRHTfsg3_eC4_kNLG1mI-boj2NKKxxCkvMEOE82I-bSG8V2boOekZArL29w-rXq81oJnrgNLo6JKHC3uDBWyqqEtEQpp5v0g5Ux0Nl-MCBgmf1qmIMqoLaXMUi62wTrpfA",
+      "places/ChIJEx3iIUFTO4gRz9hJQU_a-cA/photos/AV-0GLdAzS5AcmA0RUzSBA0eb2gqPoF28xrHoInJVy2uYbJ7xqg3-93Yfd9iBhoZWgF_0NzWZRlOBUwMQLmWX_I81cadKO7bdKgsc-iddj2TjIeYp34-ryy1bL_L015A_eXyJYmlk1Rct2PwBF0Jt1EKxGzDn5479rIH2g-s8tJ4FcN9rmiRvTPhf5K--FvDQPUTCr29l52aBbolJsmlFbJMGkGf9aPulDM9kqnwvZ5Olj_we-AxZ9uJBupyRb9QrG0_7G0OV6rPHGzUPK0VS5m1wl83ui-rmSSdFb5wb8TsuLcqqcfDOMPMpUlDaRzd6rrS6CZfMxmyJyvNaEPVWZCSbLLv_Kk-Zmxdi7VNiqaVF2MMZA8jVVsZTDv4k5cNN48oZd5gnwJa6DE235mkZOIEJTSr7364umyq6ocwvXf-hNUhzQ",
+      "places/ChIJEx3iIUFTO4gRz9hJQU_a-cA/photos/AV-0GLfM2JLAdMM-iOrBfsy13EnkNK96vK0IMzoFrlf2y9saFk9Hv4lXbS5cMMK_Ry0L6dRtIXygvxeKlkx3KI_nrY2juSrI26oGC2DwmevV3UCaP3a2HN0vwFy6M20gXZ64DwTLRaJ225axyJdI_EQcNN7I8h_mvaLaxlSyjSkvuEIilzwwqv9NzPJt-yep_QDcsbEUPsyUu9btPkRpFhyjhtXVfmIabZZxm5ZbVD7yabnyQ4xb0Phaz1kcQIkVVwcpIX5isRskEwVltA7zQSWSI4xCPYjVoyLEoSb_Fxb19AO9y0dvJ6wSJjDNBUqOCahRWZ6eNuTXx6b1m3Ca7bNG5Sfy45Fff6tnBmYFqX7Vm-_AfLp_T9tvzAILCUC_-S-cAJj1KqiDVbZS67hroARXXRsjmxTr",
+      "places/ChIJEx3iIUFTO4gRz9hJQU_a-cA/photos/AV-0GLfLMimV8v7MymcXrfvYfLdfXzVvpOAK1VpBKMRDjl8dzW5jaqiWTfanBZccQxgCS_eXi4noFAxSPMBk2ZkSR_1A1Yk_I-7juxEtF-g1sYdT4saTpK8hc2Rced2Ab4K-RLrZJWzOpcn4tDuITMX9DHIBsM_rvrD4-xkQgf-87xhXI7Q7EoO-NAJOFtEOr5yrPUnTZ_9PskPv7PHYLlobsRwQldK6UgYCobbm5ngcHpS1Hf9MdFFqXa5lK6OVsdTDlWELmsSzyXieFIonxzM_g-FW6itl5kbUasP7MdQgMcUVyjACk24c6PZuMXe-kntcj8j-QltVMnFQWGUFz2tnMFe2x5c39gG5V4hpl-6SDGLzUNcc5uSyZM2To18KfHtTyQLuEc9m9tmTJMzh66wGQ4u_u92k-RyKEY7hhxkbpPKXug"
+    ],
+    "types": [
+      "indian_restaurant",
+      "banquet_hall",
+      "event_venue",
+      "bar",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "buffet_score": 45,
+    "buffet_confidence": "MEDIUM",
+    "buffet_evidence": [
+      "buffet mentioned in 2/5 reviews",
+      "matched 'Indian buffet' search query"
+    ],
+    "is_buffet": true,
+    "state": "MI",
+    "found_via": "Indian buffet",
+    "search_location": "Canton",
+    "metro_rank": 19,
+    "scraped_at": "2026-11-14T20:27:13.724192Z"
+  }
+]

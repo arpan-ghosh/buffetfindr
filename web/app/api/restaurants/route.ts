@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import path from "path";
 import fs from "fs";
 import type { Restaurant } from "@/lib/types";
+import { REGION_DEFS, ALL_REGION_FILES, inRegionBounds } from "@/lib/regions";
 
 const USE_DB = !!process.env.DATABASE_URL;
 
@@ -10,69 +11,8 @@ const USE_DB = !!process.env.DATABASE_URL;
 // dataset passed 500. Old app builds can only be fixed from here.
 const MIN_LIMIT = 1000;
 
-// Region → state abbreviations (matches what's stored in DB / JSON)
-const REGION_STATES: Record<string, string[]> = {
-  dmv:     ["MD", "VA", "DC"],
-  boston:  ["MA"],
-  nyc:     ["NY"],
-  philly:  ["PA"],
-  nj:      ["NJ"],
-  chicago: ["IL"],
-  seattle: ["WA"],
-  la:      ["CA"],
-  dallas:  ["TX"],
-  houston: ["TX"],
-  miami:   ["FL"],
-  atlanta: ["GA"],
-  bayarea: ["CA"],
-  phoenix: ["AZ"],
-  columbus:   ["OH"],
-  cincinnati: ["OH", "KY"], // metro straddles the Ohio River
-  cleveland:  ["OH"],
-};
-
-// Metros sharing a state are split by latitude:
-// Dallas ≈ 32.8 / Houston ≈ 29.8 (TX), Bay Area ≈ 37.5 / LA ≈ 34 (CA),
-// Cleveland ≈ 41.5 / Columbus ≈ 40.0 / Cincinnati ≈ 39.1 (OH)
-const REGION_LAT_RANGE: Record<string, [number, number]> = {
-  dallas:  [31.5, 90],
-  houston: [-90, 31.5],
-  bayarea: [36, 90],
-  la:      [-90, 36],
-  columbus:   [39.6, 40.8],
-  cleveland:  [40.8, 90],
-  cincinnati: [-90, 39.6],
-};
-
-// JSON file names per region
-const REGION_FILES: Record<string, string[]> = {
-  all:     ["maryland", "virginia", "dc", "massachusetts", "new_york", "philadelphia", "new_jersey", "illinois", "washington", "los_angeles", "dallas", "houston", "miami", "atlanta", "bay_area", "phoenix", "columbus", "cincinnati", "cleveland"],
-  dmv:     ["maryland", "virginia", "dc"],
-  boston:  ["massachusetts"],
-  nyc:     ["new_york"],
-  philly:  ["philadelphia"],
-  nj:      ["new_jersey"],
-  chicago: ["illinois"],
-  seattle: ["washington"],
-  la:      ["los_angeles"],
-  dallas:  ["dallas"],
-  houston: ["houston"],
-  miami:   ["miami"],
-  atlanta: ["atlanta"],
-  bayarea: ["bay_area"],
-  phoenix: ["phoenix"],
-  columbus:   ["columbus"],
-  cincinnati: ["cincinnati"],
-  cleveland:  ["cleveland"],
-};
-
 function statesForRegion(region: string): string[] | null {
-  return region === "all" ? null : (REGION_STATES[region] ?? [region.toUpperCase()]);
-}
-
-function inRegionLat(r: Restaurant, region: string): boolean {
-  const range = REGION_LAT_RANGE[region];
-  return !range || (r.lat != null && r.lat >= range[0] && r.lat < range[1]);
+  return region === "all" ? null : (REGION_DEFS[region]?.states ?? [region.toUpperCase()]);
 }
 
 // ── DB path (Neon) ────────────────────────────────────────────────────────────
@@ -96,7 +36,7 @@ async function dbQuery(params: {
 
   const allowedStates = statesForRegion(params.state);
   if (allowedStates)
-    restaurants = restaurants.filter(r => allowedStates.includes(r.state?.toUpperCase() ?? "") && inRegionLat(r, params.state));
+    restaurants = restaurants.filter(r => allowedStates.includes(r.state?.toUpperCase() ?? "") && inRegionBounds(r, params.state));
   if (params.buffetsOnly && params.minScore > 0)
     restaurants = restaurants.filter(r => (r.buffet_score ?? 0) >= params.minScore);
   if (params.confidence)
@@ -127,7 +67,7 @@ function fileQuery(params: {
   limit: number;
 }): { restaurants: Restaurant[]; total: number } {
   const suffix = params.buffetsOnly ? "buffets" : "all";
-  const regionFiles = REGION_FILES[params.state] ?? REGION_FILES.all;
+  const regionFiles = REGION_DEFS[params.state]?.files ?? ALL_REGION_FILES;
   const allFiles = regionFiles.flatMap(name => [
     path.join(process.cwd(), "data", `${name}_${suffix}.json`),
   ]);
@@ -138,7 +78,7 @@ function fileQuery(params: {
 
   const seen = new Set<string>();
   restaurants = restaurants.filter(r => { if (seen.has(r.place_id)) return false; seen.add(r.place_id); return true; });
-  restaurants = restaurants.filter(r => inRegionLat(r, params.state));
+  restaurants = restaurants.filter(r => inRegionBounds(r, params.state));
   if (params.buffetsOnly)
     restaurants = restaurants.filter(r => r.buffet_score >= params.minScore);
   restaurants = restaurants

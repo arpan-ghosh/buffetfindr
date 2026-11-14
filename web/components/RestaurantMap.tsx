@@ -23,6 +23,18 @@ const REGION_VIEW: Record<string, { center: { lat: number; lng: number }; zoom: 
   columbus:   { center: { lat: 40.02, lng: -83.01 }, zoom: 10 },
   cincinnati: { center: { lat: 39.25, lng: -84.45 }, zoom: 10 },
   cleveland:  { center: { lat: 41.48, lng: -81.70 }, zoom: 10 },
+  austin:      { center: { lat: 30.38, lng: -97.74  }, zoom: 10 },
+  sanantonio:  { center: { lat: 29.52, lng: -98.52  }, zoom: 10 },
+  sandiego:    { center: { lat: 32.92, lng: -117.15 }, zoom: 10 },
+  sacramento:  { center: { lat: 38.60, lng: -121.40 }, zoom: 10 },
+  lasvegas:    { center: { lat: 36.13, lng: -115.17 }, zoom: 10 },
+  detroit:     { center: { lat: 42.47, lng: -83.25  }, zoom: 10 },
+  minneapolis: { center: { lat: 44.94, lng: -93.27  }, zoom: 10 },
+  denver:      { center: { lat: 39.71, lng: -104.96 }, zoom: 10 },
+  tampa:       { center: { lat: 27.98, lng: -82.50  }, zoom: 10 },
+  orlando:     { center: { lat: 28.52, lng: -81.40  }, zoom: 10 },
+  charlotte:   { center: { lat: 35.22, lng: -80.80  }, zoom: 10 },
+  raleigh:     { center: { lat: 35.84, lng: -78.82  }, zoom: 10 },
 };
 
 const MAP_STYLE = [
