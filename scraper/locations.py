@@ -587,112 +587,222 @@ CLEVELAND = [
     {"name": "Avon",                              "lat": 41.4517, "lng": -82.0354},
 ]
 
-# ── Second metro expansion (top-20 samples) ───────────────────────────────────
+# ── Second metro expansion (full grids) ───────────────────────────────────────
 
 AUSTIN = [
-    {"name": "Austin",                         "lat": 30.2672, "lng": -97.7431},
-    {"name": "North Austin / Domain",          "lat": 30.4021, "lng": -97.7253},
-    {"name": "Cedar Park",                     "lat": 30.5052, "lng": -97.8203},
-    {"name": "Round Rock",                     "lat": 30.5083, "lng": -97.6789},
-    {"name": "Pflugerville",                   "lat": 30.4394, "lng": -97.6200},
-    {"name": "South Austin",                   "lat": 30.2010, "lng": -97.8000},
+    # Central + south
+    {"name": "Austin",                                    "lat": 30.2672, "lng": -97.7431},
+    {"name": "North Central / Burnet Rd",                 "lat": 30.3400, "lng": -97.7300},
+    {"name": "South Austin",                              "lat": 30.2010, "lng": -97.8000},
+    {"name": "Bee Cave / Lakeway",                        "lat": 30.3085, "lng": -97.9400},
+    {"name": "Buda / Kyle",                               "lat": 30.0500, "lng": -97.8500},
+    {"name": "Manor / East Austin",                       "lat": 30.3407, "lng": -97.5800},
+    # North — Domain, Lakeline, Cedar Park, Round Rock are the Indian hubs
+    {"name": "North Austin / Domain",                     "lat": 30.4021, "lng": -97.7253},
+    {"name": "Anderson Mill / Lakeline",                  "lat": 30.4560, "lng": -97.8000},
+    {"name": "Cedar Park",                                "lat": 30.5052, "lng": -97.8203},
+    {"name": "Leander",                                   "lat": 30.5788, "lng": -97.8531},
+    {"name": "Round Rock",                                "lat": 30.5083, "lng": -97.6789},
+    {"name": "Pflugerville",                              "lat": 30.4394, "lng": -97.6200},
+    {"name": "Hutto",                                     "lat": 30.5427, "lng": -97.5467},
+    {"name": "Georgetown",                                "lat": 30.6333, "lng": -97.6780},
 ]
 
 SAN_ANTONIO = [
-    {"name": "San Antonio",                    "lat": 29.4241, "lng": -98.4936},
-    {"name": "Medical Center",                 "lat": 29.5080, "lng": -98.5750},
-    {"name": "Stone Oak",                      "lat": 29.6300, "lng": -98.4900},
-    {"name": "UTSA / Helotes",                 "lat": 29.5830, "lng": -98.6200},
-    {"name": "Live Oak / Universal City",      "lat": 29.5650, "lng": -98.3360},
+    {"name": "San Antonio",                               "lat": 29.4241, "lng": -98.4936},
+    {"name": "Alamo Heights / Airport",                   "lat": 29.5200, "lng": -98.4600},
+    {"name": "Medical Center",                            "lat": 29.5080, "lng": -98.5750},
+    {"name": "UTSA / La Cantera",                         "lat": 29.5830, "lng": -98.6200},
+    {"name": "Stone Oak",                                 "lat": 29.6300, "lng": -98.4900},
+    {"name": "Leon Springs / Boerne",                     "lat": 29.7000, "lng": -98.6600},
+    {"name": "Alamo Ranch / Westover Hills",              "lat": 29.4800, "lng": -98.7100},
+    {"name": "Lackland / Southwest",                      "lat": 29.3900, "lng": -98.6300},
+    {"name": "Brooks / South Side",                       "lat": 29.3400, "lng": -98.4500},
+    {"name": "Live Oak / Universal City",                 "lat": 29.5650, "lng": -98.3360},
+    {"name": "New Braunfels",                             "lat": 29.7030, "lng": -98.1245},
 ]
 
 SAN_DIEGO = [
-    {"name": "Mira Mesa / Miramar",            "lat": 32.9156, "lng": -117.1439},
-    {"name": "Kearny Mesa",                    "lat": 32.8300, "lng": -117.1500},
-    {"name": "Downtown / Hillcrest",           "lat": 32.7400, "lng": -117.1611},
-    {"name": "La Jolla / UTC",                 "lat": 32.8700, "lng": -117.2150},
-    {"name": "Rancho Bernardo / Poway",        "lat": 33.0180, "lng": -117.0750},
-    {"name": "San Marcos / Vista",             "lat": 33.1400, "lng": -117.2000},
+    # City — Mira Mesa / Miramar Rd is the Indian hub
+    {"name": "Downtown / Hillcrest",                      "lat": 32.7400, "lng": -117.1611},
+    {"name": "Pacific Beach / Point Loma",                "lat": 32.7900, "lng": -117.2400},
+    {"name": "Kearny Mesa",                               "lat": 32.8300, "lng": -117.1500},
+    {"name": "La Jolla / UTC",                            "lat": 32.8700, "lng": -117.2150},
+    {"name": "Mira Mesa / Miramar",                       "lat": 32.9156, "lng": -117.1439},
+    {"name": "Carmel Valley / Del Mar",                   "lat": 32.9400, "lng": -117.2300},
+    {"name": "Rancho Bernardo / Poway",                   "lat": 33.0180, "lng": -117.0750},
+    # East + South County
+    {"name": "La Mesa / El Cajon",                        "lat": 32.7800, "lng": -116.9900},
+    {"name": "Chula Vista / National City",               "lat": 32.6401, "lng": -117.0842},
+    # North County (stays south of 33.4, the LA line)
+    {"name": "Escondido",                                 "lat": 33.1192, "lng": -117.0864},
+    {"name": "San Marcos / Vista",                        "lat": 33.1400, "lng": -117.2000},
+    {"name": "Carlsbad / Encinitas",                      "lat": 33.1100, "lng": -117.2900},
+    {"name": "Oceanside",                                 "lat": 33.1959, "lng": -117.3795},
 ]
 
 SACRAMENTO = [
-    {"name": "Sacramento",                     "lat": 38.5816, "lng": -121.4944},
-    {"name": "Roseville",                      "lat": 38.7521, "lng": -121.2880},
-    {"name": "Folsom",                         "lat": 38.6780, "lng": -121.1761},
-    {"name": "Elk Grove",                      "lat": 38.4088, "lng": -121.3716},
-    {"name": "Rancho Cordova",                 "lat": 38.5891, "lng": -121.3027},
-    {"name": "Davis",                          "lat": 38.5449, "lng": -121.7405},
+    {"name": "Sacramento",                                "lat": 38.5816, "lng": -121.4944},
+    {"name": "Natomas",                                   "lat": 38.6500, "lng": -121.5100},
+    {"name": "Arden-Arcade",                              "lat": 38.6000, "lng": -121.3800},
+    {"name": "South Sacramento / Florin",                 "lat": 38.4900, "lng": -121.4300},
+    {"name": "Elk Grove",                                 "lat": 38.4088, "lng": -121.3716},
+    {"name": "Rancho Cordova",                            "lat": 38.5891, "lng": -121.3027},
+    {"name": "Citrus Heights / Fair Oaks",                "lat": 38.6800, "lng": -121.2800},
+    {"name": "North Highlands / Antelope",                "lat": 38.7000, "lng": -121.3900},
+    {"name": "Roseville",                                 "lat": 38.7521, "lng": -121.2880},
+    {"name": "Rocklin / Lincoln",                         "lat": 38.8200, "lng": -121.2400},
+    {"name": "Folsom",                                    "lat": 38.6780, "lng": -121.1761},
+    # Yolo County (east of -121.9; Vacaville/Fairfield are Bay Area)
+    {"name": "Davis",                                     "lat": 38.5449, "lng": -121.7405},
+    {"name": "Woodland",                                  "lat": 38.6785, "lng": -121.7733},
 ]
 
 LAS_VEGAS = [
-    {"name": "The Strip / Paradise",           "lat": 36.1147, "lng": -115.1728},
-    {"name": "Spring Valley",                  "lat": 36.1080, "lng": -115.2450},
-    {"name": "Summerlin",                      "lat": 36.1700, "lng": -115.3100},
-    {"name": "Henderson",                      "lat": 36.0395, "lng": -114.9817},
-    {"name": "North Las Vegas / Centennial",   "lat": 36.2700, "lng": -115.2000},
+    {"name": "The Strip / Paradise",                      "lat": 36.1147, "lng": -115.1728},
+    {"name": "Downtown Las Vegas",                        "lat": 36.1699, "lng": -115.1398},
+    {"name": "Spring Valley / Chinatown",                 "lat": 36.1080, "lng": -115.2450},
+    {"name": "Summerlin",                                 "lat": 36.1700, "lng": -115.3100},
+    {"name": "Southwest / Enterprise",                    "lat": 36.0300, "lng": -115.2500},
+    {"name": "Silverado Ranch / South Strip",             "lat": 36.0100, "lng": -115.1500},
+    {"name": "Green Valley",                              "lat": 36.0500, "lng": -115.0600},
+    {"name": "Henderson",                                 "lat": 36.0300, "lng": -114.9800},
+    {"name": "Sunrise Manor / East Las Vegas",            "lat": 36.1600, "lng": -115.0600},
+    {"name": "North Las Vegas / Aliante",                 "lat": 36.2700, "lng": -115.1500},
+    {"name": "Centennial Hills",                          "lat": 36.2800, "lng": -115.2600},
 ]
 
 DETROIT = [
-    {"name": "Farmington Hills",               "lat": 42.4990, "lng": -83.3677},
-    {"name": "Troy",                           "lat": 42.6064, "lng": -83.1498},
-    {"name": "Canton",                         "lat": 42.3087, "lng": -83.4822},
-    {"name": "Novi",                           "lat": 42.4806, "lng": -83.4755},
-    {"name": "Hamtramck / Detroit",            "lat": 42.3928, "lng": -83.0496},
-    {"name": "Sterling Heights",               "lat": 42.5803, "lng": -83.0302},
+    # Oakland County — Troy, Farmington Hills, Novi are the Indian hubs
+    {"name": "Farmington Hills",                          "lat": 42.4990, "lng": -83.3677},
+    {"name": "Novi",                                      "lat": 42.4806, "lng": -83.4755},
+    {"name": "West Bloomfield / Commerce",                "lat": 42.5600, "lng": -83.4200},
+    {"name": "Southfield / Royal Oak",                    "lat": 42.4800, "lng": -83.2000},
+    {"name": "Troy",                                      "lat": 42.6064, "lng": -83.1498},
+    {"name": "Rochester Hills / Auburn Hills",            "lat": 42.6700, "lng": -83.1900},
+    # Macomb County
+    {"name": "Sterling Heights",                          "lat": 42.5803, "lng": -83.0302},
+    {"name": "Warren / Madison Heights",                  "lat": 42.4900, "lng": -83.0700},
+    {"name": "Shelby / Macomb Township",                  "lat": 42.6500, "lng": -82.9500},
+    # Wayne County + Ann Arbor
+    {"name": "Hamtramck / Detroit",                       "lat": 42.3928, "lng": -83.0496},
+    {"name": "Dearborn",                                  "lat": 42.3223, "lng": -83.1763},
+    {"name": "Livonia / Westland",                        "lat": 42.3684, "lng": -83.3527},
+    {"name": "Canton",                                    "lat": 42.3087, "lng": -83.4822},
+    {"name": "Taylor / Downriver",                        "lat": 42.2200, "lng": -83.2400},
+    {"name": "Ypsilanti",                                 "lat": 42.2411, "lng": -83.6130},
+    {"name": "Ann Arbor",                                 "lat": 42.2808, "lng": -83.7430},
 ]
 
 MINNEAPOLIS = [
-    {"name": "Minneapolis",                    "lat": 44.9778, "lng": -93.2650},
-    {"name": "St. Paul",                       "lat": 44.9537, "lng": -93.0900},
-    {"name": "Bloomington / Edina",            "lat": 44.8408, "lng": -93.2983},
-    {"name": "Eden Prairie",                   "lat": 44.8547, "lng": -93.4708},
-    {"name": "Plymouth / Maple Grove",         "lat": 45.0500, "lng": -93.4500},
-    {"name": "Eagan",                          "lat": 44.8041, "lng": -93.1669},
+    {"name": "Minneapolis",                               "lat": 44.9778, "lng": -93.2650},
+    {"name": "St. Paul",                                  "lat": 44.9537, "lng": -93.0900},
+    {"name": "Roseville / New Brighton",                  "lat": 45.0400, "lng": -93.1700},
+    {"name": "Woodbury",                                  "lat": 44.9239, "lng": -92.9594},
+    {"name": "Bloomington / Edina",                       "lat": 44.8408, "lng": -93.2983},
+    {"name": "Eagan",                                     "lat": 44.8041, "lng": -93.1669},
+    {"name": "Burnsville / Apple Valley",                 "lat": 44.7300, "lng": -93.2500},
+    {"name": "Eden Prairie",                              "lat": 44.8547, "lng": -93.4708},
+    {"name": "Minnetonka / St. Louis Park",               "lat": 44.9300, "lng": -93.4000},
+    {"name": "Plymouth",                                  "lat": 45.0105, "lng": -93.4555},
+    {"name": "Maple Grove",                               "lat": 45.1000, "lng": -93.4400},
+    {"name": "Brooklyn Park",                             "lat": 45.0941, "lng": -93.3563},
+    {"name": "Blaine / Coon Rapids",                      "lat": 45.1608, "lng": -93.2349},
 ]
 
 DENVER = [
-    {"name": "Denver",                         "lat": 39.7392, "lng": -104.9903},
-    {"name": "Aurora",                         "lat": 39.7000, "lng": -104.8200},
-    {"name": "Lakewood",                       "lat": 39.7047, "lng": -105.0814},
-    {"name": "Centennial / DTC",               "lat": 39.6000, "lng": -104.8900},
-    {"name": "Westminster / Broomfield",       "lat": 39.8800, "lng": -105.0500},
-    {"name": "Highlands Ranch / Lone Tree",    "lat": 39.5450, "lng": -104.9300},
+    {"name": "Denver",                                    "lat": 39.7392, "lng": -104.9903},
+    {"name": "Lakewood",                                  "lat": 39.7047, "lng": -105.0814},
+    {"name": "Arvada / Wheat Ridge",                      "lat": 39.8000, "lng": -105.1100},
+    {"name": "Green Valley Ranch / DIA",                  "lat": 39.7800, "lng": -104.8000},
+    {"name": "Aurora",                                    "lat": 39.7000, "lng": -104.8200},
+    {"name": "Southeast Aurora / Southlands",             "lat": 39.6000, "lng": -104.7300},
+    {"name": "Centennial / DTC",                          "lat": 39.6000, "lng": -104.8900},
+    {"name": "Littleton / Ken Caryl",                     "lat": 39.6000, "lng": -105.0500},
+    {"name": "Highlands Ranch / Lone Tree",               "lat": 39.5450, "lng": -104.9300},
+    {"name": "Parker",                                    "lat": 39.5186, "lng": -104.7614},
+    {"name": "Castle Rock",                               "lat": 39.3722, "lng": -104.8561},
+    # North + Boulder County
+    {"name": "Westminster / Broomfield",                  "lat": 39.8800, "lng": -105.0500},
+    {"name": "Thornton",                                  "lat": 39.9200, "lng": -104.9400},
+    {"name": "Louisville / Lafayette",                    "lat": 39.9700, "lng": -105.1300},
+    {"name": "Boulder",                                   "lat": 40.0150, "lng": -105.2705},
+    {"name": "Longmont",                                  "lat": 40.1672, "lng": -105.1019},
 ]
 
 TAMPA = [
-    {"name": "Tampa",                          "lat": 27.9506, "lng": -82.4572},
-    {"name": "New Tampa / Wesley Chapel",      "lat": 28.1700, "lng": -82.3600},
-    {"name": "Brandon",                        "lat": 27.9378, "lng": -82.2859},
-    {"name": "Carrollwood / Citrus Park",      "lat": 28.0600, "lng": -82.5400},
-    {"name": "Clearwater / Largo",             "lat": 27.9400, "lng": -82.7600},
-    {"name": "St. Petersburg",                 "lat": 27.7676, "lng": -82.6403},
+    # Hillsborough + Pasco
+    {"name": "Tampa",                                     "lat": 27.9506, "lng": -82.4572},
+    {"name": "South Tampa / Westshore",                   "lat": 27.9200, "lng": -82.5200},
+    {"name": "USF / Temple Terrace",                      "lat": 28.0600, "lng": -82.4000},
+    {"name": "Carrollwood / Citrus Park",                 "lat": 28.0600, "lng": -82.5400},
+    {"name": "Town 'n' Country / Oldsmar",                "lat": 28.0300, "lng": -82.6500},
+    {"name": "Lutz / Land O' Lakes",                      "lat": 28.1900, "lng": -82.4600},
+    {"name": "New Tampa / Wesley Chapel",                 "lat": 28.1700, "lng": -82.3600},
+    {"name": "Brandon",                                   "lat": 27.9378, "lng": -82.2859},
+    {"name": "Riverview",                                 "lat": 27.8400, "lng": -82.3300},
+    {"name": "Trinity / New Port Richey",                 "lat": 28.2000, "lng": -82.6800},
+    # Pinellas
+    {"name": "Clearwater / Largo",                        "lat": 27.9400, "lng": -82.7600},
+    {"name": "Palm Harbor",                               "lat": 28.0900, "lng": -82.7500},
+    {"name": "Pinellas Park",                             "lat": 27.8400, "lng": -82.7000},
+    {"name": "St. Petersburg",                            "lat": 27.7676, "lng": -82.6403},
+    # Polk (kept west of -81.85, the Orlando line)
+    {"name": "Plant City / Lakeland",                     "lat": 28.0300, "lng": -82.0300},
 ]
 
 ORLANDO = [
-    {"name": "Orlando",                        "lat": 28.5383, "lng": -81.3792},
-    {"name": "International Drive / Dr. Phillips","lat": 28.4500, "lng": -81.4700},
-    {"name": "Kissimmee",                      "lat": 28.3000, "lng": -81.4200},
-    {"name": "Lake Mary / Sanford",            "lat": 28.7589, "lng": -81.3178},
-    {"name": "Winter Park / UCF",              "lat": 28.6000, "lng": -81.2500},
-    {"name": "Winter Garden / Ocoee",          "lat": 28.5600, "lng": -81.5700},
+    {"name": "Orlando",                                   "lat": 28.5383, "lng": -81.3792},
+    {"name": "International Drive / Dr. Phillips",        "lat": 28.4500, "lng": -81.4700},
+    {"name": "South Orange Blossom Trail / Hunters Creek", "lat": 28.4000, "lng": -81.4050},
+    {"name": "Lake Buena Vista / Celebration",            "lat": 28.3500, "lng": -81.5300},
+    {"name": "Kissimmee",                                 "lat": 28.3000, "lng": -81.4200},
+    {"name": "Davenport / Four Corners",                  "lat": 28.2000, "lng": -81.6300},
+    {"name": "Lake Nona",                                 "lat": 28.3900, "lng": -81.2500},
+    {"name": "Winter Park",                               "lat": 28.6000, "lng": -81.3400},
+    {"name": "UCF / Waterford Lakes",                     "lat": 28.5800, "lng": -81.2000},
+    {"name": "Oviedo / Winter Springs",                   "lat": 28.6700, "lng": -81.2100},
+    {"name": "Altamonte Springs / Longwood",              "lat": 28.6800, "lng": -81.3800},
+    {"name": "Lake Mary / Sanford",                       "lat": 28.7589, "lng": -81.3178},
+    {"name": "Apopka",                                    "lat": 28.6800, "lng": -81.5100},
+    {"name": "Winter Garden / Ocoee",                     "lat": 28.5600, "lng": -81.5700},
+    {"name": "Clermont",                                  "lat": 28.5494, "lng": -81.7300},
 ]
 
 CHARLOTTE = [
-    {"name": "Uptown Charlotte",               "lat": 35.2271, "lng": -80.8431},
-    {"name": "Ballantyne / Pineville",         "lat": 35.0600, "lng": -80.8500},
-    {"name": "University City",                "lat": 35.3100, "lng": -80.7500},
-    {"name": "Matthews",                       "lat": 35.1168, "lng": -80.7237},
-    {"name": "Concord",                        "lat": 35.4000, "lng": -80.6000},
-    {"name": "Huntersville",                   "lat": 35.4107, "lng": -80.8428},
+    {"name": "Uptown Charlotte",                          "lat": 35.2271, "lng": -80.8431},
+    {"name": "SouthPark / South End",                     "lat": 35.1500, "lng": -80.8300},
+    {"name": "Ballantyne / Pineville",                    "lat": 35.0600, "lng": -80.8500},
+    {"name": "Steele Creek",                              "lat": 35.1200, "lng": -80.9700},
+    {"name": "Matthews",                                  "lat": 35.1168, "lng": -80.7237},
+    {"name": "Mint Hill / East Charlotte",                "lat": 35.2000, "lng": -80.7200},
+    {"name": "Indian Trail / Monroe",                     "lat": 35.0500, "lng": -80.6300},
+    {"name": "University City",                           "lat": 35.3100, "lng": -80.7500},
+    {"name": "Concord",                                   "lat": 35.3900, "lng": -80.6500},
+    {"name": "Huntersville",                              "lat": 35.4107, "lng": -80.8428},
+    {"name": "Cornelius / Mooresville",                   "lat": 35.5400, "lng": -80.8400},
+    {"name": "Gastonia / Belmont",                        "lat": 35.2500, "lng": -81.1000},
+    # South Carolina suburbs (state read from each address)
+    {"name": "Fort Mill SC",                              "lat": 35.0000, "lng": -80.9300},
+    {"name": "Rock Hill SC",                              "lat": 34.9249, "lng": -81.0251},
 ]
 
 RALEIGH = [
-    {"name": "Raleigh",                        "lat": 35.7796, "lng": -78.6382},
-    {"name": "Cary",                           "lat": 35.7915, "lng": -78.7811},
-    {"name": "Morrisville / RTP",              "lat": 35.8235, "lng": -78.8256},
-    {"name": "Durham",                         "lat": 35.9940, "lng": -78.8986},
-    {"name": "Chapel Hill",                    "lat": 35.9132, "lng": -79.0558},
-    {"name": "Apex / Holly Springs",           "lat": 35.7000, "lng": -78.8500},
+    # Wake County — Cary / Morrisville are the Indian hubs
+    {"name": "Raleigh",                                   "lat": 35.7796, "lng": -78.6382},
+    {"name": "North Raleigh",                             "lat": 35.8800, "lng": -78.6400},
+    {"name": "Brier Creek / RDU",                         "lat": 35.9000, "lng": -78.7900},
+    {"name": "Cary",                                      "lat": 35.7915, "lng": -78.7811},
+    {"name": "Morrisville / RTP",                         "lat": 35.8235, "lng": -78.8256},
+    {"name": "Apex",                                      "lat": 35.7327, "lng": -78.8503},
+    {"name": "Holly Springs / Fuquay-Varina",             "lat": 35.6200, "lng": -78.8200},
+    {"name": "Garner / South Raleigh",                    "lat": 35.7000, "lng": -78.6200},
+    {"name": "Knightdale / East Raleigh",                 "lat": 35.7900, "lng": -78.5000},
+    {"name": "Wake Forest",                               "lat": 35.9799, "lng": -78.5097},
+    # Durham + Orange
+    {"name": "Durham",                                    "lat": 35.9940, "lng": -78.8986},
+    {"name": "South Durham / Southpoint",                 "lat": 35.9050, "lng": -78.9400},
+    {"name": "Chapel Hill / Carrboro",                    "lat": 35.9132, "lng": -79.0558},
 ]
 
 STATE_MAP = {
@@ -725,6 +835,6 @@ STATE_MAP = {
     "denver":        {"locations": DENVER,        "abbr": "CO"},
     "tampa":         {"locations": TAMPA,         "abbr": "FL"},
     "orlando":       {"locations": ORLANDO,       "abbr": "FL"},
-    "charlotte":     {"locations": CHARLOTTE,     "abbr": "NC"},
+    "charlotte":     {"locations": CHARLOTTE,     "abbr": "NC", "state_from_address": True},
     "raleigh":       {"locations": RALEIGH,       "abbr": "NC"},
 }
