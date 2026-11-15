@@ -21,6 +21,9 @@ import { REGION_DEFS, ALL_REGION_FILES, inRegionBounds, type Box } from "@/lib/r
 
 const USE_DB = !!process.env.DATABASE_URL;
 
+const CACHE_OK = "public, s-maxage=300, stale-while-revalidate=3600";
+const CACHE_FALLBACK = "public, s-maxage=60";
+
 // Floor on results per request. The shipped iOS app (1.1.0) and the web page ask for
 // 500, which silently dropped the lowest-scoring buffets from the "All" view once the
 // dataset passed 500. Old app builds can only be fixed from here.
@@ -256,10 +259,13 @@ function badRequest(error: string) {
 async function withFallback(fromDb: () => Promise<Result>, fromFiles: () => Result) {
   if (!USE_DB) return NextResponse.json(fromFiles());
   try {
-    return NextResponse.json(await fromDb());
+    // The data changes a few times a week, but every uncached request pulls rows out of Neon
+    // and its free plan caps network transfer, so let Vercel's CDN answer repeats for 5 min.
+    return NextResponse.json(await fromDb(), { headers: { "Cache-Control": CACHE_OK } });
   } catch (err) {
     console.error("[restaurants] DB failed, serving JSON snapshot:", err instanceof Error ? err.message : err);
-    return NextResponse.json(fromFiles(), { headers: { "x-data-source": "files" } });
+    // Short, so the live data is back within a minute of the database recovering.
+    return NextResponse.json(fromFiles(), { headers: { "x-data-source": "files", "Cache-Control": CACHE_FALLBACK } });
   }
 }
 
