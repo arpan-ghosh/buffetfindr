@@ -248,13 +248,28 @@ function badRequest(error: string) {
   return NextResponse.json({ error }, { status: 400 });
 }
 
+/**
+ * Neon in production, JSON files in dev. If the database call fails (outage, exceeded
+ * quota), serve the committed JSON snapshot instead of a 500; it lacks DB-only fields such
+ * as buffet_schedule, so responses are marked with x-data-source: files.
+ */
+async function withFallback(fromDb: () => Promise<Result>, fromFiles: () => Result) {
+  if (!USE_DB) return NextResponse.json(fromFiles());
+  try {
+    return NextResponse.json(await fromDb());
+  } catch (err) {
+    console.error("[restaurants] DB failed, serving JSON snapshot:", err instanceof Error ? err.message : err);
+    return NextResponse.json(fromFiles(), { headers: { "x-data-source": "files" } });
+  }
+}
+
 export async function GET(req: NextRequest) {
   const p = req.nextUrl.searchParams;
 
   const placeId = p.get("place_id");
   if (placeId !== null) {
     if (!PLACE_ID_RE.test(placeId)) return badRequest("Invalid place_id");
-    return NextResponse.json(USE_DB ? await dbById(placeId) : fileById(placeId));
+    return withFallback(() => dbById(placeId), () => fileById(placeId));
   }
 
   const fields = p.get("fields");
@@ -277,6 +292,5 @@ export async function GET(req: NextRequest) {
     lite:        fields === "lite",
   };
 
-  const result = USE_DB ? await dbQuery(params) : fileQuery(params);
-  return NextResponse.json(result);
+  return withFallback(() => dbQuery(params), () => fileQuery(params));
 }
