@@ -57,14 +57,14 @@ scraper/data/*.json  →  web/data/*.json  →  Neon DB (db:seed)  →  web + mo
 | Washington (`WA`) | 136 | 30 |
 | Los Angeles (`CA`) | 271 | 85 |
 | Dallas (`TX`) | 210 | 53 |
-| Houston (`TX`) | top 20 | 8 |
-| Miami (`FL`) | top 20 | 6 |
-| Atlanta (`GA`) | top 20 | 3 |
+| Houston (`TX`) | 166 | 47 |
+| Miami (`FL`) | 91 | 22 |
+| Atlanta (`GA`) | 139 | 39 |
 | Bay Area (`CA`) | 347 | 91 |
-| Phoenix (`AZ`) | top 20 | 5 |
-| Columbus (`OH`) | top 20 | 11 |
-| Cincinnati (`OH`/`KY`) | top 20 | 6 |
-| Cleveland (`OH`) | top 20 | 7 |
+| Phoenix (`AZ`) | 83 | 21 |
+| Columbus (`OH`) | 68 | 23 |
+| Cincinnati (`OH`/`KY`) | 69 | 15 |
+| Cleveland (`OH`) | 48 | 13 |
 | Austin (`TX`) | top 20 | 6 |
 | San Antonio (`TX`) | top 20 | 6 |
 | San Diego (`CA`) | top 20 | 7 |
@@ -77,9 +77,9 @@ scraper/data/*.json  →  web/data/*.json  →  Neon DB (db:seed)  →  web + mo
 | Orlando (`FL`) | top 20 | 7 |
 | Charlotte (`NC`/`SC`) | top 20 | 6 |
 | Raleigh–Durham (`NC`) | top 20 | 8 |
-| **Total** | | **704** |
+| **Total (committed snapshot)** | | **862** |
 
-> Houston/Miami/Atlanta/Phoenix/Columbus/Cincinnati/Cleveland are **top-20 samples** (ranked by `rating × ln(reviews)`), not full grid scrapes. Bay Area (34 points), LA (35) and Dallas–Fort Worth (24) are full grid scrapes; LA/Dallas were merged with their earlier top-20 pass (higher buffet score wins) because a grid scan records a place under whichever query found it first and so can miss the "found via Indian buffet" +20 bonus. Dallas/Houston share `state=TX` (split at lat 31.5°) and LA/Bay Area share `state=CA` (split at lat 36°), Columbus/Cincinnati/Cleveland share `state=OH` (split at lat 39.6° and 40.8°; Cincinnati also includes N. Kentucky, `state=KY`, taken from each address); the API, region pages and restaurant pages split them by latitude.
+> Houston/Miami/Atlanta/Phoenix/Columbus/Cincinnati/Cleveland were upgraded from top-20 samples to full grid scrapes in Nov 2026 (merged with the top-20 pass; results >20 km from any grid point and non-South-Asian places dropped). Full-grid mode makes one search call per query (no pagination, max 20 results per query), so dense metros are likely under-covered. Bay Area (34 points), LA (35) and Dallas–Fort Worth (24) are also full grid scrapes; LA/Dallas were merged with their earlier top-20 pass (higher buffet score wins) because a grid scan records a place under whichever query found it first and so can miss the "found via Indian buffet" +20 bonus. Dallas/Houston share `state=TX` (split at lat 31.5°) and LA/Bay Area share `state=CA` (split at lat 36°), Columbus/Cincinnati/Cleveland share `state=OH` (split at lat 39.6° and 40.8°; Cincinnati also includes N. Kentucky, `state=KY`, taken from each address); the API, region pages and restaurant pages split them by latitude.
 >
 > The 12 metros added in Nov 2026 (Austin … Raleigh–Durham) are top-20 samples too. Metros sharing a state are now split by **bounding boxes** (lat and/or lng) defined once in `web/lib/regions.ts` (`REGION_DEFS`): TX = Dallas / Houston / Austin / San Antonio, CA = LA / Bay Area / San Diego / Sacramento, FL = Miami / Tampa / Orlando, NC = Charlotte (+SC) / Raleigh. Boxes within a state must not overlap.
 
@@ -92,7 +92,7 @@ scraper/data/*.json  →  web/data/*.json  →  Neon DB (db:seed)  →  web + mo
 6. Add region to `web/lib/regions.ts` `REGION_DEFS` (states, data files, and bounding `boxes` if it shares a state with another metro) — the API route, region page, restaurant page and sitemap all read it; also add label/description to `web/app/buffets/[region]/page.tsx` and `REGION_NAMES`/`REGION_LABELS` in `web/app/restaurant/[place_id]/page.tsx`
 7. Add pill to `web/components/FilterBar.tsx` `REGIONS` array
 8. Add pan/zoom target to `web/components/RestaurantMap.tsx` `REGION_VIEW`
-9. Add pan/zoom target to `mobile/lib/api.ts` `REGION_VIEW`
+9. Add the region (key, label, group, map centre) to `mobile/lib/regions.ts` `REGIONS` — the picker and map views derive from it
 10. Run `npm run db:seed`
 
 > **Note**: `db:seed` now also updates the `state` field on conflict, so re-scraping a region with a corrected state abbreviation will fix the DB.
@@ -171,6 +171,12 @@ Runs on port 3000 (or 3001 if taken). If you see 500 errors after accidental `np
 DATABASE_URL=postgresql://...          # Neon (auto-injected by Vercel Marketplace)
 NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=AIza...
 ```
+
+### API parameters (`/api/restaurants`)
+Legacy requests (`state`, `limit`, `min_score`, `confidence`, `search`, `buffets_only`) return exactly what they always did — shipped iOS apps rely on that; `limit` is floored at 1000. Opt-in params: `bbox=minLng,minLat,maxLng,maxLat`, `fields=lite` (14 keys per row, one photo ref), and `place_id=` (one full row). List responses are CDN-cached 5 min (`s-maxage=300`).
+
+### Neon free-plan limits and fallback
+The DB is Neon on the **Free plan** via the Vercel Marketplace: 5 GB network transfer and 100 CU-hours per month (storage 1 GB). Exceeding either suspends the DB (queries fail with HTTP 402) until the monthly reset. In Nov 2026 transfer hit 8.3 GB from uncached ~4 MB "All" queries and heavy testing. If the DB fails, `/api/restaurants`, `/buffets/[region]`, `/restaurant/[id]` and the sitemap serve the committed `web/data/*_buffets.json` snapshot (API marks it `x-data-source: files`; no schedule data, feedback/submissions/analyze-schedule fail). Keep `web/data` committed and current. Avoid bulk test traffic against production; check usage in the Neon console (Vercel → Storage → Neon → Open in Neon).
 
 ### Database
 ```bash
