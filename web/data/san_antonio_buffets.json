@@ -1,5 +1,339 @@
 [
   {
+    "place_id": "ChIJ3WSO6INhXIYR6f2ccvH3RrU",
+    "name": "Fusion Food",
+    "address": "8132 Fredericksburg Rd, San Antonio, TX 78229, USA",
+    "lat": 29.515478400000003,
+    "lng": -98.57053379999999,
+    "phone": "(210) 616-2322",
+    "website": "http://fusionfoodsa.com/",
+    "rating": 4.2,
+    "review_count": 835,
+    "price_level": "PRICE_LEVEL_INEXPENSIVE",
+    "business_status": "OPERATIONAL",
+    "hours": [
+      "Monday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM"
+    ],
+    "hours_periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 22,
+          "minute": 0
+        }
+      }
+    ],
+    "photo_refs": [
+      "places/ChIJ3WSO6INhXIYR6f2ccvH3RrU/photos/AV-0GLcMEZVVr9l447LvCPchdcOv-jcSXiB8jCURXCRCtNvVWckqYuEpHUcpqHrmZYPk-COfZamB2lkd7yBGzv6x3UlGtHKcCQ_CIylOYvezUjJkkJQ6DxKr3osNVkdCAmMaN_1c6R25l6I-hIhIE9Z5ypnIwgmCNHFQgo6BQY_uIjGE29t-1_zGU9MEbHJQMQ_HcQpyZUeMqA0dOMcfqKihfKHgXRCnuPIzaRhT6fB6JNAaMIYvmbqTENbGBHB55lcygwcV3GYL2xl4792pVB9J7hJyXR-ggp5uYHnGnQRkMkS70LQi1VChYqtUObmtRa9jaxG5W2s3xEEbxPWFHgCTwjdJQNihmTu5hrzZj3MVBA1kZupC5NCFiYYiWsqek04Qa0aDyBEd5JcYEcivIHRx8XbYr74",
+      "places/ChIJ3WSO6INhXIYR6f2ccvH3RrU/photos/AV-0GLeiHfzF0uzRBjitCB9wyb1iism87_XdonuvuQ4SoY_aMS9aQ6EUPdjYfkXbk3eIG2yG_qdFd21d7iCu-bkjzyK4oVH2PsyT8nSu7Dd0ip-g9yzh1qKrM9NlSLaTdo0reiWCV9zTBXF7TLcRT_JEIaVsiQyPc6sXzzr2jAqf5mj04zS-_Nk19ERfw7MVhu17e_WdV9_BtFXHdUYIVuoYmKPNOrbD1oUm2dl3rtDItBh0k7J4FhbFr7ZOHu55207O5KlYwnbs8PdtPR0kyYe7gG5nh-I1eBqBh6qoVUPZHhJISYN0lDi5tTnWMlSKYvYFBzNgkYjqoy0gDY_YRnXpbL2xMdQ7uzGoPQbVV7jNi1cXlPZ2vCwstfhzuW__IpRhFh8IXQKiBlxur_uQt9e7Lc5CiNL_",
+      "places/ChIJ3WSO6INhXIYR6f2ccvH3RrU/photos/AV-0GLem7g-CLau2-iCeVQt48jCBXs_sAv3FxsONch-PC14UBMHm4Hjs4lOX9jMbxtjQ2XIjgJi7jPgIZn6IWtbUOvo5y3h2XIiGErDpL4-oTK13h6kq6TN6qp3sx_yvYmzSNguJdTDryrv-YHaivjCLhsNaakNb6EOATbbRpYuD_8AivGWhWTOJF7yjmr5JWBOiqS8nlf3LVjwNnH3zwAPn7GWObYrxmPSkwMuQ6lLgEKxoEHesp-ZYo6mdZK8r8ZRouvRZ5GtknvtdhKHir3eUhO8y86USyUm7D4FJjZcKsS4QI8GWgjQDH4j5hRqWnVw_xEwGLiIQb06NKiG13h5xTfTL41sth-N-Jr7AsAI_GnXXFLyAvYX6jZzhv2M3fglzxXp580kPopjVoOXcFbIBkne9Kw",
+      "places/ChIJ3WSO6INhXIYR6f2ccvH3RrU/photos/AV-0GLdiJGHRtDTHMzbZxJerJ5G_y0iYvBGRcIvBHc2Yl6dl2hTJwmrOOEHjQo171RhNa9pWJgW11B9DtT8lcCEd1JvEjc8PZcBTLvVfHxFVPO0K5BtiWiI375JSPBpBc2GGK3KHoP2fFouQriM8pU-QOqpQFX85ruyRpP81nMUz4UGeqtVM_LajE1mQ1_qzsa9uOJufBdSTGJsaiYUg1uFzLVXpq3dhKZKNlv-ofIbJq2Ipohg4ajh5mvaVuwwjo7frabNhm1hX4v5UVuIzKvUccpaR-rAA_mXjbabVhKbO1DolaPZmRO1Ku9Qbmmol-eQ6vOfR0pyjoARB4IDoJ_5ES5v_0D9U7fGGvy5W5ZprSdTpYKzP6xTCfEAbZ1DLFqDauM3eae81xoulGmdPHh-VdaILR9Dx8XMF-jhK0DoU0eZj-w",
+      "places/ChIJ3WSO6INhXIYR6f2ccvH3RrU/photos/AV-0GLfH4RYN3LaUSP7lFXFCqtP8lyopo3U1okqJIC0DAScKx3bCbVzwrJZ5Opmp_mTEcmJvd8y4Df9Jxkg_Tm2IbXu3OqRWijKwTQX2-cJdXvHLInPkN9iCV9NYCABVWfl23t0Q4hkXlgRjNsJpou0Kh0qJ1FRxAwaI4WtO3JQXFbgsw2e3ytx6tY5pUaxNXfJRbcZstZRsMPsMprjJ1git1qdGiVGRBPrbgafXtuK2mBUpMD6Z_RvJmtEXQEPS72M94lt5FVrHGBabRJtirvTkNYtFU7WITTwkf3ILBOgl6SYnLS9YnCSjiu11dfMlpjudr3KP-Kxhd5UDmcngsY33iSv9jo7TJbYtp1L_S6jUkbwWOA51X6hj_qN_YUxHwAP6TZva2Rhx9d5M93GrY619h1O3SJcVLu5H6_7N3FxxwzzalA"
+    ],
+    "types": [
+      "fusion_restaurant",
+      "pizza_delivery",
+      "halal_restaurant",
+      "pakistani_restaurant",
+      "pizza_restaurant",
+      "meal_delivery",
+      "food_delivery",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "buffet_score": 90,
+    "buffet_confidence": "HIGH",
+    "buffet_evidence": [
+      "buffet mentioned in 3/5 reviews",
+      "buffet on website: buffet",
+      "matched 'Indian buffet' search query"
+    ],
+    "is_buffet": true,
+    "state": "TX",
+    "found_via": "Indian buffet",
+    "search_location": "San Antonio",
+    "scraped_at": "2026-11-14T20:41:30.588128Z"
+  },
+  {
+    "place_id": "ChIJV4BIkABnXIYROrz2rVUKWQc",
+    "name": "Pavani Express Indian Cuisine",
+    "address": "6480 Babcock Rd, San Antonio, TX 78249, USA",
+    "lat": 29.551781499999997,
+    "lng": -98.615595,
+    "phone": "(210) 444-9992",
+    "website": "http://www.pavaniexpress.com/",
+    "rating": 3.9,
+    "review_count": 141,
+    "price_level": "PRICE_LEVEL_INEXPENSIVE",
+    "business_status": "OPERATIONAL",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u20092:00\u202fPM, 5:30\u2009\u2013\u20099:00\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u20092:00\u202fPM, 5:30\u2009\u2013\u20099:00\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u20092:00\u202fPM, 5:30\u2009\u2013\u20099:00\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u20092:00\u202fPM, 5:30\u2009\u2013\u20099:00\u202fPM",
+      "Saturday: 9:00\u202fAM\u2009\u2013\u20092:00\u202fPM, 5:30\u2009\u2013\u20099:00\u202fPM",
+      "Sunday: 9:00\u202fAM\u2009\u2013\u20092:00\u202fPM, 5:30\u2009\u2013\u20099:00\u202fPM"
+    ],
+    "hours_periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 14,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 0,
+          "hour": 17,
+          "minute": 30
+        },
+        "close": {
+          "day": 0,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 14,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 17,
+          "minute": 30
+        },
+        "close": {
+          "day": 2,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 14,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 17,
+          "minute": 30
+        },
+        "close": {
+          "day": 3,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 14,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 17,
+          "minute": 30
+        },
+        "close": {
+          "day": 4,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 14,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 17,
+          "minute": 30
+        },
+        "close": {
+          "day": 5,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 14,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 17,
+          "minute": 30
+        },
+        "close": {
+          "day": 6,
+          "hour": 21,
+          "minute": 0
+        }
+      }
+    ],
+    "photo_refs": [
+      "places/ChIJV4BIkABnXIYROrz2rVUKWQc/photos/AV-0GLcTTwqAjrGJnOkV-CG6iZiJEOSGYg4cLL0mBvgffALiqoDG6O8uSr79TVguNKtUhQTz9Rg09IqvNmmx1xnTvKPXOf2OegC3ItCnpTWuTOZONzPho_WrPDdiN3UGTtzZ419r-cTFTvbKCgcwV7Fyy5IBpV3NklIXsn-G27aipIWB02L1lMlOFF2rKHiV91aRqrRI16lMTpr8g7piG2WU1kxz-xUmvryCqp9IZX-x_519DORL3cBZrJNyHZNxg41O4O36byZSyXv01i6JpJt9QcxSIA8WqeG99jfEo-wTGRFL71MPTXqKqS5Oq1BZiiz5ez4Jmo5tjxdD7zbOPzNmkMcfBFpVuSmBxIn1SC2Sgl_3b0taAeq0BkGG7VZZCa4NKjGDFTShOxRFajHoqj7ixEJI49dN6vdyXtyyLG4hQj40iw",
+      "places/ChIJV4BIkABnXIYROrz2rVUKWQc/photos/AV-0GLfj4OESxdAJ-SpFdMUwrj7CNwLUSMU9IlDfeZINV_ApWpPqR7eMht3CYHT8t9ZLQY89FPiuhmZee9qTHyawYFKxk1yzAQ5JBid2LrXsqTd1hWoupqyCr2CdLXg-APhrBJt9YMvoOq4CD2-x7wpHyEW70mV9S_i-knLFUwsMHehBtGZRks68_Ssded6ZK4KYKvJsJnsy3udEAZPEnOUWm_pOSn4IM3AhhmcL7upyYxgDPdBjjbPctNsZ8d7T726DxY80X2rYPPt4GJMzzLI1DP45_hAJuOW3bSDQ1JenLQaWKBG9Lyf37BuwY_RTiTsMT-Y3gkL8Db2daD6JGLML3wDvEhi2D8rGPXWw3o1kN6mD7gG5tB_0l6z1m0JspYwy9sbSAFiF7pV8L8mWB4GgDHfFnBnKX-NYQU9dAuNO_0Ypdg",
+      "places/ChIJV4BIkABnXIYROrz2rVUKWQc/photos/AV-0GLc0hXxWD75_AV4VoWQxgOAq8_ToXdVwVK6YvoV4A54xXxWaWyMAFZcZ65SsKQahcDy3QEqjgnqAsPm4WXUMm5zWY0DCuZPQqZzbOs6NFEGjuMgP_PY493yu9RwXuUg5VtF4_hHsrONPa9ZK9S1KsAxGmVmvD4iZ5cdBgYd6cVW1crVIfWYhW9N3S8lMzhgcYQC9hTtuyVVzEquRO0w88cJEZ1kyUmXfxL3gUjTyk_wq79GjwSr0DyAsfk5OLoVoF-_6lCgceVnXFsNTqNl1wLErtPOj3gFpYz8E_OaiiToMzTO0Zy4EfrkaJt8RUp9-L-JI6efbOBOyRltx13vFGKE9ThZ89GhJBG5G7PI_gmDLMIfXCO--RY_Ll33Ca_4eggA9vBGlUdUcRE6jA0bmXIM4-LuFZNDCtpeibpUbQ08u9Q",
+      "places/ChIJV4BIkABnXIYROrz2rVUKWQc/photos/AV-0GLdnHUtX8cERbQVaZSkEH4L3FC3uJRWWf-wGy1aXNWd-BBZHWkySdIeGd6H2Sk-PlHuM-KMrGrwbu66FFuYVa0H6gdPaYC8vAxHuzpjFrqUjEmW5BGKlFV_zpNrXmeygNDmfEFKGPCPAKLIcJpRh4Zevh6mdZASAJD5ZGs06Ruf0fb-B-V9fBCddw6Xb-3-f1HAXv5IAX9cS4HaNoRGbV--6zL7VkiQn6e2lVm8h_fuLWR5ZOm-o5tXz7djcG20IoBfkN9bQodP1oHRuRTgUHF77X5Xtfqwk_0hKtK6XyKkfOKYDMU4q9VXU32ybdBkHSZ0i4Qb8wKCYAjmx1_GAeYqJGPa_lHQ31fEOkFXZxBqiZpQkBrltYflmcpMb9c_s05D3Pm6-U_uRT2VUzlviWuVhewAho8gimRiGB-D5ZESQ",
+      "places/ChIJV4BIkABnXIYROrz2rVUKWQc/photos/AV-0GLdqe11DRA05hzAsnr2YluJSEVucuTxKMfyFGQ8bFkwaQjuR-J38MYbKVm8T1SMF4pJduV4ucIZdW14MoR01ON5TzaRgMc2Tma5ZhwjvWFopLmVOdbgfA7o66-HJv6wLe317pcgMV3GKCfumZXHGS_1J7e4xTtGJGv37bS9dVxgNzdQvTP3QrlhAkPgCv-L9JpHKEumLIwrhZZ2KAmBhFBSaC7rWH4rHaylHxEYvQkzLeoN7lFas4iykUL-_oBzhkil26aqT3PSezCiLomF4OrC7DnvZIu_xZhuukO1jLtn6rX5d__PJO_-7u3ZVn9cKgPetc8B2Jvd2X6kTy3AK2j3VfJQGUrfIRwUQ5JkcJcxwvbITdOG1PAz_tlrv4WWbgMopaEwydbSp1CiZd6aGRtMKzynizZg"
+    ],
+    "types": [
+      "indian_restaurant",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "buffet_score": 65,
+    "buffet_confidence": "HIGH",
+    "buffet_evidence": [
+      "buffet mentioned in 1 review",
+      "buffet on website: buffet",
+      "matched 'Indian buffet' search query"
+    ],
+    "is_buffet": true,
+    "state": "TX",
+    "found_via": "Indian Sunday buffet",
+    "search_location": "UTSA / La Cantera",
+    "scraped_at": "2026-11-14T20:41:36.916342Z"
+  },
+  {
     "place_id": "ChIJRZNQRlNnXIYRgTmWGEUN55k",
     "name": "India Palace",
     "address": "8474 Fredericksburg Rd #100, San Antonio, TX 78229, USA",

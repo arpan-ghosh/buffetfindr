@@ -65,23 +65,23 @@ scraper/data/*.json  →  web/data/*.json  →  Neon DB (db:seed)  →  web + mo
 | Columbus (`OH`) | 68 | 23 |
 | Cincinnati (`OH`/`KY`) | 69 | 15 |
 | Cleveland (`OH`) | 48 | 13 |
-| Austin (`TX`) | top 20 | 6 |
-| San Antonio (`TX`) | top 20 | 6 |
-| San Diego (`CA`) | top 20 | 7 |
-| Sacramento (`CA`) | top 20 | 9 |
-| Las Vegas (`NV`) | top 20 | 14 |
-| Detroit (`MI`) | top 20 | 9 |
-| Minneapolis–St. Paul (`MN`) | top 20 | 4 |
-| Denver (`CO`) | top 20 | 9 |
-| Tampa (`FL`) | top 20 | 8 |
-| Orlando (`FL`) | top 20 | 7 |
-| Charlotte (`NC`/`SC`) | top 20 | 6 |
-| Raleigh–Durham (`NC`) | top 20 | 8 |
-| **Total (committed snapshot)** | | **862** |
+| Austin (`TX`) | 87 | 13 |
+| San Antonio (`TX`) | 31 | 8 |
+| San Diego (`CA`) | 77 | 19 |
+| Sacramento (`CA`) | 84 | 30 |
+| Las Vegas (`NV`) | 31 | 16 |
+| Detroit (`MI`) | 111 | 38 |
+| Minneapolis–St. Paul (`MN`) | 60 | 17 |
+| Denver (`CO`) | 108 | 34 |
+| Tampa (`FL`) | 66 | 17 |
+| Orlando (`FL`) | 68 | 21 |
+| Charlotte (`NC`/`SC`) | 68 | 12 |
+| Raleigh–Durham (`NC`) | 77 | 23 |
+| **Total (committed snapshot, de-duplicated)** | | **1017** |
 
 > Houston/Miami/Atlanta/Phoenix/Columbus/Cincinnati/Cleveland were upgraded from top-20 samples to full grid scrapes in Nov 2026 (merged with the top-20 pass; results >20 km from any grid point and non-South-Asian places dropped). Full-grid mode makes one search call per query (no pagination, max 20 results per query), so dense metros are likely under-covered. Bay Area (34 points), LA (35) and Dallas–Fort Worth (24) are also full grid scrapes; LA/Dallas were merged with their earlier top-20 pass (higher buffet score wins) because a grid scan records a place under whichever query found it first and so can miss the "found via Indian buffet" +20 bonus. Dallas/Houston share `state=TX` (split at lat 31.5°) and LA/Bay Area share `state=CA` (split at lat 36°), Columbus/Cincinnati/Cleveland share `state=OH` (split at lat 39.6° and 40.8°; Cincinnati also includes N. Kentucky, `state=KY`, taken from each address); the API, region pages and restaurant pages split them by latitude.
 >
-> The 12 metros added in Nov 2026 (Austin … Raleigh–Durham) are top-20 samples too. Metros sharing a state are now split by **bounding boxes** (lat and/or lng) defined once in `web/lib/regions.ts` (`REGION_DEFS`): TX = Dallas / Houston / Austin / San Antonio, CA = LA / Bay Area / San Diego / Sacramento, FL = Miami / Tampa / Orlando, NC = Charlotte (+SC) / Raleigh. Boxes within a state must not overlap.
+> The 12 metros added in Nov 2026 (Austin … Raleigh–Durham) were scraped as full grids (11–16 points each). Denver, Tampa, Orlando, Charlotte and Raleigh were written to `web/data` while Neon was over quota and still need `npm run db:seed -- denver tampa orlando charlotte raleigh`. Likely under-covered (20-result cap, no pagination): Detroit, Denver, Sacramento, Austin, Tampa, Raleigh. Metros sharing a state are now split by **bounding boxes** (lat and/or lng) defined once in `web/lib/regions.ts` (`REGION_DEFS`): TX = Dallas / Houston / Austin / San Antonio, CA = LA / Bay Area / San Diego / Sacramento, FL = Miami / Tampa / Orlando, NC = Charlotte (+SC) / Raleigh. Boxes within a state must not overlap.
 
 ### Adding a new region
 1. Add location grid to `scraper/locations.py` → `STATE_MAP`
