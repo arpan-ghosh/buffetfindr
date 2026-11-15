@@ -5,16 +5,22 @@ import { Star, MapPin, Phone, Clock, Navigation2, Globe, ChevronLeft } from "luc
 import Link from "next/link";
 import type { Restaurant } from "@/lib/types";
 import { cityFromAddress, isOpenNow } from "@/lib/utils";
-import { regionFor } from "@/lib/regions";
+import { regionFor, ALL_REGION_FILES } from "@/lib/regions";
+import { snapshotBuffets } from "@/lib/snapshot";
 
 export const revalidate = 86400; // ISR — rebuild at most once per day
 
 const DAY_ORDER = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
 
 async function getRestaurant(placeId: string): Promise<Restaurant | null> {
-  const sql = neon(process.env.DATABASE_URL!);
-  const rows = await sql`SELECT * FROM restaurants WHERE place_id = ${placeId} AND is_buffet = true LIMIT 1`;
-  return (rows[0] as unknown as Restaurant) ?? null;
+  try {
+    const sql = neon(process.env.DATABASE_URL!);
+    const rows = await sql`SELECT * FROM restaurants WHERE place_id = ${placeId} AND is_buffet = true LIMIT 1`;
+    return (rows[0] as unknown as Restaurant) ?? null;
+  } catch (err) {
+    console.error("[restaurant] DB failed, using JSON snapshot:", err instanceof Error ? err.message : err);
+    return snapshotBuffets(ALL_REGION_FILES).find(r => r.place_id === placeId) ?? null;
+  }
 }
 
 function parseAddress(address: string) {

@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { neon } from "@neondatabase/serverless";
+import { snapshotBuffets } from "@/lib/snapshot";
 import { Star, MapPin, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import type { Restaurant } from "@/lib/types";
@@ -43,13 +44,20 @@ const REGIONS: Record<string, { label: string; description: string }> = {
 };
 
 async function getBuffets(region: string): Promise<Restaurant[]> {
-  const sql = neon(process.env.DATABASE_URL!);
-  const rows = await sql`
-    SELECT * FROM restaurants
-    WHERE is_buffet = true AND state = ANY(${REGION_DEFS[region].states}::text[])
-    ORDER BY buffet_score DESC
-  `;
-  return (rows as unknown as Restaurant[]).filter(r => inRegion(r, region));
+  try {
+    const sql = neon(process.env.DATABASE_URL!);
+    const rows = await sql`
+      SELECT * FROM restaurants
+      WHERE is_buffet = true AND state = ANY(${REGION_DEFS[region].states}::text[])
+      ORDER BY buffet_score DESC
+    `;
+    return (rows as unknown as Restaurant[]).filter(r => inRegion(r, region));
+  } catch (err) {
+    console.error("[buffets] DB failed, using JSON snapshot:", err instanceof Error ? err.message : err);
+    return snapshotBuffets(REGION_DEFS[region].files)
+      .filter(r => inRegion(r, region))
+      .sort((a, b) => (b.buffet_score ?? 0) - (a.buffet_score ?? 0));
+  }
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ region: string }> }): Promise<Metadata> {
